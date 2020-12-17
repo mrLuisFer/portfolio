@@ -1,14 +1,16 @@
 import React from "react"
+import logo from "../assets/hero-pattern.png"
 
 export default function Hero(): JSX.Element {
   return (
     <div className="Hero">
+      <img src={logo} alt="" />
       <div className="Hero__personal">
         <h2 className="Hero__personal-title">
-          Hi!, my name is <span>Luis Alvarez</span>{" "}
+          Hi!, my name is <span>Luis Alvarez</span>
           <span>
             <i className="fas fa-grip-lines-vertical"></i>
-          </span>{" "}
+          </span>
         </h2>
         <h5 className="Hero__personal-info">
           I'm a Frontend Developer, specialized in <span>Javascript</span>{" "}

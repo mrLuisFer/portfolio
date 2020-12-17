@@ -7,8 +7,11 @@
 // Global
 @import "./scss/globals";
 
-// App (Its imported, because use colors variables)
+// App
 @import "./scss/App.scss";
 
 // Hero
 @import "./scss/components/Hero";
+
+// NavBar
+@import "./scss/components/NavBar";
