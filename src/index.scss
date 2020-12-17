@@ -6,3 +6,9 @@
 
 // Global
 @import "./scss/globals";
+
+// App (Its imported, because use colors variables)
+@import "./scss/App.scss";
+
+// Hero
+@import "./scss/components/Hero";

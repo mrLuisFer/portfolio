@@ -1,25 +1,31 @@
-// Fonts
-$open-sans-font: "Open Sans", sans-serif;
-$inter-font: "Inter", sans-serif;
+// CSS variables
+:root {
+  // Fonts
+  --open-sans-font: "Open Sans", sans-serif;
+  --inter-font: "Inter", sans-serif;
 
-// Color Palette
-$beau-blue: #c5d5ea;
-$gainsboro: #d8e1e9;
-$independence: #33415c;
-$oxford-dark-blue: #001233;
-$oxford-blue: #002855;
-$usafa-blue: #0353a4;
-$true-blue: #0466c8;
-$cultured: #f8f9fa;
-$light-gray: #ced4da;
-$state-gray: #6c757d;
-$dark-gray: #212529;
-$cerulean-blue: #7392b7;
-$cerulean-crayola: #00b4d8;
-$powder-blue: #caf0f8;
-$command-blue: #0077b6;
-$semi-purple: #21209c;
-$dark: #0d1b2a;
-$honey-yellow: #ffb703;
-$orange: #fb8500;
-$rich-black: #0b090a;
+  // Color Palette
+  --beau-blue: #c5d5ea;
+  --gainsboro: #d8e1e9;
+  --independence: #33415c;
+  --oxford-dark-blue: #001233;
+  --oxford-blue: #002855;
+  --usafa-blue: #0353a4;
+  --true-blue: #0466c8;
+  --cultured: #f8f9fa;
+  --light-gray: #ced4da;
+  --state-gray: #6c757d;
+  --dark-gray: #212529;
+  --cerulean-blue: #7392b7;
+  --cerulean-crayola: #00b4d8;
+  --powder-blue: #caf0f8;
+  --command-blue: #0077b6;
+  --semi-purple: #21209c;
+  --dark: #0d1b2a;
+  --honey-yellow: #ffb703;
+  --orange: #fb8500;
+  --rich-black: #0b090a;
+
+  // root properties
+  font-size: 16px;
+}

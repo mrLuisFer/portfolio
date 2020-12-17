@@ -1,12 +1,16 @@
 import React from "react"
-import "./App.scss"
+import "./scss/_App.scss"
+// views
+import HomePage from "./views/HomePage"
+// components
+import NavBar from "./components/NavBar"
 
-function App(): JSX.Element {
+export default function App(): JSX.Element {
+  // Components for the view
   return (
     <div className="App">
-      <p>I think i have an idea to the design</p>
+      <NavBar />
+      <HomePage />
     </div>
   )
 }
-
-export default App
