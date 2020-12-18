@@ -1,3 +1,141 @@
 .Hero {
+  display: flex;
+  align-items: center;
+  // justify-content: space-around;
 
+  &__illustration {
+    height: 450px;
+    width: 450px;
+    margin: 0 10%;
+  }
+
+  &__personal {
+    margin-bottom: 1.5rem;
+
+    &-title {
+      font-size: 3rem;
+      font-family: var(--inter-font);
+      font-weight: 600;
+    }
+
+    &-greet {
+      display: block;
+      font-size: 2rem;
+      margin: 0;
+      color: var(--state-gray);
+      font-weight: 300;
+    }
+
+    &-name {
+      color: var(--true-blue);
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      margin-right: 0.5rem;
+      position: relative;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--blue-background);
+      }
+
+      &::after {
+        content: " ";
+        position: absolute;
+        background: var(--blue-background);
+        border-radius: 1px;
+        width: 100%;
+        height: 7px;
+        left: 0;
+        bottom: 8px;
+        z-index: -10;
+        opacity: 0.4;
+        transition: background 0.3s ease;
+      }
+
+      &:hover {
+        &::after {
+          background: var(--true-blue);
+        }
+      }
+    }
+
+    &-info {
+      margin-top: 1.35rem;
+      font-size: 1.5rem;
+      width: 290px;
+      line-height: 1.44;
+
+      span {
+        color: var(--rich-black);
+        font-weight: 600;
+
+        span {
+          // color: var(--true-blue);
+          color: var(--usafa-blue);
+          font-weight: 700;
+        }
+      }
+
+      #Hero__personal-info-js {
+        color: var(--honey-yellow);
+      }
+    }
+
+    &-codeIcon {
+      color: var(--beau-blue);
+      transition: 0.3s ease;
+
+      &:hover {
+        opacity: 0.6;
+        color: var(--cerulean-blue);
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    a {
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      color: var(--oxford-dark-blue);
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--blue-background);
+      }
+
+      // Child's anchor tags <a>
+      &:nth-child(1):hover {
+        color: var(--linkedin-color);
+      }
+
+      &:nth-child(2):hover {
+        color: var(--github-color);
+      }
+
+      &:nth-child(3) {
+        background: var(--true-blue);
+        border-radius: 4px;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+        text-decoration: none;
+        color: var(--light-gray);
+        font-weight: 600;
+        transition: 0.3s ease;
+
+        i {
+          font-size: 0.9rem;
+          margin-right: 0.2rem;
+        }
+
+        &:hover {
+          background: var(--blue-background);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
 }

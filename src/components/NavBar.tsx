@@ -4,7 +4,7 @@ import { Link, BrowserRouter as Router } from "react-router-dom"
 // Assets
 import doubleArrowRight from "../assets/double-arrow-right.svg"
 
-export default function NavBar() {
+export default function NavBar(): JSX.Element {
   const [showIcons, setShowIcons] = useState(false)
 
   const handleShowIcons = (): void => {
@@ -15,7 +15,7 @@ export default function NavBar() {
     <Router>
       <div className="NavBar">
         <div className="NavBar__logo">
-          <h1 className="NavBar__logo-title">
+          <h1 className="NavBar__logo-title animate__animated animate__bounceIn animate__fast">
             <Link to="/">mrLuisFer</Link>
           </h1>
         </div>

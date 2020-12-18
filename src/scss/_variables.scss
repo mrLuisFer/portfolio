@@ -6,7 +6,6 @@
 
   // Color Palette
   --gainsboro: #d8e1e9;
-  --state-gray: #6c757d;
   --cerulean-blue: #7392b7;
   --cerulean-crayola: #00b4d8;
   --green: #71eba0;
@@ -14,7 +13,7 @@
   --true-blue: #0466c8;
   --command-blue: #0077b6;
   --semi-purple: #21209c;
-  --honey-yellow: #ffb703;
+  --honey-yellow: #eeac06;
   --orange: #fb8500;
   --independence: #33415c;
   // Shadow Color
@@ -28,6 +27,7 @@
   --powder-blue: #caf0f8;
   --dark-gray: #212529;
   --beau-blue: #c5d5ea;
+  --state-gray: #6c757d;
   // Titles
   --rich-black: #0b090a;
   // Hover Font Color
@@ -36,4 +36,9 @@
   --light-gray: #ecf2f8;
   // root properties
   font-size: 16px;
+
+  // Linkedin Color
+  --linkedin-color: #0e76a8;
+  // Github Color
+  --github-color: #211f1f;
 }
