@@ -1,4 +1,56 @@
 .NavBar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    &-title {
+      font-family: var(--inter-font);
+      font-weight: 600;
+      color: var(--rich-black);
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left: 0.9rem;
+      color: var(--oxford-blue);
+      text-decoration: none;
+      transition: color 0.25s ease-in;
+
+      &:hover {
+        color: var(--oxford-dark-blue);
+      }
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    align-items: center;
+    color: var(--beau-blue);
+
+    &__span {
+      margin-left: 0.9rem;
+      padding: 0.4rem 0.6rem;
+      background: var(--usafa-blue);
+      border-radius: 9px 0 0 9px;
+      // For no select the text, like a button
+      cursor: pointer;
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none;
+    }
+
+    &-icons {
+      background: var(--usafa-blue);
+      padding: 0.4rem 0.6rem;
+      border-radius: 0 9px 9px 0;
+    }
+  }
 }
