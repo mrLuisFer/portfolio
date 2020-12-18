@@ -1,3 +1,12 @@
 .App {
-  padding: 30px 40px;
+  padding: 10px 40px;
+}
+
+.wave-pattern {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -3rem;
+  z-index: -1000;
+  opacity: 0.3;
 }
