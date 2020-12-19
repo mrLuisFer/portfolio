@@ -7,6 +7,10 @@
 // Global
 @import "./scss/globals";
 
+// Mixins
+@import "./scss/mixins/no-select";
+@import "./scss/mixins/font-weight";
+
 // App
 @import "./scss/App.scss";
 

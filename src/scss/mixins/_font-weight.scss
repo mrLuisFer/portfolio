@@ -1,0 +1,21 @@
+// When using it in a way like Mixin, the animation is bad since it takes time to load the file,
+// so just take the parameters and add it by copying and pasting the animation wherever you want
+@mixin font-weight($font-color, $end-seconds-animation: 0.3s) {
+  // Add transition for looks with more weight
+  -webkit-transition: all $end-seconds-animation;
+  -moz-transition: all $end-seconds-animation;
+  -o-transition: all $end-seconds-animation;
+  transition: all $end-seconds-animation;
+
+  // This works with hover, otherwise it would not be necessary
+  &:hover {
+    color: $font-color;
+    text-shadow: -0.2px -0.2px 0 $font-color, 0.2px -0.2px 0 $font-color,
+      -0.2px 0.2px 0 $font-color, 0.2px 0.2px 0 $font-color;
+    // For add a transition smooth to font-weight
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}

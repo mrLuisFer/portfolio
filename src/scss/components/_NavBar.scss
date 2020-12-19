@@ -14,6 +14,9 @@
         position: relative;
         text-decoration: none;
 
+        // To not be able to select text
+        @include no-select;
+
         &::after {
           content: " ";
           position: absolute;
@@ -46,9 +49,12 @@
       color: var(--oxford-blue);
       text-decoration: none;
       transition: color 0.2s ease-in;
+      // For can't select the text in a link
+      @include no-select;
 
       &:hover {
         color: var(--oxford-dark-blue);
+        font-weight: 600;
         border-bottom: 2px solid var(--oxford-blue);
       }
     }
@@ -60,19 +66,17 @@
     color: var(--beau-blue);
 
     &__span {
-      background: var(--command-blue);
+      // background: var(--command-blue);
+      background: var(--blue);
       margin-left: 0.9rem;
       padding: 0.4rem 0.6rem;
       padding-right: 0.4rem;
       border-radius: 9px 0 0 9px;
       // For no select the text, like a button
       cursor: pointer;
-      user-select: none;
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-      -khtml-user-select: none; /* Konqueror HTML */
-      -moz-user-select: none; /* Old versions of Firefox */
-      -ms-user-select: none; /* Internet Explorer/Edge */
+
+      // To not be able to select text
+      @include no-select;
 
       // Add transition for looks with more weight
       -webkit-transition: all 0.3s;
@@ -80,6 +84,7 @@
       -o-transition: all 0.3s;
       transition: all 0.3s;
 
+      // This works with hover, otherwise it would not be necessary
       &:hover {
         color: var(--light-gray);
         text-shadow: -0.2px -0.2px 0 var(--light-gray),
@@ -100,7 +105,12 @@
     }
 
     &-icons {
-      background: var(--command-blue);
+      // background: var(--blue);
+      background: linear-gradient(
+        270deg,
+        rgba(4, 102, 200, 1) 30%,
+        rgba(3, 83, 164, 1) 95%
+      );
       padding-left: 0;
       border-radius: 0 9px 9px 0;
       font-size: 1rem;

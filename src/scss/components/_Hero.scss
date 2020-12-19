@@ -38,6 +38,7 @@
         color: var(--blue-background);
       }
 
+      // Line under text to highlight
       &::after {
         content: " ";
         position: absolute;
@@ -117,7 +118,8 @@
       }
 
       &:nth-child(3) {
-        background: var(--true-blue);
+        // background: var(--true-blue);
+        background: var(--blue);
         border-radius: 4px;
         padding: 0.5rem 0.8rem;
         font-size: 0.8rem;
@@ -132,7 +134,8 @@
         }
 
         &:hover {
-          background: var(--blue-background);
+          // background: var(--blue-background);
+          filter: brightness(1.1);
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
       }
