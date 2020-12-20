@@ -1,0 +1,60 @@
+.LikeToDo {
+  padding: 0 10%;
+  margin-bottom: 8rem;
+  h2 {
+    font-family: var(--inter-font);
+    font-weight: 700;
+    font-size: 2.2rem;
+    position: relative;
+    display: inline;
+    // For can't select the title
+    @include no-select;
+    // Line under the text to hightlight
+    @include line-under-text(
+      var(--command-blue),
+      var(--blue-background),
+      100%,
+      7px,
+      0px,
+      5px,
+      0.4
+    );
+  }
+
+  &__container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    div {
+      background: var(--beau-blue);
+      padding: 1rem;
+      color: var(--oxford-dark-blue);
+      border-radius: 9px;
+      text-align: center;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        background: var(--blue-background);
+        color: var(--powder-blue);
+        box-shadow: 2px 2px 5px var(--shadow-color);
+      }
+
+      i {
+        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        display: block;
+      }
+
+      p {
+        font-family: var(--open-sans-font);
+        font-weight: 600;
+        letter-spacing: 0.1px;
+        font-size: 0.9rem;
+        cursor: default;
+      }
+    }
+  }
+}

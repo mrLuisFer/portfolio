@@ -2,14 +2,27 @@
   background: var(--blue-background);
   color: var(--gainsboro);
   position: relative;
-  padding: 0 40px;
   height: auto;
+  margin-bottom: 14rem;
+  // padding: 0 40px;
 
   // This is the wave illustration
   &__wave {
     position: absolute;
-    top: -18.8rem;
+    // top: -18.8rem;
+    top: -17rem;
     left: 0;
+    z-index: -10;
+    width: 100%;
+
+    // This is the illustration below the component
+    &-down {
+      position: absolute;
+      bottom: -14rem;
+      left: 0;
+      width: 100%;
+      z-index: -10;
+    }
   }
 
   &__info {
@@ -61,15 +74,16 @@
         font-weight: 400;
         font-weight: 400;
         transition: 0.3s ease-out;
-        cursor: default;
+        cursor: text;
         user-select: normal;
         letter-spacing: 0.25px;
-        line-height: 1.6;
+        line-height: 1.7;
         transition: 0.3s ease-in;
         padding-bottom: 2rem;
 
         &:hover {
           color: var(--light-gray);
+          line-height: 1.8;
         }
 
         &::selection {
@@ -100,6 +114,7 @@
           // background: var(--oxford-blue);
           background: var(--blue-background);
           box-shadow: 2px 2px 7px var(--dark);
+          transform: scale(1.1);
         }
       }
     }
