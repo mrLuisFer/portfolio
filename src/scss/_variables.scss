@@ -5,17 +5,17 @@
   --inter-font: "Inter", sans-serif;
 
   // Color Palette
-  --gainsboro: #d8e1e9;
   --cerulean-blue: #7392b7;
-  --cerulean-crayola: #00b4d8;
   --green: #71eba0;
-  --usafa-blue: #0353a4;
-  --true-blue: #0466c8;
-  --command-blue: #0077b6;
   --semi-purple: #21209c;
   --honey-yellow: #eeac06;
   --orange: #fb8500;
   --independence: #33415c;
+  // Principal
+  --cerulean-crayola: #00b4d8;
+  --usafa-blue: #0353a4;
+  --true-blue: #0466c8;
+  --command-blue: #0077b6;
   // Shadow Color
   --shadow-color: rgba(33, 37, 41, 0.4);
   // Links or anchors tag
@@ -26,6 +26,7 @@
   // Text Color
   --powder-blue: #caf0f8;
   --dark-gray: #212529;
+  --gainsboro: #d8e1e9;
   --beau-blue: #c5d5ea;
   --state-gray: #6c757d;
   // Titles

@@ -1,0 +1,114 @@
+.AboutResume {
+  background: var(--blue-background);
+  color: var(--gainsboro);
+  position: relative;
+  padding: 0 40px;
+  height: auto;
+
+  // This is the wave illustration
+  &__wave {
+    position: absolute;
+    top: -18.8rem;
+    left: 0;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    font-family: var(--open-sans-font);
+    // Margin is because of the way the margin is with a margin on the sides
+    margin: 0 10%;
+
+    &-title {
+      margin-bottom: 1.9rem;
+
+      h2 {
+        font-family: var(--inter-font);
+        font-weight: 700;
+        margin-top: 1.5rem;
+        margin-bottom: 0.2rem;
+        font-size: 2.8rem;
+        position: relative;
+
+        &::after {
+          content: " ";
+          background: var(--beau-blue);
+          width: 50px;
+          height: 50px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          opacity: 0.2;
+        }
+
+        i {
+          margin-right: 0.3rem;
+        }
+      }
+
+      p {
+        color: var(--beau-blue);
+        opacity: 0.8;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+    }
+
+    &-text {
+      p {
+        color: #ffffff;
+        font-weight: 400;
+        font-weight: 400;
+        transition: 0.3s ease-out;
+        cursor: default;
+        user-select: normal;
+        letter-spacing: 0.25px;
+        line-height: 1.6;
+        transition: 0.3s ease-in;
+        padding-bottom: 2rem;
+
+        &:hover {
+          color: var(--light-gray);
+        }
+
+        &::selection {
+          color: var(--powder-blue);
+        }
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        font-family: var(--inter-font);
+        font-weight: 600;
+        background: var(--light-gray);
+        color: var(--blue-background);
+        padding: 0.5rem 1rem;
+        border-radius: 7px;
+        transition: 0.15s ease-in;
+
+        i {
+          margin-right: 0.6rem;
+        }
+
+        &:hover {
+          color: var(--light-gray);
+          // background: var(--oxford-blue);
+          background: var(--blue-background);
+          box-shadow: 2px 2px 7px var(--dark);
+        }
+      }
+    }
+
+    // This is the illustration of the guy flying
+    &-flying-illustration {
+      width: 450px;
+      height: 450px;
+      padding-left: 1rem;
+    }
+  }
+}

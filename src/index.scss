@@ -10,6 +10,7 @@
 // Mixins
 @import "./scss/mixins/no-select";
 @import "./scss/mixins/font-weight";
+@import "./scss/mixins/line-under-text";
 
 // App
 @import "./scss/App.scss";
@@ -19,3 +20,6 @@
 
 // NavBar
 @import "./scss/components/NavBar";
+
+// AboutResume
+@import "./scss/components/AboutResume";

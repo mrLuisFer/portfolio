@@ -24,7 +24,11 @@ export default function NavBar(): JSX.Element {
           <Link to="/">About me</Link>
           <div className="NavBar__social-media">
             <span
-              className="NavBar__social-media__span"
+              className={
+                showIcons
+                  ? "NavBar__social-media__span"
+                  : "NavBar__social-media__span NavBar__notShowIcons-rounded"
+              }
               onClick={handleShowIcons}
             >
               <img

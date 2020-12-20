@@ -1,7 +1,8 @@
 .Hero {
   display: flex;
   align-items: center;
-  // justify-content: space-around;
+  margin-bottom: 17rem;
+  padding: 0 40px;
 
   &__illustration {
     height: 450px;
@@ -39,25 +40,15 @@
       }
 
       // Line under text to highlight
-      &::after {
-        content: " ";
-        position: absolute;
-        background: var(--blue-background);
-        border-radius: 1px;
-        width: 100%;
-        height: 7px;
-        left: 0;
-        bottom: 8px;
-        z-index: -10;
-        opacity: 0.4;
-        transition: background 0.3s ease;
-      }
-
-      &:hover {
-        &::after {
-          background: var(--true-blue);
-        }
-      }
+      @include line-under-text(
+        var(--blue-background),
+        var(--true-blue),
+        100%,
+        7px,
+        0px,
+        8px,
+        0.4
+      );
     }
 
     &-info {
@@ -103,6 +94,7 @@
       font-size: 1.5rem;
       color: var(--oxford-dark-blue);
       transition: color 0.3s ease;
+      font-family: var(--inter-font);
 
       &:hover {
         color: var(--blue-background);

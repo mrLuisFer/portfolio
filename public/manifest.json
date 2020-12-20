@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "mrLuisFer Portfolio",
+  "name": "This is my first Portfolio made with TypeScript using React and frontend tools, such as Jsx (HTML), Sass (Css) and more to give a good touch and style to the Portfolio to demonstrate my skills as Frontend Developer",
   "icons": [
     {
       "src": "favicon.ico",

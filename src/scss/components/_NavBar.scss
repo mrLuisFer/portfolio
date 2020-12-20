@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8rem;
+  padding: 0 40px;
 
   &__logo {
     &-title {
@@ -17,25 +18,16 @@
         // To not be able to select text
         @include no-select;
 
-        &::after {
-          content: " ";
-          position: absolute;
-          background: var(--command-blue);
-          border-radius: 1px;
-          width: 100%;
-          height: 7px;
-          left: 0;
-          bottom: 0px;
-          z-index: -10;
-          opacity: 0.4;
-          transition: background 0.3s ease;
-        }
-
-        &:hover {
-          &::after {
-            background: var(--true-blue);
-          }
-        }
+        // Line under text to highlight
+        @include line-under-text(
+          var(--command-blue),
+          var(--true-blue),
+          100%,
+          7px,
+          0px,
+          0px,
+          0.4
+        );
       }
     }
   }
@@ -47,6 +39,7 @@
     a {
       margin-left: 0.9rem;
       color: var(--oxford-blue);
+      font-family: var(--inter-font);
       text-decoration: none;
       transition: color 0.2s ease-in;
       // For can't select the text in a link
@@ -64,6 +57,7 @@
     display: flex;
     align-items: center;
     color: var(--beau-blue);
+    font-family: var(--inter-font);
 
     &__span {
       // background: var(--command-blue);
@@ -71,7 +65,7 @@
       margin-left: 0.9rem;
       padding: 0.4rem 0.6rem;
       padding-right: 0.4rem;
-      border-radius: 9px 0 0 9px;
+      border-radius: 7px 0 0 7px;
       // For no select the text, like a button
       cursor: pointer;
 
@@ -85,6 +79,7 @@
       transition: all 0.3s;
 
       // This works with hover, otherwise it would not be necessary
+      transition: border-radius 0s ease;
       &:hover {
         color: var(--light-gray);
         text-shadow: -0.2px -0.2px 0 var(--light-gray),
@@ -95,6 +90,7 @@
         -moz-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
+        transition: border-radius 0s ease;
       }
 
       img {
@@ -104,6 +100,7 @@
       }
     }
 
+    // The side to show with the icons in the social media button
     &-icons {
       // background: var(--blue);
       background: linear-gradient(
@@ -112,7 +109,7 @@
         rgba(3, 83, 164, 1) 95%
       );
       padding-left: 0;
-      border-radius: 0 9px 9px 0;
+      border-radius: 0 7px 7px 0;
       font-size: 1rem;
       padding: 0.4rem 0.6rem;
 
@@ -130,5 +127,10 @@
   &__img-volted {
     transition: all 0.3s ease;
     transform: rotate(180deg);
+  }
+
+  &__notShowIcons-rounded {
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
   }
 }
