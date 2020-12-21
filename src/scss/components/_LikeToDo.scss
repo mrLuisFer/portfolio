@@ -12,13 +12,17 @@
     // Line under the text to hightlight
     @include line-under-text(
       var(--command-blue),
-      var(--blue-background),
+      var(--cerulean-crayola),
       100%,
       7px,
       0px,
       5px,
       0.4
     );
+
+    span {
+      color: var(--true-blue);
+    }
   }
 
   &__container {
@@ -38,7 +42,7 @@
       &:hover {
         transform: scale(1.1);
         background: var(--blue-background);
-        color: var(--powder-blue);
+        color: var(--light-gray);
         box-shadow: 2px 2px 5px var(--shadow-color);
       }
 

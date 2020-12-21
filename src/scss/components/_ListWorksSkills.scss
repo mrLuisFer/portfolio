@@ -1,0 +1,55 @@
+.ListWorksSkills {
+  padding: 0 10%;
+  color: var(--dark-gray);
+
+  &__title {
+    font-size: 2.45rem;
+    font-family: var(--inter-font);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+
+    // Line under the text to hightlight
+    @include line-under-text(
+      var(--command-blue),
+      var(--cerulean-crayola),
+      100%,
+      7px,
+      0,
+      5px,
+      0.4
+    );
+
+    span {
+      color: var(--true-blue);
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin-bottom: 3rem;
+
+    a {
+      text-decoration: none;
+      color: var(--dark-gray);
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      span {
+        font-family: var(--inter-font);
+        font-weight: 400;
+        border: 2px solid rgba(255, 255, 255, 0);
+        margin-right: 4rem;
+        @include no-select;
+
+        &:hover {
+          color: var(--oxford-dark-blue);
+          border-bottom: 2px solid var(--oxford-blue);
+        }
+      }
+    }
+  }
+}

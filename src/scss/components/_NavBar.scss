@@ -41,13 +41,14 @@
       color: var(--oxford-blue);
       font-family: var(--inter-font);
       text-decoration: none;
-      transition: color 0.2s ease-in;
+      transition: 0.2s ease-in;
+      border-bottom: 2px solid rgba(0, 0, 0, 0);
       // For can't select the text in a link
       @include no-select;
 
       &:hover {
+        transform: scale(1.1);
         color: var(--oxford-dark-blue);
-        font-weight: 600;
         border-bottom: 2px solid var(--oxford-blue);
       }
     }

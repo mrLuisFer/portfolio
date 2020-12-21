@@ -3,7 +3,7 @@ import React from "react"
 import Hero from "../components/Hero"
 import AboutResume from "../components/AboutResume"
 import LikeToDo from "../components/LikeToDo"
-import Skiils from "../components/Skiils"
+import ListWorksSkills from "../components/ListWorksSkills"
 
 function HomePage(): JSX.Element {
   return (
@@ -11,7 +11,7 @@ function HomePage(): JSX.Element {
       <Hero />
       <AboutResume />
       <LikeToDo />
-      <Skiils />
+      <ListWorksSkills />
     </>
   )
 }
