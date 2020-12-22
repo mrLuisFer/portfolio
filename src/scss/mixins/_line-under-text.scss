@@ -22,7 +22,7 @@
   &::after {
     content: " ";
     position: absolute;
-    border-radius: 1px;
+    border-radius: 1.5px;
     background: $firstColor;
     width: #{$width};
     height: #{$height};

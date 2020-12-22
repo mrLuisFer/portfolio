@@ -1,6 +1,11 @@
 import React from "react"
 // React Router
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom"
 // Components
 import Skiils from "../components/Skiils"
 
@@ -14,25 +19,39 @@ export default function ListWorksSkills(): JSX.Element {
             My <span>Portfolio</span>
           </h2>
           <div className="ListWorksSkills__links">
-            <Link to="/">
+            <NavLink
+              activeClassName="ListWorksSkills__link-active"
+              to="/skills"
+            >
               <i className="fas fa-angle-right"></i> <span>Skills </span>
-            </Link>
-            <Link to="/portfolio/projects">
+            </NavLink>
+            <NavLink
+              activeClassName="ListWorksSkills__link-active"
+              to="/portfolio/projects"
+            >
               <i className="fas fa-angle-right"></i> <span>Projects</span>
-            </Link>
-            <Link to="/portfolio/what-i-do">
+            </NavLink>
+            <NavLink
+              activeClassName="ListWorksSkills__link-active"
+              to="/portfolio/what-i-do"
+            >
               <i className="fas fa-angle-right"></i> <span>What I do?</span>
-            </Link>
+            </NavLink>
           </div>
 
-          {/* Routes to navigate in the list of skills, projects and what I do */}
-          <Switch>
-            <Route exact path="/">
-              <Skiils />
-            </Route>
-            <Route path="/portfolio/projects"></Route>
-            <Route path="/portfolio/what-i-do"></Route>
-          </Switch>
+          <div className="Cards-container">
+            {/* Routes to navigate in the list of skills, projects and what I do */}
+            <Switch>
+              <Route exact path="/">
+                <Skiils />
+              </Route>
+              <Route exact path="/skills">
+                <Skiils />
+              </Route>
+              <Route exact path="/portfolio/projects"></Route>
+              <Route exact path="/portfolio/what-i-do"></Route>
+            </Switch>
+          </div>
         </div>
       </div>
     </Router>

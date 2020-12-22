@@ -1,6 +1,7 @@
 .ListWorksSkills {
   padding: 0 10%;
   color: var(--dark-gray);
+  margin-bottom: 1rem;
 
   &__title {
     font-size: 2.45rem;
@@ -33,6 +34,7 @@
       text-decoration: none;
       color: var(--dark-gray);
       transition: 0.3s ease;
+      font-size: 1.05rem;
 
       &:hover {
         transform: scale(1.1);
@@ -52,4 +54,33 @@
       }
     }
   }
+
+  // Styles when is clicked in the nav and active
+  &__link-active {
+    span {
+      color: var(--dark);
+      transform: scale(1.1);
+      font-weight: 600;
+      text-decoration: none;
+      position: relative;
+
+      @include line-under-text(
+        var(--independence),
+        var(--state-gray),
+        100%,
+        5px,
+        0,
+        0px,
+        0.2
+      );
+    }
+  }
+}
+
+// This is the container for have the same styles in the links
+.Cards-container {
+  // background: var(--blue-bg);
+  padding: 2rem 0;
+  border-radius: 7px;
+  color: var(--gainsboro);
 }
