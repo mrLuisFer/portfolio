@@ -7,7 +7,8 @@ import {
   NavLink,
 } from "react-router-dom"
 // Components
-import Skiils from "../components/Skiils"
+import Skills from "./Skills"
+import Projects from "./Projects"
 
 export default function ListWorksSkills(): JSX.Element {
   return (
@@ -21,7 +22,7 @@ export default function ListWorksSkills(): JSX.Element {
           <div className="ListWorksSkills__links">
             <NavLink
               activeClassName="ListWorksSkills__link-active"
-              to="/skills"
+              to="/portfolio/skills"
             >
               <i className="fas fa-angle-right"></i> <span>Skills </span>
             </NavLink>
@@ -43,12 +44,14 @@ export default function ListWorksSkills(): JSX.Element {
             {/* Routes to navigate in the list of skills, projects and what I do */}
             <Switch>
               <Route exact path="/">
-                <Skiils />
+                <Skills />
               </Route>
-              <Route exact path="/skills">
-                <Skiils />
+              <Route exact path="/portfolio/skills">
+                <Skills />
               </Route>
-              <Route exact path="/portfolio/projects"></Route>
+              <Route exact path="/portfolio/projects">
+                <Projects />
+              </Route>
               <Route exact path="/portfolio/what-i-do"></Route>
             </Switch>
           </div>
