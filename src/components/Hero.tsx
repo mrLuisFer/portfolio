@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router } from "react-router-dom"
 // Assets
 import heroIllustration from "../assets/hero-illustration.svg"
 
@@ -50,9 +50,9 @@ export default function Hero(): JSX.Element {
             >
               <i className="fab fa-github"></i>
             </a>
-            <Link to="/">
+            <a href="#about">
               <i className="fas fa-user"></i> More About Me
-            </Link>
+            </a>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import waveAboutResumeDown from "../assets/wave-about-resume-down.svg"
 
 export default function AboutResume(): JSX.Element {
   return (
-    <div className="AboutResume">
+    <div id="about" className="AboutResume">
       <img
         className="AboutResume__wave"
         src={waveAboutResume}

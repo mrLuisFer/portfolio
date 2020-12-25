@@ -65,8 +65,8 @@
       position: relative;
 
       @include line-under-text(
-        var(--independence),
-        var(--state-gray),
+        var(--true-blue),
+        var(--cerulean-blue),
         100%,
         5px,
         0,

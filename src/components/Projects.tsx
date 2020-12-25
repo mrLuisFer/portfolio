@@ -30,13 +30,18 @@ export default function Projects(): JSX.Element {
         {/* The cards of the data */}
         {data.map((project: any) => (
           <div key={project?.id} className="Projects__container">
-            <h2>{project?.name}</h2>
+            <h2>
+              {project?.name}
+              <i className="far fa-window-minimize"></i>
+            </h2>
             <p className="Projects__container-description">
               {truncate(project?.description)}
             </p>
             <a href={project?.html_url} target="_blank" rel="noreferrer">
-              <i className="fab fa-github-alt"></i> {project?.full_name}
+              <i className="fab fa-github-alt"></i>{" "}
+              <span>{project?.full_name}</span>
             </a>
+            <br />
             {project?.language?.length > 1 ? (
               <p className="Projects__container-lang">
                 <i className="fas fa-file-code"></i>
@@ -45,6 +50,7 @@ export default function Projects(): JSX.Element {
             ) : (
               ""
             )}
+            <br />
             <p className="Projects__container-date">
               <i className="far fa-calendar-alt"></i>{" "}
               {new Date(`${project.created_at}`).toDateString()}
