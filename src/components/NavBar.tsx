@@ -5,7 +5,8 @@ import { Link } from "react-router-dom"
 import doubleArrowRight from "../assets/double-arrow-right.svg"
 
 export default function NavBar(): JSX.Element {
-  const [showIcons, setShowIcons] = useState(false)
+  // State that handles the icons to be seen
+  const [showIcons, setShowIcons] = useState<Boolean>(false)
 
   const handleShowIcons = (): void => {
     setShowIcons(!showIcons)

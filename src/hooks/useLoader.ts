@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export function useLoader(): Boolean {
+export function useLoader(seconds: number = 700): Boolean {
   const [loader, setLoader] = useState<Boolean>(true)
 
   // A set timeout for put the loader
@@ -8,9 +8,9 @@ export function useLoader(): Boolean {
     const timer = setTimeout(() => {
       // Remove the loader
       setLoader(false)
-    }, 700)
+    }, seconds)
     return () => clearTimeout(timer)
-  }, [])
+  }, [seconds])
 
   return loader
 }

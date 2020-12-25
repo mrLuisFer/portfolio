@@ -8,7 +8,7 @@ import ListWorksSkills from "../components/ListWorksSkills"
 import { useLoader } from "../hooks/useLoader"
 
 function HomePage(): JSX.Element {
-  const loader: Boolean = useLoader()
+  const loader: Boolean = useLoader(500)
 
   return (
     <>
