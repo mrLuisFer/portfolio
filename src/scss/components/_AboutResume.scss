@@ -104,6 +104,7 @@
         padding: 0.5rem 1rem;
         border-radius: 7px;
         transition: 0.15s ease-in;
+        font-size: 1.05rem;
 
         i {
           margin-right: 0.6rem;
@@ -111,10 +112,8 @@
 
         &:hover {
           color: var(--light-gray);
-          // background: var(--oxford-blue);
           background: var(--blue-background);
           box-shadow: 2px 2px 7px var(--dark);
-          transform: scale(1.1);
         }
       }
     }
@@ -124,6 +123,11 @@
       width: 450px;
       height: 450px;
       padding-left: 1rem;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
