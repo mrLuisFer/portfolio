@@ -4,14 +4,24 @@ import Hero from "../components/Hero"
 import AboutResume from "../components/AboutResume"
 import LikeToDo from "../components/LikeToDo"
 import ListWorksSkills from "../components/ListWorksSkills"
+// Hooks
+import { useLoader } from "../hooks/useLoader"
 
 function HomePage(): JSX.Element {
+  const loader: Boolean = useLoader()
+
   return (
     <>
-      <Hero />
-      <AboutResume />
-      <LikeToDo />
-      <ListWorksSkills />
+      {loader ? (
+        <div className="loader">Loading...</div>
+      ) : (
+        <>
+          <Hero />
+          <AboutResume />
+          <LikeToDo />
+          <ListWorksSkills />
+        </>
+      )}
     </>
   )
 }

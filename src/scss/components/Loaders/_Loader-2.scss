@@ -1,7 +1,7 @@
-// this is the loader for be used
-.loader,
-.loader:before,
-.loader:after {
+// Loader2
+.loader-2,
+.loader-2:before,
+.loader-2:after {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -10,7 +10,7 @@
   -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
 }
-.loader {
+.loader-2 {
   color: #0466c8;
   font-size: 1rem;
   margin: 80px auto;
@@ -23,18 +23,18 @@
   -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
-.loader:before,
-.loader:after {
+.loader-2:before,
+.loader-2:after {
   content: "";
   position: absolute;
   top: 0;
 }
-.loader:before {
+.loader-2:before {
   left: -3.5em;
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
-.loader:after {
+.loader-2:after {
   left: 3.5em;
 }
 @-webkit-keyframes load7 {

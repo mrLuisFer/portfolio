@@ -1,39 +1,7 @@
 .Projects {
   // Convert to mixin or more dynamic
   &__title {
-    margin-bottom: 1.5rem;
-    font-size: 1.35rem;
-    display: inline-block;
-    position: relative;
-    font-family: var(--inter-font);
-    font-weight: 600;
-
-    @include line-under-text(
-      var(--oxford-blue),
-      var(--true-blue),
-      100%,
-      3px,
-      0,
-      -3px,
-      0.97
-    );
-
-    &:hover {
-      color: var(--oxford-blue);
-
-      span {
-        color: var(--oxford-blue);
-      }
-    }
-
-    i {
-      margin-right: 0.3rem;
-    }
-
-    span {
-      transition: 0.3s ease;
-      color: var(--true-blue);
-    }
+    @include title;
   }
 
   &__grid {

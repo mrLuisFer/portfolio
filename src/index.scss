@@ -6,12 +6,15 @@
 
 // Global
 @import "./scss/globals";
-@import "./scss/components/Loader";
+// Loaders
+@import "./scss/components/Loaders/Loader";
+@import "./scss/components/Loaders/Loader-2";
 
 // Mixins
 @import "./scss/mixins/no-select";
 @import "./scss/mixins/font-weight";
 @import "./scss/mixins/line-under-text";
+@import "./scss/mixins/ListWorkSkills-mixins";
 
 // App
 @import "./scss/App.scss";

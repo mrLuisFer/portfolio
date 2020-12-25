@@ -6,10 +6,14 @@ import {
   Route,
   NavLink,
 } from "react-router-dom"
+
+// Custom Hooks
+import { useLoader } from "../hooks/useLoader"
+
 // Components
 import Skills from "./Skills"
 import Projects from "./Projects"
-import { useLoader } from "../hooks/loader"
+import Services from "./Services"
 
 export default function ListWorksSkills(): JSX.Element {
   const loader = useLoader()
@@ -37,7 +41,7 @@ export default function ListWorksSkills(): JSX.Element {
             </NavLink>
             <NavLink
               activeClassName="ListWorksSkills__link-active"
-              to="/portfolio/what-i-do"
+              to="/portfolio/services"
             >
               <i className="fas fa-angle-right"></i> <span>What I do?</span>
             </NavLink>
@@ -55,8 +59,12 @@ export default function ListWorksSkills(): JSX.Element {
               <Route exact path="/portfolio/projects">
                 <Projects />
               </Route>
-              <Route exact path="/portfolio/what-i-do">
-                {loader ? <div className="loader">Loading...</div> : ""}
+              <Route exact path="/portfolio/services">
+                {loader ? (
+                  <div className="loader">Loading...</div>
+                ) : (
+                  <Services />
+                )}
               </Route>
             </Switch>
           </div>
