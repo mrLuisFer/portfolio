@@ -6,6 +6,7 @@
 
 // Global
 @import "./scss/globals";
+@import "./scss/components/Loader";
 
 // Mixins
 @import "./scss/mixins/no-select";
@@ -32,3 +33,6 @@
 
 // Skills
 @import "./scss/components/Skills";
+
+// Projects
+@import "./scss/components/Projects";

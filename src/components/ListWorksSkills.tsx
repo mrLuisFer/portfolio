@@ -9,8 +9,11 @@ import {
 // Components
 import Skills from "./Skills"
 import Projects from "./Projects"
+import { useLoader } from "../hooks/loader"
 
 export default function ListWorksSkills(): JSX.Element {
+  const loader = useLoader()
+
   return (
     <Router>
       <div className="ListWorksSkills">
@@ -40,19 +43,21 @@ export default function ListWorksSkills(): JSX.Element {
             </NavLink>
           </div>
 
+          {/* Routes to navigate in the list of skills, projects and what I do */}
           <div className="Cards-container">
-            {/* Routes to navigate in the list of skills, projects and what I do */}
             <Switch>
               <Route exact path="/">
                 <Skills />
               </Route>
               <Route exact path="/portfolio/skills">
-                <Skills />
+                {loader ? <div className="loader">Loading...</div> : <Skills />}
               </Route>
               <Route exact path="/portfolio/projects">
                 <Projects />
               </Route>
-              <Route exact path="/portfolio/what-i-do"></Route>
+              <Route exact path="/portfolio/what-i-do">
+                {loader ? <div className="loader">Loading...</div> : ""}
+              </Route>
             </Switch>
           </div>
         </div>

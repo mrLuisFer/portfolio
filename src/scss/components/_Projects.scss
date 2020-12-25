@@ -1,0 +1,125 @@
+.Projects {
+  // Convert to mixin or more dynamic
+  &__title {
+    margin-bottom: 1.5rem;
+    font-size: 1.35rem;
+    display: inline-block;
+    position: relative;
+    font-family: var(--inter-font);
+    font-weight: 600;
+
+    @include line-under-text(
+      var(--oxford-blue),
+      var(--true-blue),
+      100%,
+      3px,
+      0,
+      -3px,
+      0.97
+    );
+
+    &:hover {
+      color: var(--oxford-blue);
+
+      span {
+        color: var(--oxford-blue);
+      }
+    }
+
+    i {
+      margin-right: 0.3rem;
+    }
+
+    span {
+      transition: 0.3s ease;
+      color: var(--true-blue);
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2.5rem;
+    row-gap: 3.5rem;
+    color: var(--gainsboro);
+  }
+
+  &__container {
+    background: var(--dark-blue-bg);
+    padding: 1.5rem 0.8rem;
+    border-radius: 9px;
+    box-shadow: 2px 1.5px 7px var(--shadow-color);
+    position: relative;
+    background-color: #25225d;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237cb4f4' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    h2 {
+      font-size: 1rem;
+      color: var(--gainsboro);
+      text-transform: uppercase;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-family: var(--inter-font);
+      font-weight: 600;
+
+      i {
+        margin-right: 0.3rem;
+        font-size: 0.5rem;
+      }
+    }
+
+    &-description {
+      margin-top: 1rem;
+      line-height: 1.5;
+      letter-spacing: 0.1px;
+      color: var(--light-gray);
+      margin-bottom: 1rem;
+      height: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    a {
+      text-decoration: none;
+      display: flex;
+      color: var(--powder-blue);
+      align-items: center;
+      font-family: var(--inter-font);
+
+      i {
+        margin-right: 0.35rem;
+        color: var(--powder-blue);
+        font-size: 1.2rem;
+      }
+    }
+
+    &-lang {
+      padding-top: 1rem;
+      font-family: var(--inter-font);
+      color: var(--powder-blue);
+      font-size: 0.85rem;
+
+      i {
+        margin-right: 0.5rem;
+        font-size: 1.1rem;
+        color: var(--powder-blue);
+      }
+    }
+
+    &-date {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      font-family: var(--open-sans-font);
+      color: var(--powder-blue);
+      font-weight: 400;
+
+      i {
+        margin-right: 0.35rem;
+        font-size: 1rem;
+        color: var(--powder-blue);
+      }
+    }
+  }
+}

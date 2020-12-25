@@ -54,6 +54,12 @@
     rgba(71, 63, 173, 1) 34%,
     rgba(42, 34, 144, 1) 94%
   );
+
+  --dark-blue-bg: linear-gradient(
+    130deg,
+    rgb(46, 42, 105) 45%,
+    rgb(12, 8, 69) 85%
+  );
   // Animate Css (Delay)
   --animate-delay: 0.2s;
 }

@@ -4,7 +4,7 @@ export default function LikeToDo() {
   return (
     <div className="LikeToDo">
       <h2>
-        What <span>I like to do</span>?
+        What <span>I like</span>?
       </h2>
       <div className="LikeToDo__container">
         <div>
