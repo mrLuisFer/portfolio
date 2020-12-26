@@ -5,8 +5,10 @@
   }
 
   &__container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    align-items: flex-start;
     gap: 3rem 2rem;
 
     &-card {
@@ -14,20 +16,20 @@
       align-items: center;
       border: 0.5px solid rgba(0, 0, 0, 0);
       border-radius: 9px;
-      width: 26rem;
       height: auto;
       padding: 1rem;
       transition: 0.3s ease;
       color: var(--dark-gray);
 
       &-icon {
-        padding: 1.1rem;
         border-radius: 10px;
         box-shadow: 0.3px 0.3px 4px var(--shadow-color);
         transition: 0.3s ease;
-        font-size: 1.85rem;
-        width: 71.5px; // For have the same width for all cards
         text-align: center;
+        height: auto;
+        // width: 65px; // For have the same width for all cards
+        padding: 0.8rem;
+        font-size: 1.9rem;
 
         &:hover {
           transform: scale(1.08);
@@ -38,7 +40,7 @@
         margin-left: 1rem;
 
         h1 {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           font-family: var(--inter-font);
           color: var(--oxford-blue);
           font-weight: 400;
@@ -49,8 +51,13 @@
           cursor: pointer;
           display: flex;
           align-items: center;
+          @include no-select;
 
           @include font-weight(var(--powder-blue));
+
+          &:hover {
+            text-decoration: underline;
+          }
 
           span {
             i {
@@ -65,9 +72,38 @@
           line-height: 1.55;
           letter-spacing: 0.5px;
           position: relative;
+          font-size: 0.9rem;
 
           &:hover {
             color: var(--cultured);
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--dark-gray);
+          font-family: var(--inter-font);
+          font-weight: 300;
+          text-align: right;
+          margin-top: 1rem;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          i {
+            margin-right: 0.3rem;
+            transition: 0.3s ease;
+          }
+
+          &:hover {
+            span {
+              text-decoration: underline;
+            }
+
+            i {
+              text-decoration: none;
+              margin-right: 0.5rem;
+            }
           }
         }
       }
@@ -75,7 +111,6 @@
       // This is the hover card effetcs
       &:hover {
         border: 0.5px solid var(--oxford-dark-blue);
-        transform: scale(1.025);
         box-shadow: 0.6px 0.6px 5px var(--shadow-color);
 
         // Card Hover Effects
@@ -87,11 +122,16 @@
         .Services__container-card-icon {
           background: var(--independence);
           color: var(--gainsboro);
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         div {
           h1 {
             color: var(--powder-blue);
+          }
+
+          a {
+            color: var(--green);
           }
         }
       }
@@ -131,4 +171,14 @@
       transform: rotate(90deg);
     }
   }
+}
+
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: 2s rotate360 infinite linear;
 }
