@@ -15,6 +15,7 @@
       border: 0.5px solid rgba(0, 0, 0, 0);
       border-radius: 9px;
       width: 26rem;
+      height: auto;
       padding: 1rem;
       transition: 0.3s ease;
       color: var(--dark-gray);
@@ -119,6 +120,8 @@
       width: auto;
       background-color: none;
       box-shadow: none;
+      transform: rotate(0deg);
+      transition: all 0.3s ease;
     }
   }
 
