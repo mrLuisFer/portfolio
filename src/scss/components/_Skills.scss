@@ -54,6 +54,11 @@
   &__illustration {
     height: 420px;
     width: 450px;
+    transition: 0.3s ease-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__flex {
