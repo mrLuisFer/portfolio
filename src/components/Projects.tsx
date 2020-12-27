@@ -10,6 +10,7 @@ export default function Projects(): JSX.Element {
 
   console.log(data)
 
+  // @todo: Do more dynamic
   const truncate: Function = (str: string): string => {
     if (str.length >= 190) {
       return str.length > 10 ? str.substring(0, 190) + "..." : str
@@ -23,9 +24,12 @@ export default function Projects(): JSX.Element {
   ) : (
     // Projects Section
     <div className="Projects">
-      <h2 className="Projects__title">
-        <i className="fas fa-angle-double-right"></i>My <span>Projects:</span>
-      </h2>
+      <div className="Projects__flex">
+        <h2 className="Projects__title">
+          <i className="fas fa-angle-double-right"></i>My <span>Projects:</span>
+        </h2>
+        <i className="fas fa-search Projects__search-icon"></i>
+      </div>
       <div className="Projects__grid">
         {/* The cards of the data */}
         {data.map((project: any) => (

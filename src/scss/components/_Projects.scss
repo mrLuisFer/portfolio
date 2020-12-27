@@ -1,12 +1,47 @@
 .Projects {
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
   // Convert to mixin or more dynamic
+  // Title of the Projects section
   &__title {
+    // ListWorkSkills-mixins file
     @include title;
+    margin-bottom: 0;
+  }
+
+  &__search-icon {
+    font-size: 1.4rem;
+    padding-right: 0.2rem;
+    position: relative;
+    cursor: pointer;
+
+    &:active {
+      &::after {
+        content: "Soon...";
+        position: absolute;
+        background: var(--dark-gray);
+        width: auto;
+        height: auto;
+        top: -2rem;
+        left: -2rem;
+        padding: 0.5rem;
+        font-family: var(--open-sans-font);
+        color: var(--gainsboro);
+        font-size: 0.7rem;
+        border-radius: 8px;
+      }
+    }
   }
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     column-gap: 2.5rem;
     row-gap: 4.5rem;
     color: var(--gainsboro);

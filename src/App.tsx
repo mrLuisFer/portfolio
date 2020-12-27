@@ -26,8 +26,8 @@ export default function App(): JSX.Element {
 
         <Switch>
           <Route exact path="/" component={withRouter(HomePage)}></Route>
-          <Route path="/contact-me"></Route>
-          <Route path="/about-me" component={withRouter(AboutMe)}></Route>
+          <Route path="/contact-me/"></Route>
+          <Route path="/about-me/" component={withRouter(AboutMe)}></Route>
         </Switch>
       </div>
     </Router>

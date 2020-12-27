@@ -5,23 +5,46 @@ import { Link } from "react-router-dom"
 import doubleArrowRight from "../assets/double-arrow-right.svg"
 
 export default function NavBar(): JSX.Element {
+  // This is the list of emojis that change
+  const listIcons: Array<string> = [
+    "fas fa-crown",
+    "far fa-grin-wink",
+    "fab fa-redhat",
+    "fas fa-graduation-cap",
+    "fas fa-glasses",
+    "far fa-kiss",
+    "far fa-grin-squint",
+  ]
+
   // State that handles the icons to be seen
   const [showIcons, setShowIcons] = useState<Boolean>(false)
+  const [indexIcon, setIndexIcon] = useState<number>(0)
 
   const handleShowIcons = (): void => {
     setShowIcons(!showIcons)
+  }
+
+  const handleChangeIcon = (): void => {
+    if (indexIcon === listIcons.length - 1) {
+      setIndexIcon(0)
+    } else {
+      setIndexIcon(indexIcon + 1)
+    }
   }
 
   return (
     <div className="NavBar">
       <div className="NavBar__logo">
         <h1 className="NavBar__logo-title animate__animated animate__bounceIn animate__fast">
-          <Link to="/">mrLuisFer</Link>
+          <Link to="/">
+            <i onClick={handleChangeIcon} className={listIcons[indexIcon]}></i>
+            mrLuisFer
+          </Link>
         </h1>
       </div>
       <div className="NavBar__links">
-        <Link to="/contact-me">Contact me</Link>
-        <Link to="/about-me">About me</Link>
+        <Link to="/contact-me/">Contact me</Link>
+        <Link to="/about-me/">About me</Link>
         <div className="NavBar__social-media">
           <span
             className={
