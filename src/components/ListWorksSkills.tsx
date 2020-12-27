@@ -53,13 +53,13 @@ export default function ListWorksSkills(): JSX.Element {
               <Route exact path="/">
                 <Skills />
               </Route>
-              <Route exact path="/portfolio/skills">
+              <Route path="/portfolio/skills">
                 {loader ? <div className="loader">Loading...</div> : <Skills />}
               </Route>
-              <Route exact path="/portfolio/projects">
+              <Route path="/portfolio/projects">
                 <Projects />
               </Route>
-              <Route exact path="/portfolio/services">
+              <Route path="/portfolio/services">
                 {loader ? (
                   <div className="loader">Loading...</div>
                 ) : (

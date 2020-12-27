@@ -18,7 +18,7 @@ export default function ServicesHtml({
 
   const handleShowText = (): void => {
     // checks if the text exists so as not to break the style of the box
-    const hasDescription: number = 40
+    const hasDescription: number = 20
     if (description.length >= hasDescription) {
       setShowText(!showText)
     }
