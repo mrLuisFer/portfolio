@@ -20,13 +20,13 @@ export default function CardsContainer(): JSX.Element {
         <Route exact path="/">
           <Skills />
         </Route>
-        <Route path="/portfolio/skills/">
+        <Route path="/skills">
           {loader ? <div className="loader">Loading...</div> : <Skills />}
         </Route>
-        <Route path="/portfolio/projects/">
+        <Route path="/projects">
           <Projects />
         </Route>
-        <Route path="/portfolio/services/">
+        <Route path="/services">
           {loader ? <div className="loader">Loading...</div> : <Services />}
         </Route>
       </Switch>

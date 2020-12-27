@@ -33,7 +33,7 @@ export default function NavBar(): JSX.Element {
   }
 
   return (
-    <div className="NavBar">
+    <div id="hero" className="NavBar">
       <div className="NavBar__logo">
         <h1 className="NavBar__logo-title animate__animated animate__bounceIn animate__fast">
           <Link to="/">
@@ -43,8 +43,8 @@ export default function NavBar(): JSX.Element {
         </h1>
       </div>
       <div className="NavBar__links">
-        <Link to="/contact-me/">Contact me</Link>
-        <Link to="/about-me/">About me</Link>
+        <Link to="/contact-me">Contact me</Link>
+        <Link to="/about-me">About me</Link>
         <div className="NavBar__social-media">
           <span
             className={

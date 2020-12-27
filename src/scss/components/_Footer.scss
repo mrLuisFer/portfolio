@@ -1,0 +1,58 @@
+.Footer {
+  margin-top: 15rem;
+  padding: 0 10%;
+  background: var(--blue-background);
+  color: var(--cultured);
+  position: relative;
+  z-index: 100;
+  height: auto;
+
+  &__wave {
+    position: absolute;
+    left: 0;
+    top: -17rem;
+    z-index: -10;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &-card {
+      h2 {
+        position: relative;
+        margin-bottom: 1rem;
+        font-family: var(--inter-font);
+
+        &::after {
+          content: " ";
+          width: 25%;
+          height: 0.2rem;
+          background: var(--light-gray);
+          position: absolute;
+          left: 0;
+          bottom: -3px;
+          border-radius: 2px;
+        }
+      }
+
+      a {
+        display: block;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: var(--light-gray);
+
+        &:hover {
+          color: var(--gainsboro);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &-illustration {
+      width: 390px;
+      height: 390px;
+      margin-right: -5rem;
+    }
+  }
+}

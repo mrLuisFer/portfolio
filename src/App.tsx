@@ -21,9 +21,9 @@ export default function App(): JSX.Element {
         <NavBar />
 
         <Switch>
-          <Route path="/" component={HomePage}></Route>
-          <Route path="/contact-me/"></Route>
-          <Route path="/about-me/" component={AboutMe}></Route>
+          <Route exact path="/" component={HomePage}></Route>
+          <Route path="/contact-me"></Route>
+          <Route path="/about-me" component={AboutMe}></Route>
         </Switch>
 
         <Footer />
