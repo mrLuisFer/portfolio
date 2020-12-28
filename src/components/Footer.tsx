@@ -26,9 +26,7 @@ export default function Footer() {
             <a href="/">Instagram</a>
           </div>
         </div>
-        <div>
-          <h2>Let's talk about everything!</h2>
-        </div>
+
         <img
           className="Footer__container-illustration"
           src={footerIllustration}
