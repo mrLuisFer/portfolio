@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react"
 
 export const useFetch = (url: string) => {
-  const cache: React.MutableRefObject<any> = useRef({})
+  const cache: React.MutableRefObject<any> = useRef<Array<Object>>([])
 
-  const [status, setStatus] = useState("fetching")
+  const [status, setStatus] = useState<string>("fetching")
   const [data, setData] = useState<Array<Object>>([])
 
   useEffect(() => {

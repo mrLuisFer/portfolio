@@ -1,0 +1,19 @@
+.ContactUs {
+  padding: 0 10%;
+  color: var(--oxford-dark-blue);
+
+  &__title {
+    position: relative;
+    display: inline-block;
+
+    @include line-under-text(
+      var(--oxford-dark-blue),
+      var(--true-blue),
+      70%,
+      7px,
+      0,
+      0,
+      0.7
+    );
+  }
+}

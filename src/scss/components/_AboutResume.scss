@@ -77,13 +77,13 @@
         cursor: text;
         user-select: normal;
         letter-spacing: 0.25px;
-        line-height: 1.7;
+        line-height: 1.8;
         transition: 0.3s ease-in;
         padding-bottom: 2rem;
 
         &:hover {
           color: var(--light-gray);
-          line-height: 1.8;
+          line-height: 1.85;
         }
 
         &::selection {

@@ -14,7 +14,7 @@
     @include line-under-text(
       var(--command-blue),
       var(--cerulean-crayola),
-      100%,
+      50%,
       7px,
       0,
       5px,
@@ -67,7 +67,7 @@
       @include line-under-text(
         var(--true-blue),
         var(--cerulean-blue),
-        100%,
+        50%,
         5px,
         0,
         0px,

@@ -6,27 +6,23 @@
   position: relative;
   z-index: 100;
   height: auto;
+  padding-bottom: 2rem;
 
   &__wave {
     position: absolute;
     left: 0;
     top: -17rem;
     z-index: -10;
+    width: 100%;
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-evenly;
 
     &-card {
-      &:nth-child(1) {
-        grid-column: span 2;
-      }
-
-      &:nth-child(2) {
-        grid-column: span 2;
-      }
-
       h2 {
         position: relative;
         margin-bottom: 1rem;
@@ -47,17 +43,27 @@
 
       a {
         display: block;
-        margin-bottom: 1rem;
         text-decoration: none;
-        color: var(--light-gray);
         font-family: var(--inter-font);
-        font-weight: 300;
+        color: var(--light-gray);
+        margin-bottom: 1rem;
 
-        @include font-weight(var(--light-gray), 0s);
+        span {
+          font-weight: 300;
 
-        &:hover {
-          color: var(--gainsboro);
-          text-decoration: underline;
+          @include font-weight(var(--light-gray), 0s);
+
+          &:hover {
+            color: var(--gainsboro);
+            text-decoration: underline;
+          }
+        }
+
+        i {
+          display: inline-block;
+          font-size: 1.2rem;
+          margin-right: 0.5rem;
+          text-align: left;
         }
       }
     }
@@ -67,9 +73,40 @@
       height: 400px;
       margin-right: -5rem;
       transition: 0.3s ease;
+    }
+  }
 
-      &:hover {
-        transform: scale(1.1);
+  &__made {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    color: var(--powder-blue);
+    transition: all 0.3s ease;
+
+    i {
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    a {
+      margin: 0 0.5rem;
+      font-family: var(--inter-font);
+      transition: all 0.3s ease;
+      color: var(--powder-blue);
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: var(--cultured);
+
+      i {
+        color: var(--green);
+        font-size: 1.1rem;
+      }
+
+      a {
+        text-decoration: underline;
       }
     }
   }

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 // views
 import HomePage from "./views/HomePage"
-
+import ContactUs from "./views/ContactUs"
 // components
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
@@ -22,7 +22,7 @@ export default function App(): JSX.Element {
 
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
-          <Route path="/contact-me"></Route>
+          <Route path="/contact-me" component={ContactUs}></Route>
         </Switch>
 
         <Footer />
