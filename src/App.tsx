@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 // views
 import HomePage from "./views/HomePage"
-import ContactUs from "./views/ContactUs"
+import ContactUs from "./views/ContactMe"
 // components
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"

@@ -43,6 +43,7 @@ export default function NavBar(): JSX.Element {
         </h1>
       </div>
       <div className="NavBar__links">
+        <Link to="/">Home</Link>
         <Link to="/contact-me">Contact me</Link>
         <div className="NavBar__social-media">
           <span

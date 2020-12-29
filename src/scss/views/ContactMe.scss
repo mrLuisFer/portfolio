@@ -1,0 +1,84 @@
+.ContactMe {
+  margin-bottom: 29rem;
+  padding: 0 10%;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+
+    @include line-under-text(
+      var(--oxford-dark-blue),
+      var(--true-blue),
+      60%,
+      7px,
+      0,
+      0,
+      0.7
+    );
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6.5rem;
+
+    &-social {
+      background: var(--independence);
+      padding: 2.3rem 1.6rem;
+      padding-bottom: 0;
+      height: 450px;
+      width: 300px;
+      border-radius: 9px;
+
+      &__title {
+        text-align: center;
+        color: var(--light-gray);
+        font-size: 1.2rem;
+        font-family: var(--open-sans-font);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: var(--light-gray);
+        text-align: center;
+        font-family: var(--inter-font);
+        font-weight: 300;
+        padding: 1.6rem 0;
+        font-size: 1.05rem;
+        letter-spacing: 0.9px;
+        border-bottom: 1.5px solid var(--state-gray);
+
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+          border: none;
+        }
+
+        i {
+          margin-right: 0.4rem;
+          font-size: 1.2rem;
+        }
+
+        span {
+          &:hover {
+            text-decoration: underline;
+            color: var(--gainsboro);
+          }
+        }
+      }
+
+      &__illustration {
+        width: 500px;
+        height: 500px;
+        transition: 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
