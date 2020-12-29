@@ -16,7 +16,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     &-card {
       &:nth-child(1) {
@@ -31,6 +31,7 @@
         position: relative;
         margin-bottom: 1rem;
         font-family: var(--inter-font);
+        font-weight: 600;
 
         &::after {
           content: " ";
@@ -49,6 +50,10 @@
         margin-bottom: 1rem;
         text-decoration: none;
         color: var(--light-gray);
+        font-family: var(--inter-font);
+        font-weight: 300;
+
+        @include font-weight(var(--light-gray), 0s);
 
         &:hover {
           color: var(--gainsboro);
@@ -58,9 +63,14 @@
     }
 
     &-illustration {
-      width: 390px;
-      height: 390px;
+      width: 400px;
+      height: 400px;
       margin-right: -5rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
