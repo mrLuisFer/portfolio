@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 // views
 import HomePage from "./views/HomePage"
-import AboutMe from "./views/AboutMe"
+
 // components
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
@@ -23,7 +23,6 @@ export default function App(): JSX.Element {
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
           <Route path="/contact-me"></Route>
-          <Route path="/about-me" component={AboutMe}></Route>
         </Switch>
 
         <Footer />

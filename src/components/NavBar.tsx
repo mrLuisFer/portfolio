@@ -44,7 +44,6 @@ export default function NavBar(): JSX.Element {
       </div>
       <div className="NavBar__links">
         <Link to="/contact-me">Contact me</Link>
-        <Link to="/about-me">About me</Link>
         <div className="NavBar__social-media">
           <span
             className={
