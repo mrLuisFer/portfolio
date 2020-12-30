@@ -21,15 +21,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 6.5rem;
+    margin-bottom: 6.6rem;
 
     &-social {
-      background: var(--independence);
+      background: var(--dark);
       padding: 2.3rem 1.6rem;
       padding-bottom: 0;
       height: 450px;
       width: 300px;
       border-radius: 9px;
+      margin-left: 2rem;
 
       &__title {
         text-align: center;
@@ -78,6 +79,22 @@
         &:hover {
           transform: scale(1.1);
         }
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+
+    img {
+      width: 450px;
+      height: 420px;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
       }
     }
   }

@@ -1,0 +1,90 @@
+.ContactForm {
+  color: var(--dark-gray);
+  padding-right: 4.5rem;
+
+  h2 {
+    font-family: var(--inter-font);
+    margin-bottom: 2rem;
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+
+  form {
+    div {
+      margin-top: 2rem;
+
+      label {
+        font-family: var(--inter-font);
+        font-weight: 300;
+        padding-left: 0.5rem;
+      }
+
+      input,
+      textarea {
+        margin-top: 0.8rem;
+        display: block;
+        box-shadow: 0px 1px 15px var(--shadow-color);
+        width: 100%;
+        border-radius: 35px;
+        border: none;
+        padding: 0.8rem 1.6rem;
+        outline: none;
+        border: 0.5px solid rgba(0, 0, 0, 0);
+        font-family: var(--open-sans-font);
+        transition: 0.3s ease;
+        resize: none;
+
+        &:hover {
+          border: 0.3px solid var(--command-blue);
+
+          &::placeholder {
+            color: var(--oxford-blue);
+          }
+        }
+
+        &:focus {
+          box-shadow: -3px 3px 19px var(--shadow-color);
+          border: 0.5px solid var(--true-blue);
+        }
+
+        &::placeholder {
+          font-family: var(--inter-font);
+        }
+      }
+
+      textarea {
+        padding: 1.2rem 1.6rem;
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 2rem;
+    border: none;
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+    border-radius: 40px;
+    background: linear-gradient(
+      130deg,
+      rgba(3, 103, 233, 0.973) 34%,
+      rgb(45, 34, 190) 88%
+    );
+    color: var(--light-gray);
+    font-family: var(--inter-font);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+    transition: font-size 0.15s ease;
+
+    &:hover {
+      color: var(--gainsboro);
+      font-size: 1.05rem;
+    }
+
+    i {
+      margin-right: 0.6rem;
+    }
+  }
+}
