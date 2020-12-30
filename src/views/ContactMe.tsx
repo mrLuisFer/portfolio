@@ -1,6 +1,7 @@
 import React from "react"
 // Assets
 import contactMeIllustration from "../assets/contactMe/code-typing-contactme.svg"
+import contactMeMailSent from "../assets/contactMe/contactMe-mail-sent.svg"
 // Components
 import ContactForm from "../components/ContactForm"
 
@@ -41,6 +42,7 @@ export default function ContactMe() {
         />
       </div>
       <div className="ContactMe__flex">
+        <img src={contactMeMailSent} alt="contactMe-mail-sent" />
         <ContactForm />
       </div>
     </div>
