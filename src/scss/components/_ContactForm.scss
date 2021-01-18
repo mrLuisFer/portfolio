@@ -71,16 +71,16 @@
       rgba(3, 103, 233, 0.973) 34%,
       rgb(45, 34, 190) 88%
     );
-    color: var(--light-gray);
+    color: var(--gainsboro);
     font-family: var(--inter-font);
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
     transition: font-size 0.15s ease;
+    outline: none;
 
     &:hover {
-      color: var(--gainsboro);
-      font-size: 1.05rem;
+      color: var(--light-gray);
     }
 
     i {

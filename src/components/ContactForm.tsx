@@ -1,11 +1,20 @@
 import React, { useState } from "react"
 import { sendEmail } from "../functions/emailJs"
 
+type Error = {
+  status: boolean
+  text: string
+}
 // This is the contact component with all logic
 export default function ContactForm() {
+  const [hasEmail, setHasEmail] = useState<Boolean>(false)
   const [hasInfo, setHasInfo] = useState<Boolean>(false)
+  const [error, setError] = useState<Error>({
+    status: false,
+    text: "",
+  })
 
-  const validateToSendEmail = (e: any) => {
+  const validateToSendEmail = (e: any): void => {
     e.preventDefault()
 
     // Input Values
@@ -13,18 +22,38 @@ export default function ContactForm() {
     const email: string = e.target[1].value
     const message: string = e.target[2].value
 
-    // const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-
-    if (name.length > 0 && email.length > 0 && message.length > 0) {
+    if (name.length > 0 && email.length > 0 && message.length > 10) {
       const res: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      const testingEmail = res.test(email)
-      console.log(testingEmail)
-      // setHasInfo(true)
+      const testingEmail: boolean = res.test(email)
+      if (testingEmail) {
+        setHasEmail(true)
+        setHasInfo(true)
+        const error = {
+          status: false,
+          text: "",
+        }
+        setError(error)
+      } else {
+        console.log("El email es incorrecto")
+        const error = {
+          status: true,
+          text: "Please enter a valid email",
+        }
+        setError(error)
+      }
+    } else {
+      console.log("Colocar un mensaje correcto")
+      const error = {
+        status: true,
+        text: "Please put a valid message",
+      }
+      setError(error)
     }
 
     //// Function
-    if (hasInfo) {
-      sendEmail(e)
+    if (hasEmail && hasInfo) {
+      // sendEmail(e)
+      console.log(e)
     }
   }
 
@@ -74,6 +103,8 @@ export default function ContactForm() {
           <i className="far fa-envelope"></i>Send Email
         </button>
       </form>
+      {error.status ? <p>{error.text}</p> : ""}
     </div>
   )
 }
+
