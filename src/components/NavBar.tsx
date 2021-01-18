@@ -7,9 +7,9 @@ import doubleArrowRight from "../assets/double-arrow-right.svg"
 export default function NavBar(): JSX.Element {
   // This is the list of emojis that change
   const listIcons: Array<string> = [
+    "fab fa-redhat",
     "fas fa-crown",
     "far fa-grin-wink",
-    "fab fa-redhat",
     "fas fa-graduation-cap",
     "fas fa-glasses",
     "far fa-kiss",
