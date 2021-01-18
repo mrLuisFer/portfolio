@@ -6,7 +6,6 @@ import footerIllustration from "../assets/footer-illustration.svg"
 export default function Footer() {
   return (
     <div className="Footer">
-      <img className="Footer__wave" src={footerWave} alt="footer-wave" />
       <div className="Footer__container">
         {/* Quick Links */}
         <div className="Footer__container-card">

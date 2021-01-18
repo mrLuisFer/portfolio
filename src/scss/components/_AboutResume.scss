@@ -3,56 +3,58 @@
   color: var(--gainsboro);
   position: relative;
   height: auto;
-  margin-bottom: 14rem;
-  // padding: 0 40px;
+  padding: 2.5rem 0;
+  margin-bottom: 5rem;
 
-  // This is the wave illustration
-  &__wave {
-    position: absolute;
-    // top: -18.8rem;
-    top: -17rem;
-    left: 0;
-    z-index: -10;
-    width: 100%;
-
-    // This is the illustration below the component
-    &-down {
-      position: absolute;
-      bottom: -14rem;
-      left: 0;
-      width: 100%;
-      z-index: -10;
-    }
+  @media (min-width: $ipad) {
+    margin-bottom: 9em;
+    padding-top: 0;
   }
 
   &__info {
-    display: flex;
-    align-items: flex-start;
-    font-family: var(--open-sans-font);
     // Margin is because of the way the margin is with a margin on the sides
     margin: 0 10%;
+    font-family: var(--open-sans-font);
+
+    @media (min-width: $ipad) {
+      display: flex;
+      align-items: flex-start;
+    }
 
     &-title {
-      margin-bottom: 1.9rem;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: $ipad) {
+        margin-bottom: 1.9rem;
+      }
 
       h2 {
         font-family: var(--inter-font);
         font-weight: 700;
         margin-top: 1.5rem;
-        margin-bottom: 0.2rem;
-        font-size: 2.8rem;
         position: relative;
+        font-size: 1.8rem;
+        margin-bottom: 0.7rem;
+
+        @media (min-width: $ipad) {
+          margin-bottom: 0.2rem;
+          font-size: 2.8rem;
+        }
 
         &::after {
-          content: " ";
-          background: var(--beau-blue);
-          width: 50px;
-          height: 50px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          border-radius: 50%;
-          opacity: 0.2;
+          display: none;
+
+          @media (min-width: $ipad) {
+            content: " ";
+            background: var(--beau-blue);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            opacity: 0.2;
+          }
         }
 
         i {
@@ -63,8 +65,8 @@
       p {
         color: var(--beau-blue);
         opacity: 0.8;
-        font-size: 0.9rem;
         text-transform: uppercase;
+        font-size: 0.9rem;
       }
     }
 
@@ -72,18 +74,24 @@
       p {
         color: #ffffff;
         font-weight: 400;
-        font-weight: 400;
         transition: 0.3s ease-out;
         cursor: text;
         user-select: normal;
         letter-spacing: 0.25px;
-        line-height: 1.8;
+        line-height: 1.5;
         transition: 0.3s ease-in;
-        padding-bottom: 2rem;
+        font-size: 0.95rem;
+        text-align: justify;
+        padding-bottom: 3rem;
+
+        @media (min-width: $ipad) {
+          padding-bottom: 2rem;
+          line-height: 1.8;
+          text-align: left;
+        }
 
         &:hover {
           color: var(--light-gray);
-          line-height: 1.85;
         }
 
         &::selection {
@@ -101,10 +109,14 @@
         font-weight: 600;
         background: var(--light-gray);
         color: var(--blue-background);
-        padding: 0.5rem 1rem;
-        border-radius: 7px;
+        border-radius: var(--radius);
         transition: 0.15s ease-in;
-        font-size: 1.05rem;
+        padding: 0.8rem 1.2rem;
+        font-size: 1.1rem;
+
+        @media (min-width: $ipad) {
+          font-size: 1.05rem;
+        }
 
         i {
           margin-right: 0.6rem;
@@ -121,13 +133,22 @@
 
     // This is the illustration of the guy flying
     &-flying-illustration {
-      width: 450px;
-      height: 450px;
-      padding-left: 1rem;
+      margin-top: 2rem;
+      width: 300px;
       transition: 0.3s ease-in-out;
 
+      @media (min-width: $ipad) {
+        width: 450px;
+        height: 450px;
+        padding-left: 1rem;
+      }
+
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.04);
+
+        @media (min-width: $ipad) {
+          transform: scale(1.1);
+        }
       }
     }
   }

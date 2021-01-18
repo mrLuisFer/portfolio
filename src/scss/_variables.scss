@@ -26,7 +26,7 @@
   --dark-gray: #212529;
   --honey-yellow: #eeac06;
   --orange: #fb8500;
-  --green: #9efcc2;
+  --green: #9efcd0;
   // Shadow Color
   --shadow-color: rgba(33, 37, 41, 0.4);
   // root properties
@@ -56,4 +56,12 @@
   );
   // Animate Css (Delay)
   --animate-delay: 0.2s;
+  // Radius
+  --radius: 10px;
 }
+
+// Screens
+$mobile: 375px;
+$ipad: 700px;
+$large: 1024px;
+$very-large: 1440px;

@@ -34,7 +34,7 @@ export default function ServicesHtml({
       <div className="Services__container-card">
         {/* Icon (ClassName)*/}
         <span className="Services__container-card-icon">
-          <i id="card-icon" className={iconClass}></i>
+          <i id="card-icon" className={iconClass} onClick={handleShowText}></i>
         </span>
         <div>
           {/* Title */}

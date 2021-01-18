@@ -1,19 +1,14 @@
 .Footer {
-  margin-top: 15rem;
-  padding: 0 10%;
   background: var(--blue-background);
+  margin-top: 3rem;
   color: var(--cultured);
   position: relative;
-  z-index: 100;
   height: auto;
-  padding-bottom: 2rem;
+  padding: 2rem 0;
 
-  &__wave {
-    position: absolute;
-    left: 0;
-    top: -15rem;
-    z-index: -10;
-    width: 100%;
+  @media (min-width: $ipad) {
+    padding: 0 10%;
+    margin-top: 5rem;
   }
 
   &__container {
@@ -69,10 +64,14 @@
     }
 
     &-illustration {
-      width: 400px;
-      height: 400px;
-      margin-right: -5rem;
+      width: 250px;
       transition: 0.3s ease;
+
+      @media (min-width: $ipad) {
+        width: 400px;
+        height: 400px;
+        margin-right: -5rem;
+      }
     }
   }
 

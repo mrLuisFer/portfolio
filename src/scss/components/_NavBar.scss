@@ -1,26 +1,37 @@
 .NavBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8rem;
   padding: 0 40px;
+  margin-bottom: 3rem;
+
+  @media (min-width: $ipad) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8rem;
+  }
 
   &__logo {
+    display: flex;
+    justify-content: center;
     &-title {
-      display: flex;
-      align-items: center;
+      @media (min-width: $ipad) {
+        align-items: center;
+        justify-content: none;
+      }
 
       i {
         margin-right: 0.3rem;
       }
 
       a {
-        font-family: var(--inter-font);
+        text-decoration: none;
         font-weight: 600;
+        font-family: var(--inter-font);
         color: var(--rich-black);
         font-size: 1.3rem;
-        position: relative;
-        text-decoration: none;
+
+        @media (min-width: $ipad) {
+          position: relative;
+        }
 
         // To not be able to select text
         @include no-select;
@@ -40,65 +51,80 @@
   }
 
   &__links {
-    display: flex;
-    align-items: center;
+    text-align: center;
 
+    @media (min-width: $ipad) {
+      display: flex;
+      align-items: center;
+    }
     a {
-      margin-left: 0.9rem;
+      margin: 0 0.9rem;
+      text-decoration: none;
       color: var(--oxford-blue);
       font-family: var(--inter-font);
-      text-decoration: none;
-      transition: 0.2s ease-in;
       border-bottom: 2px solid rgba(0, 0, 0, 0);
       // For can't select the text in a link
       @include no-select;
 
+      @media (min-width: $ipad) {
+        margin: 0;
+        margin-left: 0.9rem;
+        transition: 0.2s ease-in;
+      }
+
       &:hover {
-        transform: scale(1.1);
         color: var(--oxford-dark-blue);
         border-bottom: 2px solid var(--oxford-blue);
+        transform: scale(1.05);
+
+        @media (min-width: $ipad) {
+          transform: scale(1.1);
+        }
       }
     }
   }
 
   &__social-media {
-    display: flex;
-    align-items: center;
-    color: var(--beau-blue);
-    font-family: var(--inter-font);
+    display: none;
 
-    &__span {
-      // background: var(--command-blue);
-      background: var(--blue);
-      margin-left: 0.9rem;
-      padding: 0.4rem 0.6rem;
-      padding-right: 0.4rem;
-      border-radius: 7px 0 0 7px;
-      // For no select the text, like a button
-      cursor: pointer;
+    @media (min-width: $ipad) {
+      display: flex;
+      align-items: center;
+      color: var(--beau-blue);
+      font-family: var(--inter-font);
 
-      // To not be able to select text
-      @include no-select;
+      &__span {
+        background: var(--blue);
+        margin-left: 0.9rem;
+        padding: 0.4rem 0.6rem;
+        padding-right: 0.4rem;
+        border-radius: var(--radius) 0 0 var(--radius);
+        // For no select the text, like a button
+        cursor: pointer;
 
-      // Add transition for looks with more weight
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      -o-transition: all 0.3s;
-      transition: all 0.3s;
+        // To not be able to select text
+        @include no-select;
 
-      // This works with hover, otherwise it would not be necessary
-      transition: border-radius 0s ease;
-      &:hover {
-        color: var(--light-gray);
-        text-shadow: -0.2px -0.2px 0 var(--light-gray),
-          0.2px -0.2px 0 var(--light-gray), -0.2px 0.2px 0 var(--light-gray),
-          0.2px 0.2px 0 var(--light-gray);
-        // For add a transition smooth to font-weight
-        -webkit-transition: all 0.5s;
-        -moz-transition: all 0.5s;
-        -o-transition: all 0.5s;
-        transition: all 0.5s;
+        // Add transition for looks with more weight
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+
+        // This works with hover, otherwise it would not be necessary
         transition: border-radius 0s ease;
+        &:hover {
+          color: var(--light-gray);
+          text-shadow: -0.2px -0.2px 0 var(--light-gray),
+            0.2px -0.2px 0 var(--light-gray), -0.2px 0.2px 0 var(--light-gray),
+            0.2px 0.2px 0 var(--light-gray);
+          // For add a transition smooth to font-weight
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          transition: border-radius 0s ease;
+        }
       }
 
       img {

@@ -11,7 +11,9 @@ export default function ContactMe() {
       <h1 className="ContactMe__title">Contact Me</h1>
       <div className="ContactMe__container">
         <div className="ContactMe__container-social">
-          <h4 className="ContactMe__container-social__title">Follow Me:</h4>
+          <h4 className="ContactMe__container-social__title">
+            You can contact me by..
+          </h4>
           <a href="/">
             {/* Icon */}
             <i className="fab fa-github"></i>

@@ -15,7 +15,7 @@ export default function Projects(): JSX.Element {
     if (str.length >= 190) {
       return str.length > 10 ? str.substring(0, 190) + "..." : str
     } else {
-      return str + "."
+      return str + ""
     }
   }
 
@@ -46,6 +46,11 @@ export default function Projects(): JSX.Element {
               <span>{project?.full_name}</span>
             </a>
             <br />
+            <p className="Projects__container-date">
+              <i className="far fa-calendar-alt"></i>{" "}
+              {new Date(`${project.created_at}`).toDateString()}
+            </p>
+            <br />
             {project?.language?.length > 1 ? (
               <p className="Projects__container-lang">
                 <i className="fas fa-file-code"></i>
@@ -54,11 +59,6 @@ export default function Projects(): JSX.Element {
             ) : (
               ""
             )}
-            <br />
-            <p className="Projects__container-date">
-              <i className="far fa-calendar-alt"></i>{" "}
-              {new Date(`${project.created_at}`).toDateString()}
-            </p>
           </div>
         ))}
       </div>
