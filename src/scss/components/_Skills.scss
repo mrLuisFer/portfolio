@@ -4,7 +4,11 @@
   align-items: flex-start;
 
   &__sections {
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
+
+    @media (min-width: $large) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__title {
@@ -65,10 +69,22 @@
     width: 250px;
 
     @media (min-width: $ipad) {
-      margin-top: 0;
-      height: 420px;
-      width: 450px;
+      width: 330px;
+      height: 300px;
+      margin-bottom: 1rem;
     }
+
+    @media (min-width: $large) {
+      width: 400px;
+      height: 350px;
+      margin: 0;
+    }
+
+    @media (min-width: $very-large) {
+      width: 450px;
+      height: 420px;
+    }
+
     transition: 0.3s ease-out;
 
     &:hover {
@@ -82,6 +98,11 @@
     flex-direction: row;
 
     @media (min-width: $ipad) {
+      flex-direction: column;
+    }
+
+    @media (min-width: $large) {
+      flex-direction: row;
       flex-wrap: nowrap;
       align-items: flex-start;
       justify-content: space-between;

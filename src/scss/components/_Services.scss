@@ -23,6 +23,13 @@
       padding: 1rem;
       transition: 0.3s ease;
       color: var(--dark-gray);
+      width: 420px;
+      margin: 0 auto;
+
+      @media (min-width: $large) {
+        width: auto;
+        margin: 0;
+      }
 
       &-icon {
         border-radius: var(--radius);

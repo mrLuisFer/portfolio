@@ -44,7 +44,11 @@
     padding: 1rem 0;
 
     @media (min-width: $ipad) {
-      justify-content: space-between;
+      justify-content: flex-start;
+    }
+
+    @media (min-width: $large) {
+      justify-content: space-evenly;
     }
 
     div {
@@ -55,6 +59,7 @@
       text-align: center;
       padding: 0.7rem 1.5rem;
       transition: 0.3s ease;
+      max-width: 130px;
 
       @media (min-width: $ipad) {
         padding: 1rem;

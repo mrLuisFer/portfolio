@@ -2,7 +2,7 @@
   padding: 0 5%;
   margin-bottom: 4rem;
 
-  @media (min-width: $ipad) {
+  @media (min-width: $large) {
     margin-bottom: 20rem;
     padding: 0 10%;
   }
@@ -30,7 +30,7 @@
     flex-wrap: wrap;
     flex-direction: column-reverse;
 
-    @media (min-width: $ipad) {
+    @media (min-width: $large) {
       flex-direction: row;
     }
 
@@ -43,7 +43,7 @@
       border-radius: var(--radius);
       margin: 0 auto;
 
-      @media (min-width: $ipad) {
+      @media (min-width: $large) {
         margin: 0;
         margin-left: 2rem;
       }
@@ -95,6 +95,11 @@
         margin: 0 auto;
 
         @media (min-width: $ipad) {
+          width: 370px;
+          height: 300px;
+        }
+
+        @media (min-width: $large) {
           width: 500px;
           height: 500px;
         }
@@ -125,7 +130,7 @@
       margin: 0 auto;
       margin-top: 1rem;
 
-      @media (min-width: $ipad) {
+      @media (min-width: $large) {
         width: 450px;
         height: 420px;
       }

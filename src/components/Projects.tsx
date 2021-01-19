@@ -1,23 +1,24 @@
 import React from "react"
 // Hooks
 import { useFetch } from "../hooks/useFetch"
+// Functions
+import { truncate } from "../functions/truncate"
 
 // In this component will be the call to the github api
 export default function Projects(): JSX.Element {
   const url: string = "https://api.github.com/users/mrLuisFer/repos"
-
   const { status, data } = useFetch(url)
 
-  console.log(data)
+  const windowWidth: number = window.innerWidth
+  let length: number = 0
 
-  // @todo: Do more dynamic
-  const truncate: Function = (str: string): string => {
-    if (str.length >= 190) {
-      return str.length > 10 ? str.substring(0, 190) + "..." : str
-    } else {
-      return str + ""
-    }
+  if (windowWidth <= 375) {
+    length = 170
+  } else if (windowWidth >= 375) {
+    length = 160
   }
+
+  console.log(data)
 
   return status === "fetching" ? (
     <div className="loader">Loading...</div>
@@ -34,12 +35,9 @@ export default function Projects(): JSX.Element {
         {/* The cards of the data */}
         {data.map((project: any) => (
           <div key={project?.id} className="Projects__container">
-            <h2>
-              {project?.name}
-              <i className="far fa-window-minimize"></i>
-            </h2>
+            <h2>{project?.name}</h2>
             <p className="Projects__container-description">
-              {truncate(project?.description)}
+              {truncate(project?.description, length)}
             </p>
             <a href={project?.html_url} target="_blank" rel="noreferrer">
               <i className="fab fa-github-alt"></i>{" "}

@@ -31,11 +31,12 @@ export default function AboutResume(): JSX.Element {
             </a>
           </div>
         </div>
-        <img
-          className="AboutResume__info-flying-illustration"
-          src={aboutResumeIllustration}
-          alt="flying-about-resume-illustration"
-        />
+        <div className="AboutResume__info-flying-illustration">
+          <img
+            src={aboutResumeIllustration}
+            alt="flying-about-resume-illustration"
+          />
+        </div>
       </div>
     </div>
   )

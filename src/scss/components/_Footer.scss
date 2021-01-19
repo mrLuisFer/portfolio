@@ -5,10 +5,16 @@
   position: relative;
   height: auto;
   padding: 2rem 0;
+  padding-top: 3rem;
 
   @media (min-width: $ipad) {
-    padding: 0 10%;
+    padding: 2rem 5%;
     margin-top: 5rem;
+  }
+
+  @media (min-width: $large) {
+    padding: 2rem 10%;
+    padding-top: 3rem;
   }
 
   &__container {
@@ -16,6 +22,14 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-evenly;
+
+    @media (min-width: $ipad) {
+      justify-content: space-around;
+    }
+
+    @media (min-width: $large) {
+      justify-content: space-evenly;
+    }
 
     &-card {
       h2 {
@@ -68,8 +82,13 @@
       transition: 0.3s ease;
 
       @media (min-width: $ipad) {
+        width: 350px;
+        height: 350px;
+      }
+
+      @media (min-width: $large) {
         width: 400px;
-        height: 400px;
+        height: 350px;
         margin-right: -5rem;
       }
     }

@@ -13,18 +13,6 @@ export default function ListWorksSkills(): JSX.Element {
           <h2 className="ListWorksSkills__title">
             My <span>Portfolio</span>
           </h2>
-          <div className="ListWorksSkills__links">
-            <Link to="/skills">
-              <i className="fas fa-angle-right"></i> <span>Skills </span>
-            </Link>
-            <Link to="/projects">
-              <i className="fas fa-angle-right"></i> <span>Projects</span>
-            </Link>
-            <Link to="/services">
-              <i className="fas fa-angle-right"></i> <span>What I do?</span>
-            </Link>
-          </div>
-
           {/* Routes to navigate in the list of skills, projects and what I do */}
           <CardsContainer />
         </div>

@@ -1,6 +1,5 @@
 import React from "react"
 // Assets
-import footerWave from "../assets/footer-wave.svg"
 import footerIllustration from "../assets/footer-illustration.svg"
 
 export default function Footer() {

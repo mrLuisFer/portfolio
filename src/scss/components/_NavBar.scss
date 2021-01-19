@@ -70,6 +70,12 @@
         margin: 0;
         margin-left: 0.9rem;
         transition: 0.2s ease-in;
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: $large) {
+        font-size: 1.2rem;
+        margin-left: 1.2rem;
       }
 
       &:hover {
@@ -96,9 +102,10 @@
       &__span {
         background: var(--blue);
         margin-left: 0.9rem;
-        padding: 0.4rem 0.6rem;
         padding-right: 0.4rem;
         border-radius: var(--radius) 0 0 var(--radius);
+        padding: 0.4rem 0.6rem;
+        height: 2rem;
         // For no select the text, like a button
         cursor: pointer;
 
@@ -113,6 +120,11 @@
 
         // This works with hover, otherwise it would not be necessary
         transition: border-radius 0s ease;
+
+        @media (min-width: $large) {
+          padding: 0.4rem 0.6rem;
+        }
+
         &:hover {
           color: var(--light-gray);
           text-shadow: -0.2px -0.2px 0 var(--light-gray),
@@ -147,6 +159,7 @@
       border-radius: 0 7px 7px 0;
       font-size: 1rem;
       padding: 0.4rem 0.6rem;
+      height: 2rem;
 
       &-anchors {
         a {

@@ -1,4 +1,9 @@
 .Projects {
+  margin: 5rem 0;
+
+  @media (min-width: $large) {
+    margin: 7rem 0;
+  }
   &__flex {
     display: flex;
     align-items: center;
@@ -41,10 +46,14 @@
   &__grid {
     @media (min-width: $ipad) {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       column-gap: 2.5rem;
       row-gap: 4.5rem;
       color: var(--gainsboro);
+    }
+
+    @media (min-width: $large) {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     }
   }
 
@@ -53,16 +62,21 @@
     border-radius: var(--radius);
     box-shadow: 2px 1.5px 7px var(--shadow-color);
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237cb4f4' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    background-color: #25225d;
+    background-color: var(--blue-background);
     position: relative;
     margin: 0 auto;
     transition: 0.2s ease-out;
     padding: 1.8rem 0.8rem;
     margin-bottom: 2.5rem;
+    max-width: 300px;
 
     @media (min-width: $ipad) {
       width: auto;
       margin: 0;
+    }
+
+    @media (min-width: $large) {
+      width: 100%;
     }
 
     &:hover {
@@ -85,7 +99,7 @@
       justify-content: center;
       align-items: flex-end;
       font-family: var(--inter-font);
-      font-weight: 600;
+      font-weight: 700;
 
       &:hover {
         color: var(--powder-blue);

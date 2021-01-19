@@ -3,6 +3,8 @@
 .App {
   padding-top: 10px;
   height: 100vh;
+  margin: 0 auto;
+  max-width: 1900px;
 }
 
 .wave-pattern {
@@ -13,7 +15,7 @@
   z-index: -1000;
   top: 0;
 
-  @media (min-width: $ipad) {
+  @media (min-width: $large) {
     top: -3rem;
   }
 }
