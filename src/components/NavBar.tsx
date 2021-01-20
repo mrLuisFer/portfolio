@@ -6,6 +6,12 @@ import doubleArrowRight from "../assets/double-arrow-right.svg"
 import navBarLogo from "../assets/navbar-logo/navbar-logo.svg"
 // Utils
 import { bounceIn, zoomIn } from "../utils/animateCss/animateCss"
+import {
+  facebook,
+  linkedin,
+  mailTo,
+  twitter,
+} from "../utils/social-links/socialLinks"
 
 export default function NavBar(): JSX.Element {
   // State that handles the icons to be seen
@@ -49,32 +55,16 @@ export default function NavBar(): JSX.Element {
           {showIcons ? (
             <div className="NavBar__social-media-icons">
               <div className={`NavBar__social-media-icons-anchors ${zoomIn}`}>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100013068189807"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={facebook} target="_blank" rel="noreferrer">
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a
-                  href="https://twitter.com/lolesuncrak"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={twitter} target="_blank" rel="noreferrer">
                   <i className="fab fa-twitter"></i>
                 </a>
-                <a
-                  href="https://www.linkedin.com/in/luis-fernando-alvarez/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={linkedin} target="_blank" rel="noreferrer">
                   <i className="fab fa-linkedin-in"></i>
                 </a>
-                <a
-                  href="mailto:lolesuncrak@gmail.com"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a href={mailTo} target="_blank" rel="noreferrer">
                   <i className="fas fa-paper-plane"></i>
                 </a>
               </div>

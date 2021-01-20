@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import heroIllustration from "../assets/hero-illustration.svg"
 // Utils
 import { slideUp } from "../utils/animateCss/animateCss"
+import { linkedin, github } from "../utils/social-links/socialLinks"
 
 export default function Hero(): JSX.Element {
   return (
@@ -38,7 +39,7 @@ export default function Hero(): JSX.Element {
           <div className="Hero__links">
             <a
               className="Hero__links-linkedin"
-              href="https://www.linkedin.com/in/luis-fernando-alvarez/"
+              href={linkedin}
               target="_blank"
               rel="noreferrer"
             >
@@ -46,7 +47,7 @@ export default function Hero(): JSX.Element {
             </a>
             <a
               className="Hero__links-github"
-              href="https://github.com/mrLuisFer"
+              href={github}
               target="_blank"
               rel="noreferrer"
             >
