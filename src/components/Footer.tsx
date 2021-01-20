@@ -1,10 +1,12 @@
 import React from "react"
 // Assets
 import footerIllustration from "../assets/footer-illustration.svg"
+import footerWave from "../assets/footer-wave.svg"
 
 export default function Footer() {
   return (
     <div className="Footer">
+      <img src={footerWave} alt="footer-wave" className="Footer__wave" />
       <div className="Footer__container">
         {/* Quick Links */}
         <div className="Footer__container-card">
@@ -17,7 +19,10 @@ export default function Footer() {
               <span>About Me</span>
             </a>
             <a href="/#portfolio">
-              <span>My Portfolio</span>
+              <span>Portfolio</span>
+            </a>
+            <a href="/#projects">
+              <span>Projects</span>
             </a>
             <a
               href="mailto:lolesuncrak@gmail.com"

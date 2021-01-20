@@ -24,10 +24,11 @@ export default function Projects(): JSX.Element {
     <div className="loader">Loading...</div>
   ) : (
     // Projects Section
-    <div className="Projects">
+    <div className="Projects" id="projects">
       <div className="Projects__flex">
         <h2 className="Projects__title">
-          <i className="fas fa-angle-double-right"></i>My <span>Projects:</span>
+          <i className="fas fa-angle-double-right"></i>
+          <span>Projects:</span>
         </h2>
         <i className="fas fa-search Projects__search-icon"></i>
       </div>

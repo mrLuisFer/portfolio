@@ -12,6 +12,12 @@
   &__logo {
     display: flex;
     justify-content: center;
+    position: relative;
+
+    &:hover {
+      @include after-btn("Luis Alvarez", 4rem);
+    }
+
     &-title {
       @media (min-width: $ipad) {
         align-items: center;

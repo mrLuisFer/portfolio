@@ -1,10 +1,17 @@
 import React from "react"
 // Assets
 import aboutResumeIllustration from "../assets/flying-about-resume-illustration.svg"
+import waveAboutResume from "../assets/wave-about-resume.svg"
+import waveAboutResumeDown from "../assets/wave-about-resume-down.svg"
 
 export default function AboutResume(): JSX.Element {
   return (
     <div id="about" className="AboutResume">
+      <img
+        src={waveAboutResume}
+        alt="wave-about-resume"
+        className="AboutResume__wave"
+      />
       <div className="AboutResume__info">
         <div>
           <div className="AboutResume__info-title">
@@ -38,6 +45,11 @@ export default function AboutResume(): JSX.Element {
           />
         </div>
       </div>
+      <img
+        src={waveAboutResumeDown}
+        alt="wave-about-resume-down"
+        className="AboutResume__wave-down"
+      />
     </div>
   )
 }

@@ -16,9 +16,9 @@ export default function LikeToDo() {
           <p>Develop Apps</p>
         </div>
         <div>
-          <i className="fas fa-cookie-bite"></i>
+          <i className="fas fa-utensils"></i>
           <p>
-            Cooking <span>Cookies</span>
+            Cook <span>and Eat</span>{" "}
           </p>
         </div>
         <div>
@@ -33,7 +33,9 @@ export default function LikeToDo() {
         </div>
         <div>
           <i className="fas fa-cat"></i>
-          <p>Cats</p>
+          <p>
+            Cats <span>(Michis)</span>{" "}
+          </p>
         </div>
         <div>
           <i className="fas fa-route"></i>

@@ -9,7 +9,8 @@ export default function ContactForm() {
   const [hasEmail, setHasEmail] = useState<Boolean>(false)
   const [hasInfo, setHasInfo] = useState<Boolean>(false)
   const [error, setError] = useState<String>("")
-  const [statusError, setStatusError] = useState(false)
+  const [statusError, setStatusError] = useState<Boolean>(false)
+  const [showText, setShowText] = useState<Boolean>(false)
 
   const validateToSendEmail = (e: any): void => {
     e.preventDefault()
@@ -26,12 +27,15 @@ export default function ContactForm() {
         setHasEmail(true)
         setHasInfo(true)
         setStatusError(false)
+        setShowText(true)
       } else {
         setError("Please enter a valid email")
         setStatusError(true)
+        setShowText(true)
       }
     } else {
       setError("Please put a valid message/name")
+      setShowText(true)
       setStatusError(true)
     }
 
@@ -79,7 +83,7 @@ export default function ContactForm() {
             name="message"
             rows={7}
             cols={40}
-            placeholder="My message..."
+            placeholder="Some message..."
             autoComplete="off"
             required
           ></textarea>
@@ -88,12 +92,14 @@ export default function ContactForm() {
           <i className="far fa-envelope"></i>Send Email
         </button>
       </form>
-      {statusError ? (
-        <StatusText error={error} statusError={statusError} />
+      {showText ? (
+        <StatusText
+          error={error}
+          statusError={statusError}
+          setShowText={setShowText}
+        />
       ) : (
-        <p className="ContactForm__text-status ContactForm__text-status-succes">
-          <i className="fas fa-check-square"></i> Message sent successfully! :D
-        </p>
+        ""
       )}
     </div>
   )
