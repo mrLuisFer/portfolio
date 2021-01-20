@@ -19,6 +19,7 @@
     margin: 0 auto;
     height: 220px;
     margin-bottom: 2rem;
+    @include no-select;
 
     @media (min-width: $ipad) {
       margin: 0;
@@ -182,12 +183,18 @@
       // Child's anchor tags <a>
       &:nth-child(1):hover {
         color: var(--linkedin-color);
-        @include after-btn("LinkedIn", 1.7rem, -2rem);
+
+        @media (min-width: $large) {
+          @include after-btn("LinkedIn", 1.7rem, -2rem);
+        }
       }
 
       &:nth-child(2):hover {
         color: var(--github-color);
-        @include after-btn("Github", 1.7rem, -0.3rem);
+
+        @media (min-width: $large) {
+          @include after-btn("Github", 1.7rem, -0.3rem);
+        }
       }
 
       &:nth-child(3) {

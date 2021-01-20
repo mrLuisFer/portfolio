@@ -9,6 +9,7 @@
 
 .wave-pattern {
   position: absolute;
+  backface-visibility: hidden;
   width: 100%;
   left: 0;
   opacity: 0.3;

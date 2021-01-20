@@ -3,35 +3,16 @@ import { Link } from "react-router-dom"
 
 // Assets
 import doubleArrowRight from "../assets/double-arrow-right.svg"
+import navBarLogo from "../assets/navbar-logo/navbar-logo.svg"
 // Utils
 import { bounceIn, zoomIn } from "../utils/animateCss/animateCss"
 
 export default function NavBar(): JSX.Element {
-  // This is the list of emojis that change
-  const listIcons: Array<string> = [
-    "fab fa-redhat",
-    "fas fa-crown",
-    "far fa-grin-wink",
-    "fas fa-graduation-cap",
-    "fas fa-glasses",
-    "far fa-kiss",
-    "far fa-grin-squint",
-  ]
-
   // State that handles the icons to be seen
   const [showIcons, setShowIcons] = useState<Boolean>(false)
-  const [indexIcon, setIndexIcon] = useState<number>(0)
 
   const handleShowIcons = (): void => {
     setShowIcons(!showIcons)
-  }
-
-  const handleChangeIcon = (): void => {
-    if (indexIcon === listIcons.length - 1) {
-      setIndexIcon(0)
-    } else {
-      setIndexIcon(indexIcon + 1)
-    }
   }
 
   return (
@@ -39,8 +20,8 @@ export default function NavBar(): JSX.Element {
       <div className="NavBar__logo">
         <h1 className={`NavBar__logo-title ${bounceIn}`}>
           <Link to="/">
-            <i onClick={handleChangeIcon} className={listIcons[indexIcon]}></i>
-            mrLuisFer
+            <img src={navBarLogo} alt="navbar-logo" />
+            LuisFer
           </Link>
         </h1>
       </div>
