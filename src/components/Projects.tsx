@@ -18,8 +18,6 @@ export default function Projects(): JSX.Element {
     length = 160
   }
 
-  console.log(data)
-
   return status === "fetching" ? (
     <div className="loader">Loading...</div>
   ) : (

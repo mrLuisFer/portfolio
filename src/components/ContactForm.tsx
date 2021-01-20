@@ -41,8 +41,7 @@ export default function ContactForm() {
 
     //// Function
     if (hasEmail && hasInfo) {
-      // sendEmail(e)
-      console.log(e)
+      sendEmail(e)
     }
   }
 

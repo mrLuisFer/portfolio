@@ -3,6 +3,8 @@ import React from "react"
 import aboutResumeIllustration from "../assets/flying-about-resume-illustration.svg"
 import waveAboutResume from "../assets/wave-about-resume.svg"
 import waveAboutResumeDown from "../assets/wave-about-resume-down.svg"
+// Utils
+import { bounceIn } from "../utils/animateCss/animateCss"
 
 export default function AboutResume(): JSX.Element {
   return (
@@ -41,6 +43,7 @@ export default function AboutResume(): JSX.Element {
         <div className="AboutResume__info-flying-illustration">
           <img
             src={aboutResumeIllustration}
+            className={bounceIn}
             alt="flying-about-resume-illustration"
           />
         </div>

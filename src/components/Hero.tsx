@@ -2,6 +2,8 @@ import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
 // Assets
 import heroIllustration from "../assets/hero-illustration.svg"
+// Utils
+import { slideUp } from "../utils/animateCss/animateCss"
 
 export default function Hero(): JSX.Element {
   return (
@@ -12,7 +14,7 @@ export default function Hero(): JSX.Element {
           src={heroIllustration}
           alt="hero-illustration"
         />
-        <div className="Hero__flex">
+        <div className={`Hero__flex ${slideUp}`}>
           <div className="Hero__personal">
             <h2 className="Hero__personal-title">
               <span className="Hero__personal-greet">Hello!</span>

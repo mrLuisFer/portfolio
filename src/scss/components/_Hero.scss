@@ -126,7 +126,8 @@
 
       @media (min-width: $large) {
         line-height: 1.44;
-        width: 290px;
+        width: 300px;
+        font-size: 1.65rem;
       }
 
       span {
@@ -162,6 +163,7 @@
       transition: 0.3s ease;
       color: var(--oxford-dark-blue);
       font-family: var(--inter-font);
+      position: relative;
 
       @media (min-width: $ipad) {
         margin-right: 1rem;
@@ -180,10 +182,12 @@
       // Child's anchor tags <a>
       &:nth-child(1):hover {
         color: var(--linkedin-color);
+        @include after-btn("LinkedIn", 1.7rem, -2rem);
       }
 
       &:nth-child(2):hover {
         color: var(--github-color);
+        @include after-btn("Github", 1.7rem, -0.3rem);
       }
 
       &:nth-child(3) {

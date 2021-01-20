@@ -1,4 +1,6 @@
 import React, { useState } from "react"
+// Utils
+import { fadeIn } from "../utils/animateCss/animateCss"
 
 type TServicesHtml = {
   iconClass: string
@@ -33,8 +35,11 @@ export default function ServicesHtml({
       {/* Card */}
       <div className="Services__container-card">
         {/* Icon (ClassName)*/}
-        <span className="Services__container-card-icon">
-          <i id="card-icon" className={iconClass} onClick={handleShowText}></i>
+        <span
+          className="Services__container-card-icon"
+          onClick={handleShowText}
+        >
+          <i id="card-icon" className={iconClass}></i>
         </span>
         <div>
           {/* Title */}
@@ -49,9 +54,7 @@ export default function ServicesHtml({
           {/* Text (Description)*/}
           <div
             className={
-              showText
-                ? "Services__showed animate__animated animate__fadeIn"
-                : "Services__toShow"
+              showText ? `Services__showed ${fadeIn}` : "Services__toShow"
             }
           >
             <p>{description}</p>

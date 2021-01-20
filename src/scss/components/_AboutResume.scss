@@ -122,17 +122,20 @@
         transition: 0.3s ease-out;
         cursor: text;
         user-select: normal;
-        letter-spacing: 0.25px;
-        line-height: 1.5;
         transition: 0.3s ease-in;
         font-size: 0.95rem;
         text-align: justify;
         padding-bottom: 3rem;
         max-width: 600px;
+        line-height: 1.7;
+        text-align: left;
+        letter-spacing: 0.3px;
 
         @media (min-width: $ipad) {
           font-size: 1.05rem;
           line-height: 1.8;
+          letter-spacing: 0.25px;
+          text-align: justify;
         }
 
         @media (min-width: $large) {
