@@ -309,6 +309,9 @@ psd
 thumb
 sketch
 
+.idea
+.idea/
+.idea/*
 ### Sass ###
 .sass-cache/
 *.css.map
