@@ -6,6 +6,13 @@ import contactMeMailSent from "../assets/contactMe/contactMe-mail-sent.svg"
 import ContactForm from "../components/ContactForm"
 // Utils
 import { slideUp } from "../utils/animateCss/animateCss"
+import {
+  facebook,
+  github,
+  instagram,
+  linkedin,
+  twitter,
+} from "../utils/social-links/socialLinks"
 
 export default function ContactMe() {
   return (
@@ -16,25 +23,23 @@ export default function ContactMe() {
           <h4 className="ContactMe__container-social__title">
             You can contact me by..
           </h4>
-          <a href="/">
-            {/* Icon */}
+          <a href={github} target="_blank" rel="noreferrer">
             <i className="fab fa-github"></i>
-            {/* Name Of the icon (span) */}
             <span>GitHub</span>
           </a>
-          <a href="/">
+          <a href={linkedin} target="_blank" rel="noreferrer">
             <i className="fab fa-linkedin"></i>
             <span>LinkedIn</span>
           </a>
-          <a href="/">
+          <a href={twitter} target="_blank" rel="noreferrer">
             <i className="fab fa-twitter"></i>
             <span>Twitter</span>
           </a>
-          <a href="/">
+          <a href={facebook} target="_blank" rel="noreferrer">
             <i className="fab fa-facebook"></i>
             <span>Facebook</span>
           </a>
-          <a href="/">
+          <a href={instagram} target="_blank" rel="noreferrer">
             <i className="fab fa-instagram"></i>
             <span>Instagram</span>
           </a>
