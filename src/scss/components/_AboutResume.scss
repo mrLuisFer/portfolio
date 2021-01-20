@@ -29,6 +29,7 @@
     width: 100%;
     background: var(--cultured);
     backface-visibility: hidden;
+    padding-bottom: -0rem;
     @include no-select;
 
     &-down {

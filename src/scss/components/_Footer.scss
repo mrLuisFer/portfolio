@@ -5,7 +5,7 @@
   position: relative;
   height: auto;
   padding: 2rem 0;
-  padding-top: 8rem;
+  padding-top: 9.5rem;
 
   @media (min-width: $ipad) {
     padding: 2rem 5%;
@@ -21,9 +21,10 @@
   &__wave {
     position: absolute;
     width: 100%;
-    left: 0px;
-    top: -0;
+    left: 0;
+    top: 0;
     background: var(--cultured);
+    padding-bottom: -0rem;
     backface-visibility: hidden;
   }
 
