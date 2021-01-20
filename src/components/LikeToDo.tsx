@@ -16,24 +16,30 @@ export default function LikeToDo() {
           <p>Develop Apps</p>
         </div>
         <div>
-          <i className="fas fa-cookie-bite"></i>
-          <p>Cooking Cookies</p>
+          <i className="fas fa-utensils"></i>
+          <p>
+            Cook <span>and Eat</span>{" "}
+          </p>
         </div>
         <div>
           <i className="fas fa-gamepad"></i>
-          <p>Play VideoGames</p>
+          <p>
+            Play <span>VideoGames</span>
+          </p>
         </div>
         <div>
           <i className="fas fa-graduation-cap"></i>
           <p>Study & Learn</p>
         </div>
         <div>
-          <i className="fas fa-route"></i>
-          <p>Travel & Know</p>
+          <i className="fas fa-cat"></i>
+          <p>
+            Cats <span>(Michis)</span>{" "}
+          </p>
         </div>
         <div>
-          <i className="fas fa-cat"></i>
-          <p>Cats (Michis)</p>
+          <i className="fas fa-route"></i>
+          <p>Travel & Know</p>
         </div>
       </div>
     </div>

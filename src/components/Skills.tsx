@@ -10,7 +10,7 @@ export default function Skiils(): JSX.Element {
         {/* Lenguages and Frameworks */}
         <div className="Skills__sections">
           <p className="Skills__title">
-            <i className="fas fa-angle-double-right"></i>My{" "}
+            <i className="fas fa-angle-double-right"></i>
             <span>Lenguages & Frameworks:</span>
           </p>
           <div className="Skills__flex">
@@ -29,7 +29,7 @@ export default function Skiils(): JSX.Element {
               </div>
               <div>
                 <i className="fab fa-react"></i>
-                <p>ReactJs</p>
+                <p>React</p>
               </div>
               <div>
                 <span className="devicons devicons-nodejs_small"></span>
@@ -79,7 +79,8 @@ export default function Skiils(): JSX.Element {
         {/* Tools Section */}
         <div className="Skills__sections Skills__text-right">
           <p className="Skills__title">
-            <i className="fas fa-angle-double-right"></i>My <span>Tools:</span>
+            <i className="fas fa-angle-double-right"></i>
+            <span>Tools:</span>
           </p>
           <div className="Skills__flex">
             <img

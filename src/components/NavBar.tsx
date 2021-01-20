@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 
 // Assets
 import doubleArrowRight from "../assets/double-arrow-right.svg"
+// Utils
+import { bounceIn, zoomIn } from "../utils/animateCss/animateCss"
 
 export default function NavBar(): JSX.Element {
   // This is the list of emojis that change
@@ -35,14 +37,14 @@ export default function NavBar(): JSX.Element {
   return (
     <div id="hero" className="NavBar">
       <div className="NavBar__logo">
-        <h1 className="NavBar__logo-title animate__animated animate__bounceIn animate__fast">
+        <h1 className={`NavBar__logo-title ${bounceIn}`}>
           <Link to="/">
             <i onClick={handleChangeIcon} className={listIcons[indexIcon]}></i>
             mrLuisFer
           </Link>
         </h1>
       </div>
-      <div className="NavBar__links">
+      <div className={`NavBar__links {fadeIn}`}>
         <Link to="/">Home</Link>
         <Link to="/contact-me">Contact me</Link>
         <div className="NavBar__social-media">
@@ -65,7 +67,7 @@ export default function NavBar(): JSX.Element {
 
           {showIcons ? (
             <div className="NavBar__social-media-icons">
-              <div className="NavBar__social-media-icons-anchors animate__animated animate__zoomIn animate__faster">
+              <div className={`NavBar__social-media-icons-anchors ${zoomIn}`}>
                 <a
                   href="https://www.facebook.com/profile.php?id=100013068189807"
                   target="_blank"

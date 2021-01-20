@@ -1,6 +1,11 @@
 .ContactMe {
-  margin-bottom: 20rem;
-  padding: 0 10%;
+  padding: 0 5%;
+  margin-bottom: 4rem;
+
+  @media (min-width: $large) {
+    margin-bottom: 20rem;
+    padding: 0 10%;
+  }
 
   &__title {
     position: relative;
@@ -22,6 +27,12 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 6.6rem;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+
+    @media (min-width: $large) {
+      flex-direction: row;
+    }
 
     &-social {
       background: var(--dark);
@@ -29,8 +40,13 @@
       padding-bottom: 0;
       height: 450px;
       width: 300px;
-      border-radius: 9px;
-      margin-left: 2rem;
+      border-radius: var(--radius);
+      margin: 0 auto;
+
+      @media (min-width: $large) {
+        margin: 0;
+        margin-left: 2rem;
+      }
 
       &__title {
         text-align: center;
@@ -52,6 +68,7 @@
         font-size: 1.05rem;
         letter-spacing: 0.9px;
         border-bottom: 1.5px solid var(--state-gray);
+        font-size: 1.1rem;
 
         &:nth-last-child(1) {
           margin-bottom: 0;
@@ -72,9 +89,20 @@
       }
 
       &__illustration {
-        width: 500px;
-        height: 500px;
         transition: 0.3s ease;
+        width: 300px;
+        height: 260px;
+        margin: 0 auto;
+
+        @media (min-width: $ipad) {
+          width: 370px;
+          height: 300px;
+        }
+
+        @media (min-width: $large) {
+          width: 500px;
+          height: 500px;
+        }
 
         &:hover {
           transform: scale(1.1);
@@ -87,11 +115,25 @@
     display: flex;
     text-align: left;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding: 0 5%;
+
+    @media (min-width: $ipad) {
+      flex-direction: row;
+      padding: 0;
+    }
 
     img {
-      width: 450px;
-      height: 420px;
       transition: 0.3s ease;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 1rem;
+
+      @media (min-width: $large) {
+        width: 450px;
+        height: 420px;
+      }
 
       &:hover {
         transform: scale(1.1);

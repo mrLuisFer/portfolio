@@ -1,14 +1,22 @@
 .ListWorksSkills {
-  padding: 0 10%;
+  padding: 0 5%;
   color: var(--dark-gray);
   margin-bottom: 1rem;
 
+  @media (min-width: $ipad) {
+    padding: 0 10%;
+  }
+
   &__title {
-    font-size: 2.45rem;
-    font-family: var(--inter-font);
     position: relative;
+    font-family: var(--inter-font);
     display: inline-block;
     margin-bottom: 2rem;
+    font-size: 1.9rem;
+
+    @media (min-width: $ipad) {
+      font-size: 2.45rem;
+    }
 
     // Line under the text to hightlight
     @include line-under-text(
@@ -25,62 +33,11 @@
       color: var(--true-blue);
     }
   }
-
-  &__links {
-    display: flex;
-    margin-bottom: 3rem;
-
-    a {
-      text-decoration: none;
-      color: var(--dark-gray);
-      transition: 0.3s ease;
-      font-size: 1.05rem;
-
-      &:hover {
-        transform: scale(1.1);
-      }
-
-      span {
-        font-family: var(--inter-font);
-        font-weight: 400;
-        border: 2px solid rgba(255, 255, 255, 0);
-        margin-right: 4rem;
-        @include no-select;
-
-        &:hover {
-          color: var(--oxford-dark-blue);
-          border-bottom: 2px solid var(--oxford-blue);
-        }
-      }
-    }
-  }
-
-  // Styles when is clicked in the nav and active
-  &__link-active {
-    span {
-      color: var(--dark);
-      transform: scale(1.1);
-      font-weight: 600;
-      text-decoration: none;
-      position: relative;
-
-      @include line-under-text(
-        var(--true-blue),
-        var(--cerulean-blue),
-        50%,
-        5px,
-        0,
-        0px,
-        0.2
-      );
-    }
-  }
 }
 
 // This is the container for have the same styles in the links
 .Cards-container {
-  // background: var(--blue-bg);
   padding: 2rem 0;
-  border-radius: 7px;
+  border-radius: var(--radius);
   color: var(--oxford-dark-blue);
 }

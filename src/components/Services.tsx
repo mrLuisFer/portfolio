@@ -7,7 +7,7 @@ export default function Services(): JSX.Element {
     <div className="Services">
       <h2 className="Services__title">
         <i className="fas fa-angle-double-right"></i>
-        My <span>Services:</span>
+        <span>Services:</span>
       </h2>
       <div className="Services__container">
         <ServicesHtml

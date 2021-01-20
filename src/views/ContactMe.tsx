@@ -4,14 +4,18 @@ import contactMeIllustration from "../assets/contactMe/code-typing-contactme.svg
 import contactMeMailSent from "../assets/contactMe/contactMe-mail-sent.svg"
 // Components
 import ContactForm from "../components/ContactForm"
+// Utils
+import { slideUp } from "../utils/animateCss/animateCss"
 
 export default function ContactMe() {
   return (
     <div className="ContactMe">
       <h1 className="ContactMe__title">Contact Me</h1>
       <div className="ContactMe__container">
-        <div className="ContactMe__container-social">
-          <h4 className="ContactMe__container-social__title">Follow Me:</h4>
+        <div className={`ContactMe__container-social ${slideUp}`}>
+          <h4 className="ContactMe__container-social__title">
+            You can contact me by..
+          </h4>
           <a href="/">
             {/* Icon */}
             <i className="fab fa-github"></i>

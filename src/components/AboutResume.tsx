@@ -1,16 +1,18 @@
 import React from "react"
 // Assets
-import waveAboutResume from "../assets/wave-about-resume.svg"
 import aboutResumeIllustration from "../assets/flying-about-resume-illustration.svg"
+import waveAboutResume from "../assets/wave-about-resume.svg"
 import waveAboutResumeDown from "../assets/wave-about-resume-down.svg"
+// Utils
+import { bounceIn } from "../utils/animateCss/animateCss"
 
 export default function AboutResume(): JSX.Element {
   return (
     <div id="about" className="AboutResume">
       <img
-        className="AboutResume__wave"
         src={waveAboutResume}
-        alt="wave-about-resumme"
+        alt="wave-about-resume"
+        className="AboutResume__wave"
       />
       <div className="AboutResume__info">
         <div>
@@ -38,16 +40,18 @@ export default function AboutResume(): JSX.Element {
             </a>
           </div>
         </div>
-        <img
-          className="AboutResume__info-flying-illustration"
-          src={aboutResumeIllustration}
-          alt="flying-about-resume-illustration"
-        />
+        <div className="AboutResume__info-flying-illustration">
+          <img
+            src={aboutResumeIllustration}
+            className={bounceIn}
+            alt="flying-about-resume-illustration"
+          />
+        </div>
       </div>
       <img
-        className="AboutResume__wave-down"
         src={waveAboutResumeDown}
         alt="wave-about-resume-down"
+        className="AboutResume__wave-down"
       />
     </div>
   )

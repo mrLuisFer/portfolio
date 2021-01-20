@@ -3,13 +3,13 @@
   "name": "This is my first Portfolio made with TypeScript using React and frontend tools, such as Jsx (HTML), Sass (Css) and more to give a good touch and style to the Portfolio to demonstrate my skills as Frontend Developer",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "favicon.svg",
+      "sizes": "64x64 32x32 24x24 16x16 128x128",
       "type": "image/x-icon"
     }
   ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#fdfdfd"
 }

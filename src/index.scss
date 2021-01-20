@@ -9,6 +9,8 @@
 // Loaders
 @import "./scss/components/Loaders/Loader";
 @import "./scss/components/Loaders/Loader-2";
+// Custom Scroll
+@import "./scss/customScroll.scss";
 
 // Mixins
 @import "./scss/mixins/no-select";
@@ -16,6 +18,7 @@
 @import "./scss/mixins/line-under-text";
 @import "./scss/mixins/ListWorkSkills-mixins";
 @import "./scss/mixins/rotate";
+@import "./scss/mixins/after-btn";
 
 // App
 @import "./scss/App.scss";

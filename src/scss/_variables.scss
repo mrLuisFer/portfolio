@@ -15,7 +15,7 @@
   --independence: #33415c;
   --oxford-blue: #002855;
   --semi-purple: #21209c;
-  --blue-background: #3f43ad;
+  --blue-background: #2f3292;
   --cerulean-crayola: #00b4d8;
   --usafa-blue: #0353a4;
   --true-blue: #0466c8;
@@ -26,7 +26,7 @@
   --dark-gray: #212529;
   --honey-yellow: #eeac06;
   --orange: #fb8500;
-  --green: #9efcc2;
+  --green: #9efcd0;
   // Shadow Color
   --shadow-color: rgba(33, 37, 41, 0.4);
   // root properties
@@ -56,4 +56,12 @@
   );
   // Animate Css (Delay)
   --animate-delay: 0.2s;
+  // Radius
+  --radius: 10px;
 }
+
+// Screens
+$mobile: 375px;
+$ipad: 700px;
+$large: 1000px;
+$very-large: 1440px;
