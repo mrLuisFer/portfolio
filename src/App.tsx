@@ -1,4 +1,3 @@
-import React from "react"
 import "./scss/_App.scss"
 // React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"

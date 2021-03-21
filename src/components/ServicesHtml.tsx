@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 // Utils
 import { fadeIn } from "../utils/animateCss/animateCss"
 

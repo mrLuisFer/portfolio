@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 // Functions
 import { sendEmail } from "../functions/emailJs"
 // Components

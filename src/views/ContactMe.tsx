@@ -1,4 +1,3 @@
-import React from "react"
 // Assets
 import contactMeIllustration from "../assets/contactMe/code-typing-contactme.svg"
 import contactMeMailSent from "../assets/contactMe/contactMe-mail-sent.svg"

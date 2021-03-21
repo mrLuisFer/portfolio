@@ -1,4 +1,3 @@
-import React from "react"
 import { BrowserRouter as Router } from "react-router-dom"
 // Assets
 import heroIllustration from "../assets/hero-illustration.svg"

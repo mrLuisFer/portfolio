@@ -1,4 +1,3 @@
-import React from "react"
 // Assets
 import WebsiteCreatorIllustration from "../assets/website-creator-illustration.svg"
 import ToolsSkillsIllustration from "../assets/tools-skills.svg"

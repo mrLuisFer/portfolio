@@ -1,4 +1,3 @@
-import React from "react"
 // Assets
 import footerIllustration from "../assets/footer-illustration.svg"
 import footerWave from "../assets/footer-wave.svg"

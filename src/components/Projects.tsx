@@ -1,4 +1,3 @@
-import React from "react"
 // Hooks
 import { useFetch } from "../hooks/useFetch"
 // Functions

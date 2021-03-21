@@ -1,4 +1,3 @@
-import React from "react"
 // Assets
 import aboutResumeIllustration from "../assets/flying-about-resume-illustration.svg"
 import waveAboutResume from "../assets/wave-about-resume.svg"
