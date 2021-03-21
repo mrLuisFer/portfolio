@@ -30,7 +30,7 @@
     bottom: #{$positionBottom};
     z-index: -10;
     opacity: #{$opacity};
-    transition: background 0.3s ease;
+    transition: background var(--transition);
   }
 
   &:hover {

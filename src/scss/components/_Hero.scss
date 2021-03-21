@@ -78,7 +78,7 @@
       letter-spacing: 1.1px;
       margin-right: 0.5rem;
       position: relative;
-      transition: color 0.3s ease;
+      transition: color var(--transition);
 
       &:hover {
         color: var(--blue-background);
@@ -102,7 +102,7 @@
 
       @media (min-width: $large) {
         font-size: 2rem;
-        transition: 0.3s ease;
+        transition: var(--transition);
       }
 
       &:hover {
@@ -161,7 +161,7 @@
 
     a {
       font-size: 1.5rem;
-      transition: 0.3s ease;
+      transition: var(--transition);
       color: var(--oxford-dark-blue);
       font-family: var(--inter-font);
       position: relative;
@@ -204,7 +204,7 @@
         color: var(--light-gray);
         font-weight: 600;
         text-decoration: none;
-        transition: 0.3s ease;
+        transition: var(--transition);
         padding: 0.7rem;
 
         @media (min-width: $ipad) {

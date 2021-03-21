@@ -58,7 +58,7 @@
       border-radius: var(--radius);
       text-align: center;
       padding: 0.7rem 1.5rem;
-      transition: 0.3s ease;
+      transition: var(--transition);
       max-width: 130px;
 
       @media (min-width: $ipad) {

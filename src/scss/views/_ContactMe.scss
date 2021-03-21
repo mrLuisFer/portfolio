@@ -89,7 +89,7 @@
       }
 
       &__illustration {
-        transition: 0.3s ease;
+        transition: var(--transition);
         width: 300px;
         height: 260px;
         margin: 0 auto;
@@ -125,7 +125,7 @@
     }
 
     img {
-      transition: 0.3s ease;
+      transition: var(--transition);
       width: 300px;
       margin: 0 auto;
       margin-top: 1rem;

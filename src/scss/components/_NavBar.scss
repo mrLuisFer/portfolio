@@ -78,7 +78,7 @@
       @media (min-width: $ipad) {
         margin: 0;
         margin-left: 0.9rem;
-        transition: 0.2s ease-in;
+        transition: var(--transition);
         font-size: 0.9rem;
       }
 

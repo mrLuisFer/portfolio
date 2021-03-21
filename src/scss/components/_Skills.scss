@@ -35,7 +35,7 @@
       justify-content: space-between;
       padding: 0.7rem;
       font-size: 1rem;
-      transition: 0.2s ease-out;
+      transition: var(--transition);
 
       @media (min-width: $ipad) {
         padding-left: 0.6rem;
@@ -85,7 +85,7 @@
       height: 420px;
     }
 
-    transition: 0.3s ease-out;
+    transition: var(--transition);
 
     &:hover {
       transform: scale(1.05);

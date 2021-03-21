@@ -15,8 +15,8 @@
     visibility: hidden;
     animation: 0.6s fadeIn;
     animation-fill-mode: forwards;
-    transition: all 0.6s ease;
-    -webkit-transition: all 0.6s ease;
+    transition: all var(--transition);
+    -webkit-transition: all var(--transition);
   }
 }
 

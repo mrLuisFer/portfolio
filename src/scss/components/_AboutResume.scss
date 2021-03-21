@@ -124,10 +124,9 @@
       p {
         color: #ffffff;
         font-weight: 400;
-        transition: 0.3s ease-out;
         cursor: text;
         user-select: normal;
-        transition: 0.3s ease-in;
+        transition: var(--transition);
         font-size: 0.95rem;
         text-align: justify;
         padding-bottom: 3rem;
@@ -210,7 +209,7 @@
 
       img {
         width: 300px;
-        transition: 0.3s ease-in-out;
+        transition: var(--transition);
         display: flex;
         margin: 0 auto;
         margin-top: 2rem;

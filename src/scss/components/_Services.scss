@@ -21,7 +21,7 @@
       border-radius: var(--radius);
       height: auto;
       padding: 1rem;
-      transition: 0.3s ease;
+      transition: var(--transition);
       color: var(--dark-gray);
       margin: 0 auto;
       width: 340px;
@@ -38,7 +38,7 @@
       &-icon {
         border-radius: var(--radius);
         box-shadow: 0.3px 0.3px 4px var(--shadow-color);
-        transition: 0.3s ease;
+        transition: var(--transition);
         text-align: center;
         height: auto;
         width: 60px; // For have the same width for all cards
@@ -61,7 +61,7 @@
           position: relative;
           margin: 0;
           margin-bottom: 0.4rem;
-          transition: all 0.3s ease;
+          transition: var(--transition);
           cursor: pointer;
           display: flex;
           align-items: center;
@@ -106,7 +106,7 @@
 
           i {
             margin-right: 0.3rem;
-            transition: 0.3s ease;
+            transition: var(--transition);
           }
 
           &:hover {
@@ -158,7 +158,7 @@
     visibility: hidden;
     display: none;
     position: absolute;
-    transition: all 0.3s ease;
+    transition: var(--transition);
   }
 
   &__showed {
@@ -175,13 +175,13 @@
       background-color: none;
       box-shadow: none;
       transform: rotate(0deg);
-      transition: all 0.3s ease;
+      transition: var(--transition);
     }
   }
 
   &__toVolted {
     i {
-      transition: all 0.3s ease;
+      transition: var(--transition);
       transform: rotate(90deg);
     }
   }

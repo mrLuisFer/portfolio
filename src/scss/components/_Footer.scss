@@ -90,7 +90,7 @@
 
     &-illustration {
       width: 250px;
-      transition: 0.3s ease;
+      transition: var(--transition);
 
       @media (min-width: $ipad) {
         width: 350px;
@@ -111,17 +111,17 @@
     align-items: center;
     font-weight: 300;
     color: var(--powder-blue);
-    transition: all 0.3s ease;
+    transition: var(--transition);
 
     i {
       margin: 0 0.5rem;
-      transition: all 0.3s ease;
+      transition: var(--transition);
     }
 
     a {
       margin: 0 0.5rem;
       font-family: var(--inter-font);
-      transition: all 0.3s ease;
+      transition: var(--transition);
       color: var(--powder-blue);
       text-decoration: none;
     }

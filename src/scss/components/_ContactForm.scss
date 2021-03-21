@@ -45,7 +45,7 @@
         outline: none;
         border: 0.5px solid rgba(0, 0, 0, 0);
         font-family: var(--open-sans-font);
-        transition: 0.3s ease;
+        transition: var(--transition);
         resize: none;
 
         &:hover {
@@ -87,7 +87,7 @@
     font-family: var(--inter-font);
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: var(--transition);
     margin: 0 auto;
     margin-top: 2rem;
     display: flex;

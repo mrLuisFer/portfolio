@@ -38,7 +38,7 @@
   }
 
   span {
-    transition: 0.3s ease;
+    transition: var(--transition);
     color: var(--true-blue);
   }
 }

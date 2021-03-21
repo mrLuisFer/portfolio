@@ -2,14 +2,15 @@ import "./scss/_App.scss"
 // React Router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
+// Assets
+import wavePattern from "./assets/wave-pattern.svg"
 // views
 import HomePage from "./views/HomePage"
 import ContactUs from "./views/ContactMe"
 // components
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
-// Assets
-import wavePattern from "./assets/wave-pattern.svg"
+import BtnToTop from "./components/BtnToTop/BtnToTop"
 
 export default function App(): JSX.Element {
   // Components for the view
@@ -24,6 +25,7 @@ export default function App(): JSX.Element {
           <Route path="/contact-me" component={ContactUs}></Route>
         </Switch>
 
+        <BtnToTop />
         <Footer />
       </div>
     </Router>

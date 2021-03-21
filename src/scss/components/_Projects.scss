@@ -52,7 +52,7 @@
     background-color: var(--oxford-dark-blue);
     position: relative;
     margin: 0 auto;
-    transition: 0.2s ease-out;
+    transition: var(--transition);
     padding: 1.8rem 0.8rem;
     margin-bottom: 2.5rem;
     max-width: 300px;
@@ -130,7 +130,7 @@
       text-decoration: none;
       font-family: var(--inter-font);
       color: var(--powder-blue);
-      transition: 0.3s ease;
+      transition: var(--transition);
       display: inline-block;
 
       &:hover {
@@ -150,7 +150,7 @@
       }
 
       i {
-        transition: 0.3s ease;
+        transition: var(--transition);
         margin-right: 0.35rem;
         color: var(--powder-blue);
         font-size: 1.2rem;
@@ -163,15 +163,15 @@
       font-family: var(--inter-font);
       color: var(--powder-blue);
       font-size: 0.85rem;
-      transition: 0.3s ease;
+      transition: var(--transition);
       display: inline-block;
 
       &:hover {
         color: var(--green);
-        transition: 0.3s ease;
+        transition: var(--transition);
 
         i {
-          transition: 0.3s ease;
+          transition: var(--transition);
 
           color: var(--green);
         }
@@ -190,7 +190,7 @@
       font-size: 0.75rem;
       font-family: var(--open-sans-font);
       color: var(--powder-blue);
-      transition: 0.3s ease;
+      transition: var(--transition);
       font-weight: 600;
       display: inline-block;
 
@@ -206,7 +206,7 @@
         margin-right: 0.35rem;
         font-size: 1rem;
         color: var(--powder-blue);
-        transition: 0.3s ease;
+        transition: var(--transition);
       }
     }
   }

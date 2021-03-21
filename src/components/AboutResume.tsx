@@ -7,7 +7,7 @@ import { bounceIn } from "../utils/animateCss/animateCss"
 
 export default function AboutResume(): JSX.Element {
   return (
-    <div id="about" className="AboutResume">
+    <div className="AboutResume">
       <img
         src={waveAboutResume}
         alt="wave-about-resume"
@@ -17,7 +17,7 @@ export default function AboutResume(): JSX.Element {
         <div>
           <div className="AboutResume__info-title">
             <h2>
-              <i className="fas fa-angle-right"></i>About Me
+              <i className="fas fa-angle-right" id="about"></i>About Me
             </h2>
             <p>Main information about me and what I love to do</p>
           </div>
