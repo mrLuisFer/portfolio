@@ -27,7 +27,6 @@ export default function Projects(): JSX.Element {
           <i className="fas fa-angle-double-right"></i>
           <span>Projects:</span>
         </h2>
-        <i className="fas fa-search Projects__search-icon"></i>
       </div>
       <div className="Projects__grid">
         {/* The cards of the data */}

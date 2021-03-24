@@ -19,17 +19,6 @@
     margin-bottom: 0;
   }
 
-  &__search-icon {
-    font-size: 1.4rem;
-    padding-right: 0.2rem;
-    position: relative;
-    cursor: pointer;
-
-    &:hover {
-      @include after-btn("Soon...", -2rem, -2rem);
-    }
-  }
-
   &__grid {
     @media (min-width: $ipad) {
       display: grid;
