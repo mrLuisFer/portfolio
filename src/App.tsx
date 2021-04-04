@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 // Assets
 import wavePattern from './assets/wave-pattern.svg'
 // views
-import HomePage from './views/HomePage'
-import ContactUs from './views/ContactMe'
+import HomePage from './views/HomePage/HomePage'
+import ContactUs from './views/ContactMe/ContactMe'
 // components
 import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
