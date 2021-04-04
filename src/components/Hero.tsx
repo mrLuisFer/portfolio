@@ -1,59 +1,57 @@
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router } from 'react-router-dom'
 // Assets
-import heroIllustration from "../assets/hero-illustration.svg"
+import heroIllustration from '../assets/hero-illustration.svg'
 // Utils
-import { slideUp } from "../utils/animateCss/animateCss"
-import { linkedin, github } from "../utils/social-links/socialLinks"
+import { slideUp } from '../utils/animateCss/animateCss'
+import { linkedin, github } from '../utils/social-links/socialLinks'
 
 export default function Hero(): JSX.Element {
   return (
     <Router>
-      <div className="Hero">
+      <div className='Hero'>
         <img
-          className="Hero__illustration"
+          className='Hero__illustration'
           src={heroIllustration}
-          alt="hero-illustration"
+          alt='hero-illustration'
         />
         <div className={`Hero__flex ${slideUp}`}>
-          <div className="Hero__personal">
-            <h2 className="Hero__personal-title">
-              <span className="Hero__personal-greet">Hello!</span>
-              I'm <span className="Hero__personal-name">Luis Alvarez</span>
+          <div className='Hero__personal'>
+            <h2 className='Hero__personal-title'>
+              <span className='Hero__personal-greet'>Hello!</span> I am{' '}
+              <span className='Hero__personal-name'>Luis Alvarez</span>
               <span>
-                <i className="fas fa-code Hero__personal-codeIcon"></i>
+                <i className='fas fa-code Hero__personal-codeIcon' />
               </span>
             </h2>
-            <h5 className="Hero__personal-info">
+            <h5 className='Hero__personal-info'>
               <span>
                 Frontend <span>Developer</span>
               </span>
               , specialized in
-              <span id="Hero__personal-info-js"> Javascript</span> &{" "}
+              <span id='Hero__personal-info-js'> Javascript</span> {'&'}{' '}
               <span>
                 <span>React</span>
-              </span>{" "}
+              </span>{' '}
               for UI
             </h5>
           </div>
-          <div className="Hero__links">
+          <div className='Hero__links'>
             <a
-              className="Hero__links-linkedin"
+              className='Hero__links-linkedin'
               href={linkedin}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fab fa-linkedin-in"></i>
+              target='_blank'
+              rel='noopener noreferrer'>
+              <i className='fab fa-linkedin-in' />
             </a>
             <a
-              className="Hero__links-github"
+              className='Hero__links-github'
               href={github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fab fa-github"></i>
+              target='_blank'
+              rel='noopener noreferrer'>
+              <i className='fab fa-github' />
             </a>
-            <a href="/#about">
-              <i className="fas fa-user"></i> More About Me
+            <a href='/#about'>
+              <i className='fas fa-user' /> More About Me
             </a>
           </div>
         </div>

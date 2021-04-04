@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { useState } from 'react'
 // Functions
-import { sendEmail } from "../functions/emailJs"
+import sendEmail from '../functions/emailJs'
 // Components
-import StatusText from "./StatusText"
+import StatusText from './StatusText'
 
 // This is the contact component with all logic
 export default function ContactForm() {
   const [hasEmail, setHasEmail] = useState<Boolean>(false)
   const [hasInfo, setHasInfo] = useState<Boolean>(false)
-  const [error, setError] = useState<String>("")
+  const [error, setError] = useState<String>('')
   const [statusError, setStatusError] = useState<Boolean>(false)
   const [showText, setShowText] = useState<Boolean>(false)
 
@@ -29,76 +29,79 @@ export default function ContactForm() {
         setStatusError(false)
         setShowText(true)
       } else {
-        setError("Please enter a valid email")
+        setError('Please enter a valid email')
         setStatusError(true)
         setShowText(true)
       }
     } else {
-      setError("Please put a valid message/name")
+      setError('Please put a valid message/name')
       setShowText(true)
       setStatusError(true)
     }
 
-    //// Function
+    /// Function
     if (hasEmail && hasInfo) {
       sendEmail(e)
     }
   }
 
   return (
-    <div className="ContactForm">
+    <div className='ContactForm'>
       <h2>
-        <i className="far fa-comments"></i>
+        <i className='far fa-comments' />
         Leave me a message
       </h2>
       {/* Contact Form */}
       <form onSubmit={(e) => validateToSendEmail(e)}>
         <div>
-          <label htmlFor="from_name">Name:</label>
-          <input
-            type="text"
-            name="from_name"
-            id="from_name"
-            placeholder="Name..."
-            autoComplete="off"
-            required
-          />
+          <label htmlFor='from_name'>
+            Name:
+            <input
+              type='text'
+              name='from_name'
+              id='from_name'
+              placeholder='Name...'
+              autoComplete='off'
+              required
+            />
+          </label>
         </div>
         <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="emal"
-            name="email"
-            id="email"
-            placeholder="some@email.com"
-            autoComplete="off"
-            required
-          />
+          <label htmlFor='email'>
+            Email:
+            <input
+              type='emal'
+              name='email'
+              id='email'
+              placeholder='some@email.com'
+              autoComplete='off'
+              required
+            />
+          </label>
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            rows={7}
-            cols={40}
-            placeholder="Some message..."
-            autoComplete="off"
-            required
-          ></textarea>
+          <label htmlFor='message'>
+            Message:
+            <textarea
+              id='message'
+              name='message'
+              rows={7}
+              cols={40}
+              placeholder='Some message...'
+              autoComplete='off'
+              required
+            />
+          </label>
         </div>
-        <button type="submit" className="ContactForm__submit">
-          <i className="far fa-envelope"></i>Send Email
+        <button type='submit' className='ContactForm__submit'>
+          <i className='far fa-envelope' />
+          Send Email
         </button>
       </form>
       {showText ? (
-        <StatusText
-          error={error}
-          statusError={statusError}
-          setShowText={setShowText}
-        />
+        <StatusText error={error} statusError={statusError} setShowText={setShowText} />
       ) : (
-        ""
+        ''
       )}
     </div>
   )

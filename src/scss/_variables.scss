@@ -1,8 +1,8 @@
 // CSS variables
 :root {
   // Fonts
-  --open-sans-font: "Open Sans", sans-serif;
-  --inter-font: "Inter", sans-serif;
+  --open-sans-font: 'Open Sans', sans-serif;
+  --inter-font: 'Inter', sans-serif;
 
   // Color Palette
   --powder-blue: #caf0f8;
@@ -37,28 +37,16 @@
   // Github Color
   --github-color: #211f1f;
   // Linear Gradient Colors
-  --blue: linear-gradient(
-    90deg,
-    rgba(4, 102, 200, 1) 30%,
-    rgba(3, 83, 164, 1) 95%
-  );
+  --blue: linear-gradient(90deg, rgba(4, 102, 200, 1) 30%, rgba(3, 83, 164, 1) 95%);
 
-  --blue-bg: linear-gradient(
-    130deg,
-    rgba(71, 63, 173, 1) 34%,
-    rgba(42, 34, 144, 1) 94%
-  );
+  --blue-bg: linear-gradient(130deg, rgba(71, 63, 173, 1) 34%, rgba(42, 34, 144, 1) 94%);
 
-  --dark-blue-bg: linear-gradient(
-    130deg,
-    rgb(46, 42, 105) 45%,
-    rgb(12, 8, 69) 85%
-  );
+  --dark-blue-bg: linear-gradient(130deg, rgb(46, 42, 105) 45%, rgb(12, 8, 69) 85%);
   // Animate Css (Delay)
   --animate-delay: 0.2s;
 
   --radius: 10px;
-  --transition: 0.3s ease-in;
+  --transition: 0.2s ease-in;
 }
 
 // Screens

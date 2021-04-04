@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from "react"
+import { useEffect, useCallback } from 'react'
 
 type TStatusText = {
   error: String
@@ -6,13 +6,9 @@ type TStatusText = {
   setShowText: Function
 }
 
-export default function StatusText({
-  error,
-  statusError,
-  setShowText,
-}: TStatusText) {
-  const succesText: string = "Message sent successfully! :D"
-  const succesIcon: string = "fas fa-check-square"
+export default function StatusText({ error, statusError, setShowText }: TStatusText) {
+  const succesText: string = 'Message sent successfully! :D'
+  const succesIcon: string = 'fas fa-check-square'
 
   const changinShowText = useCallback(() => {
     setShowText(false)
@@ -25,18 +21,15 @@ export default function StatusText({
   }, [changinShowText])
 
   return (
-    <div className="StatusText">
-      <p className="ContactForm__text-status">
+    <div className='StatusText'>
+      <p className='ContactForm__text-status'>
         <span
           className={
             statusError
-              ? "ContactForm__text-status-error "
-              : "ContactForm__text-status-succes"
-          }
-        >
-          <i
-            className={statusError ? "fas fa-exclamation-triangle" : succesIcon}
-          ></i>
+              ? 'ContactForm__text-status-error '
+              : 'ContactForm__text-status-succes'
+          }>
+          <i className={statusError ? 'fas fa-exclamation-triangle' : succesIcon} />
           {statusError ? error : succesText}
         </span>
       </p>

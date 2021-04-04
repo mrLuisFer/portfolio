@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState } from 'react'
 // Utils
-import { fadeIn } from "../utils/animateCss/animateCss"
+import { fadeIn } from '../utils/animateCss/animateCss'
 
 type TServicesHtml = {
   iconClass: string
@@ -12,8 +12,8 @@ type TServicesHtml = {
 export default function ServicesHtml({
   iconClass,
   title,
-  description = "",
-  linkReference = "",
+  description = '',
+  linkReference = '',
 }: TServicesHtml) {
   const [showText, setShowText] = useState<Boolean>(false)
   const [showLinkReference, setShowLinkReference] = useState<Boolean>(true)
@@ -33,39 +33,33 @@ export default function ServicesHtml({
   return (
     <>
       {/* Card */}
-      <div className="Services__container-card">
-        {/* Icon (ClassName)*/}
+      <div className='Services__container-card'>
+        {/* Icon (ClassName) */}
         <span
-          className="Services__container-card-icon"
+          className='Services__container-card-icon'
           onClick={handleShowText}
-        >
-          <i id="card-icon" className={iconClass}></i>
+          aria-hidden='true'>
+          <i id='card-icon' className={iconClass} />
         </span>
         <div>
           {/* Title */}
-          <h1 onClick={handleShowText}>
-            <span
-              className={showText ? "Services__toVolted" : "Services__toVolt"}
-            >
-              <i className="fas fa-caret-right"></i>
+          <h1 onClick={handleShowText} aria-hidden='true'>
+            <span className={showText ? 'Services__toVolted' : 'Services__toVolt'}>
+              <i className='fas fa-caret-right' />
             </span>
             {title}
           </h1>
-          {/* Text (Description)*/}
-          <div
-            className={
-              showText ? `Services__showed ${fadeIn}` : "Services__toShow"
-            }
-          >
+          {/* Text (Description) */}
+          <div className={showText ? `Services__showed ${fadeIn}` : 'Services__toShow'}>
             <p>{description}</p>
 
             {showLinkReference ? (
-              <a href={linkReference} target="_blank" rel="noreferrer">
-                <i className="fas fa-link"></i>
+              <a href={linkReference} target='_blank' rel='noopener noreferrer'>
+                <i className='fas fa-link' />
                 <span>What is this?</span>
               </a>
             ) : (
-              ""
+              ''
             )}
           </div>
         </div>

@@ -21,7 +21,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
   "rules": {
     "react/react-in-jsx-scope": 0,
     "eqeqeq": "error",
@@ -53,11 +53,14 @@
     "no-underscore-dangle": 0,
     "lines-between-class-members": 0,
     "no-continue": 0,
-    "react-hooks/rules-of-hooks": "error",
     "react/static-property-placement": 0,
     "react/state-in-constructor": 0,
     "react/jsx-props-no-spreading": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "no-undef": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "no-else-return": "off"
   },
   "settings": {
     "import/resolver": {

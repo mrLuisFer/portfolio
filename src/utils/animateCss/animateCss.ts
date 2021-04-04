@@ -1,9 +1,9 @@
 // esto debe ser agregado siempre para tener animado el elemento
-const animated: string = "animate__animated"
+const animated: string = 'animate__animated'
 
 // velocidades de la animacion
-const fast: string = "animate__fast"
-const faster: string = "animate__faster"
+const fast: string = 'animate__fast'
+const faster: string = 'animate__faster'
 
 // estas son las animaciones que debes usar importandolas y usando el nombre de la variable
 const fadeIn: string = `${animated} animate__fadeIn`

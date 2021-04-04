@@ -4,8 +4,8 @@ export default function BtnToTop() {
   }
 
   return (
-    <button className="BtnToTop" onClick={scrollToTop}>
-      <i className="fas fa-arrow-up BtnToTop__arrow-icon"></i>
+    <button className='BtnToTop' onClick={scrollToTop} type='button'>
+      <i className='fas fa-arrow-up BtnToTop__arrow-icon' />
     </button>
   )
 }
