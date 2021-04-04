@@ -1,9 +1,9 @@
 // Assets
-import aboutResumeIllustration from '../assets/flying-about-resume-illustration.svg'
-import waveAboutResume from '../assets/wave-about-resume.svg'
-import waveAboutResumeDown from '../assets/wave-about-resume-down.svg'
+import aboutResumeIllustration from '../../assets/flying-about-resume-illustration.svg'
+import waveAboutResume from '../../assets/wave-about-resume.svg'
+import waveAboutResumeDown from '../../assets/wave-about-resume-down.svg'
 // Utils
-import { bounceIn } from '../utils/animateCss/animateCss'
+import { bounceIn } from '../../utils/animateCss/animateCss'
 
 export default function AboutResume(): JSX.Element {
   return (

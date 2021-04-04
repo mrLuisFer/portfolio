@@ -1,9 +1,9 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 // Assets
-import heroIllustration from '../assets/hero-illustration.svg'
+import heroIllustration from '../../assets/hero-illustration.svg'
 // Utils
-import { slideUp } from '../utils/animateCss/animateCss'
-import { linkedin, github } from '../utils/social-links/socialLinks'
+import { slideUp } from '../../utils/animateCss/animateCss'
+import { linkedin, github } from '../../utils/social-links/socialLinks'
 
 export default function Hero(): JSX.Element {
   return (

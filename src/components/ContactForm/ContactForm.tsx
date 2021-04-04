@@ -1,8 +1,8 @@
 import { useState } from 'react'
 // Functions
-import sendEmail from '../functions/emailJs'
+import sendEmail from '../../functions/emailJs'
 // Components
-import StatusText from './StatusText'
+import StatusText from '../StatusText/StatusText'
 
 // This is the contact component with all logic
 export default function ContactForm() {

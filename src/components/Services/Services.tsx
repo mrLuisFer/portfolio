@@ -1,5 +1,5 @@
 // Components
-import ServicesHtml from './ServicesHtml'
+import ServicesHtml from './ServicesHtml/ServicesHtml'
 
 export default function Services(): JSX.Element {
   return (

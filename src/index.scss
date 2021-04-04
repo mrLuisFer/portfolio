@@ -1,59 +1,56 @@
 // Google Fonts - Open Sans | Inter
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
 
 //  Variables
-@import "./scss/variables.scss";
+@import './scss/variables.scss';
 
 // Global
-@import "./scss/globals";
+@import './scss/globals';
 // Loaders
-@import "./scss/components/Loaders/Loader";
-@import "./scss/components/Loaders/Loader-2";
+@import './scss/components/Loaders/Loader';
+@import './scss/components/Loaders/Loader-2';
 // Custom Scroll
-@import "./scss/customScroll.scss";
+@import './scss/customScroll.scss';
 
 // Mixins
-@import "./scss/mixins/no-select";
-@import "./scss/mixins/font-weight";
-@import "./scss/mixins/line-under-text";
-@import "./scss/mixins/ListWorkSkills-mixins";
-@import "./scss/mixins/rotate";
-@import "./scss/mixins/after-btn";
+@import './scss/mixins/no-select';
+@import './scss/mixins/font-weight';
+@import './scss/mixins/line-under-text';
+@import './scss/mixins/ListWorkSkills-mixins';
+@import './scss/mixins/rotate';
+@import './scss/mixins/after-btn';
 
 // App
-@import "./scss/App.scss";
+@import './scss/App.scss';
 
 // Contact Me
-@import "./scss/views/ContactMe.scss";
+@import './scss/views/ContactMe.scss';
 // Contact Me (Form)
-@import "./scss/components/ContactForm";
+@import './scss/components/ContactForm';
 
 // Hero
-@import "./scss/components/Hero";
+@import './scss/components/Hero';
 
 // NavBar
-@import "./scss/components/NavBar";
-
-// AboutResume
-@import "./scss/components/AboutResume";
+@import './scss/components/NavBar';
 
 // LikeToDo (Cards)
-@import "./scss/components/LikeToDo";
+@import './scss/components/LikeToDo';
 
 // ListWorksSkills
-@import "./scss/components/ListWorksSkills";
+@import './scss/components/ListWorksSkills';
 
 // Skills
-@import "./scss/components/Skills";
+@import './scss/components/Skills';
 
 // Projects
-@import "./scss/components/Projects";
+@import './scss/components/Projects';
 
 // Services
-@import "./scss/components/Services";
+@import './scss/components/Services';
 
 // Fotter
-@import "./scss/components/Footer";
+@import './scss/components/Footer';
 
 // Components
-@import "./components/index";
+@import './components/index';

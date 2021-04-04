@@ -2,7 +2,7 @@
 import contactMeIllustration from '../assets/contactMe/code-typing-contactme.svg'
 import contactMeMailSent from '../assets/contactMe/contactMe-mail-sent.svg'
 // Components
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/ContactForm/ContactForm'
 // Utils
 import { slideUp } from '../utils/animateCss/animateCss'
 import {

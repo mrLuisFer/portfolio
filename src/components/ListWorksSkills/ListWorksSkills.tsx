@@ -1,5 +1,5 @@
 // Components
-import CardsContainer from './CardsContainer'
+import CardsContainer from '../CardsContainer/CardsContainer'
 
 export default function ListWorksSkills(): JSX.Element {
   return (

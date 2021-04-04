@@ -1,6 +1,6 @@
 // Assets
-import WebsiteCreatorIllustration from '../assets/website-creator-illustration.svg'
-import ToolsSkillsIllustration from '../assets/tools-skills.svg'
+import WebsiteCreatorIllustration from '../../assets/website-creator-illustration.svg'
+import ToolsSkillsIllustration from '../../assets/tools-skills.svg'
 
 export default function Skiils(): JSX.Element {
   return (

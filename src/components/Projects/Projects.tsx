@@ -1,7 +1,7 @@
 // Hooks
-import { useFetch } from '../hooks/useFetch'
+import { useFetch } from '../../hooks/useFetch'
 // Functions
-import truncate from '../functions/truncate'
+import truncate from '../../functions/truncate'
 
 // In this component will be the call to the github api
 export default function Projects(): JSX.Element {

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // Utils
-import { fadeIn } from '../utils/animateCss/animateCss'
+import { fadeIn } from '../../../utils/animateCss/animateCss'
 
 type TServicesHtml = {
   iconClass: string
