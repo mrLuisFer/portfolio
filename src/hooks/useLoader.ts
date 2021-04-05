@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 
-/* eslint-disable import/prefer-default-export */
 export function useLoader(seconds: number = 700): Boolean {
   const [loader, setLoader] = useState<Boolean>(true)
 

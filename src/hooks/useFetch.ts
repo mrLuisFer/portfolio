@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
 
-/* eslint-disable import/prefer-default-export */
 export const useFetch = (url: string) => {
   const cache: React.MutableRefObject<any> = useRef<Array<Object>>([])
 

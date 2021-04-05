@@ -5,20 +5,35 @@ import waveAboutResumeDown from '../../assets/wave-about-resume-down.svg'
 // Utils
 import { bounceIn } from '../../utils/animateCss/animateCss'
 
+import {
+  SAboutResume,
+  AboutResumeWave,
+  AboutResummeWaveDown,
+  AboutResumeInfo,
+  AboutResumeInfoTitleContainer,
+  AboutResumeInfoTitle,
+  AboutResumeInfoTitleText,
+  AboutResumeInfoText,
+  AboutResumeInfoIllustrationContainer,
+  AboutResumeInfoIllustration,
+} from './AboutResume.styles'
+
 export default function AboutResume(): JSX.Element {
   return (
-    <div className='AboutResume'>
-      <img src={waveAboutResume} alt='wave-about-resume' className='AboutResume__wave' />
-      <div className='AboutResume__info'>
+    <SAboutResume>
+      <AboutResumeWave src={waveAboutResume} alt='wave-about-resume' />
+      <AboutResumeInfo>
         <div>
-          <div className='AboutResume__info-title'>
-            <h2>
+          <AboutResumeInfoTitleContainer>
+            <AboutResumeInfoTitle>
               <i className='fas fa-angle-right' id='about' />
               About Me
-            </h2>
-            <p>Main information about me and what I love to do</p>
-          </div>
-          <div className='AboutResume__info-text'>
+            </AboutResumeInfoTitle>
+            <AboutResumeInfoTitleText>
+              Main information about me and what I love to do
+            </AboutResumeInfoTitleText>
+          </AboutResumeInfoTitleContainer>
+          <AboutResumeInfoText>
             <p>
               Hi!, my name is <span>Luis Fernando Alvarez</span> I am a{' '}
               <span>Software Developer</span>, focused on <span>Frontend Developer</span>,
@@ -34,21 +49,17 @@ export default function AboutResume(): JSX.Element {
               <i className='fas fa-cloud-download-alt' />
               Download My CV
             </a>
-          </div>
+          </AboutResumeInfoText>
         </div>
-        <div className='AboutResume__info-flying-illustration'>
-          <img
+        <AboutResumeInfoIllustrationContainer className='AboutResume__info-flying-illustration'>
+          <AboutResumeInfoIllustration
             src={aboutResumeIllustration}
             className={bounceIn}
             alt='flying-about-resume-illustration'
           />
-        </div>
-      </div>
-      <img
-        src={waveAboutResumeDown}
-        alt='wave-about-resume-down'
-        className='AboutResume__wave-down'
-      />
-    </div>
+        </AboutResumeInfoIllustrationContainer>
+      </AboutResumeInfo>
+      <AboutResummeWaveDown src={waveAboutResumeDown} alt='wave-about-resume-down' />
+    </SAboutResume>
   )
 }
