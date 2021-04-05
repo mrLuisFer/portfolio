@@ -11,73 +11,102 @@ import {
   mailTo,
 } from '../../utils/social-links/socialLinks'
 
+import {
+  SFooter,
+  FooterWave,
+  FooterContainer,
+  FooterContainerCard,
+  FooterContainerCardTitle,
+  FooterContainerIllustration,
+  FooterMade,
+  FooterContainerCardAnchor,
+} from './Footer.styles'
+
 export default function Footer() {
   return (
-    <div className='Footer'>
-      <img src={footerWave} alt='footer-wave' className='Footer__wave' />
-      <div className='Footer__container'>
+    <SFooter>
+      <FooterWave src={footerWave} alt='footer-wave' />
+      <FooterContainer>
         {/* Quick Links */}
-        <div className='Footer__container-card'>
-          <h2>Quick Links</h2>
+        <FooterContainerCard>
+          <FooterContainerCardTitle>Quick Links</FooterContainerCardTitle>
           <div>
-            <a href='/#hero'>
+            <FooterContainerCardAnchor href='/#hero'>
               <span>Header</span>
-            </a>
-            <a href='/#about'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor href='/#about'>
               <span>About Me</span>
-            </a>
-            <a href='/#portfolio'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor href='/#portfolio'>
               <span>Portfolio</span>
-            </a>
-            <a href='/#projects'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor href='/#projects'>
               <span>Projects</span>
-            </a>
-            <a href={mailTo} target='_blank' rel='noopener noreferrer'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor
+              href={mailTo}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fas fa-at' />
               <span>Send a Email</span>
-            </a>{' '}
+            </FooterContainerCardAnchor>{' '}
           </div>
-        </div>
+        </FooterContainerCard>
         {/* Social Media */}
-        <div className='Footer__container-card'>
-          <h2>Social Media</h2>
+        <FooterContainerCard>
+          <FooterContainerCardTitle>Social Media</FooterContainerCardTitle>
           <div>
-            <a href={linkedin} target='_blank' rel='noopener noreferrer'>
+            <FooterContainerCardAnchor
+              href={linkedin}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-linkedin-in' />
               <span>LinkedIn</span>
-            </a>
-            <a href={twitter} target='_blank' rel='noopener noreferrer'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor
+              href={twitter}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-twitter' />
               <span>Twitter</span>
-            </a>
-            <a href={github} target='_blank' rel='noopener noreferrer'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor
+              href={github}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-github' />
               <span>Github</span>
-            </a>
-            <a href={facebook} target='_blank' rel='noopener noreferrer'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor
+              href={facebook}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-facebook-f' />
               <span>Facebook</span>
-            </a>
-            <a href={instagram} target='_blank' rel='noopener noreferrer'>
+            </FooterContainerCardAnchor>
+            <FooterContainerCardAnchor
+              href={instagram}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-instagram' />
               <span>Instagram</span>
-            </a>
+            </FooterContainerCardAnchor>
           </div>
-        </div>
+        </FooterContainerCard>
         {/* Footer Illustration */}
-        <img
+        <FooterContainerIllustration
           className='Footer__container-illustration'
           src={footerIllustration}
           alt='footer-illustration'
         />
-      </div>
+      </FooterContainer>
 
-      <span className='Footer__made'>
+      <FooterMade>
         Made with <i className='fas fa-heart' /> by{' '}
         <a href={github} target='_blank' rel='noopener noreferrer'>
           mrLuisFer
         </a>
-      </span>
-    </div>
+      </FooterMade>
+    </SFooter>
   )
 }

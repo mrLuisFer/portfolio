@@ -1,45 +1,54 @@
+import {
+  SLikeToDo,
+  LikeToDoTitle,
+  LikeToDoContainer,
+  LikeToDoCard,
+  LikeToDoCardIcon,
+  LikeTodoCardText,
+} from './LikeToDo.styles'
+
 export default function LikeToDo() {
   return (
-    <div className='LikeToDo'>
-      <h2>
+    <SLikeToDo>
+      <LikeToDoTitle>
         What <span>I like</span>?
-      </h2>
-      <div className='LikeToDo__container'>
-        <div>
-          <i className='fas fa-book' />
-          <p>Read Books</p>
-        </div>
-        <div>
-          <i className='fas fa-laptop-code' />
-          <p>Develop Apps</p>
-        </div>
-        <div>
-          <i className='fas fa-utensils' />
-          <p>
+      </LikeToDoTitle>
+      <LikeToDoContainer>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-book' />
+          <LikeTodoCardText>Read Books</LikeTodoCardText>
+        </LikeToDoCard>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-laptop-code' />
+          <LikeTodoCardText>Develop Apps</LikeTodoCardText>
+        </LikeToDoCard>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-utensils' />
+          <LikeTodoCardText>
             Cook <span>and Eat</span>{' '}
-          </p>
-        </div>
-        <div>
-          <i className='fas fa-gamepad' />
-          <p>
+          </LikeTodoCardText>
+        </LikeToDoCard>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-gamepad' />
+          <LikeTodoCardText>
             Play <span>VideoGames</span>
-          </p>
-        </div>
-        <div>
-          <i className='fas fa-graduation-cap' />
-          <p>Study & Learn</p>
-        </div>
-        <div>
-          <i className='fas fa-cat' />
-          <p>
+          </LikeTodoCardText>
+        </LikeToDoCard>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-graduation-cap' />
+          <LikeTodoCardText>Study & Learn</LikeTodoCardText>
+        </LikeToDoCard>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-cat' />
+          <LikeTodoCardText>
             Cats <span>(Michis)</span>{' '}
-          </p>
-        </div>
-        <div>
-          <i className='fas fa-route' />
-          <p>Travel & Know</p>
-        </div>
-      </div>
-    </div>
+          </LikeTodoCardText>
+        </LikeToDoCard>
+        <LikeToDoCard>
+          <LikeToDoCardIcon className='fas fa-route' />
+          <LikeTodoCardText>Travel & Know</LikeTodoCardText>
+        </LikeToDoCard>
+      </LikeToDoContainer>
+    </SLikeToDo>
   )
 }

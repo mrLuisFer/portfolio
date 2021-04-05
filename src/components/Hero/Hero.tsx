@@ -5,25 +5,38 @@ import heroIllustration from '../../assets/hero-illustration.svg'
 import { slideUp } from '../../utils/animateCss/animateCss'
 import { linkedin, github } from '../../utils/social-links/socialLinks'
 
+import {
+  SHero,
+  HeroIllustration,
+  HeroPersonal,
+  HeroPersonalGreet,
+  HeroPersonalTitle,
+  HeroPersonalName,
+  HeroPersonalCodeIcon,
+  HeroPersonalInfo,
+  HeroLinks,
+  HeroLinksLinkedin,
+  HeroLinksGithub,
+  HeroLinksAbout,
+} from './Hero.styles'
+
 export default function Hero(): JSX.Element {
   return (
     <Router>
-      <div className='Hero'>
-        <img
-          className='Hero__illustration'
-          src={heroIllustration}
-          alt='hero-illustration'
-        />
+      <SHero>
+        <HeroIllustration src={heroIllustration} alt='hero-illustration' />
         <div className={`Hero__flex ${slideUp}`}>
-          <div className='Hero__personal'>
-            <h2 className='Hero__personal-title'>
-              <span className='Hero__personal-greet'>Hello!</span> I am{' '}
-              <span className='Hero__personal-name'>Luis Alvarez</span>
+          <HeroPersonal>
+            <HeroPersonalTitle>
+              <HeroPersonalGreet>Hello!</HeroPersonalGreet> I am{' '}
+              <HeroPersonalName className='Hero__personal-name'>
+                Luis Alvarez
+              </HeroPersonalName>
               <span>
-                <i className='fas fa-code Hero__personal-codeIcon' />
+                <HeroPersonalCodeIcon className='fas fa-code' />
               </span>
-            </h2>
-            <h5 className='Hero__personal-info'>
+            </HeroPersonalTitle>
+            <HeroPersonalInfo className='Hero__personal-info'>
               <span>
                 Frontend <span>Developer</span>
               </span>
@@ -33,29 +46,21 @@ export default function Hero(): JSX.Element {
                 <span>React</span>
               </span>{' '}
               for UI
-            </h5>
-          </div>
-          <div className='Hero__links'>
-            <a
-              className='Hero__links-linkedin'
-              href={linkedin}
-              target='_blank'
-              rel='noopener noreferrer'>
+            </HeroPersonalInfo>
+          </HeroPersonal>
+          <HeroLinks>
+            <HeroLinksLinkedin href={linkedin} target='_blank' rel='noopener noreferrer'>
               <i className='fab fa-linkedin-in' />
-            </a>
-            <a
-              className='Hero__links-github'
-              href={github}
-              target='_blank'
-              rel='noopener noreferrer'>
+            </HeroLinksLinkedin>
+            <HeroLinksGithub href={github} target='_blank' rel='noopener noreferrer'>
               <i className='fab fa-github' />
-            </a>
-            <a href='/#about'>
+            </HeroLinksGithub>
+            <HeroLinksAbout href='/#about'>
               <i className='fas fa-user' /> More About Me
-            </a>
-          </div>
+            </HeroLinksAbout>
+          </HeroLinks>
         </div>
-      </div>
+      </SHero>
     </Router>
   )
 }
