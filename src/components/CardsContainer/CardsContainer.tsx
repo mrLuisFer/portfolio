@@ -9,11 +9,13 @@ import Skills from '../Skills/Skills'
 import Projects from '../Projects/Projects'
 import Services from '../Services/Services'
 
+import { SCardsContainer } from './CardsContainer.styles'
+
 export default function CardsContainer(): JSX.Element {
   const loader = useLoader()
 
   return (
-    <div className='Cards-container'>
+    <SCardsContainer>
       {loader ? (
         <div className='loader'>Loading...</div>
       ) : (
@@ -23,6 +25,6 @@ export default function CardsContainer(): JSX.Element {
           <Services />
         </>
       )}
-    </div>
+    </SCardsContainer>
   )
 }

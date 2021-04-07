@@ -2,18 +2,29 @@
 import WebsiteCreatorIllustration from '../../assets/website-creator-illustration.svg'
 import ToolsSkillsIllustration from '../../assets/tools-skills.svg'
 
+import {
+  SkillsStyled,
+  SkillsSections,
+  SkillsSectionsTwo,
+  SkillsTitle,
+  SkillsCardsContainer,
+  SkillsCardsContainerTwo,
+  SkillsIllustration,
+  SkillsFlex,
+} from './Skills.styles'
+
 export default function Skiils(): JSX.Element {
   return (
-    <div className='Skills'>
+    <SkillsStyled>
       <div>
         {/* Lenguages and Frameworks */}
-        <div className='Skills__sections'>
-          <p className='Skills__title'>
+        <SkillsSections>
+          <SkillsTitle>
             <i className='fas fa-angle-double-right' />
             <span>Lenguages & Frameworks:</span>
-          </p>
-          <div className='Skills__flex'>
-            <div className='Skills__cards-container'>
+          </SkillsTitle>
+          <SkillsFlex>
+            <SkillsCardsContainer>
               <div>
                 <span className='devicons devicons-html5' />
                 <p>HTML5</p>
@@ -66,28 +77,26 @@ export default function Skiils(): JSX.Element {
                 <i className='devicon-redux-original' />
                 <p>Redux</p>
               </div>
-            </div>
-            <img
-              className='Skills__illustration'
+            </SkillsCardsContainer>
+            <SkillsIllustration
               src={WebsiteCreatorIllustration}
               alt='website-creator-illustration'
             />
-          </div>
-        </div>
+          </SkillsFlex>
+        </SkillsSections>
 
         {/* Tools Section */}
-        <div className='Skills__sections Skills__text-right'>
-          <p className='Skills__title'>
+        <SkillsSectionsTwo>
+          <SkillsTitle className='Skills__title'>
             <i className='fas fa-angle-double-right' />
             <span>Tools:</span>
-          </p>
-          <div className='Skills__flex'>
-            <img
-              className='Skills__illustration'
+          </SkillsTitle>
+          <SkillsFlex>
+            <SkillsIllustration
               src={ToolsSkillsIllustration}
               alt='tool-skills-illustration'
             />
-            <div className='Skills__cards-container Skills__flex-end'>
+            <SkillsCardsContainerTwo>
               <div>
                 <i className='devicon-github-original' />
                 <p>Github</p>
@@ -132,10 +141,10 @@ export default function Skiils(): JSX.Element {
                 <i className='devicon-vim-plain' />
                 <p>Vim</p>
               </div>
-            </div>
-          </div>
-        </div>
+            </SkillsCardsContainerTwo>
+          </SkillsFlex>
+        </SkillsSectionsTwo>
       </div>
-    </div>
+    </SkillsStyled>
   )
 }
