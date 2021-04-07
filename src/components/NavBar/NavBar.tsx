@@ -8,6 +8,19 @@ import navBarLogo from '../../assets/navbar-logo/navbar-logo.svg'
 import { bounceIn, zoomIn, fadeIn } from '../../utils/animateCss/animateCss'
 import { facebook, linkedin, mailTo, twitter } from '../../utils/social-links/socialLinks'
 
+import {
+  NavBarStyled,
+  NavBarLogo,
+  NavBarLogoTitle,
+  NavBarLinks,
+  NavBarLink,
+  NavBarSocialMedia,
+  NavBarSocialMediaIcons,
+  NavBarSocialMediaIconsAnchors,
+  NavBarSocialMediaSpan,
+  ImgToRotate,
+} from './NavBar.styles'
+
 export default function NavBar(): JSX.Element {
   // State that handles the icons to be seen
   const [showIcons, setShowIcons] = useState<Boolean>(false)
@@ -17,20 +30,20 @@ export default function NavBar(): JSX.Element {
   }
 
   return (
-    <div id='hero' className='NavBar'>
-      <div className='NavBar__logo'>
-        <h1 className={`NavBar__logo-title ${bounceIn}`}>
+    <NavBarStyled id='hero'>
+      <NavBarLogo>
+        <NavBarLogoTitle className={`${bounceIn}`}>
           <Link to='/'>
             <img src={navBarLogo} alt='navbar-logo' />
             LuisFer
           </Link>
-        </h1>
-      </div>
-      <div className={`NavBar__links ${fadeIn}`}>
-        <Link to='/'>Home</Link>
-        <Link to='/contact-me'>Contact me</Link>
-        <div className='NavBar__social-media'>
-          <span
+        </NavBarLogoTitle>
+      </NavBarLogo>
+      <NavBarLinks className={`${fadeIn}`}>
+        <NavBarLink to='/'>Home</NavBarLink>
+        <NavBarLink to='/contact-me'>Contact me</NavBarLink>
+        <NavBarSocialMedia>
+          <NavBarSocialMediaSpan
             className={
               showIcons
                 ? 'NavBar__social-media__span'
@@ -38,18 +51,19 @@ export default function NavBar(): JSX.Element {
             }
             onClick={handleShowIcons}
             aria-hidden='true'>
-            <img
+            <ImgToRotate
               src={doubleArrowRight}
               alt='double-arrow-right'
               className={showIcons ? '' : 'NavBar__img-volted'}
+              sI={showIcons}
             />
             Social Media
             {showIcons ? ':' : ''}
-          </span>
+          </NavBarSocialMediaSpan>
 
           {showIcons ? (
-            <div className='NavBar__social-media-icons'>
-              <div className={`NavBar__social-media-icons-anchors ${zoomIn}`}>
+            <NavBarSocialMediaIcons>
+              <NavBarSocialMediaIconsAnchors className={`${zoomIn}`}>
                 <a href={facebook} target='_blank' rel='noopener noreferrer'>
                   <i className='fab fa-facebook-f' />
                 </a>
@@ -62,13 +76,13 @@ export default function NavBar(): JSX.Element {
                 <a href={mailTo} target='_blank' rel='noopener noreferrer'>
                   <i className='fas fa-paper-plane' />
                 </a>
-              </div>
-            </div>
+              </NavBarSocialMediaIconsAnchors>
+            </NavBarSocialMediaIcons>
           ) : (
             ''
           )}
-        </div>
-      </div>
-    </div>
+        </NavBarSocialMedia>
+      </NavBarLinks>
+    </NavBarStyled>
   )
 }
