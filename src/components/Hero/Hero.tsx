@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom'
+import '../../styles/afterBtn.css'
 // Assets
 import heroIllustration from '../../assets/hero-illustration.svg'
 // Utils
@@ -29,9 +30,7 @@ export default function Hero(): JSX.Element {
           <HeroPersonal>
             <HeroPersonalTitle>
               <HeroPersonalGreet>Hello!</HeroPersonalGreet> I am{' '}
-              <HeroPersonalName className='Hero__personal-name'>
-                Luis Alvarez
-              </HeroPersonalName>
+              <HeroPersonalName>Luis Alvarez</HeroPersonalName>
               <span>
                 <HeroPersonalCodeIcon className='fas fa-code' />
               </span>
@@ -49,10 +48,18 @@ export default function Hero(): JSX.Element {
             </HeroPersonalInfo>
           </HeroPersonal>
           <HeroLinks>
-            <HeroLinksLinkedin href={linkedin} target='_blank' rel='noopener noreferrer'>
+            <HeroLinksLinkedin
+              className='HeroLinksLinkedin'
+              href={linkedin}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-linkedin-in' />
             </HeroLinksLinkedin>
-            <HeroLinksGithub href={github} target='_blank' rel='noopener noreferrer'>
+            <HeroLinksGithub
+              className='HeroLinksGithub'
+              href={github}
+              target='_blank'
+              rel='noopener noreferrer'>
               <i className='fab fa-github' />
             </HeroLinksGithub>
             <HeroLinksAbout href='/#about'>

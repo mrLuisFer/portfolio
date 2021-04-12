@@ -3,14 +3,14 @@ import { ipad, large } from './screens'
 import { lineUnderText } from './lineUnderText'
 
 export const titleStyle: CSSObject | string = `
-   margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   display: inline-block;
-  position: relative;
   font-family: var(--inter-font);
   font-weight: 600;
   color: var(--dark-gray);
   font-size: 1.2rem;
-
+  position: relative;
+  
   @media (min-width: ${ipad}) {
     font-size: 1.4rem;
   }

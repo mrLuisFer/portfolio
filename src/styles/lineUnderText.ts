@@ -13,12 +13,12 @@ export const lineUnderText = (
     position: absolute;
     border-radius: 1.5px;
     background: ${firstColor};
-    width: #${width};
-    height: #${height};
-    left: #${positionLeft};
-    bottom: #${positionBottom};
+    width: ${width};
+    height: ${height};
+    left: ${positionLeft};
+    bottom: ${positionBottom};
     z-index: -10;
-    opacity: #${opacity};
+    opacity: ${opacity};
     transition: background var(--transition);
   }
 

@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { ipad, large } from '../../styles/screens'
-import { afterBtn } from '../../styles/afterBtn'
 import { lineUnderText } from '../../styles/lineUnderText'
 import { noSelect } from '../../styles/noSelect'
 
@@ -21,12 +20,6 @@ export const NavBarLogo = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
-
-  @media (min-width: ${large}) {
-    &:hover {
-      ${afterBtn('Luis Alvarez', 4)}
-    }
-  }
 `
 
 export const NavBarLogoTitle = styled.h1`

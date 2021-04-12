@@ -121,7 +121,7 @@ const HeroPersonalInfo = styled.h5`
   font-size: 1.3rem;
   line-height: 1.5;
   font-weight: 400;
-  padding-right: 6rem;
+  padding-right: 3rem;
 
   @media (min-width: ${ipad}) {
     padding-right: 0;
@@ -188,23 +188,19 @@ const HeroLinksAnchor = `
 
 const HeroLinksLinkedin = styled.a`
   ${HeroLinksAnchor}
+  position: relative;
 
   &:hover {
     color: var(--linkedin-color);
-    @media (min-width: ${large}) {
-      @include after-btn('LinkedIn', 1.7rem, -2rem);
-    }
   }
 `
 
 const HeroLinksGithub = styled.a`
   ${HeroLinksAnchor}
+  position: relative;
 
   &:hover {
     color: var(--github-color);
-    @media (min-width: ${large}) {
-      @include after-btn('Github', 1.7rem, -0.3rem);
-    }
   }
 `
 
@@ -231,7 +227,7 @@ const HeroLinksAbout = styled.a`
     font-size: 0.9rem;
     margin-right: 0.2rem;
 
-    @media (min-width: $ipad) {
+    @media (min-width: ${ipad}) {
       font-size: 0.8rem;
     }
   }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import '../../styles/afterBtn.css'
 
 // Assets
 import doubleArrowRight from '../../assets/double-arrow-right.svg'
@@ -32,10 +33,10 @@ export default function NavBar(): JSX.Element {
 
   return (
     <NavBarStyled id='hero'>
-      <NavBarLogo>
+      <NavBarLogo className='NavBarLogo'>
         <NavBarLogoTitle className={`${bounceIn}`}>
           <Link to='/'>
-            <img src={navBarLogo} alt='navbar-logo' />
+            <img src={navBarLogo} alt='mrLuisFer logo' />
             LuisFer
           </Link>
         </NavBarLogoTitle>

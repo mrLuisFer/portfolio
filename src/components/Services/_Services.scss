@@ -1,96 +1,17 @@
 .Services {
   &__title {
-    @include title;
-    margin-bottom: 2rem;
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 2rem 1.5rem;
-
-    @media (min-width: $ipad) {
-      align-items: flex-start;
-      gap: 3rem 1.5rem;
-    }
-
     &-card {
-      display: flex;
-      align-items: center;
-      border: 0.5px solid rgba(0, 0, 0, 0);
-      border-radius: var(--radius);
-      height: auto;
-      padding: 1rem;
-      transition: var(--transition);
-      color: var(--dark-gray);
-      margin: 0 auto;
-      width: 340px;
-
-      @media (min-width: $ipad) {
-        width: 420px;
-      }
-
-      @media (min-width: $large) {
-        width: auto;
-        margin: 0;
-      }
-
       &-icon {
-        border-radius: var(--radius);
-        box-shadow: 0.3px 0.3px 4px var(--shadow-color);
-        transition: var(--transition);
-        text-align: center;
-        height: auto;
-        width: 60px; // For have the same width for all cards
-        padding: 0.8rem;
-        font-size: 1.9rem;
-
-        &:hover {
-          transform: scale(1.08);
-        }
       }
 
       div {
-        margin-left: 1rem;
-
         h1 {
-          font-size: 1.3rem;
-          font-family: var(--inter-font);
-          color: var(--oxford-blue);
-          font-weight: 400;
-          position: relative;
-          margin: 0;
-          margin-bottom: 0.4rem;
-          transition: var(--transition);
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          @include no-select;
-
-          @include font-weight(var(--powder-blue));
-
-          &:hover {
-            text-decoration: underline;
-          }
-
-          span {
-            i {
-              margin-right: 0.5rem;
-            }
-          }
         }
 
         p {
-          font-family: var(--open-sans-font);
-          // font-weight: 300;
-          line-height: 1.55;
-          letter-spacing: 0.5px;
-          position: relative;
-          font-size: 0.9rem;
-
-          &:hover {
-            color: var(--cultured);
-          }
         }
 
         a {

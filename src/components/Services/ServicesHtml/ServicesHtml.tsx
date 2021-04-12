@@ -1,6 +1,13 @@
 import { useState } from 'react'
 // Utils
 import { fadeIn } from '../../../utils/animateCss/animateCss'
+import {
+  ServicesHtmlCard,
+  ServicesHtmlCardContent,
+  ServicesHtmlCardContentText,
+  ServicesHtmlCardContentTitle,
+  ServicesHtmlCardIcon,
+} from './ServicesHtml.styles'
 
 type TServicesHtml = {
   iconClass: string
@@ -33,25 +40,22 @@ export default function ServicesHtml({
   return (
     <>
       {/* Card */}
-      <div className='Services__container-card'>
+      <ServicesHtmlCard>
         {/* Icon (ClassName) */}
-        <span
-          className='Services__container-card-icon'
-          onClick={handleShowText}
-          aria-hidden='true'>
+        <ServicesHtmlCardIcon onClick={handleShowText} aria-hidden='true'>
           <i id='card-icon' className={iconClass} />
-        </span>
-        <div>
+        </ServicesHtmlCardIcon>
+        <ServicesHtmlCardContent>
           {/* Title */}
-          <h1 onClick={handleShowText} aria-hidden='true'>
+          <ServicesHtmlCardContentTitle onClick={handleShowText} aria-hidden='true'>
             <span className={showText ? 'Services__toVolted' : 'Services__toVolt'}>
               <i className='fas fa-caret-right' />
             </span>
             {title}
-          </h1>
+          </ServicesHtmlCardContentTitle>
           {/* Text (Description) */}
           <div className={showText ? `Services__showed ${fadeIn}` : 'Services__toShow'}>
-            <p>{description}</p>
+            <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
 
             {showLinkReference ? (
               <a href={linkReference} target='_blank' rel='noopener noreferrer'>
@@ -62,8 +66,8 @@ export default function ServicesHtml({
               ''
             )}
           </div>
-        </div>
-      </div>
+        </ServicesHtmlCardContent>
+      </ServicesHtmlCard>
     </>
   )
 }

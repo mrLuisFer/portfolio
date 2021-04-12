@@ -1,14 +1,16 @@
 // Components
 import ServicesHtml from './ServicesHtml/ServicesHtml'
 
+import { ServicesContainer, ServicesTitle } from './Services.styles'
+
 export default function Services(): JSX.Element {
   return (
     <div className='Services'>
-      <h2 className='Services__title'>
+      <ServicesTitle>
         <i className='fas fa-angle-double-right' />
         <span>Services:</span>
-      </h2>
-      <div className='Services__container'>
+      </ServicesTitle>
+      <ServicesContainer>
         <ServicesHtml
           title='Web Development'
           iconClass='fas fa-laptop-code'
@@ -45,7 +47,7 @@ export default function Services(): JSX.Element {
           iconClass='fas fa-spinner rotate'
           description='Learning new things🌟'
         />
-      </div>
+      </ServicesContainer>
     </div>
   )
 }
