@@ -62,24 +62,28 @@ export default function NavBar(): JSX.Element {
             <NavBarSocialMediaIcons>
               <NavBarSocialMediaIconsAnchors className={`${zoomIn}`}>
                 <NavBarSocialMediaIconsAnchor
+                  className='NavBarSocialMediaAnchorFacebook'
                   href={facebook}
                   target='_blank'
                   rel='noopener noreferrer'>
                   <i className='fab fa-facebook-f' />
                 </NavBarSocialMediaIconsAnchor>
                 <NavBarSocialMediaIconsAnchor
+                  className='NavBarSocialMediaAnchorTwitter'
                   href={twitter}
                   target='_blank'
                   rel='noopener noreferrer'>
                   <i className='fab fa-twitter' />
                 </NavBarSocialMediaIconsAnchor>
                 <NavBarSocialMediaIconsAnchor
+                  className='NavBarSocialMediaAnchorLinkedin'
                   href={linkedin}
                   target='_blank'
                   rel='noopener noreferrer'>
                   <i className='fab fa-linkedin-in' />
                 </NavBarSocialMediaIconsAnchor>
                 <NavBarSocialMediaIconsAnchor
+                  className='NavBarSocialMediaAnchorMailTo'
                   href={mailTo}
                   target='_blank'
                   rel='noopener noreferrer'>

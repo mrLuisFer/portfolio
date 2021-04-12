@@ -185,4 +185,5 @@ export const NavBarLink = styled(Link)`
 
 export const NavBarSocialMediaIconsAnchor = styled.a`
   ${linkAndAnchorStyles}
+  position: relative;
 `

@@ -2,8 +2,10 @@ import { useState } from 'react'
 // Utils
 import { fadeIn } from '../../../utils/animateCss/animateCss'
 import {
+  LinkReference,
   ServicesHtmlCard,
   ServicesHtmlCardContent,
+  ServicesHtmlCardContentContainer,
   ServicesHtmlCardContentText,
   ServicesHtmlCardContentTitle,
   ServicesHtmlCardIcon,
@@ -54,18 +56,23 @@ export default function ServicesHtml({
             {title}
           </ServicesHtmlCardContentTitle>
           {/* Text (Description) */}
-          <div className={showText ? `Services__showed ${fadeIn}` : 'Services__toShow'}>
+          <ServicesHtmlCardContentContainer
+            className={showText ? `Services__showed ${fadeIn}` : 'Services__toShow'}
+            isShow={showText}>
             <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
 
             {showLinkReference ? (
-              <a href={linkReference} target='_blank' rel='noopener noreferrer'>
+              <LinkReference
+                href={linkReference}
+                target='_blank'
+                rel='noopener noreferrer'>
                 <i className='fas fa-link' />
                 <span>What is this?</span>
-              </a>
+              </LinkReference>
             ) : (
               ''
             )}
-          </div>
+          </ServicesHtmlCardContentContainer>
         </ServicesHtmlCardContent>
       </ServicesHtmlCard>
     </>

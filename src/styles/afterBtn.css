@@ -77,3 +77,107 @@
   transition: all var(--transition);
   -webkit-transition: all var(--transition);
 }
+
+.NavBarSocialMediaAnchorFacebook:hover::after {
+  content: 'Facebook';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: 0rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorTwitter:hover::after {
+  content: 'Twitter';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: 0rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorLinkedin:hover::after {
+  content: 'LinkedIn';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: 0rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorMailTo:hover::after {
+  content: 'Mail to mrLuisFer';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: -3rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.AboutResumeInfoText-a {
+  position: relative;
+}
+
+.AboutResumeInfoText-a:hover::after {
+  content: 'mrLuisFer | Curriculum Vitae';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 3.5rem;
+  left: 0;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}

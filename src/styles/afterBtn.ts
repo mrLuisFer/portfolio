@@ -1,4 +1,4 @@
-export const afterBtn = (text: string, top: string = '', left: string = '') => {
+export const afterBtn = (text: string, top: number = 0, left: number = 0): string => {
   return `
   &::after {
     content: ${text};
@@ -6,8 +6,8 @@ export const afterBtn = (text: string, top: string = '', left: string = '') => {
     background: var(--dark-gray);
     width: auto;
     height: auto;
-    top: ${top};
-    left: ${left};
+    top: ${top}rem;
+    left: ${left}rem;
     padding: 0.5rem;
     font-family: var(--open-sans-font);
     color: var(--gainsboro);
@@ -18,7 +18,7 @@ export const afterBtn = (text: string, top: string = '', left: string = '') => {
     animation-fill-mode: forwards;
     transition: all var(--transition);
     -webkit-transition: all var(--transition);
-}
+  }
 
 @keyframes fadeIn {
   99% {
