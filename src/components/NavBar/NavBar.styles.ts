@@ -74,39 +74,6 @@ export const NavBarLinks = styled.div`
   }
 `
 
-export const NavBarLink = styled(Link)`
-  margin: 0 0.9rem;
-  text-decoration: none;
-  color: var(--oxford-blue);
-  font-family: var(--inter-font);
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
-
-  ${noSelect}
-
-    @media (min-width: ${ipad}) {
-      margin: 0;
-      margin-left: 0.9rem;
-      transition: var(--transition);
-      font-size: 0.9rem;
-    }
-
-    @media (min-width: ${large}) {
-      font-size: 1.2rem;
-      margin-left: 1.2rem;
-    }
-
-    &:hover {
-      color: var(--oxford-dark-blue);
-      border-bottom: 2px solid var(--oxford-blue);
-      transform: scale(1.05);
-
-      @media (min-width: ${ipad}) {
-        transform: scale(1.1);
-      }
-    }
-  }
-`
-
 export const NavBarSocialMedia = styled.div`
   display: none;
 
@@ -125,7 +92,7 @@ export const NavBarSocialMedia = styled.div`
   }
 `
 
-export const NavBarSocialMediaSpan = styled.span`
+export const NavBarSocialMediaSpan: any = styled.span`
   background: var(--blue);
   margin-left: 0.9rem;
   padding-right: 0.4rem;
@@ -158,6 +125,9 @@ export const NavBarSocialMediaSpan = styled.span`
     transition: all 0.5s;
     transition: border-radius 0s ease;
   }
+
+  border-top-right-radius: ${(props: any) => (props.showIns ? '' : '7px')};
+  border-bottom-right-radius: ${(props: any) => (props.showIns ? '' : '7px')};
 `
 
 export const NavBarSocialMediaIcons = styled.div`
@@ -179,6 +149,47 @@ export const NavBarSocialMediaIconsAnchors = styled.div`
 `
 
 export const ImgToRotate: any = styled.img`
-  transition: ${(props: any) => (props.sI ? 'all 0.3s ease' : '')};
-  transform: ${(props: any) => (props.sI ? 'rotate(180deg)' : '')};
+  transition: ${(props: any) => (props.showIns ? 'all 0.3s ease' : '')};
+  transform: ${(props: any) => (props.showIns ? 'rotate(180deg)' : '')};
+`
+
+const linkAndAnchorStyles = `
+  margin: 0 0.9rem;
+  text-decoration: none;
+  color: var(--oxford-blue);
+  font-family: var(--inter-font);
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+  ${noSelect}
+
+    @media (min-width: ${ipad}) {
+      margin: 0;
+      margin-left: 0.9rem;
+      transition: var(--transition);
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: ${large}) {
+      font-size: 1.2rem;
+      margin-left: 1.2rem;
+    }
+
+    &:hover {
+      color: var(--oxford-dark-blue);
+      border-bottom: 2px solid var(--oxford-blue);
+      transform: scale(1.05);
+
+      @media (min-width: ${ipad}) {
+        transform: scale(1.1);
+      }
+    }
+  }
+`
+
+export const NavBarLink = styled(Link)`
+  ${linkAndAnchorStyles}
+`
+
+export const NavBarSocialMediaIconsAnchor = styled.a`
+  ${linkAndAnchorStyles}
 `

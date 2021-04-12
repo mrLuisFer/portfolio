@@ -19,6 +19,7 @@ import {
   NavBarSocialMediaIconsAnchors,
   NavBarSocialMediaSpan,
   ImgToRotate,
+  NavBarSocialMediaIconsAnchor,
 } from './NavBar.styles'
 
 export default function NavBar(): JSX.Element {
@@ -44,18 +45,13 @@ export default function NavBar(): JSX.Element {
         <NavBarLink to='/contact-me'>Contact me</NavBarLink>
         <NavBarSocialMedia>
           <NavBarSocialMediaSpan
-            className={
-              showIcons
-                ? 'NavBar__social-media__span'
-                : 'NavBar__social-media__span NavBar__notShowIcons-rounded'
-            }
             onClick={handleShowIcons}
-            aria-hidden='true'>
+            aria-hidden='true'
+            showIns={showIcons}>
             <ImgToRotate
               src={doubleArrowRight}
               alt='double-arrow-right'
-              className={showIcons ? '' : 'NavBar__img-volted'}
-              sI={showIcons}
+              showIns={showIcons}
             />
             Social Media
             {showIcons ? ':' : ''}
@@ -64,18 +60,30 @@ export default function NavBar(): JSX.Element {
           {showIcons ? (
             <NavBarSocialMediaIcons>
               <NavBarSocialMediaIconsAnchors className={`${zoomIn}`}>
-                <a href={facebook} target='_blank' rel='noopener noreferrer'>
+                <NavBarSocialMediaIconsAnchor
+                  href={facebook}
+                  target='_blank'
+                  rel='noopener noreferrer'>
                   <i className='fab fa-facebook-f' />
-                </a>
-                <a href={twitter} target='_blank' rel='noopener noreferrer'>
+                </NavBarSocialMediaIconsAnchor>
+                <NavBarSocialMediaIconsAnchor
+                  href={twitter}
+                  target='_blank'
+                  rel='noopener noreferrer'>
                   <i className='fab fa-twitter' />
-                </a>
-                <a href={linkedin} target='_blank' rel='noopener noreferrer'>
+                </NavBarSocialMediaIconsAnchor>
+                <NavBarSocialMediaIconsAnchor
+                  href={linkedin}
+                  target='_blank'
+                  rel='noopener noreferrer'>
                   <i className='fab fa-linkedin-in' />
-                </a>
-                <a href={mailTo} target='_blank' rel='noopener noreferrer'>
+                </NavBarSocialMediaIconsAnchor>
+                <NavBarSocialMediaIconsAnchor
+                  href={mailTo}
+                  target='_blank'
+                  rel='noopener noreferrer'>
                   <i className='fas fa-paper-plane' />
-                </a>
+                </NavBarSocialMediaIconsAnchor>
               </NavBarSocialMediaIconsAnchors>
             </NavBarSocialMediaIcons>
           ) : (
