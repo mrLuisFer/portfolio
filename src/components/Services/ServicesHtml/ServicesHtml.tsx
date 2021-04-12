@@ -1,6 +1,7 @@
 import { useState } from 'react'
 // Utils
 import { fadeIn } from '../../../utils/animateCss/animateCss'
+import '../../../styles/rotate.css'
 import {
   LinkReference,
   ServicesHtmlCard,
@@ -8,6 +9,7 @@ import {
   ServicesHtmlCardContentContainer,
   ServicesHtmlCardContentText,
   ServicesHtmlCardContentTitle,
+  ServicesHtmlCardContentTitleIcon,
   ServicesHtmlCardIcon,
 } from './ServicesHtml.styles'
 
@@ -50,15 +52,13 @@ export default function ServicesHtml({
         <ServicesHtmlCardContent>
           {/* Title */}
           <ServicesHtmlCardContentTitle onClick={handleShowText} aria-hidden='true'>
-            <span className={showText ? 'Services__toVolted' : 'Services__toVolt'}>
+            <ServicesHtmlCardContentTitleIcon toVolt={showText}>
               <i className='fas fa-caret-right' />
-            </span>
+            </ServicesHtmlCardContentTitleIcon>
             {title}
           </ServicesHtmlCardContentTitle>
           {/* Text (Description) */}
-          <ServicesHtmlCardContentContainer
-            className={showText ? `Services__showed ${fadeIn}` : 'Services__toShow'}
-            isShow={showText}>
+          <ServicesHtmlCardContentContainer className={fadeIn} isShow={showText}>
             <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
 
             {showLinkReference ? (
