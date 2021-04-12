@@ -29,7 +29,6 @@
     "no-unused-vars": "error",
     "no-unused-labels": "warn",
     "strict": "warn",
-    "indent": ["warn", 2],
     "jsx-quotes": ["warn", "prefer-single"],
     "semi": ["warn", "never"],
     "quotes": ["warn", "single"],
@@ -61,7 +60,18 @@
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn",
     "no-else-return": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "max-len": "off",
+    "indent": "off",
+    "no-shadow": "off",
+    "arrow-parens": "off",
+    "no-confusing-arrow": "off",
+    "no-use-before-define": "off",
+    "object-curly-newline": "off",
+    "function-paren-newline": "off"
   },
   "settings": {
     "import/resolver": {
