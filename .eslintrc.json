@@ -1,0 +1,83 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "globals": {
+    "ASSET_PATH": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.json",
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier", "react-hooks"],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "eqeqeq": "error",
+    "no-proto": "warn",
+    "no-unused-vars": "error",
+    "no-unused-labels": "warn",
+    "strict": "warn",
+    "jsx-quotes": ["warn", "prefer-single"],
+    "semi": ["warn", "never"],
+    "quotes": ["warn", "single"],
+    "no-alert": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "import/extensions": "off",
+    "react/no-multi-comp": 0,
+    "react/sort-comp": 0,
+    "react/require-default-props": 0,
+    "react/default-props-match-prop-types": [
+      "error",
+      {
+        "allowRequiredDefaults": true
+      }
+    ],
+    "react/destructuring-assignment": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/img-has-alt": 0,
+    "camelcase": 0, // relay generates types with _ in the names, so need to allow non-camelcased,
+    "no-underscore-dangle": 0,
+    "lines-between-class-members": 0,
+    "no-continue": 0,
+    "react/static-property-placement": 0,
+    "react/state-in-constructor": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "no-undef": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn",
+    "no-else-return": "off",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "max-len": "off",
+    "indent": "off",
+    "no-shadow": "off",
+    "arrow-parens": "off",
+    "no-confusing-arrow": "off",
+    "no-use-before-define": "off",
+    "object-curly-newline": "off",
+    "function-paren-newline": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
+}

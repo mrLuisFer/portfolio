@@ -1,14 +1,19 @@
-import { StrictMode } from "react"
-import { render } from "react-dom"
-import "./index.scss"
-import App from "./App"
-import reportWebVitals from "./reportWebVitals"
+import { StrictMode } from 'react'
+import { render } from 'react-dom'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+
+import './styles/global/variables.css'
+import './styles/global/globals.css'
+import './styles/global/customScroll.css'
+
+const root = document.getElementById('root')
 
 render(
   <StrictMode>
     <App />
   </StrictMode>,
-  document.getElementById("root")
+  root
 )
 
 // If you want to start measuring performance in your app, pass a function
