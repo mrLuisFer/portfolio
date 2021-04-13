@@ -24,7 +24,7 @@ If you know the basics, you can contribute with your knowledge or if you want to
 
 - TypeScript
 
-- Sass
+- Styled Components
 
 - AnimateCss
 
@@ -58,3 +58,4 @@ The compilation is minimized and the file names include the hashes
 - [Twitter](https://twitter.com/lolesuncrak)
 - [LinkedIn](https://www.linkedin.com/in/mrluisfer/)
 - [Github](https://github.com/mrLuisFer)
+- [My Discord Commnunity](https://discord.gg/RTdXPfbz3K)

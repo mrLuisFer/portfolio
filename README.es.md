@@ -5,7 +5,7 @@
 
 ## Acerca de
 
-Este es mi primer Portafolio como **Desarrollador Web** | **Frontend**, lo construi con las herramientas basicas de Frontend como `HTML`, `CSS` y `Javascript`
+Este es mi primer Portafolio como **Desarrollador Web** | **Frontend**, lo construí con las herramientas basicas de Frontend como `HTML`, `CSS` y `Javascript`
 
 Pero fue usando `React` para agilizar el desarrollo y `TypesScript` por gusto y evitar errores que lleguen a ocurrir en el futuro o cuando este en produccion
 
@@ -24,7 +24,7 @@ Si conoces lo basico, puedes aportar con tus conocimientos o si quieres agregar 
 
 - TypeScript
 
-- Sass
+- Styled Components
 
 - AnimateCss
 
@@ -58,3 +58,4 @@ La compilación se minimiza y los nombres de archivo incluyen los hash
 - [Twitter](https://twitter.com/lolesuncrak)
 - [LinkedIn](https://www.linkedin.com/in/mrluisfer/)
 - [Github](https://github.com/mrLuisFer)
+- [Mi pequeña comunidad de Discord](https://discord.gg/RTdXPfbz3K)
