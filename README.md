@@ -39,18 +39,34 @@ If you know the basics, you can contribute with your knowledge or if you want to
 If you want to contribute something to this project, you can contact me through one of my social networks
 But you can also do it through a `pull request` and I will review it with pleasure to add it to the main branch
 
-### Scripts Disponibles
+### Scripts Availables
 
-**`npm start`**
+```
+npm start
+```
 
 This will start the project locally on your `localhost: 3000`
 And every time you modify a file and save it, it will automatically reload in your browser
 
-**`npm run build`**
+```
+npm run build
+```
 
 Build your application for production and properly bundle React in production mode and optimize build for best performance
 
 The compilation is minimized and the file names include the hashes
+
+```
+npm run format
+```
+
+What it does is format all files excluding the `node_modules` folder using prettier and eslint rules
+
+```
+npm run lint
+```
+
+Makes the .eslint linter go through all the files checking the rules that are placed in the .eslintrc.json
 
 ## Where to find me?
 

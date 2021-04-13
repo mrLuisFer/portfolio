@@ -41,16 +41,32 @@ Pero tambien puedes hacerlo mediante un `pull request` y yo lo revisare con much
 
 ### Scripts Disponibles
 
-**`npm start`**
+```
+npm start
+```
 
 Esto iniciara el proywcto de manera local en tu `localhost:3000`
 Y cada vez que modifiques algun archivo y lo guardes se te recargara automaticamente en tu navegador
 
-**`npm run build`**
+```
+npm run build
+```
 
 Compila la aplicación para producción y agrupa correctamente React en el modo de producción y optimiza la compilación para obtener el mejor rendimiento
 
 La compilación se minimiza y los nombres de archivo incluyen los hash
+
+```
+npm run format
+```
+
+Lo que hace es formatear todos los archivos excluyendo la carpeta `node_modules` usando reglas de prettier y eslint
+
+```
+npm run lint
+```
+
+Hace que el linter .eslint revise todos los archivos verificando las reglas que se colocan en el `.eslintrc.json`
 
 ## Donde encontrarme?
 
