@@ -1,5 +1,5 @@
 import { CSSObject } from 'styled-components'
-import { ipad, large } from './screens'
+import { ipad, large } from '../screens'
 import { lineUnderText } from './lineUnderText'
 
 export const titleStyle: CSSObject | string = `

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ipad } from '../../styles/screens'
-import { titleStyle } from '../../styles/titleStyle'
+import { titleStyle } from '../../styles/mixins/titleStyle'
 
 export const ServicesTitle = styled.h2`
   ${titleStyle}

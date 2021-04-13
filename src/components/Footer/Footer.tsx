@@ -22,7 +22,7 @@ import {
   FooterContainerCardAnchor,
 } from './Footer.styles'
 
-export default function Footer() {
+export default function Footer(): JSX.Element {
   return (
     <SFooter>
       <FooterWave src={footerWave} alt='footer-wave' />

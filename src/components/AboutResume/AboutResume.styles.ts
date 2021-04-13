@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { noSelect } from '../../styles/noSelect'
+import { noSelect } from '../../styles/mixins/noSelect'
 import { ipad, large } from '../../styles/screens'
 
 const SAboutResume = styled.div`

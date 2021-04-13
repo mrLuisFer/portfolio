@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { large, ipad, veryLarge } from '../../styles/screens'
-import { titleStyle } from '../../styles/titleStyle'
+import { titleStyle } from '../../styles/mixins/titleStyle'
 
 const SkillsStyled = styled.div`
   display: flex;

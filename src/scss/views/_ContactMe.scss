@@ -2,7 +2,8 @@
   padding: 0 5%;
   margin-bottom: 4rem;
 
-  @media (min-width: $large) {
+  // Large
+  @media (min-width: 700px) {
     margin-bottom: 20rem;
     padding: 0 10%;
   }

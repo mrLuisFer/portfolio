@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { lineUnderText } from '../../styles/lineUnderText'
+import { lineUnderText } from '../../styles/mixins/lineUnderText'
 import { ipad } from '../../styles/screens'
 
 const SListWorksSkills = styled.div`

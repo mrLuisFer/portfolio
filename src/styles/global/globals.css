@@ -1,5 +1,3 @@
-@import "./normalize";
-
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -18,8 +16,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  font-family: var(--open-sans-font), -apple-system, "Segoe UI", "Roboto",
-    sans-serif;
+  font-family: var(--open-sans-font), -apple-system, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--cultured);

@@ -1,8 +1,12 @@
 import { StrictMode } from 'react'
 import { render } from 'react-dom'
-import './index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+
+import './styles/global/variables.css'
+import './styles/global/globals.css'
+import './styles/global/customScroll.css'
+import './index.scss'
 
 render(
   <StrictMode>

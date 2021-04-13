@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { ipad, large } from '../../styles/screens'
-import { lineUnderText } from '../../styles/lineUnderText'
+import { lineUnderText } from '../../styles/mixins/lineUnderText'
 
 const SHero = styled.div`
   margin-bottom: 7rem;

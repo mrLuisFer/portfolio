@@ -10,11 +10,14 @@ import NavBar from './components/NavBar/NavBar'
 import Footer from './components/Footer/Footer'
 import BtnToTop from './components/BtnToTop/BtnToTop'
 
+import { AppStyled, WavePattern } from './styles/global/App.styles'
+
 export default function App(): JSX.Element {
   return (
     <Router>
-      <div className='App'>
-        <img className='wave-pattern' src={wavePattern} alt='wave-pattern' />
+      {/* @APP */}
+      <AppStyled>
+        <WavePattern src={wavePattern} alt='mrLuisFer wave illustration pattern' />
         <NavBar />
         <Switch>
           <Route exact path='/' component={HomePage} />
@@ -22,7 +25,7 @@ export default function App(): JSX.Element {
         </Switch>
         <BtnToTop />
         <Footer />
-      </div>
+      </AppStyled>
     </Router>
   )
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { fontWeight } from '../../styles/fontWeight'
+import { fontWeight } from '../../styles/mixins/fontWeight'
 import { ipad, large } from '../../styles/screens'
 
 const SFooter = styled.div`

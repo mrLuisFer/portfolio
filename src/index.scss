@@ -1,16 +1,6 @@
-// Google Fonts - Open Sans | Inter
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap');
-
-//  Variables
-@import './scss/variables.scss';
-
-// Global
-@import './scss/globals';
-// Loaders
 @import './scss/components/Loaders/Loader';
 @import './scss/components/Loaders/Loader-2';
 // Custom Scroll
-@import './scss/customScroll.scss';
 
 // Mixins
 @import './scss/mixins/no-select';
@@ -25,23 +15,5 @@
 
 // Contact Me
 @import './scss/views/ContactMe.scss';
-// Contact Me (Form)
 
-// Hero
-
-// NavBar
-
-// LikeToDo (Cards)
-
-// ListWorksSkills
-
-// Skills
-
-// Projects
-
-// Services
-
-// Fotter
-
-// Components
 @import './components/index';
