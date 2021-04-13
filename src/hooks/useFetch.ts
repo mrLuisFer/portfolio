@@ -21,7 +21,7 @@ export const useFetch = (url: string) => {
       } else {
         const response: Response = await fetch(url)
         const resData: Array<Object> = await response.json()
-        cache.current[url] = data // set response in cache;
+        cache.current[url] = data // set response in cache
         setData(resData)
         setStatus('fetched')
       }

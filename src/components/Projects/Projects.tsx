@@ -1,61 +1,36 @@
 // Hooks
 import { useFetch } from '../../hooks/useFetch'
-// Functions
-import truncate from '../../functions/truncate'
+import {
+  ProjectsStyled,
+  ProjectsFlex,
+  ProjectsTitle,
+  ProjectsGrid,
+} from './Projects.styles'
+
+import ProjectsCard from './ProjectsCard/ProjectsCard'
 
 // In this component will be the call to the github api
 export default function Projects(): JSX.Element {
   const url: string = 'https://api.github.com/users/mrLuisFer/repos'
   const { status, data } = useFetch(url)
 
-  const windowWidth: number = window.innerWidth
-  let length: number = 0
-
-  if (windowWidth <= 375) {
-    length = 170
-  } else if (windowWidth >= 375) {
-    length = 160
-  }
-
   return status === 'fetching' ? (
     <div className='loader'>Loading...</div>
   ) : (
     // Projects Section
-    <div className='Projects' id='projects'>
-      <div className='Projects__flex'>
-        <h2 className='Projects__title'>
+    <ProjectsStyled id='projects'>
+      <ProjectsFlex>
+        <ProjectsTitle>
           <i className='fas fa-angle-double-right' />
           <span>Projects:</span>
-        </h2>
-      </div>
-      <div className='Projects__grid'>
+        </ProjectsTitle>
+      </ProjectsFlex>
+      <ProjectsGrid>
         {/* The cards of the data */}
         {data.map((project: any) => (
-          <div key={project?.id} className='Projects__container'>
-            <h2>{project?.name}</h2>
-            <p className='Projects__container-description'>
-              {truncate(project?.description, length)}
-            </p>
-            <a href={project?.html_url} target='_blank' rel='noopener noreferrer'>
-              <i className='fab fa-github-alt' /> <span>{project?.full_name}</span>
-            </a>
-            <br />
-            <p className='Projects__container-date'>
-              <i className='far fa-calendar-alt' />{' '}
-              {new Date(`${project.created_at}`).toDateString()}
-            </p>
-            <br />
-            {project?.language?.length > 1 ? (
-              <p className='Projects__container-lang'>
-                <i className='fas fa-file-code' />
-                {project?.language}
-              </p>
-            ) : (
-              ''
-            )}
-          </div>
+          <ProjectsCard project={project} key={project?.id} />
         ))}
-      </div>
-    </div>
+      </ProjectsGrid>
+    </ProjectsStyled>
   )
 }
