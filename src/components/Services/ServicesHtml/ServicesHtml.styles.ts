@@ -67,11 +67,13 @@ export const ServicesHtmlCardIcon = styled.span`
   }
 `
 
-export const ServicesHtmlCard = styled.div`
+export const ServicesHtmlCard: any = styled.div`
   display: flex;
   align-items: center;
   border: 0.5px solid rgba(0, 0, 0, 0);
   border-radius: var(--radius);
+  box-shadow: ${(props: any) =>
+    props.showText ? '0.5px 0.5px 2px var(--oxford-dark-blue)' : ''};
   height: auto;
   padding: 1rem;
   transition: var(--transition);

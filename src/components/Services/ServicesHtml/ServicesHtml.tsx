@@ -44,7 +44,7 @@ export default function ServicesHtml({
   return (
     <>
       {/* Card */}
-      <ServicesHtmlCard>
+      <ServicesHtmlCard showText={showText}>
         {/* Icon (ClassName) */}
         <ServicesHtmlCardIcon onClick={handleShowText} aria-hidden='true'>
           <i id='card-icon' className={iconClass} />
