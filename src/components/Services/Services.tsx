@@ -5,7 +5,7 @@ import { ServicesContainer, ServicesTitle } from './Services.styles'
 
 export default function Services(): JSX.Element {
   return (
-    <div className='Services'>
+    <div>
       <ServicesTitle>
         <i className='fas fa-angle-double-right' />
         <span>Services:</span>

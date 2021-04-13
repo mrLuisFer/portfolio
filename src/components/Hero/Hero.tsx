@@ -29,7 +29,7 @@ export default function Hero(): JSX.Element {
           src={heroIllustration}
           alt='Illustration of a Developer making code'
         />
-        <div className={`Hero__flex ${slideUp}`}>
+        <div className={slideUp}>
           <HeroPersonal>
             <HeroPersonalTitle>
               <HeroPersonalGreet>Hello!</HeroPersonalGreet> I am{' '}
@@ -38,7 +38,7 @@ export default function Hero(): JSX.Element {
                 <HeroPersonalCodeIcon className='fas fa-code' />
               </span>
             </HeroPersonalTitle>
-            <HeroPersonalInfo className='Hero__personal-info'>
+            <HeroPersonalInfo>
               <span>
                 Frontend <span>Developer</span>
               </span>

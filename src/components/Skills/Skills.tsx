@@ -87,7 +87,7 @@ export default function Skiils(): JSX.Element {
 
         {/* Tools Section */}
         <SkillsSectionsTwo>
-          <SkillsTitle className='Skills__title'>
+          <SkillsTitle>
             <i className='fas fa-angle-double-right' />
             <span>Tools:</span>
           </SkillsTitle>

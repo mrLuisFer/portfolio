@@ -48,7 +48,7 @@ export default function AboutResume(): JSX.Element {
               freelance work and projects.
             </p>
             {/* Button to download the CV */}
-            <a className='AboutResumeInfoText-a' href='/cv-resume.pdf' download>
+            <a href='/cv-resume.pdf' download>
               <i className='fas fa-cloud-download-alt' />
               Download My CV
             </a>

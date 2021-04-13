@@ -33,7 +33,7 @@ export default function NavBar(): JSX.Element {
 
   return (
     <NavBarStyled id='hero'>
-      <NavBarLogo className='NavBarLogo'>
+      <NavBarLogo>
         <NavBarLogoTitle className={`${bounceIn}`}>
           <Link to='/'>
             <img src={navBarLogo} alt='mrLuisFer logo' />
