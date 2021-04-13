@@ -6,13 +6,14 @@ import reportWebVitals from './reportWebVitals'
 import './styles/global/variables.css'
 import './styles/global/globals.css'
 import './styles/global/customScroll.css'
-import './index.scss'
+
+const root = document.getElementById('root')
 
 render(
   <StrictMode>
     <App />
   </StrictMode>,
-  document.getElementById('root')
+  root
 )
 
 // If you want to start measuring performance in your app, pass a function

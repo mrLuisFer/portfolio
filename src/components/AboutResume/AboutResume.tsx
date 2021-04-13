@@ -21,7 +21,10 @@ import {
 export default function AboutResume(): JSX.Element {
   return (
     <SAboutResume>
-      <AboutResumeWave src={waveAboutResume} alt='wave-about-resume' />
+      <AboutResumeWave
+        src={waveAboutResume}
+        alt='Illustration for the about section of mrLuisFer'
+      />
       <AboutResumeInfo>
         <div>
           <AboutResumeInfoTitleContainer>
@@ -55,11 +58,14 @@ export default function AboutResume(): JSX.Element {
           <AboutResumeInfoIllustration
             src={aboutResumeIllustration}
             className={bounceIn}
-            alt='flying-about-resume-illustration'
+            alt='Floating illustration about ideas and inspiration'
           />
         </AboutResumeInfoIllustrationContainer>
       </AboutResumeInfo>
-      <AboutResummeWaveDown src={waveAboutResumeDown} alt='wave-about-resume-down' />
+      <AboutResummeWaveDown
+        src={waveAboutResumeDown}
+        alt='Wave style illustration for the final part of the about section'
+      />
     </SAboutResume>
   )
 }

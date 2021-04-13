@@ -1,13 +1,10 @@
-// React Router
-// import { Switch, Route } from "react-router-dom"
-
-// Custom Hooks
 import { useLoader } from '../../hooks/useLoader'
 
-// Components
 import Skills from '../Skills/Skills'
 import Projects from '../Projects/Projects'
 import Services from '../Services/Services'
+
+import '../../styles/components/Loaders/loader.css'
 
 import { SCardsContainer } from './CardsContainer.styles'
 

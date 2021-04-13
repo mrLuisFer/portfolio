@@ -80,7 +80,7 @@ export default function Skiils(): JSX.Element {
             </SkillsCardsContainer>
             <SkillsIllustration
               src={WebsiteCreatorIllustration}
-              alt='website-creator-illustration'
+              alt='Website creator illustration'
             />
           </SkillsFlex>
         </SkillsSections>
@@ -94,7 +94,7 @@ export default function Skiils(): JSX.Element {
           <SkillsFlex>
             <SkillsIllustration
               src={ToolsSkillsIllustration}
-              alt='tool-skills-illustration'
+              alt='Tool skills illustration'
             />
             <SkillsCardsContainerTwo>
               <div>

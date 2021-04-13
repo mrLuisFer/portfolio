@@ -42,39 +42,33 @@ export default function ServicesHtml({
   }
 
   return (
-    <>
-      {/* Card */}
-      <ServicesHtmlCard showText={showText}>
-        {/* Icon (ClassName) */}
-        <ServicesHtmlCardIcon onClick={handleShowText} aria-hidden='true'>
-          <i id='card-icon' className={iconClass} />
-        </ServicesHtmlCardIcon>
-        <ServicesHtmlCardContent>
-          {/* Title */}
-          <ServicesHtmlCardContentTitle onClick={handleShowText} aria-hidden='true'>
-            <ServicesHtmlCardContentTitleIcon toVolt={showText}>
-              <i className='fas fa-caret-right' />
-            </ServicesHtmlCardContentTitleIcon>
-            {title}
-          </ServicesHtmlCardContentTitle>
-          {/* Text (Description) */}
-          <ServicesHtmlCardContentContainer className={fadeIn} isShow={showText}>
-            <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
+    <ServicesHtmlCard showText={showText}>
+      {/* Icon (ClassName) */}
+      <ServicesHtmlCardIcon onClick={handleShowText} aria-hidden='true'>
+        <i id='card-icon' className={iconClass} />
+      </ServicesHtmlCardIcon>
+      <ServicesHtmlCardContent>
+        {/* Title */}
+        <ServicesHtmlCardContentTitle onClick={handleShowText} aria-hidden='true'>
+          <ServicesHtmlCardContentTitleIcon toVolt={showText}>
+            <i className='fas fa-caret-right' />
+          </ServicesHtmlCardContentTitleIcon>
+          {title}
+        </ServicesHtmlCardContentTitle>
+        {/* Text (Description) */}
+        <ServicesHtmlCardContentContainer className={fadeIn} isShow={showText}>
+          <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
 
-            {showLinkReference ? (
-              <LinkReference
-                href={linkReference}
-                target='_blank'
-                rel='noopener noreferrer'>
-                <i className='fas fa-link' />
-                <span>What is this?</span>
-              </LinkReference>
-            ) : (
-              ''
-            )}
-          </ServicesHtmlCardContentContainer>
-        </ServicesHtmlCardContent>
-      </ServicesHtmlCard>
-    </>
+          {showLinkReference ? (
+            <LinkReference href={linkReference} target='_blank' rel='noopener noreferrer'>
+              <i className='fas fa-link' />
+              <span>What is this?</span>
+            </LinkReference>
+          ) : (
+            ''
+          )}
+        </ServicesHtmlCardContentContainer>
+      </ServicesHtmlCardContent>
+    </ServicesHtmlCard>
   )
 }

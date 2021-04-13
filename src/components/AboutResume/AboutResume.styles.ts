@@ -199,9 +199,10 @@ const AboutResumeInfoText = styled.div`
 
 const AboutResumeInfoIllustrationContainer = styled.div`
   @media (min-width: ${ipad}) {
-    @include no-select;
     display: flex;
     justify-content: center;
+
+    ${noSelect}
   }
 
   @media (min-width: ${large}) {

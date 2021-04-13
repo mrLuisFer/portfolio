@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { ipad, large } from '../../styles/screens'
 import { lineUnderText } from '../../styles/mixins/lineUnderText'
+import { noSelect } from '../../styles/mixins/noSelect'
 
 const SHero = styled.div`
   margin-bottom: 7rem;
@@ -24,7 +25,8 @@ const HeroIllustration = styled.img`
   margin: 0 auto;
   height: 220px;
   margin-bottom: 2rem;
-  @include no-select;
+
+  ${noSelect}
 
   @media (min-width: ${ipad}) {
     margin: 0;

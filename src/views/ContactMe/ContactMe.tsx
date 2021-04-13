@@ -13,44 +13,61 @@ import {
   twitter,
 } from '../../utils/social-links/socialLinks'
 
+import {
+  ContactMeContainer,
+  ContactMeSocialContainer,
+  ContactMeSocialLink,
+  ContactMeSocialContainerTitle,
+  ContactMeStyled,
+  ContactMeTitle,
+  ContactMeSocialIcon,
+  ContactMeSocialText,
+  ContactMeIllustration,
+  ContactMeFlex,
+} from './ContactMe.styles'
+
 export default function ContactMe() {
   return (
-    <div className='ContactMe'>
-      <h1 className='ContactMe__title'>Contact Me</h1>
-      <div className='ContactMe__container'>
-        <div className={`ContactMe__container-social ${slideUp}`}>
-          <h4 className='ContactMe__container-social__title'>You can contact me by..</h4>
-          <a href={github} target='_blank' rel='noopener noreferrer'>
-            <i className='fab fa-github' />
-            <span>GitHub</span>
-          </a>
-          <a href={linkedin} target='_blank' rel='noopener noreferrer'>
-            <i className='fab fa-linkedin' />
-            <span>LinkedIn</span>
-          </a>
-          <a href={twitter} target='_blank' rel='noopener noreferrer'>
-            <i className='fab fa-twitter' />
-            <span>Twitter</span>
-          </a>
-          <a href={facebook} target='_blank' rel='noopener noreferrer'>
-            <i className='fab fa-facebook' />
-            <span>Facebook</span>
-          </a>
-          <a href={instagram} target='_blank' rel='noopener noreferrer'>
-            <i className='fab fa-instagram' />
-            <span>Instagram</span>
-          </a>
-        </div>
-        <img
-          className='ContactMe__container-social__illustration'
+    <ContactMeStyled>
+      <ContactMeTitle>Contact Me</ContactMeTitle>
+      <ContactMeContainer>
+        <ContactMeSocialContainer className={slideUp}>
+          <ContactMeSocialContainerTitle>
+            You can contact me by..
+          </ContactMeSocialContainerTitle>
+          <ContactMeSocialLink href={github} target='_blank' rel='noopener noreferrer'>
+            <ContactMeSocialIcon className='fab fa-github' />
+            <ContactMeSocialText>GitHub</ContactMeSocialText>
+          </ContactMeSocialLink>
+          <ContactMeSocialLink href={linkedin} target='_blank' rel='noopener noreferrer'>
+            <ContactMeSocialIcon className='fab fa-linkedin' />
+            <ContactMeSocialText>LinkedIn</ContactMeSocialText>
+          </ContactMeSocialLink>
+          <ContactMeSocialLink href={twitter} target='_blank' rel='noopener noreferrer'>
+            <ContactMeSocialIcon className='fab fa-twitter' />
+            <ContactMeSocialText>Twitter</ContactMeSocialText>
+          </ContactMeSocialLink>
+          <ContactMeSocialLink href={facebook} target='_blank' rel='noopener noreferrer'>
+            <ContactMeSocialIcon className='fab fa-facebook' />
+            <ContactMeSocialText>Facebook</ContactMeSocialText>
+          </ContactMeSocialLink>
+          <ContactMeSocialLink href={instagram} target='_blank' rel='noopener noreferrer'>
+            <ContactMeSocialIcon className='fab fa-instagram' />
+            <ContactMeSocialText>Instagram</ContactMeSocialText>
+          </ContactMeSocialLink>
+        </ContactMeSocialContainer>
+        <ContactMeIllustration
           src={contactMeIllustration}
-          alt='code-typing-contactme'
+          alt='Illustration of person developing a web page'
         />
-      </div>
-      <div className='ContactMe__flex'>
-        <img src={contactMeMailSent} alt='contactMe-mail-sent' />
+      </ContactMeContainer>
+      <ContactMeFlex>
+        <ContactMeIllustration
+          src={contactMeMailSent}
+          alt='Illustration where an email is sent'
+        />
         <ContactForm />
-      </div>
-    </div>
+      </ContactMeFlex>
+    </ContactMeStyled>
   )
 }

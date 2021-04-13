@@ -1,12 +1,12 @@
-export const lineUnderText = (
+export const lineUnderText: Function = (
   firstColor: string,
   hoverColor: string,
   width: string | number = '100%',
   height: string | number = '7px',
   positionLeft: string | number = '0px',
-  positionBottom: string = ' ',
+  positionBottom: string | number = 0,
   opacity: string | number = 0.4
-) => {
+): string => {
   return `
   &::after {
     content: " ";
@@ -22,7 +22,7 @@ export const lineUnderText = (
     transition: background var(--transition);
   }
 
-  &:hover {
+  :hover {
     &::after {
       background: ${hoverColor};
     }

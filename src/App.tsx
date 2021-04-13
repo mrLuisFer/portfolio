@@ -1,6 +1,4 @@
-import './scss/_App.scss'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// Assets
 import wavePattern from './assets/wave-pattern.svg'
 // views
 import HomePage from './views/HomePage/HomePage'
@@ -15,9 +13,11 @@ import { AppStyled, WavePattern } from './styles/global/App.styles'
 export default function App(): JSX.Element {
   return (
     <Router>
-      {/* @APP */}
       <AppStyled>
-        <WavePattern src={wavePattern} alt='mrLuisFer wave illustration pattern' />
+        <WavePattern
+          src={wavePattern}
+          alt='mrLuisFer wave style illustration for page top'
+        />
         <NavBar />
         <Switch>
           <Route exact path='/' component={HomePage} />

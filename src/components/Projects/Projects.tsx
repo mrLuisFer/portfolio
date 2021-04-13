@@ -7,6 +7,8 @@ import {
   ProjectsGrid,
 } from './Projects.styles'
 
+import '../../styles/components/Loaders/loader.css'
+
 import ProjectsCard from './ProjectsCard/ProjectsCard'
 
 // In this component will be the call to the github api

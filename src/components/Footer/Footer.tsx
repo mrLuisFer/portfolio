@@ -25,7 +25,7 @@ import {
 export default function Footer(): JSX.Element {
   return (
     <SFooter>
-      <FooterWave src={footerWave} alt='footer-wave' />
+      <FooterWave src={footerWave} alt='Wave style illustration for footer start' />
       <FooterContainer>
         {/* Quick Links */}
         <FooterContainerCard>
@@ -95,9 +95,8 @@ export default function Footer(): JSX.Element {
         </FooterContainerCard>
         {/* Footer Illustration */}
         <FooterContainerIllustration
-          className='Footer__container-illustration'
           src={footerIllustration}
-          alt='footer-illustration'
+          alt='Illustration of a Boy on a Cell Phone for the Footer'
         />
       </FooterContainer>
 

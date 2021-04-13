@@ -25,7 +25,10 @@ export default function Hero(): JSX.Element {
   return (
     <Router>
       <SHero>
-        <HeroIllustration src={heroIllustration} alt='hero-illustration' />
+        <HeroIllustration
+          src={heroIllustration}
+          alt='Illustration of a Developer making code'
+        />
         <div className={`Hero__flex ${slideUp}`}>
           <HeroPersonal>
             <HeroPersonalTitle>
