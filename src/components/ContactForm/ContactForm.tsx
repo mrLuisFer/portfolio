@@ -4,8 +4,20 @@ import sendEmail from '../../functions/emailJs'
 // Components
 import StatusText from '../StatusText/StatusText'
 
+import {
+  ContactFormContent,
+  ContactFormLabel,
+  ContactFormStyled,
+  ContactFormTitle,
+  ContactFormTitleIcon,
+  ContactFormInput,
+  ContactFormTextarea,
+  ContactFormBtnSubmit,
+  ContactFormBtnSubmitIcon,
+} from './ContactForm.styles'
+
 // This is the contact component with all logic
-export default function ContactForm() {
+export default function ContactForm(): JSX.Element {
   const [hasEmail, setHasEmail] = useState<Boolean>(false)
   const [hasInfo, setHasInfo] = useState<Boolean>(false)
   const [error, setError] = useState<String>('')
@@ -46,17 +58,17 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='ContactForm'>
-      <h2>
-        <i className='far fa-comments' />
+    <ContactFormStyled>
+      <ContactFormTitle>
+        <ContactFormTitleIcon className='far fa-comments' />
         Leave me a message
-      </h2>
+      </ContactFormTitle>
       {/* Contact Form */}
       <form onSubmit={(e) => validateToSendEmail(e)}>
-        <div>
-          <label htmlFor='from_name'>
+        <ContactFormContent>
+          <ContactFormLabel htmlFor='from_name'>
             Name:
-            <input
+            <ContactFormInput
               type='text'
               name='from_name'
               id='from_name'
@@ -64,12 +76,12 @@ export default function ContactForm() {
               autoComplete='off'
               required
             />
-          </label>
-        </div>
-        <div>
-          <label htmlFor='email'>
+          </ContactFormLabel>
+        </ContactFormContent>
+        <ContactFormContent>
+          <ContactFormLabel htmlFor='email'>
             Email:
-            <input
+            <ContactFormInput
               type='emal'
               name='email'
               id='email'
@@ -77,12 +89,12 @@ export default function ContactForm() {
               autoComplete='off'
               required
             />
-          </label>
-        </div>
-        <div>
-          <label htmlFor='message'>
+          </ContactFormLabel>
+        </ContactFormContent>
+        <ContactFormContent>
+          <ContactFormLabel htmlFor='message'>
             Message:
-            <textarea
+            <ContactFormTextarea
               id='message'
               name='message'
               rows={7}
@@ -91,18 +103,18 @@ export default function ContactForm() {
               autoComplete='off'
               required
             />
-          </label>
-        </div>
-        <button type='submit' className='ContactForm__submit'>
-          <i className='far fa-envelope' />
+          </ContactFormLabel>
+        </ContactFormContent>
+        <ContactFormBtnSubmit type='submit'>
+          <ContactFormBtnSubmitIcon className='far fa-envelope' />
           Send Email
-        </button>
+        </ContactFormBtnSubmit>
       </form>
       {showText ? (
         <StatusText error={error} statusError={statusError} setShowText={setShowText} />
       ) : (
         ''
       )}
-    </div>
+    </ContactFormStyled>
   )
 }

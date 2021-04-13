@@ -1,4 +1,10 @@
 import { useEffect, useCallback } from 'react'
+import {
+  StatusTextDescription,
+  StatusTextDescriptionIcon,
+  StatusTextSpan,
+  StatusTextStyled,
+} from './StatusText.styles'
 
 type TStatusText = {
   error: String
@@ -21,18 +27,15 @@ export default function StatusText({ error, statusError, setShowText }: TStatusT
   }, [changinShowText])
 
   return (
-    <div className='StatusText'>
-      <p className='ContactForm__text-status'>
-        <span
-          className={
-            statusError
-              ? 'ContactForm__text-status-error '
-              : 'ContactForm__text-status-succes'
-          }>
-          <i className={statusError ? 'fas fa-exclamation-triangle' : succesIcon} />
+    <StatusTextStyled>
+      <StatusTextDescription>
+        <StatusTextSpan statusError={statusError}>
+          <StatusTextDescriptionIcon
+            className={statusError ? 'fas fa-exclamation-triangle' : succesIcon}
+          />
           {statusError ? error : succesText}
-        </span>
-      </p>
-    </div>
+        </StatusTextSpan>
+      </StatusTextDescription>
+    </StatusTextStyled>
   )
 }
