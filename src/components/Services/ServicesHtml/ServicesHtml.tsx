@@ -25,7 +25,7 @@ export default function ServicesHtml({
   title,
   description = '',
   linkReference = '',
-}: TServicesHtml) {
+}: TServicesHtml): JSX.Element {
   const [showText, setShowText] = useState<Boolean>(false)
   const [showLinkReference, setShowLinkReference] = useState<Boolean>(true)
 

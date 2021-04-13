@@ -76,7 +76,12 @@ const FooterContainerCard = styled.div`
   }
 `
 
-const FooterContainerCardAnchor = styled.a``
+const FooterContainerCardAnchor = styled.a`
+  i {
+    margin-right: 0.5rem;
+    font-size: 1.25rem;
+  }
+`
 
 const FooterContainerCardTitle = styled.h2`
   position: relative;

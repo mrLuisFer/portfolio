@@ -19,12 +19,6 @@ export const ServicesHtmlCardContentTitle = styled.h1`
   ${noSelect}
 
   ${fontWeight('var(--powder-blue)')}
-  
-  span {
-    i {
-      margin-right: 0.5rem;
-    }
-  }
 
   :hover {
     text-decoration: underline;
@@ -56,6 +50,20 @@ export const LinkReference = styled.a`
       text-decoration: none;
       margin-right: 0.5rem;
     }
+  }
+`
+export const ServicesHtmlCardIcon = styled.span`
+  border-radius: var(--radius);
+  box-shadow: 0.3px 0.3px 4px var(--shadow-color);
+  transition: var(--transition);
+  text-align: center;
+  height: auto;
+  width: 60px;
+  padding: 0.8rem;
+  font-size: 1.9rem;
+
+  i {
+    cursor: pointer;
   }
 `
 
@@ -95,24 +103,13 @@ export const ServicesHtmlCard = styled.div`
     ${LinkReference} {
       color: var(--green);
     }
-  }
-`
 
-export const ServicesHtmlCardIcon = styled.span`
-  border-radius: var(--radius);
-  box-shadow: 0.3px 0.3px 4px var(--shadow-color);
-  transition: var(--transition);
-  text-align: center;
-  height: auto;
-  width: 60px;
-  padding: 0.8rem;
-  font-size: 1.9rem;
-
-  &:hover {
-    transform: scale(1.08);
-    background: var(--independence);
-    color: var(--gainsboro);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    ${ServicesHtmlCardIcon} {
+      transform: scale(1.08);
+      background: var(--independence);
+      color: var(--gainsboro);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
   }
 `
 
@@ -149,5 +146,6 @@ export const ServicesHtmlCardContentTitleIcon: any = styled.span`
     box-shadow: none;
     transform: ${(props: any) => (props.toVolt ? 'rotate(90deg)' : 'rotate(0deg)')};
     transition: var(--transition);
+    margin-right: 0.5rem;
   }
 `
