@@ -40,7 +40,7 @@ export const NavBarLogoTitle = styled.h1`
     color: var(--rich-black);
     font-size: 1.3rem;
 
-    @media (min-width: $ipad) {
+    @media (min-width: ${ipad}) {
       position: relative;
     }
 
