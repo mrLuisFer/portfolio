@@ -1,7 +1,7 @@
 import { useLoader } from '../../hooks/useLoader'
 
 import Skills from '../Skills/Skills'
-import Projects from '../Projects/Projects'
+// import Projects from '../Projects/Projects'
 import Services from '../Services/Services'
 
 import '../../styles/components/Loaders/loader.css'
@@ -18,7 +18,7 @@ export default function CardsContainer(): JSX.Element {
       ) : (
         <>
           <Skills />
-          <Projects />
+          {/* <Projects /> */}
           <Services />
         </>
       )}
