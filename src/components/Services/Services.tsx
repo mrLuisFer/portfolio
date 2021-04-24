@@ -1,4 +1,3 @@
-// Components
 import ServicesHtml from './ServicesHtml/ServicesHtml'
 
 import { ServicesContainer, ServicesTitle } from './Services.styles'
@@ -41,7 +40,6 @@ export default function Services(): JSX.Element {
           description='I like to develop small applications on mobile devices using React Native'
           linkReference='https://en.wikipedia.org/wiki/React_Native'
         />
-        {/* In progress (For have 2 classNames just add a space btw) */}
         <ServicesHtml
           title='In progress...'
           iconClass='fas fa-spinner rotate'

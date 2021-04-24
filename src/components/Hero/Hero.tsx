@@ -7,7 +7,7 @@ import { slideUp } from '../../utils/animateCss/animateCss'
 import { linkedin, github } from '../../utils/social-links/socialLinks'
 
 import {
-  SHero,
+  HeroStyled,
   HeroIllustration,
   HeroPersonal,
   HeroPersonalGreet,
@@ -24,7 +24,7 @@ import {
 export default function Hero(): JSX.Element {
   return (
     <Router>
-      <SHero>
+      <HeroStyled>
         <HeroIllustration
           src={heroIllustration}
           alt='Illustration of a Developer making code'
@@ -70,7 +70,7 @@ export default function Hero(): JSX.Element {
             </HeroLinksAbout>
           </HeroLinks>
         </div>
-      </SHero>
+      </HeroStyled>
     </Router>
   )
 }

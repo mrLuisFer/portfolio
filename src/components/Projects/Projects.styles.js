@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ipad, large } from '../../styles/screens'
+import { large } from '../../styles/screens'
 import { titleStyle } from '../../styles/mixins/titleStyle'
 
 export const ProjectsStyled = styled.div`
@@ -22,16 +22,16 @@ export const ProjectsTitle = styled.h1`
   margin-bottom: 0;
 `
 
-export const ProjectsGrid = styled.div`
-  @media (min-width: ${ipad}) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2.5rem;
-    row-gap: 4.5rem;
-    color: var(--gainsboro);
-  }
+// export const ProjectsGrid = styled.div`
+//   @media (min-width: ${ipad}) {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     column-gap: 2.5rem;
+//     row-gap: 4.5rem;
+//     color: var(--gainsboro);
+//   }
 
-  @media (min-width: ${large}) {
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  }
-`
+//   @media (min-width: ${large}) {
+//     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+//   }
+// `

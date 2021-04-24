@@ -6,13 +6,13 @@ import Services from '../Services/Services'
 
 import '../../styles/components/Loaders/loader.css'
 
-import { SCardsContainer } from './CardsContainer.styles'
+import { CardsContainerStyled } from './CardsContainer.styles'
 
 export default function CardsContainer(): JSX.Element {
   const loader = useLoader()
 
   return (
-    <SCardsContainer>
+    <CardsContainerStyled>
       {loader ? (
         <div className='loader'>Loading...</div>
       ) : (
@@ -22,6 +22,6 @@ export default function CardsContainer(): JSX.Element {
           <Services />
         </>
       )}
-    </SCardsContainer>
+    </CardsContainerStyled>
   )
 }

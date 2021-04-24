@@ -1,3 +1,5 @@
+import { css, FlattenSimpleInterpolation } from 'styled-components'
+
 export const lineUnderText: Function = (
   firstColor: string,
   hoverColor: string,
@@ -6,26 +8,26 @@ export const lineUnderText: Function = (
   positionLeft: string | number = '0px',
   positionBottom: string | number = 0,
   opacity: string | number = 0.4
-): string => {
-  return `
-  &::after {
-    content: " ";
-    position: absolute;
-    border-radius: 1.5px;
-    background: ${firstColor};
-    width: ${width};
-    height: ${height};
-    left: ${positionLeft};
-    bottom: ${positionBottom};
-    z-index: -10;
-    opacity: ${opacity};
-    transition: background var(--transition);
-  }
-
-  :hover {
+): FlattenSimpleInterpolation => {
+  return css`
     &::after {
-      background: ${hoverColor};
+      content: ' ';
+      position: absolute;
+      border-radius: 1.5px;
+      background: ${firstColor};
+      width: ${width};
+      height: ${height};
+      left: ${positionLeft};
+      bottom: ${positionBottom};
+      z-index: -10;
+      opacity: ${opacity};
+      transition: background var(--transition);
     }
-  }
+
+    :hover {
+      &::after {
+        background: ${hoverColor};
+      }
+    }
   `
 }

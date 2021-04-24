@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ipad } from '../../styles/screens'
 
-const SBtnToTop = styled.button`
+export const SBtnToTop = styled.button`
   position: sticky;
   bottom: 0;
   right: 0;
@@ -34,5 +34,3 @@ const SBtnToTop = styled.button`
     }
   }
 `
-
-export { SBtnToTop }

@@ -1,20 +1,11 @@
 // Hooks
-import { useFetch } from '../../hooks/useFetch'
-import {
-  ProjectsStyled,
-  ProjectsFlex,
-  ProjectsTitle,
-  ProjectsGrid,
-} from './Projects.styles'
+import { ProjectsStyled, ProjectsFlex, ProjectsTitle } from './Projects.styles'
 
 import '../../styles/components/Loaders/loader.css'
 
-import ProjectsCard from './ProjectsCard/ProjectsCard'
-
 // In this component will be the call to the github api
 export default function Projects(): JSX.Element {
-  const url: string = 'https://api.github.com/users/mrLuisFer/repos'
-  const { status, data } = useFetch(url)
+  const status: string = ''
 
   return status === 'fetching' ? (
     <div className='loader'>Loading...</div>
@@ -27,12 +18,9 @@ export default function Projects(): JSX.Element {
           <span>Projects:</span>
         </ProjectsTitle>
       </ProjectsFlex>
-      <ProjectsGrid>
-        {/* The cards of the data */}
-        {data.map((project: any) => (
-          <ProjectsCard project={project} key={project?.id} />
-        ))}
-      </ProjectsGrid>
+      <div>
+        <p>Seom</p>
+      </div>
     </ProjectsStyled>
   )
 }

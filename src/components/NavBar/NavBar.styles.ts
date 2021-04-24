@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ipad, large } from '../../styles/screens'
 import { lineUnderText } from '../../styles/mixins/lineUnderText'
 import { noSelect } from '../../styles/mixins/noSelect'
@@ -85,7 +85,7 @@ export const NavBarSocialMedia = styled.div`
   }
 `
 
-export const NavBarSocialMediaSpan: any = styled.span`
+export const NavBarSocialMediaSpan: any = styled.p`
   background: var(--blue);
   margin-left: 0.9rem;
   padding-right: 0.4rem;
@@ -124,7 +124,7 @@ export const NavBarSocialMediaSpan: any = styled.span`
 `
 
 export const NavBarSocialMediaIcons = styled.div`
-  /* background: var(--blue); */
+  background: var(--blue);
   background: linear-gradient(270deg, rgba(4, 102, 200, 1) 30%, rgba(3, 83, 164, 1) 95%);
   padding-left: 0;
   border-radius: 0 7px 7px 0;
@@ -141,12 +141,14 @@ export const NavBarSocialMediaIconsAnchors = styled.div`
   }
 `
 
-export const ImgToRotate: any = styled.img`
+export const IconToRotate: any = styled.i`
   transition: ${(props: any) => (props.showIns ? 'all 0.3s ease' : '')};
   transform: ${(props: any) => (props.showIns ? 'rotate(180deg)' : '')};
+
+  margin-right: 0.5rem;
 `
 
-const linkAndAnchorStyles = `
+const linkAndAnchorStyles = css`
   margin: 0 0.9rem;
   text-decoration: none;
   color: var(--oxford-blue);
@@ -155,26 +157,25 @@ const linkAndAnchorStyles = `
 
   ${noSelect}
 
+  @media (min-width: ${ipad}) {
+    margin: 0;
+    margin-left: 0.9rem;
+    transition: var(--transition);
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: ${large}) {
+    font-size: 1.2rem;
+    margin-left: 1.2rem;
+  }
+
+  &:hover {
+    color: var(--oxford-dark-blue);
+    border-bottom: 2px solid var(--oxford-blue);
+    transform: scale(1.05);
+
     @media (min-width: ${ipad}) {
-      margin: 0;
-      margin-left: 0.9rem;
-      transition: var(--transition);
-      font-size: 0.9rem;
-    }
-
-    @media (min-width: ${large}) {
-      font-size: 1.2rem;
-      margin-left: 1.2rem;
-    }
-
-    &:hover {
-      color: var(--oxford-dark-blue);
-      border-bottom: 2px solid var(--oxford-blue);
-      transform: scale(1.05);
-
-      @media (min-width: ${ipad}) {
-        transform: scale(1.1);
-      }
+      transform: scale(1.1);
     }
   }
 `
