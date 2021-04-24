@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { ipad } from '../../styles/screens'
 import { titleStyle } from '../../styles/mixins/titleStyle'
 
+export const ServicesStyled = styled.div`
+  margin-top: 3rem;
+`
+
 export const ServicesTitle = styled.h2`
   ${titleStyle}
   margin-bottom: 2rem;

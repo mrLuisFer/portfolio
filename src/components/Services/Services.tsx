@@ -1,10 +1,10 @@
 import ServicesHtml from './ServicesHtml/ServicesHtml'
 
-import { ServicesContainer, ServicesTitle } from './Services.styles'
+import { ServicesContainer, ServicesTitle, ServicesStyled } from './Services.styles'
 
 export default function Services(): JSX.Element {
   return (
-    <div>
+    <ServicesStyled>
       <ServicesTitle>
         <i className='fas fa-angle-double-right' />
         <span>Services:</span>
@@ -46,6 +46,6 @@ export default function Services(): JSX.Element {
           description='Learning new things🌟'
         />
       </ServicesContainer>
-    </div>
+    </ServicesStyled>
   )
 }
