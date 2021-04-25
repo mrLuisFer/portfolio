@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { ipad, large } from '../../../styles/screens'
-import { noSelect } from '../../../styles/mixins/noSelect'
-import { fontWeight } from '../../../styles/mixins/fontWeight'
+import { ipad, large } from '../../../../styles/screens'
+import { noSelect } from '../../../../styles/mixins/noSelect'
+import { fontWeight } from '../../../../styles/mixins/fontWeight'
 
 export const ServicesHtmlCardContentTitle = styled.h1`
   font-size: 1.3rem;

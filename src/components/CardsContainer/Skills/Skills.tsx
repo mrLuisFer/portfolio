@@ -1,12 +1,12 @@
 // Assets
-import WebsiteCreatorIllustration from '../../assets/website-creator-illustration.svg'
-import ToolsSkillsIllustration from '../../assets/tools-skills.svg'
+import WebsiteCreatorIllustration from '../../../assets/website-creator-illustration.svg'
+import ToolsSkillsIllustration from '../../../assets/tools-skills.svg'
+import CardTitle from '../CardsTitle/CardTitle'
 
 import {
   SkillsStyled,
   SkillsSections,
   SkillsSectionsTwo,
-  SkillsTitle,
   SkillsCardsContainer,
   SkillsCardsContainerTwo,
   SkillsIllustration,
@@ -19,10 +19,7 @@ export default function Skiils(): JSX.Element {
       <div>
         {/* Lenguages and Frameworks */}
         <SkillsSections>
-          <SkillsTitle>
-            <i className='fas fa-caret-right' />
-            <span>Lenguages & Frameworks:</span>
-          </SkillsTitle>
+          <CardTitle titleSpan='Lenguages & Frameworks' withMarginBottom={false} />
           <SkillsFlex>
             <SkillsCardsContainer>
               <div>
@@ -87,10 +84,7 @@ export default function Skiils(): JSX.Element {
 
         {/* Tools Section */}
         <SkillsSectionsTwo>
-          <SkillsTitle>
-            <i className='fas fa-caret-right' />
-            <span>Tools:</span>
-          </SkillsTitle>
+          <CardTitle titleSpan='Tools:' withMarginBottom={false} />
           <SkillsFlex>
             <SkillsIllustration
               src={ToolsSkillsIllustration}

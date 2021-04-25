@@ -1,14 +1,12 @@
 import ServicesHtml from './ServicesHtml/ServicesHtml'
 
-import { ServicesContainer, ServicesTitle, ServicesStyled } from './Services.styles'
+import { ServicesContainer, ServicesStyled } from './Services.styles'
+import CardTitle from '../CardsTitle/CardTitle'
 
 export default function Services(): JSX.Element {
   return (
     <ServicesStyled>
-      <ServicesTitle>
-        <i className='fas fa-caret-right' />
-        <span>Services:</span>
-      </ServicesTitle>
+      <CardTitle titleSpan='Services:' marginBottom='2rem' withMarginBottom />
       <ServicesContainer>
         <ServicesHtml
           title='Web Development'

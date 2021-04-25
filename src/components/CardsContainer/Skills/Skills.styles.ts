@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { large, ipad, veryLarge } from '../../styles/screens'
-import { titleStyle } from '../../styles/mixins/titleStyle'
+import { large, ipad, veryLarge } from '../../../styles/screens'
 
 export const SkillsStyled = styled.div`
   display: flex;
@@ -18,10 +17,6 @@ export const SkillsSections = styled.div`
 
 export const SkillsSectionsTwo = styled(SkillsSections)`
   text-align: right;
-`
-
-export const SkillsTitle = styled.p`
-  ${titleStyle}
 `
 
 export const SkillsCardsContainer = styled.div`
