@@ -25,6 +25,7 @@ export const NavBarLogo = styled.div`
 export const NavBarLogoTitle = styled.h1`
   @media (min-width: ${ipad}) {
     align-items: center;
+    margin: 0;
     justify-content: none;
   }
 

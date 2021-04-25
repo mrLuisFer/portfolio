@@ -43,7 +43,7 @@ export default function Hero(): JSX.Element {
                 Frontend <span>Developer</span>
               </span>
               , specialized in
-              <span id='Hero__personal-info-js'> Javascript</span> {'&'}{' '}
+              <span id='Hero__personal-info-js'> Javascript</span> &{' '}
               <span>
                 <span>React</span>
               </span>{' '}

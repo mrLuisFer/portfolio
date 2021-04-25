@@ -86,6 +86,7 @@ export const LikeToDoCardIcon = styled.i`
 
   @media (min-width: ${ipad}) {
     margin-bottom: 0.8rem;
+    font-size: 1.7rem;
   }
 `
 

@@ -20,7 +20,7 @@ export default function Skiils(): JSX.Element {
         {/* Lenguages and Frameworks */}
         <SkillsSections>
           <SkillsTitle>
-            <i className='fas fa-angle-double-right' />
+            <i className='fas fa-caret-right' />
             <span>Lenguages & Frameworks:</span>
           </SkillsTitle>
           <SkillsFlex>
@@ -88,7 +88,7 @@ export default function Skiils(): JSX.Element {
         {/* Tools Section */}
         <SkillsSectionsTwo>
           <SkillsTitle>
-            <i className='fas fa-angle-double-right' />
+            <i className='fas fa-caret-right' />
             <span>Tools:</span>
           </SkillsTitle>
           <SkillsFlex>

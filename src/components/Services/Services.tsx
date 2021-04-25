@@ -6,7 +6,7 @@ export default function Services(): JSX.Element {
   return (
     <ServicesStyled>
       <ServicesTitle>
-        <i className='fas fa-angle-double-right' />
+        <i className='fas fa-caret-right' />
         <span>Services:</span>
       </ServicesTitle>
       <ServicesContainer>

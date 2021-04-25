@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { ipad, large } from '../../styles/screens'
+import { ipad, large, mobile } from '../../styles/screens'
 import { lineUnderText } from '../../styles/mixins/lineUnderText'
 import { noSelect } from '../../styles/mixins/noSelect'
 
@@ -21,10 +21,15 @@ export const HeroStyled = styled.div`
 `
 
 export const HeroIllustration = styled.img`
-  width: 100%;
-  margin: 0 auto;
+  width: 290px;
   height: 220px;
+  margin: 0 auto;
   margin-bottom: 2rem;
+  display: block;
+
+  @media (min-width: ${mobile}) {
+    width: 100%;
+  }
 
   ${noSelect}
 
@@ -66,10 +71,14 @@ export const HeroPersonalGreet = styled.span`
   }
 `
 
-export const HeroPersonalTitle = styled.h2`
-  font-size: 2rem;
+export const HeroPersonalTitle = styled.h1`
+  font-size: 1.8rem;
   font-family: var(--inter-font);
   font-weight: 600;
+
+  @media (min-width: ${mobile}) {
+    font-size: 2rem;
+  }
 
   @media (min-width: ${ipad}) {
     font-size: 2.1rem;
@@ -84,9 +93,12 @@ export const HeroPersonalName = styled.span`
   color: var(--true-blue);
   font-weight: 700;
   letter-spacing: 1.1px;
-  margin-right: 0.5rem;
   position: relative;
   transition: color var(--transition);
+
+  @media (min-width: ${mobile}) {
+    margin-right: 0.5rem;
+  }
 
   &:hover {
     color: var(--blue-background);
@@ -118,12 +130,15 @@ export const HeroPersonalCodeIcon = styled.i`
   }
 `
 
-export const HeroPersonalInfo = styled.h5`
+export const HeroPersonalInfo = styled.h2`
   margin-top: 1.35rem;
   font-size: 1.3rem;
   line-height: 1.5;
   font-weight: 400;
-  padding-right: 3rem;
+
+  @media (min-width: ${mobile}) {
+    padding-right: 3rem;
+  }
 
   @media (min-width: ${ipad}) {
     padding-right: 0;
@@ -156,9 +171,13 @@ export const HeroPersonalInfo = styled.h5`
 
 export const HeroLinks = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 2rem;
+  justify-content: center;
+
+  @media (min-width: ${mobile}) {
+    column-gap: 1rem;
+  }
 
   @media (min-width: ${ipad}) {
     justify-content: flex-start;
