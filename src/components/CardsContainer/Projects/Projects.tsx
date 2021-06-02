@@ -1,18 +1,12 @@
 // Hooks
-import { ProjectsStyled, ProjectsTitle } from './Projects.styles'
+import CardTitle from '../CardsTitle/CardTitle'
+import { ProjectsStyled } from './Projects.styles'
 
-import '../../../styles/components/Loaders/loader.css'
-
-// In this component will be the call to the github api
 export default function Projects(): JSX.Element {
-  const status: string = ''
-
-  return status === 'fetching' ? (
-    <div className='loader'>Loading...</div>
-  ) : (
-    // Projects Section
+  return (
     <ProjectsStyled id='projects'>
-      <ProjectsTitle>Projects</ProjectsTitle>
+      <CardTitle title='Projects:' marginBottom='2rem' withMarginBottom />
+      <div />
     </ProjectsStyled>
   )
 }
