@@ -16,7 +16,7 @@ export const ServicesHtmlCardContentTitle = styled.h1`
   display: flex;
   align-items: center;
 
-  ${noSelect}
+  ${noSelect()}
 
   ${fontWeight('var(--powder-blue)')}
 
@@ -140,6 +140,9 @@ export const ServicesHtmlCardContentContainer: any = styled.div`
 `
 
 export const ServicesHtmlCardContentTitleIcon: any = styled.span`
+  cursor: pointer;
+  ${noSelect()};
+
   i {
     height: auto;
     padding: 0;
@@ -150,6 +153,6 @@ export const ServicesHtmlCardContentTitleIcon: any = styled.span`
     transition: var(--transition);
     margin-right: 0.5rem;
 
-    ${noSelect}
+    ${noSelect()}
   }
 `

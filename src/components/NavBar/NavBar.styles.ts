@@ -45,7 +45,7 @@ export const NavBarLogoTitle = styled.h1`
       position: relative;
     }
 
-    ${noSelect}
+    ${noSelect()}
 
     ${lineUnderText(
       'var(--command-blue)',
@@ -95,7 +95,7 @@ export const NavBarSocialMediaSpan: any = styled.p`
   height: 2rem;
   cursor: pointer;
 
-  ${noSelect}
+  ${noSelect()}
 
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -156,7 +156,7 @@ const linkAndAnchorStyles = css`
   font-family: var(--inter-font);
   border-bottom: 2px solid rgba(0, 0, 0, 0);
 
-  ${noSelect}
+  ${noSelect()}
 
   @media (min-width: ${ipad}) {
     margin: 0;

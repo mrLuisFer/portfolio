@@ -31,7 +31,7 @@ export const HeroIllustration = styled.img`
     width: 100%;
   }
 
-  ${noSelect}
+  ${noSelect()}
 
   @media (min-width: ${ipad}) {
     margin: 0;

@@ -20,7 +20,7 @@ export const LikeToDoTitle = styled.h2`
   display: inline;
   font-size: 1.9rem;
 
-  ${noSelect}
+  ${noSelect()}
 
   ${lineUnderText(
     'var(--command-blue)',

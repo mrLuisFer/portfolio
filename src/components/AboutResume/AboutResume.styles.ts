@@ -36,7 +36,7 @@ const AboutResumeWave = styled.img`
   backface-visibility: hidden;
   padding-bottom: -0rem;
 
-  ${noSelect}
+  ${noSelect()}
 `
 
 const AboutResummeWaveDown = styled.img`
@@ -48,7 +48,7 @@ const AboutResummeWaveDown = styled.img`
   background: var(--cultured);
   backface-visibility: hidden;
 
-  ${noSelect}
+  ${noSelect()}
 `
 
 const AboutResumeInfo = styled.div`
@@ -209,7 +209,7 @@ const AboutResumeInfoIllustrationContainer = styled.div`
     display: flex;
     justify-content: center;
 
-    ${noSelect}
+    ${noSelect()}
   }
 
   @media (min-width: ${large}) {
