@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { fontWeight } from '../../styles/mixins/fontWeight'
-import { ipad, large } from '../../styles/screens'
+import { ipad, large, mobile } from '../../styles/screens'
 
 const SFooter = styled.div`
   background: var(--blue-background);
@@ -35,6 +35,12 @@ const FooterWave = styled.img`
 
 const FooterContainer = styled.div`
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: ${mobile}) {
+    flex-direction: row;
+  }
+
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-evenly;
@@ -49,6 +55,10 @@ const FooterContainer = styled.div`
 `
 
 const FooterContainerCard = styled.div`
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
   a {
     display: block;
     text-decoration: none;
@@ -101,8 +111,13 @@ const FooterContainerCardTitle = styled.h2`
   }
 `
 const FooterContainerIllustration = styled.img`
+  margin: 0 auto;
   width: 250px;
   transition: var(--transition);
+
+  @media (min-width: ${mobile}) {
+    margin: 0;
+  }
 
   @media (min-width: ${ipad}) {
     width: 350px;
