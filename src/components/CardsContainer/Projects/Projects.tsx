@@ -7,7 +7,14 @@ export default function Projects(): JSX.Element {
     <ProjectsStyled id='projects'>
       <CardTitle titleSpan='Projects:' marginBottom='2rem' withMarginBottom />
       <div>
-        <p>Some project</p>
+        <div>
+          <h1>Some title</h1>
+          <p>Description</p>
+          <div>
+            <a href='/'>Repo</a>
+            <a href='/'>preview</a>
+          </div>
+        </div>
       </div>
     </ProjectsStyled>
   )
