@@ -1,8 +1,8 @@
-import { css } from 'styled-components'
+import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { ipad, large } from '../screens'
 import { lineUnderText } from './lineUnderText'
 
-export const titleStyle = css`
+export const titleStyle: FlattenSimpleInterpolation = css`
   margin-bottom: 1.5rem;
   display: inline-block;
   font-family: var(--inter-font);
