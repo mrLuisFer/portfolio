@@ -4,6 +4,7 @@ type TProjectsData = {
   preview?: string
   repo: string
   contributors: Array<string>
+  description: string
 }
 
 export const projectsData: Array<TProjectsData> = [
@@ -13,5 +14,6 @@ export const projectsData: Array<TProjectsData> = [
     preview: '',
     repo: '',
     contributors: ['Luis'],
+    description: 'Some rep',
   },
 ]
