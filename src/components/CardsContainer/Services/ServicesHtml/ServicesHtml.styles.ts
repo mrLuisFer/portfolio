@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ipad, large } from '../../../../styles/screens'
+import { ipad, large, mobile } from '../../../../styles/screens'
 import { noSelect } from '../../../../styles/mixins/noSelect'
 import { fontWeight } from '../../../../styles/mixins/fontWeight'
 
@@ -68,18 +68,22 @@ export const ServicesHtmlCardIcon = styled.span`
 `
 
 export const ServicesHtmlCard: any = styled.div`
-  display: flex;
   align-items: center;
-  border: 0.5px solid rgba(0, 0, 0, 0);
   border-radius: var(--radius);
+  border: 0.5px solid rgba(0, 0, 0, 0);
   box-shadow: ${(props: any) =>
     props.showText ? '0.5px 0.5px 2px var(--oxford-dark-blue)' : ''};
+  color: var(--dark-gray);
+  display: flex;
   height: auto;
+  margin: 0 auto;
   padding: 1rem;
   transition: var(--transition);
-  color: var(--dark-gray);
-  margin: 0 auto;
-  width: 340px;
+  width: 300px;
+
+  @media (min-width: ${mobile}) {
+    width: 340px;
+  }
 
   @media (min-width: ${ipad}) {
     width: 420px;
