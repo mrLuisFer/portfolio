@@ -23,10 +23,12 @@ export const NavBarLogo = styled.div`
 `
 
 export const NavBarLogoTitle = styled.h1`
+  align-items: center;
+  margin: 0 0 1rem 0;
+  justify-content: none;
+
   @media (min-width: ${ipad}) {
-    align-items: center;
     margin: 0;
-    justify-content: none;
   }
 
   img {
