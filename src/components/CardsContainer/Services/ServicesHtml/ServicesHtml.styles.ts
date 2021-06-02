@@ -149,5 +149,7 @@ export const ServicesHtmlCardContentTitleIcon: any = styled.span`
     transform: ${(props: any) => (props.toVolt ? 'rotate(90deg)' : 'rotate(0deg)')};
     transition: var(--transition);
     margin-right: 0.5rem;
+
+    ${noSelect}
   }
 `
