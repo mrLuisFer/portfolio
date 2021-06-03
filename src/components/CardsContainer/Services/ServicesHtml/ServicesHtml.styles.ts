@@ -4,6 +4,10 @@ import { noSelect } from '../../../../styles/mixins/noSelect'
 import { fontWeight } from '../../../../styles/mixins/fontWeight'
 
 export const ServicesHtmlCardContentTitle = styled.h1`
+  @media (max-width: ${mobile}) {
+    font-size: 1rem;
+  }
+
   font-size: 1.3rem;
   font-family: var(--inter-font);
   color: var(--oxford-blue);
@@ -26,6 +30,11 @@ export const ServicesHtmlCardContentTitle = styled.h1`
 `
 
 export const LinkReference = styled.a`
+  @media (max-width: ${mobile}) {
+    font-size: 0.8rem;
+  }
+
+  font-size: 1rem;
   text-decoration: none;
   color: var(--dark-gray);
   font-family: var(--inter-font);
@@ -53,6 +62,11 @@ export const LinkReference = styled.a`
   }
 `
 export const ServicesHtmlCardIcon = styled.span`
+  @media (max-width: ${mobile}) {
+    padding: 0.7rem 0.4rem;
+    font-size: 1.3rem;
+  }
+
   border-radius: var(--radius);
   box-shadow: 0.3px 0.3px 4px var(--shadow-color);
   transition: var(--transition);
@@ -80,6 +94,11 @@ export const ServicesHtmlCard: any = styled.div`
   padding: 1rem;
   transition: var(--transition);
   width: 300px;
+
+  @media (max-width: ${mobile}) {
+    margin: 0;
+    padding: 1rem 0.5rem;
+  }
 
   @media (min-width: ${mobile}) {
     width: 340px;
@@ -124,6 +143,10 @@ export const ServicesHtmlCardContent = styled.div`
 `
 
 export const ServicesHtmlCardContentText = styled.p`
+  @media (max-width: ${mobile}) {
+    font-size: 0.8rem;
+  }
+
   font-family: var(--open-sans-font);
   line-height: 1.55;
   letter-spacing: 0.5px;

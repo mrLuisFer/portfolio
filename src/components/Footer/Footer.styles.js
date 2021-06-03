@@ -59,6 +59,10 @@ const FooterContainerCard = styled.div`
   margin: 0 auto;
   text-align: center;
 
+  @media (min-width: ${ipad}) {
+    text-align: left;
+  }
+
   a {
     display: block;
     text-decoration: none;
