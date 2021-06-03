@@ -1,4 +1,3 @@
-// Hooks
 import CardTitle from '../CardsTitle/CardTitle'
 import ProjectsCard from './ProjectsCard/ProjectsCard'
 import { projectsData } from './projectsData'

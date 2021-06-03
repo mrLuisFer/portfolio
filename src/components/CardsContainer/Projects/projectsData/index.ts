@@ -2,10 +2,11 @@ import { TProjects } from '../projects.d'
 
 export const projectsData: Array<TProjects> = [
   {
-    title: '',
+    contributors: ['mrLuisFer'],
+    description:
+      'A TodoList project created to have control over activities to be carried out adapted to my needs using React & Styled Components',
     preview: '',
-    repo: '',
-    contributors: ['Luis'],
-    description: 'Some rep',
+    repo: 'https://github.com/mrLuisFer/todolist',
+    title: 'todolist',
   },
 ]

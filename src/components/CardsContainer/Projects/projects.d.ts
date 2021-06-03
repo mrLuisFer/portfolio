@@ -1,7 +1,7 @@
 export type TProjects = {
-  title: string
+  contributors: Array<string> | string[]
   description: string
   preview?: string
   repo: string
-  contributors: Array<string> | string[]
+  title: string
 }
