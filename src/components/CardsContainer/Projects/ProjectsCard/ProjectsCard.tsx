@@ -48,7 +48,9 @@ export default function ProjectsCard({
           ''
         )}
         {preview.length > 4 ? (
-          <ProjectsCardUrl href={preview}>preview</ProjectsCardUrl>
+          <ProjectsCardUrl href={preview}>
+            <ProjectsCardUrlIcon className='fas fa-external-link-alt' />
+          </ProjectsCardUrl>
         ) : (
           ''
         )}

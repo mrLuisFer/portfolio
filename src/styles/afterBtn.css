@@ -183,7 +183,7 @@
 }
 
 .ProjectsCardContainer::after {
-  content: 'Go to project';
+  content: 'Click for go to project';
   position: absolute;
   background: var(--dark-gray);
   width: auto;

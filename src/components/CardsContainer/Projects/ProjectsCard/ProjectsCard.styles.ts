@@ -9,6 +9,11 @@ export const ProjectsCardContainer = styled.article`
   border-radius: var(--radius);
   transition: var(--transition);
   cursor: pointer;
+  margin: 3rem 0;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
 
   &:hover {
     box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.8);
@@ -45,13 +50,14 @@ export const ProjectsCardContributorsTitle = styled.p`
 `
 
 export const ProjectsCardUrlIconContainer = styled.div`
-  margin-top: 1rem;
+  margin-top: 2rem;
 `
 
 export const ProjectsCardUrl = styled.a`
   text-decoration: none;
   color: var(--oxford-blue);
   transition: var(--transition);
+  margin-right: 2rem;
 
   &:hover {
     color: var(--semi-purple);
@@ -59,7 +65,7 @@ export const ProjectsCardUrl = styled.a`
 `
 
 export const ProjectsCardUrlIcon = styled.i`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   cursor: pointer;
 
   ${noSelect()};
