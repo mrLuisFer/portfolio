@@ -1,20 +1,13 @@
 import React from 'react'
-
-type TProjectsCard = {
-  title: string
-  description: string
-  repoUrl: string
-  previewUrl?: string
-  contributors: string[]
-}
+import { TProjects } from '../projects.d'
 
 export default function ProjectsCard({
   title,
   description,
-  repoUrl,
-  previewUrl = '',
+  repo,
+  preview = '',
   contributors = [],
-}: TProjectsCard): JSX.Element {
+}: TProjects): JSX.Element {
   return (
     <div>
       <h1>{title}</h1>
@@ -25,8 +18,8 @@ export default function ProjectsCard({
         ))}
       </div>
       <div>
-        <a href={repoUrl}>Url</a>
-        <a href={previewUrl}>preview</a>
+        <a href={repo}>Url</a>
+        <a href={preview}>preview</a>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 // Hooks
 import CardTitle from '../CardsTitle/CardTitle'
 import ProjectsCard from './ProjectsCard/ProjectsCard'
-import { projectsData } from './ProjectsData'
+import { projectsData } from './projectsData'
 
 import { ProjectsStyled } from './Projects.styles'
 
@@ -14,8 +14,8 @@ export default function Projects(): JSX.Element {
           <ProjectsCard
             title={projects.title}
             key={projects.title}
-            repoUrl={projects.link}
-            previewUrl={projects.preview}
+            repo={projects.repo}
+            preview={projects.preview}
             description={projects.description}
             contributors={projects.contributors}
           />
