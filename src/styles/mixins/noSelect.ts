@@ -1,6 +1,6 @@
-import { css } from 'styled-components'
+import { css, FlattenSimpleInterpolation } from 'styled-components'
 
-export const noSelect = () => css`
+export const noSelect = (): FlattenSimpleInterpolation => css`
   user-select: none;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
