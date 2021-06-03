@@ -1,14 +1,13 @@
 import styled from 'styled-components'
-import { large, ipad, veryLarge } from '../../styles/screens'
-import { titleStyle } from '../../styles/mixins/titleStyle'
+import { large, ipad, veryLarge } from '../../../styles/screens'
 
-const SkillsStyled = styled.div`
+export const SkillsStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 `
 
-const SkillsSections = styled.div`
+export const SkillsSections = styled.div`
   margin-bottom: 0rem;
 
   @media (min-width: ${large}) {
@@ -16,15 +15,11 @@ const SkillsSections = styled.div`
   }
 `
 
-const SkillsSectionsTwo = styled(SkillsSections)`
+export const SkillsSectionsTwo = styled(SkillsSections)`
   text-align: right;
 `
 
-const SkillsTitle = styled.p`
-  ${titleStyle}
-`
-
-const SkillsCardsContainer = styled.div`
+export const SkillsCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -77,7 +72,7 @@ export const SkillsCardsContainerTwo = styled(SkillsCardsContainer)`
   justify-content: flex-end;
 `
 
-const SkillsIllustration = styled.img`
+export const SkillsIllustration = styled.img`
   margin: 2rem auto;
   width: 250px;
 
@@ -105,7 +100,7 @@ const SkillsIllustration = styled.img`
   }
 `
 
-const SkillsFlex = styled.div`
+export const SkillsFlex = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -121,13 +116,3 @@ const SkillsFlex = styled.div`
     justify-content: space-between;
   }
 `
-
-export {
-  SkillsStyled,
-  SkillsSections,
-  SkillsSectionsTwo,
-  SkillsTitle,
-  SkillsCardsContainer,
-  SkillsIllustration,
-  SkillsFlex,
-}

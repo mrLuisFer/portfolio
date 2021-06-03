@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
+import './styles/global/normalize.css'
 import './styles/global/variables.css'
 import './styles/global/globals.css'
 import './styles/global/customScroll.css'

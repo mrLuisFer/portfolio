@@ -1,18 +1,17 @@
-// Components
 import ServicesHtml from './ServicesHtml/ServicesHtml'
 
-import { ServicesContainer, ServicesTitle } from './Services.styles'
+import { ServicesContainer, ServicesStyled } from './Services.styles'
+import CardTitle from '../CardsTitle/CardTitle'
 
 export default function Services(): JSX.Element {
+  const windowSize = window.innerWidth
+
   return (
-    <div>
-      <ServicesTitle>
-        <i className='fas fa-angle-double-right' />
-        <span>Services:</span>
-      </ServicesTitle>
+    <ServicesStyled>
+      <CardTitle titleSpan='Services:' marginBottom='2rem' withMarginBottom />
       <ServicesContainer>
         <ServicesHtml
-          title='Web Development'
+          title={windowSize > 380 ? 'Web Development' : 'Web Dev'}
           iconClass='fas fa-laptop-code'
           description='I like to create quality websites, good design and solve problems that are necessary for users'
           linkReference='https://en.wikipedia.org/wiki/Web_development'
@@ -36,18 +35,17 @@ export default function Services(): JSX.Element {
           linkReference='https://uxplanet.org/what-is-ui-vs-ux-design-and-the-difference-d9113f6612de'
         />
         <ServicesHtml
-          title='Mobile Development'
+          title={windowSize > 380 ? 'Mobile Development' : 'Mobile Dev'}
           iconClass='fas fa-mobile-alt'
           description='I like to develop small applications on mobile devices using React Native'
           linkReference='https://en.wikipedia.org/wiki/React_Native'
         />
-        {/* In progress (For have 2 classNames just add a space btw) */}
         <ServicesHtml
           title='In progress...'
           iconClass='fas fa-spinner rotate'
           description='Learning new things🌟'
         />
       </ServicesContainer>
-    </div>
+    </ServicesStyled>
   )
 }

@@ -23,7 +23,7 @@
   --rich-black: #0b090a;
   --dark: #0d1b2a;
   --dark-gray: #212529;
-  --honey-yellow: #eeac06;
+  --honey-yellow: #ffcd3c;
   --orange: #fb8500;
   --green: #9efcd0;
   /* Shadow Color */
@@ -45,5 +45,5 @@
   --animate-delay: 0.2s;
 
   --radius: 10px;
-  --transition: 0.2s ease-in;
+  --transition: 0.15s ease-in;
 }

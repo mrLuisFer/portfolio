@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import '../../styles/afterBtn.css'
 
 // Assets
-import doubleArrowRight from '../../assets/double-arrow-right.svg'
 import navBarLogo from '../../assets/navbar-logo/navbar-logo.svg'
 // Utils
 import { bounceIn, zoomIn, fadeIn } from '../../utils/animateCss/animateCss'
@@ -19,7 +18,7 @@ import {
   NavBarSocialMediaIcons,
   NavBarSocialMediaIconsAnchors,
   NavBarSocialMediaSpan,
-  ImgToRotate,
+  IconToRotate,
   NavBarSocialMediaIconsAnchor,
 } from './NavBar.styles'
 
@@ -49,11 +48,7 @@ export default function NavBar(): JSX.Element {
             onClick={handleShowIcons}
             aria-hidden='true'
             showIns={showIcons}>
-            <ImgToRotate
-              src={doubleArrowRight}
-              alt='double-arrow-right'
-              showIns={showIcons}
-            />
+            <IconToRotate className='fas fa-caret-right' showIns={showIcons} />
             Social Media
             {showIcons ? ':' : ''}
           </NavBarSocialMediaSpan>

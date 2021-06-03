@@ -16,6 +16,7 @@ import {
   AboutResumeInfoText,
   AboutResumeInfoIllustrationContainer,
   AboutResumeInfoIllustration,
+  AboutResumeInfoBtn,
 } from './AboutResume.styles'
 
 export default function AboutResume(): JSX.Element {
@@ -28,10 +29,7 @@ export default function AboutResume(): JSX.Element {
       <AboutResumeInfo>
         <div>
           <AboutResumeInfoTitleContainer>
-            <AboutResumeInfoTitle>
-              <i className='fas fa-angle-right' id='about' />
-              About Me
-            </AboutResumeInfoTitle>
+            <AboutResumeInfoTitle id='about'>About Me</AboutResumeInfoTitle>
             <AboutResumeInfoTitleText>
               Main information about me and what I love to do
             </AboutResumeInfoTitleText>
@@ -48,10 +46,10 @@ export default function AboutResume(): JSX.Element {
               freelance work and projects.
             </p>
             {/* Button to download the CV */}
-            <a href='/cv-resume.pdf' download>
+            <AboutResumeInfoBtn href='/cv-resume.pdf' download>
               <i className='fas fa-cloud-download-alt' />
               Download My CV
-            </a>
+            </AboutResumeInfoBtn>
           </AboutResumeInfoText>
         </div>
         <AboutResumeInfoIllustrationContainer className='AboutResume__info-flying-illustration'>

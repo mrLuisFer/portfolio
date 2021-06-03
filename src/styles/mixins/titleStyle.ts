@@ -1,8 +1,8 @@
-import { CSSObject } from 'styled-components'
+import { css, FlattenSimpleInterpolation } from 'styled-components'
 import { ipad, large } from '../screens'
 import { lineUnderText } from './lineUnderText'
 
-export const titleStyle: CSSObject | string = `
+export const titleStyle: FlattenSimpleInterpolation = css`
   margin-bottom: 1.5rem;
   display: inline-block;
   font-family: var(--inter-font);
@@ -10,7 +10,7 @@ export const titleStyle: CSSObject | string = `
   color: var(--dark-gray);
   font-size: 1.2rem;
   position: relative;
-  
+
   @media (min-width: ${ipad}) {
     font-size: 1.4rem;
   }
@@ -45,4 +45,4 @@ export const titleStyle: CSSObject | string = `
     transition: var(--transition);
     color: var(--true-blue);
   }
-  `
+`

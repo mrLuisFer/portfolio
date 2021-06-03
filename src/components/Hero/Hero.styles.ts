@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import { ipad, large } from '../../styles/screens'
+import styled, { css } from 'styled-components'
+import { ipad, large, mobile } from '../../styles/screens'
 import { lineUnderText } from '../../styles/mixins/lineUnderText'
 import { noSelect } from '../../styles/mixins/noSelect'
 
-const SHero = styled.div`
+export const HeroStyled = styled.div`
   margin-bottom: 7rem;
 
   @media (min-width: ${ipad}) {
@@ -20,13 +20,18 @@ const SHero = styled.div`
   }
 `
 
-const HeroIllustration = styled.img`
-  width: 100%;
-  margin: 0 auto;
+export const HeroIllustration = styled.img`
+  width: 290px;
   height: 220px;
+  margin: 0 auto;
   margin-bottom: 2rem;
+  display: block;
 
-  ${noSelect}
+  @media (min-width: ${mobile}) {
+    width: 100%;
+  }
+
+  ${noSelect()}
 
   @media (min-width: ${ipad}) {
     margin: 0;
@@ -40,7 +45,7 @@ const HeroIllustration = styled.img`
   }
 `
 
-const HeroPersonal = styled.div`
+export const HeroPersonal = styled.div`
   margin-bottom: 2rem;
   padding: 0 10%;
 
@@ -50,7 +55,7 @@ const HeroPersonal = styled.div`
   }
 `
 
-const HeroPersonalGreet = styled.span`
+export const HeroPersonalGreet = styled.span`
   display: block;
   color: var(--state-gray);
   margin: 0;
@@ -66,10 +71,14 @@ const HeroPersonalGreet = styled.span`
   }
 `
 
-const HeroPersonalTitle = styled.h2`
-  font-size: 2rem;
+export const HeroPersonalTitle = styled.h1`
+  font-size: 1.8rem;
   font-family: var(--inter-font);
   font-weight: 600;
+
+  @media (min-width: ${mobile}) {
+    font-size: 2rem;
+  }
 
   @media (min-width: ${ipad}) {
     font-size: 2.1rem;
@@ -80,13 +89,16 @@ const HeroPersonalTitle = styled.h2`
   }
 `
 
-const HeroPersonalName = styled.span`
+export const HeroPersonalName = styled.span`
   color: var(--true-blue);
   font-weight: 700;
   letter-spacing: 1.1px;
-  margin-right: 0.5rem;
   position: relative;
   transition: color var(--transition);
+
+  @media (min-width: ${mobile}) {
+    margin-right: 0.5rem;
+  }
 
   &:hover {
     color: var(--blue-background);
@@ -103,7 +115,7 @@ const HeroPersonalName = styled.span`
   )}
 `
 
-const HeroPersonalCodeIcon = styled.i`
+export const HeroPersonalCodeIcon = styled.i`
   color: var(--beau-blue);
   font-size: 1.5rem;
 
@@ -118,12 +130,15 @@ const HeroPersonalCodeIcon = styled.i`
   }
 `
 
-const HeroPersonalInfo = styled.h5`
+export const HeroPersonalInfo = styled.h2`
   margin-top: 1.35rem;
   font-size: 1.3rem;
   line-height: 1.5;
   font-weight: 400;
-  padding-right: 3rem;
+
+  @media (min-width: ${mobile}) {
+    padding-right: 3rem;
+  }
 
   @media (min-width: ${ipad}) {
     padding-right: 0;
@@ -154,11 +169,15 @@ const HeroPersonalInfo = styled.h5`
   }
 `
 
-const HeroLinks = styled.div`
+export const HeroLinks = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  column-gap: 1rem;
+  column-gap: 2rem;
+  justify-content: center;
+
+  @media (min-width: ${mobile}) {
+    column-gap: 1rem;
+  }
 
   @media (min-width: ${ipad}) {
     justify-content: flex-start;
@@ -166,7 +185,7 @@ const HeroLinks = styled.div`
   }
 `
 
-const HeroLinksAnchor = `
+export const HeroLinksAnchor = css`
   font-size: 1.5rem;
   transition: var(--transition);
   color: var(--oxford-dark-blue);
@@ -188,7 +207,7 @@ const HeroLinksAnchor = `
   }
 `
 
-const HeroLinksLinkedin = styled.a`
+export const HeroLinksLinkedin = styled.a`
   ${HeroLinksAnchor}
   position: relative;
 
@@ -197,7 +216,7 @@ const HeroLinksLinkedin = styled.a`
   }
 `
 
-const HeroLinksGithub = styled.a`
+export const HeroLinksGithub = styled.a`
   ${HeroLinksAnchor}
   position: relative;
 
@@ -206,7 +225,7 @@ const HeroLinksGithub = styled.a`
   }
 `
 
-const HeroLinksAbout = styled.a`
+export const HeroLinksAbout = styled.a`
   background: var(--blue);
   border-radius: var(--radius);
   font-size: 0.8rem;
@@ -239,18 +258,3 @@ const HeroLinksAbout = styled.a`
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
 `
-
-export {
-  SHero,
-  HeroIllustration,
-  HeroPersonal,
-  HeroPersonalGreet,
-  HeroPersonalTitle,
-  HeroPersonalName,
-  HeroPersonalCodeIcon,
-  HeroPersonalInfo,
-  HeroLinks,
-  HeroLinksLinkedin,
-  HeroLinksGithub,
-  HeroLinksAbout,
-}
