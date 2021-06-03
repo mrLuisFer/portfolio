@@ -19,8 +19,15 @@ export default function ProjectsCard({
   repo,
   title,
 }: TProjects): JSX.Element {
+  const handleUrlOnClick = (url: string = '/') => {
+    window.open(url, '_blank')
+  }
+
   return (
-    <ProjectsCardContainer>
+    <ProjectsCardContainer
+      className='ProjectsCardContainer'
+      aria-hidden
+      onClick={() => handleUrlOnClick(repo)}>
       <ProjectsCardTitle>
         <ProjectsCardTitleIcon className='fas fa-file-code' title={`${title}-icon`} />
         {title}

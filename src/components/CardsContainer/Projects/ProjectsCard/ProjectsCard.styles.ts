@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { noSelect } from '../../../../styles/mixins/noSelect'
+import { mobile } from '../../../../styles/screens'
 
 export const ProjectsCardContainer = styled.article`
   display: block;
@@ -7,9 +8,16 @@ export const ProjectsCardContainer = styled.article`
   padding: 1rem;
   border-radius: var(--radius);
   transition: var(--transition);
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.8);
+  }
+
+  @media (min-width: ${mobile}) {
+    &:hover {
+      transform: scale(1.04);
+    }
   }
 `
 export const ProjectsCardTitle = styled.h1`

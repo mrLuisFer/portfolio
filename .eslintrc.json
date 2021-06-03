@@ -71,7 +71,8 @@
     "no-confusing-arrow": "off",
     "no-use-before-define": "off",
     "object-curly-newline": "off",
-    "function-paren-newline": "off"
+    "function-paren-newline": "off",
+    "no-restricted-globals": "off"
   },
   "settings": {
     "import/resolver": {
