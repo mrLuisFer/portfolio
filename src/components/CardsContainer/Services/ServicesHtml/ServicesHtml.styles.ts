@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { ipad, large, mobile } from '../../../../styles/screens'
-import { noSelect } from '../../../../styles/mixins/noSelect'
-import { fontWeight } from '../../../../styles/mixins/fontWeight'
+import { ipad, large, mobile } from 'src/styles/screens'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { fontWeight } from 'src/styles/mixins/fontWeight'
 
 export const ServicesHtmlCardContentTitle = styled.h1`
   @media (max-width: ${mobile}) {
@@ -81,11 +81,14 @@ export const ServicesHtmlCardIcon = styled.span`
   }
 `
 
-export const ServicesHtmlCard: any = styled.div`
+type ServicesHtmlCardProps = {
+  showText: Boolean
+}
+export const ServicesHtmlCard = styled.div<ServicesHtmlCardProps>`
   align-items: center;
   border-radius: var(--radius);
   border: 0.5px solid rgba(0, 0, 0, 0);
-  box-shadow: ${(props: any) =>
+  box-shadow: ${(props) =>
     props.showText ? '0.5px 0.5px 2px var(--oxford-dark-blue)' : ''};
   color: var(--dark-gray);
   display: flex;
@@ -158,15 +161,21 @@ export const ServicesHtmlCardContentText = styled.p`
   }
 `
 
-export const ServicesHtmlCardContentContainer: any = styled.div`
-  visibility: ${(props: any) => (props.isShow ? 'visible' : 'hidden')};
-  display: ${(props: any) => (props.isShow ? 'block' : 'none')};
-  position: ${(props: any) => (props.isShow ? 'relative' : 'absolute')};
-  transform: ${(props: any) => (props.isShow ? 'translateY(0)' : '')};
+type ServicesHtmlCardContentContainerProps = {
+  isShow: Boolean
+}
+export const ServicesHtmlCardContentContainer = styled.div<ServicesHtmlCardContentContainerProps>`
+  visibility: ${(props) => (props.isShow ? 'visible' : 'hidden')};
+  display: ${(props) => (props.isShow ? 'block' : 'none')};
+  position: ${(props) => (props.isShow ? 'relative' : 'absolute')};
+  transform: ${(props) => (props.isShow ? 'translateY(0)' : '')};
   transition: var(--transition);
 `
 
-export const ServicesHtmlCardContentTitleIcon: any = styled.span`
+type ServicesHtmlCardContentTitleIconProps = {
+  toVolt: Boolean
+}
+export const ServicesHtmlCardContentTitleIcon = styled.span<ServicesHtmlCardContentTitleIconProps>`
   cursor: pointer;
   ${noSelect()};
 
@@ -176,7 +185,7 @@ export const ServicesHtmlCardContentTitleIcon: any = styled.span`
     width: auto;
     background-color: none;
     box-shadow: none;
-    transform: ${(props: any) => (props.toVolt ? 'rotate(90deg)' : 'rotate(0deg)')};
+    transform: ${(props) => (props.toVolt ? 'rotate(90deg)' : 'rotate(0deg)')};
     transition: var(--transition);
     margin-right: 0.5rem;
 

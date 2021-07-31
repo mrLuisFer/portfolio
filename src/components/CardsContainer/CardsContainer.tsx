@@ -1,4 +1,4 @@
-import { useLoader } from '../../hooks/useLoader'
+import { useLoader } from 'src/hooks/useLoader'
 
 import Projects from './Projects/Projects'
 import Services from './Services/Services'

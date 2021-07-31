@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { ipad, large } from '../../styles/screens'
-import { lineUnderText } from '../../styles/mixins/lineUnderText'
-import { noSelect } from '../../styles/mixins/noSelect'
+import { ipad, large } from 'src/styles/screens'
+import { lineUnderText } from 'src/styles/mixins/lineUnderText'
+import { noSelect } from 'src/styles/mixins/noSelect'
 
 export const SLikeToDo = styled.div`
   padding: 0 5%;

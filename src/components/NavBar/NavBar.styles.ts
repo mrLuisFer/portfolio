@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { ipad, large } from '../../styles/screens'
-import { lineUnderText } from '../../styles/mixins/lineUnderText'
-import { noSelect } from '../../styles/mixins/noSelect'
+import { ipad, large } from 'src/styles/screens'
+import { lineUnderText } from 'src/styles/mixins/lineUnderText'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import type { TShowIns } from './showIns.d'
 
 export const NavBarStyled = styled.nav`
   padding: 0 40px;
@@ -88,7 +89,7 @@ export const NavBarSocialMedia = styled.div`
   }
 `
 
-export const NavBarSocialMediaSpan: any = styled.p`
+export const NavBarSocialMediaSpan = styled.p<TShowIns>`
   background: var(--blue);
   margin-left: 0.9rem;
   padding-right: 0.4rem;
@@ -122,8 +123,8 @@ export const NavBarSocialMediaSpan: any = styled.p`
     transition: border-radius 0s ease;
   }
 
-  border-top-right-radius: ${(props: any) => (props.showIns ? '' : '7px')};
-  border-bottom-right-radius: ${(props: any) => (props.showIns ? '' : '7px')};
+  border-top-right-radius: ${(props) => (props.showIns ? '' : '7px')};
+  border-bottom-right-radius: ${(props) => (props.showIns ? '' : '7px')};
 `
 
 export const NavBarSocialMediaIcons = styled.div`
@@ -144,9 +145,9 @@ export const NavBarSocialMediaIconsAnchors = styled.div`
   }
 `
 
-export const IconToRotate: any = styled.i`
-  transition: ${(props: any) => (props.showIns ? 'all 0.3s ease' : '')};
-  transform: ${(props: any) => (props.showIns ? 'rotate(180deg)' : '')};
+export const IconToRotate = styled.i<TShowIns>`
+  transition: ${(props) => (props.showIns ? 'all 0.3s ease' : '')};
+  transform: ${(props) => (props.showIns ? 'rotate(180deg)' : '')};
 
   margin-right: 0.5rem;
 `

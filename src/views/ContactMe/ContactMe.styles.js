@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { ipad, large } from '../../styles/screens'
-import { lineUnderText } from '../../styles/mixins/lineUnderText'
+import { ipad, large } from 'src/styles/screens'
+import { lineUnderText } from 'src/styles/mixins/lineUnderText'
 
 export const ContactMeStyled = styled.div`
   padding: 0 5%;

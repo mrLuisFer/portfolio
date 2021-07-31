@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // Utils
-import { fadeIn } from '../../../../utils/animateCss/animateCss'
-import '../../../../styles/rotate.css'
+import { fadeIn } from 'src/utils/animateCss/animateCss'
+import 'src/styles/rotate.css'
 import {
   LinkReference,
   ServicesHtmlCard,
@@ -59,13 +59,11 @@ export default function ServicesHtml({
         <ServicesHtmlCardContentContainer className={fadeIn} isShow={showText}>
           <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
 
-          {showLinkReference ? (
+          {showLinkReference && (
             <LinkReference href={linkReference} target='_blank' rel='noopener noreferrer'>
               <i className='fas fa-link' />
               <span>What is this?</span>
             </LinkReference>
-          ) : (
-            ''
           )}
         </ServicesHtmlCardContentContainer>
       </ServicesHtmlCardContent>

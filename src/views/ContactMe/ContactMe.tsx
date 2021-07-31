@@ -1,17 +1,17 @@
 // Assets
-import contactMeIllustration from '../../assets/contactMe/code-typing-contactme.svg'
-import contactMeMailSent from '../../assets/contactMe/contactMe-mail-sent.svg'
+import contactMeIllustration from 'src/assets/contactMe/code-typing-contactme.svg'
+import contactMeMailSent from 'src/assets/contactMe/contactMe-mail-sent.svg'
 // Components
-import ContactForm from '../../components/ContactForm/ContactForm'
+import ContactForm from 'src/components/ContactForm/ContactForm'
 // Utils
-import { slideUp } from '../../utils/animateCss/animateCss'
+import { slideUp } from 'src/utils/animateCss/animateCss'
 import {
   facebook,
   github,
   instagram,
   linkedin,
   twitter,
-} from '../../utils/social-links/socialLinks'
+} from 'src/utils/social-links/socialLinks'
 
 import {
   ContactMeContainer,

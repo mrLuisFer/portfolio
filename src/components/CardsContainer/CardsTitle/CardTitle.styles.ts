@@ -1,8 +1,11 @@
 import styled from 'styled-components'
-import { titleStyle } from '../../../styles/mixins/titleStyle'
+import { titleStyle } from 'src/styles/mixins/titleStyle'
 
-export const CardTitleStyled: any = styled.h2`
+type CardTitleStyledProps = {
+  marginBottom?: string
+}
+export const CardTitleStyled = styled.h2<CardTitleStyledProps>`
   ${titleStyle}
 
-  margin-bottom: ${(props: any) => props.marginBottom};
+  margin-bottom: ${(props) => props.marginBottom};
 `

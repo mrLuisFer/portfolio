@@ -1,15 +1,28 @@
 import styled from 'styled-components'
-import { noSelect } from '../../../../styles/mixins/noSelect'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { mobile } from 'src/styles/screens'
 
 export const ProjectsCardContainer = styled.article`
   display: block;
-  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   border-radius: var(--radius);
   transition: var(--transition);
+  cursor: pointer;
+  margin: 3rem 0;
+
+  &:nth-child(1) {
+    margin-top: 0;
+  }
 
   &:hover {
-    box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.8);
+    box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.3);
+  }
+
+  @media (min-width: ${mobile}) {
+    &:hover {
+      transform: scale(1.02);
+    }
   }
 `
 export const ProjectsCardTitle = styled.h1`
@@ -37,13 +50,14 @@ export const ProjectsCardContributorsTitle = styled.p`
 `
 
 export const ProjectsCardUrlIconContainer = styled.div`
-  margin-top: 1rem;
+  margin-top: 2rem;
 `
 
 export const ProjectsCardUrl = styled.a`
   text-decoration: none;
   color: var(--oxford-blue);
   transition: var(--transition);
+  margin-right: 2rem;
 
   &:hover {
     color: var(--semi-purple);
@@ -51,7 +65,7 @@ export const ProjectsCardUrl = styled.a`
 `
 
 export const ProjectsCardUrlIcon = styled.i`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   cursor: pointer;
 
   ${noSelect()};

@@ -1,10 +1,10 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 import '../../styles/afterBtn.css'
 // Assets
-import heroIllustration from '../../assets/hero-illustration.svg'
+import heroIllustration from 'src/assets/hero-illustration.svg'
 // Utils
-import { slideUp } from '../../utils/animateCss/animateCss'
-import { linkedin, github } from '../../utils/social-links/socialLinks'
+import { slideUp } from 'src/utils/animateCss/animateCss'
+import { linkedin, github } from 'src/utils/social-links/socialLinks'
 
 import {
   HeroStyled,

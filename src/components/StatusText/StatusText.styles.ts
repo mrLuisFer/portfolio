@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { large } from '../../styles/screens'
+// eslint-disable-next-line
+import { large } from 'src/styles/screens'
 
 export const StatusTextStyled = styled.div`
   display: block;
@@ -20,7 +21,9 @@ export const StatusTextDescriptionIcon = styled.i`
   margin-right: 0.5rem;
 `
 
-export const StatusTextSpan: any = styled.span`
-  color: ${(props: any) =>
-    props.statusError ? 'var(--orange)' : ' var(--cerulean-crayola)'};
+type StatusTextSpanProps = {
+  statusError: Boolean
+}
+export const StatusTextSpan: any = styled.span<StatusTextSpanProps>`
+  color: ${(props) => (props.statusError ? 'var(--orange)' : ' var(--cerulean-crayola)')};
 `

@@ -1,8 +1,8 @@
 // components
-import Hero from '../../components/Hero/Hero'
-import AboutResume from '../../components/AboutResume/AboutResume'
-import LikeToDo from '../../components/LikeToDo/LikeToDo'
-import ListWorksSkills from '../../components/ListWorksSkills/ListWorksSkills'
+import Hero from 'src/components/Hero/Hero'
+import AboutResume from 'src/components/AboutResume/AboutResume'
+import LikeToDo from 'src/components/LikeToDo/LikeToDo'
+import ListWorksSkills from 'src/components/ListWorksSkills/ListWorksSkills'
 
 function HomePage(): JSX.Element {
   return (

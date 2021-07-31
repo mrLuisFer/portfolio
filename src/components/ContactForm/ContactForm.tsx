@@ -1,6 +1,6 @@
 import { useState } from 'react'
 // Functions
-import sendEmail from '../../functions/emailJs'
+import sendEmail from 'src/functions/emailJs'
 // Components
 import StatusText from '../StatusText/StatusText'
 

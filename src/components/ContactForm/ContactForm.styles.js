@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ipad, large } from '../../styles/screens'
+import { ipad, large } from 'src/styles/screens'
 
 export const ContactFormStyled = styled.div`
   color: var(--dark-gray);

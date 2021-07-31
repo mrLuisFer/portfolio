@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { large, ipad, veryLarge } from '../../../styles/screens'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { large, ipad, veryLarge } from 'src/styles/screens'
 
 export const SkillsStyled = styled.div`
   display: flex;
@@ -23,6 +24,8 @@ export const SkillsCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+
+  ${noSelect()}
 
   @media (min-width: ${ipad}) {
     align-items: center;
@@ -70,6 +73,8 @@ export const SkillsCardsContainer = styled.div`
 
 export const SkillsCardsContainerTwo = styled(SkillsCardsContainer)`
   justify-content: flex-end;
+
+  ${noSelect()}
 `
 
 export const SkillsIllustration = styled.img`

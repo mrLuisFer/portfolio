@@ -1,4 +1,3 @@
-import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 // views
 import HomePage from '../views/HomePage/HomePage'
