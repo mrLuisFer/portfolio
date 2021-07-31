@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ipad, large } from '../screens'
+import { ipad, large } from '../styles/screens'
 
 export const AppStyled = styled.div`
   padding-top: 10px;
