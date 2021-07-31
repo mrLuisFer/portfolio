@@ -1,14 +1,14 @@
 import { TProjects } from '../projects.d'
 
 /**
- * Template:
-    {
-      contributors: [''],
-      description: '',
-      preview: '',
-      repo: '',
-      title: '',
-    },
+ @template Template:
+  {
+    contributors: [''],
+    description: '',
+    preview: '',
+    repo: '',
+    title: '',
+  },
  */
 
 export const projectsData: Array<TProjects> = [

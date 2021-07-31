@@ -4,7 +4,7 @@ import { mobile } from '../../../../styles/screens'
 
 export const ProjectsCardContainer = styled.article`
   display: block;
-  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.2);
   padding: 1rem;
   border-radius: var(--radius);
   transition: var(--transition);
@@ -16,12 +16,12 @@ export const ProjectsCardContainer = styled.article`
   }
 
   &:hover {
-    box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.8);
+    box-shadow: 0.5px 0.5px 7px rgba(0, 0, 0, 0.3);
   }
 
   @media (min-width: ${mobile}) {
     &:hover {
-      transform: scale(1.04);
+      transform: scale(1.02);
     }
   }
 `

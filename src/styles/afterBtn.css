@@ -181,23 +181,3 @@
   transition: all var(--transition);
   -webkit-transition: all var(--transition);
 }
-
-.ProjectsCardContainer::after {
-  content: 'Click for go to project';
-  position: absolute;
-  background: var(--dark-gray);
-  width: auto;
-  height: auto;
-  bottom: 0rem;
-  right: 0rem;
-  padding: 0.5rem;
-  font-family: var(--open-sans-font);
-  color: var(--gainsboro);
-  font-size: 0.7rem;
-  border-radius: var(--radius);
-  visibility: hidden;
-  animation: 0.4s fadeIn;
-  animation-fill-mode: forwards;
-  transition: all var(--transition);
-  -webkit-transition: all var(--transition);
-}
