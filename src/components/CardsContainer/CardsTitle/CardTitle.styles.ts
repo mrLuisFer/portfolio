@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { titleStyle } from '../../../styles/mixins/titleStyle'
+import { titleStyle } from 'src/styles/mixins/titleStyle'
 
 type CardTitleStyledProps = {
   marginBottom?: string

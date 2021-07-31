@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { lineUnderText } from '../../styles/mixins/lineUnderText'
-import { ipad } from '../../styles/screens'
+import { lineUnderText } from 'src/styles/mixins/lineUnderText'
+import { ipad } from 'src/styles/screens'
 
 const SListWorksSkills = styled.div`
   padding: 0 5%;

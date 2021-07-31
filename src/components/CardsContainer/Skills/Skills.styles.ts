@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { noSelect } from '../../../styles/mixins/noSelect'
-import { large, ipad, veryLarge } from '../../../styles/screens'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { large, ipad, veryLarge } from 'src/styles/screens'
 
 export const SkillsStyled = styled.div`
   display: flex;

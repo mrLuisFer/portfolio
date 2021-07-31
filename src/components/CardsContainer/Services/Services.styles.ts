@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { ipad } from '../../../styles/screens'
+import { ipad } from 'src/styles/screens'
 
 export const ServicesStyled = styled.div`
   margin-top: 3rem;

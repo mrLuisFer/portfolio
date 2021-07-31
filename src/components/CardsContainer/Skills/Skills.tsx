@@ -1,6 +1,6 @@
 // Assets
-import WebsiteCreatorIllustration from '../../../assets/website-creator-illustration.svg'
-import ToolsSkillsIllustration from '../../../assets/tools-skills.svg'
+import WebsiteCreatorIllustration from 'src/assets/website-creator-illustration.svg'
+import ToolsSkillsIllustration from 'src/assets/tools-skills.svg'
 import CardTitle from '../CardsTitle/CardTitle'
 
 import {

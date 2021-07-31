@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { large } from '../../../styles/screens'
+import { large } from 'src/styles/screens'
 
 export const ProjectsStyled = styled.div`
   margin: 5rem 0;

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { large } from '../../styles/screens'
+// eslint-disable-next-line
+import { large } from 'src/styles/screens'
 
 export const StatusTextStyled = styled.div`
   display: block;

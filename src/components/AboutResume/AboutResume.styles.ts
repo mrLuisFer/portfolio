@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { noSelect } from '../../styles/mixins/noSelect'
-import { ipad, large } from '../../styles/screens'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { ipad, large } from 'src/styles/screens'
 
 const SAboutResume = styled.div`
   background: var(--blue-background);

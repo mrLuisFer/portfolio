@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { noSelect } from '../../../../styles/mixins/noSelect'
-import { mobile } from '../../../../styles/screens'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { mobile } from 'src/styles/screens'
 
 export const ProjectsCardContainer = styled.article`
   display: block;

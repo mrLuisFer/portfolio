@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import '../../styles/afterBtn.css'
+import 'src/styles/afterBtn.css'
 
 // Assets
-import navBarLogo from '../../assets/navbar-logo/navbar-logo.svg'
+import navBarLogo from 'src/assets/navbar-logo/navbar-logo.svg'
 // Utils
-import { bounceIn, zoomIn, fadeIn } from '../../utils/animateCss/animateCss'
-import { facebook, linkedin, mailTo, twitter } from '../../utils/social-links/socialLinks'
+import { bounceIn, zoomIn, fadeIn } from 'src/utils/animateCss/animateCss'
+import { facebook, linkedin, mailTo, twitter } from 'src/utils/social-links/socialLinks'
 
 import {
   NavBarStyled,

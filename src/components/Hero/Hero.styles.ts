@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
-import { ipad, large, mobile } from '../../styles/screens'
-import { lineUnderText } from '../../styles/mixins/lineUnderText'
-import { noSelect } from '../../styles/mixins/noSelect'
+import { ipad, large, mobile } from 'src/styles/screens'
+import { lineUnderText } from 'src/styles/mixins/lineUnderText'
+import { noSelect } from 'src/styles/mixins/noSelect'
 
 export const HeroStyled = styled.div`
   margin-bottom: 7rem;

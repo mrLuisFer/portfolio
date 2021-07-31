@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { fontWeight } from '../../styles/mixins/fontWeight'
-import { ipad, large, mobile } from '../../styles/screens'
+import { fontWeight } from 'src/styles/mixins/fontWeight'
+import { ipad, large, mobile } from 'src/styles/screens'
 
 const SFooter = styled.div`
   background: var(--blue-background);

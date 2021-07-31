@@ -1,9 +1,9 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import wavePattern from '../assets/wave-pattern.svg'
+import wavePattern from 'src/assets/wave-pattern.svg'
 // components
-import NavBar from '../components/NavBar/NavBar'
-import Footer from '../components/Footer/Footer'
-import Routes from '../routes/Routes'
+import NavBar from 'src/components/NavBar/NavBar'
+import Footer from 'src/components/Footer/Footer'
+import Routes from 'src/routes/Routes'
 
 import { AppStyled, WavePattern } from './App.styles'
 

@@ -1,6 +1,6 @@
 // Assets
-import footerIllustration from '../../assets/footer-illustration.svg'
-import footerWave from '../../assets/footer-wave.svg'
+import footerIllustration from 'src/assets/footer-illustration.svg'
+import footerWave from 'src/assets/footer-wave.svg'
 // Utils
 import {
   facebook,
@@ -9,7 +9,7 @@ import {
   github,
   instagram,
   mailTo,
-} from '../../utils/social-links/socialLinks'
+} from 'src/utils/social-links/socialLinks'
 
 import {
   SFooter,

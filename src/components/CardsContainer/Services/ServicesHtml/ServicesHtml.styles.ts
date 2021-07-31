@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { ipad, large, mobile } from '../../../../styles/screens'
-import { noSelect } from '../../../../styles/mixins/noSelect'
-import { fontWeight } from '../../../../styles/mixins/fontWeight'
+import { ipad, large, mobile } from 'src/styles/screens'
+import { noSelect } from 'src/styles/mixins/noSelect'
+import { fontWeight } from 'src/styles/mixins/fontWeight'
 
 export const ServicesHtmlCardContentTitle = styled.h1`
   @media (max-width: ${mobile}) {

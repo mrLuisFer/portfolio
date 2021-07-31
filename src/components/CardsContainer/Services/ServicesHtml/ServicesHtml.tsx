@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // Utils
-import { fadeIn } from '../../../../utils/animateCss/animateCss'
-import '../../../../styles/rotate.css'
+import { fadeIn } from 'src/utils/animateCss/animateCss'
+import 'src/styles/rotate.css'
 import {
   LinkReference,
   ServicesHtmlCard,
