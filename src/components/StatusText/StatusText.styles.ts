@@ -20,7 +20,9 @@ export const StatusTextDescriptionIcon = styled.i`
   margin-right: 0.5rem;
 `
 
-export const StatusTextSpan: any = styled.span`
-  color: ${(props: any) =>
-    props.statusError ? 'var(--orange)' : ' var(--cerulean-crayola)'};
+type StatusTextSpanProps = {
+  statusError: Boolean
+}
+export const StatusTextSpan: any = styled.span<StatusTextSpanProps>`
+  color: ${(props) => (props.statusError ? 'var(--orange)' : ' var(--cerulean-crayola)')};
 `

@@ -59,13 +59,11 @@ export default function ServicesHtml({
         <ServicesHtmlCardContentContainer className={fadeIn} isShow={showText}>
           <ServicesHtmlCardContentText>{description}</ServicesHtmlCardContentText>
 
-          {showLinkReference ? (
+          {showLinkReference && (
             <LinkReference href={linkReference} target='_blank' rel='noopener noreferrer'>
               <i className='fas fa-link' />
               <span>What is this?</span>
             </LinkReference>
-          ) : (
-            ''
           )}
         </ServicesHtmlCardContentContainer>
       </ServicesHtmlCardContent>
