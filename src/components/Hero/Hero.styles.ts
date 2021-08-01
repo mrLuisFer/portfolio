@@ -131,26 +131,26 @@ export const HeroPersonalCodeIcon = styled.i`
 `
 
 export const HeroPersonalInfo = styled.h2`
-  margin-top: 1.35rem;
+  margin: 1.35 auto 0;
   font-size: 1.3rem;
   line-height: 1.5;
   font-weight: 400;
-
-  @media (min-width: ${mobile}) {
-    padding-right: 3rem;
-  }
+  text-align: center;
 
   @media (min-width: ${ipad}) {
-    padding-right: 0;
-    width: 280px;
+    padding-right: 3rem;
+    width: 290px;
     line-height: 1.3;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: left;
+    margin: 1.35 0 0;
   }
 
   @media (min-width: ${large}) {
     line-height: 1.44;
-    width: 300px;
-    font-size: 1.65rem;
+    width: 310px;
+    font-size: 1.6rem;
+    padding: 0;
   }
 
   span {
@@ -165,7 +165,16 @@ export const HeroPersonalInfo = styled.h2`
   }
 
   #Hero__personal-info-js {
-    color: var(--honey-yellow);
+    background: var(--honey-yellow);
+    color: rgba(0, 0, 0, 0.8);
+    padding: 0.1rem 0.3rem;
+    margin: 0 1px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 `
 
