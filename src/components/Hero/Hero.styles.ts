@@ -131,7 +131,7 @@ export const HeroPersonalCodeIcon = styled.i`
 `
 
 export const HeroPersonalInfo = styled.h2`
-  margin: 1.35 auto 0;
+  margin: 1.35rem auto 0;
   font-size: 1.3rem;
   line-height: 1.5;
   font-weight: 400;
@@ -143,7 +143,7 @@ export const HeroPersonalInfo = styled.h2`
     line-height: 1.3;
     font-size: 1.2rem;
     text-align: left;
-    margin: 1.35 0 0;
+    margin: 1.35rem 0 0;
   }
 
   @media (min-width: ${large}) {
