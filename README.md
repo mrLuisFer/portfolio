@@ -5,9 +5,9 @@
 
 ## About
 
-This is my first Portfolio as **Web Developer** | **Frontend**, I built it with the basic Frontend tools like `HTML`,` CSS` and `Javascript`
+This is my first Portfolio as **Web Developer** | **Frontend**, I built it with the basic Frontend tools like `HTML`, `CSS` and `Javascript`
 
-But it was using `React` to speed up the development and` TypesScript` for pleasure and avoid errors that happen in the future or when it is in production
+But it was using `React` to speed up the development and `TypesScript` for pleasure and avoid errors that happen in the future or when it is in production
 
 I know there is a lot of code that can improve or decrease, so what I find or when I know and learn best practices I will improve and add features to the project later
 
@@ -74,4 +74,3 @@ Makes the .eslint linter go through all the files checking the rules that are pl
 - [Twitter](https://twitter.com/lolesuncrak)
 - [LinkedIn](https://www.linkedin.com/in/mrluisfer/)
 - [Github](https://github.com/mrLuisFer)
-- [My Discord Commnunity](https://discord.gg/RTdXPfbz3K)
