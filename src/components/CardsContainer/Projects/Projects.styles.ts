@@ -11,7 +11,6 @@ export const ProjectsStyled = styled.div`
 
 export const ProjectsFlex = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
 `

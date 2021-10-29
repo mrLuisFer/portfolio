@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from 'react'
 import { octokit } from 'src/utils/octokitVar'
 
 import type { ProjectData } from './projects.d'
-import { ProjectsStyled } from './Projects.styles'
+import { ProjectsStyled, ProjectsFlex } from './Projects.styles'
 import ProjectCard from './ProjectCard'
 import CardTitle from '../CardsTitle/CardTitle'
 
@@ -26,7 +26,6 @@ export default function Projects(): JSX.Element {
     getData()
   }, [getData])
 
-  console.log(projects)
   return (
     <ProjectsStyled id='projects'>
       <CardTitle titleSpan='Projects:' marginBottom='2rem' withMarginBottom />
@@ -36,11 +35,11 @@ export default function Projects(): JSX.Element {
             <h1>An error fetching data</h1>
           </div>
         ) : (
-          <>
+          <ProjectsFlex>
             {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
-          </>
+          </ProjectsFlex>
         )}
       </section>
     </ProjectsStyled>
