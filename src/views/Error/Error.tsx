@@ -26,8 +26,9 @@ export default function Error(): JSX.Element {
         alt='404'
         title={`Error 404 in ${pathname}`}
         loading='lazy'
+        draggable='false'
       />
-      <div>
+      <article>
         <TitleDesktop>Oops!</TitleDesktop>
         <ErrorTxt>
           Some error in <span>{pathname}</span>
@@ -35,7 +36,7 @@ export default function Error(): JSX.Element {
         <ErrorBtn type='button' onClick={sendToRootUrl}>
           Go back to home!
         </ErrorBtn>
-      </div>
+      </article>
     </ErrorContainer>
   )
 }
