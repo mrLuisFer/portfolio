@@ -1,30 +1,11 @@
-import { OctokitResponse } from '@octokit/types'
-import { useEffect, useState, useCallback } from 'react'
-import { octokit } from 'src/utils/octokitVar'
+import { useGetProjects } from 'src/hooks/useGetProjects'
 
-import type { ProjectData } from './projects.d'
 import { ProjectsStyled, ProjectsFlex } from './Projects.styles'
 import ProjectCard from './ProjectCard'
 import CardTitle from '../CardsTitle/CardTitle'
 
 export default function Projects(): JSX.Element {
-  const [requestStatus, setRequestStatus] = useState<number>(200)
-  const [projects, setProjects] = useState<Array<ProjectData>>([])
-
-  const getData = useCallback(async () => {
-    const url: string = 'GET /users/{username}/repos'
-    const headers = {
-      username: 'mrLuisFer',
-    }
-
-    const response: OctokitResponse<any> = await octokit.request(url, headers)
-    setRequestStatus(response.status)
-    setProjects(response.data)
-  }, [])
-
-  useEffect(() => {
-    getData()
-  }, [getData])
+  const { projects, requestStatus } = useGetProjects()
 
   return (
     <ProjectsStyled id='projects'>
