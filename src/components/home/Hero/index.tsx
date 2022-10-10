@@ -1,8 +1,8 @@
-// Utils
 import { linkedin, github } from 'src/utils/social-links/socialLinks'
 import Image from 'next/image'
 import { Box, Text } from '@chakra-ui/react'
 import Link from '../../Custom/Link'
+import Title from '../../Custom/Title'
 
 export default function Hero(): JSX.Element {
   return (
@@ -20,50 +20,54 @@ export default function Hero(): JSX.Element {
               Hello!
             </Text>
             <Text as='p' fontSize='4xl' display='flex' gap='0.5rem' fontWeight='bold'>
-              I'm{' '}
-              <Link
-                href='https://github.com/mrLuisFer'
-                external
-                display='flex'
-                alignItems='center'
-                gap='1rem'
-                bgClip='text'
-                fontWeight='extrabold'
-                bgGradient='linear(90deg, #007CF0, #00DFD8)'>
-                Luis Alvarez
-                <Text as='i' className='fas fa-code' />
-              </Link>
+              I&apos;m{' '}
+              <Title id='titleName' colorscheme='blue' bgAnimate>
+                <Link
+                  href='https://github.com/mrLuisFer'
+                  external
+                  display='flex'
+                  alignItems='center'
+                  gap='1rem'
+                  fontWeight='extrabold'
+                  transition='0.15s ease'
+                  noBrightness>
+                  Luis Alvarez
+                  <Text as='i' className='fas fa-code' />
+                </Link>
+              </Title>
             </Text>
           </Box>
           <Box>
-            <Text
+            <Title
+              id='seniority'
               as='p'
               fontSize='xl'
-              bgGradient='linear(to-l, #7928CA, #FF0080)'
-              bgClip='text'
-              fontWeight='extrabold'
-              mt='0.5rem'>
+              weight='extrabold'
+              mt='0.5rem'
+              colorscheme='pink'
+              bgAnimate
+              display='inline-block'>
               Frontend <Text as='span'>Developer</Text>
-            </Text>
+            </Title>
             <Text as='p' fontSize='lg' opacity='0.8' mt='1rem'>
               Specialized in{' '}
-              <Text
+              <Title
+                id='js-label'
                 as='span'
-                fontWeight='bold'
-                opacity='1'
-                bgGradient='linear(to-l, #fff700, #faff94)'
-                bgClip='text'>
+                weight='bold'
+                colorscheme='yellow'
+                opacity='1'>
                 Javascript
-              </Text>{' '}
+              </Title>{' '}
               &{' '}
-              <Text
+              <Title
+                id='react-label'
                 as='span'
                 opacity='1'
-                fontWeight='bold'
-                bgGradient='linear(to-r, #2e82ff, #0077f6)'
-                bgClip='text'>
+                weight='bold'
+                colorscheme='darkBlue'>
                 React
-              </Text>{' '}
+              </Title>{' '}
               for UI <br />
               and Web Aplications
             </Text>

@@ -8,7 +8,7 @@ export default function AboutResume(): JSX.Element {
       <Box>
         <div>
           <Box>
-            <Title id='about' colorscheme='pink'>
+            <Title id='about' colorscheme='pink' fontSize='2xl'>
               About Me
             </Title>
             <Box>Main information about me and what I love to do</Box>
