@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { ipad, large } from 'src/styles/screens'
 import { lineUnderText } from 'src/styles/mixins/lineUnderText'
+import Image from 'next/image'
 
 export const ContactMeStyled = styled.div`
   padding: 0 5%;
@@ -98,7 +99,7 @@ export const ContactMeSocialText = styled.span`
     color: var(--gainsboro);
   }
 `
-export const ContactMeIllustration = styled.img`
+export const ContactMeIllustration = styled(Image)`
   transition: var(--transition);
   width: 300px;
   height: 260px;

@@ -1,18 +1,13 @@
 import NavBar from 'src/components/NavBar/NavBar'
 import Footer from 'src/components/Footer/Footer'
-
-import { AppStyled, WavePattern } from './Layout.styles'
+import { Container } from '@chakra-ui/react'
 
 export default function Layout({ children }: { children: any }): JSX.Element {
   return (
-    <AppStyled>
-      <WavePattern
-        src='/assets/wave-pattern.svg'
-        alt='mrLuisFer wave style illustration for page top'
-      />
+    <Container maxW='container.xl'>
       <NavBar />
       {children}
       <Footer />
-    </AppStyled>
+    </Container>
   )
 }

@@ -1,8 +1,10 @@
 import styled from 'styled-components'
 import { fontWeight } from 'src/styles/mixins/fontWeight'
 import { ipad, large, mobile } from 'src/styles/screens'
+import Image from 'next/image'
+import Link from 'next/link'
 
-const SFooter = styled.div`
+export const SFooter = styled.div`
   background: var(--blue-background);
   margin-top: 3rem;
   color: var(--cultured);
@@ -23,7 +25,7 @@ const SFooter = styled.div`
   }
 `
 
-const FooterWave = styled.img`
+export const FooterWave = styled(Image)`
   position: absolute;
   width: 100%;
   left: 0;
@@ -33,7 +35,7 @@ const FooterWave = styled.img`
   backface-visibility: hidden;
 `
 
-const FooterContainer = styled.div`
+export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
 
@@ -54,7 +56,7 @@ const FooterContainer = styled.div`
   }
 `
 
-const FooterContainerCard = styled.div`
+export const FooterContainerCard = styled.div`
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -90,14 +92,14 @@ const FooterContainerCard = styled.div`
   }
 `
 
-const FooterContainerCardAnchor = styled.a`
+export const FooterContainerCardAnchor = styled(Link)`
   i {
     margin-right: 0.5rem;
     font-size: 1.25rem;
   }
 `
 
-const FooterContainerCardTitle = styled.h2`
+export const FooterContainerCardTitle = styled.h2`
   position: relative;
   margin-bottom: 1rem;
   font-family: var(--inter-font);
@@ -114,7 +116,7 @@ const FooterContainerCardTitle = styled.h2`
     border-radius: 2px;
   }
 `
-const FooterContainerIllustration = styled.img`
+export const FooterContainerIllustration = styled(Image)`
   margin: 0 auto;
   width: 250px;
   transition: var(--transition);
@@ -135,7 +137,7 @@ const FooterContainerIllustration = styled.img`
   }
 `
 
-const FooterMade = styled.span`
+export const FooterMade = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,14 +171,3 @@ const FooterMade = styled.span`
     }
   }
 `
-
-export {
-  SFooter,
-  FooterWave,
-  FooterContainer,
-  FooterContainerCard,
-  FooterContainerCardTitle,
-  FooterContainerCardAnchor,
-  FooterContainerIllustration,
-  FooterMade,
-}

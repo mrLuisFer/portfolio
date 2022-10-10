@@ -1,5 +1,6 @@
+import Image from 'next/image'
 import styled from 'styled-components'
-import { ipad, large } from '../styles/screens'
+import { ipad, large } from '../../styles/screens'
 
 export const AppStyled = styled.div`
   padding-top: 10px;
@@ -13,18 +14,5 @@ export const AppStyled = styled.div`
 
   @media (min-width: ${large}) {
     padding-top: 1.5rem;
-  }
-`
-
-export const WavePattern = styled.img`
-  position: absolute;
-  backface-visibility: hidden;
-  width: 100%;
-  left: 0;
-  opacity: 0.3;
-  z-index: -1000;
-  top: 0;
-  @media (min-width: ${large}) {
-    top: -3rem;
   }
 `

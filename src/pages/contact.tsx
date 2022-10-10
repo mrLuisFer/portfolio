@@ -54,13 +54,15 @@ export default function ContactMe() {
           </ContactMeSocialLink>
         </ContactMeSocialContainer>
         <ContactMeIllustration
-          src='assets/contactMe/code-typing-contactme.svg'
+          width='300px'
+          height='260px'
+          src='/assets/contactMe/code-typing-contactme.svg'
           alt='Illustration of person developing a web page'
         />
       </ContactMeContainer>
       <ContactMeFlex>
         <ContactMeIllustration
-          src='assets/contactMe/contactMe-mail-sent.svg'
+          src='/assets/contactMe/contactMe-mail-sent.svg'
           alt='Illustration where an email is sent'
         />
         <ContactForm />

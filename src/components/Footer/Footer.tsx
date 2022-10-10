@@ -22,7 +22,8 @@ export default function Footer(): JSX.Element {
   return (
     <SFooter>
       <FooterWave
-        src='assets/footer-wave.svg'
+        layout='fill'
+        src='/assets/footer-wave.svg'
         alt='Wave style illustration for footer start'
       />
       <FooterContainer>
@@ -31,70 +32,73 @@ export default function Footer(): JSX.Element {
           <FooterContainerCardTitle>Quick Links</FooterContainerCardTitle>
           <div>
             <FooterContainerCardAnchor href='/#hero'>
-              <span>Header</span>
+              <a>
+                <span>Header</span>
+              </a>
             </FooterContainerCardAnchor>
             <FooterContainerCardAnchor href='/#about'>
-              <span>About Me</span>
+              <a>
+                <span>About Me</span>
+              </a>
             </FooterContainerCardAnchor>
             <FooterContainerCardAnchor href='/#portfolio'>
-              <span>Portfolio</span>
+              <a>
+                <span>Portfolio</span>
+              </a>
             </FooterContainerCardAnchor>
             <FooterContainerCardAnchor href='/#projects'>
-              <span>Projects</span>
+              <a>
+                <span>Projects</span>
+              </a>
             </FooterContainerCardAnchor>
-            <FooterContainerCardAnchor
-              href={mailTo}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <i className='fas fa-at' />
-              <span>Send a Email</span>
-            </FooterContainerCardAnchor>{' '}
+            <FooterContainerCardAnchor href={mailTo}>
+              <a rel='noopener noreferrer' target='_blank'>
+                <i className='fas fa-at' />
+                <span>Send a Email</span>
+              </a>
+            </FooterContainerCardAnchor>
           </div>
         </FooterContainerCard>
         {/* Social Media */}
         <FooterContainerCard>
           <FooterContainerCardTitle>Social Media</FooterContainerCardTitle>
           <div>
-            <FooterContainerCardAnchor
-              href={linkedin}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <i className='fab fa-linkedin-in' />
-              <span>LinkedIn</span>
+            <FooterContainerCardAnchor href={linkedin}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-linkedin-in' />
+                <span>LinkedIn</span>
+              </a>
             </FooterContainerCardAnchor>
-            <FooterContainerCardAnchor
-              href={twitter}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <i className='fab fa-twitter' />
-              <span>Twitter</span>
+            <FooterContainerCardAnchor href={twitter}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-twitter' />
+                <span>Twitter</span>
+              </a>
             </FooterContainerCardAnchor>
-            <FooterContainerCardAnchor
-              href={github}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <i className='fab fa-github' />
-              <span>Github</span>
+            <FooterContainerCardAnchor href={github}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-github' />
+                <span>Github</span>
+              </a>
             </FooterContainerCardAnchor>
-            <FooterContainerCardAnchor
-              href={facebook}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <i className='fab fa-facebook-f' />
-              <span>Facebook</span>
+            <FooterContainerCardAnchor href={facebook}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-facebook-f' />
+                <span>Facebook</span>
+              </a>
             </FooterContainerCardAnchor>
-            <FooterContainerCardAnchor
-              href={instagram}
-              target='_blank'
-              rel='noopener noreferrer'>
-              <i className='fab fa-instagram' />
-              <span>Instagram</span>
+            <FooterContainerCardAnchor href={instagram}>
+              <a target='_blank' rel='noopener noreferrer'>
+                <i className='fab fa-instagram' />
+                <span>Instagram</span>
+              </a>
             </FooterContainerCardAnchor>
           </div>
         </FooterContainerCard>
-        {/* Footer Illustration */}
         <FooterContainerIllustration
-          src='assets/footer-illustration.svg'
+          height='250px'
+          width='250px'
+          src='/assets/footer-illustration.svg'
           alt='Illustration of a Boy on a Cell Phone for the Footer'
         />
       </FooterContainer>

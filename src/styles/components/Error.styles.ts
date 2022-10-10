@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { ipad, large } from 'src/styles/screens'
+import Image from 'next/image'
 
 const Title = styled.h1`
   text-align: center;
@@ -26,7 +27,7 @@ export const TitleDesktop = styled(Title)`
   }
 `
 
-export const ErrorImg = styled.img`
+export const ErrorImg = styled(Image)`
   display: block;
   margin: 0 auto;
   position: relative;

@@ -73,8 +73,10 @@ export default function Skiils(): JSX.Element {
               </div>
             </SkillsCardsContainer>
             <SkillsIllustration
-              src='assets/website-creator-illustration.svg'
-              alt='Website creator illustration'
+              width='250px'
+              height='300px'
+              src='/assets/website-creator-illustration.svg'
+              alt='/Website creator illustration'
             />
           </SkillsFlex>
         </SkillsSections>
@@ -84,7 +86,9 @@ export default function Skiils(): JSX.Element {
           <CardTitle titleSpan='Tools:' withMarginBottom={false} />
           <SkillsFlex>
             <SkillsIllustration
-              src='assets/tools-skills.svg'
+              width='250px'
+              height='300px'
+              src='/assets/tools-skills.svg'
               alt='Tool skills illustration'
             />
             <SkillsCardsContainerTwo>

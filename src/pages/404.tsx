@@ -21,7 +21,8 @@ export default function Error(): JSX.Element {
     <ErrorContainer>
       <TitleMobile>Oops!</TitleMobile>
       <ErrorImg
-        src='assets/404/404.svg'
+        layout='fill'
+        src='/assets/404/404.svg'
         alt='404'
         title={`Error 404 in ${pathname}`}
         loading='lazy'
