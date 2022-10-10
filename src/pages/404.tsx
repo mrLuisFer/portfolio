@@ -1,5 +1,3 @@
-import { useLocation, useHistory } from 'react-router-dom'
-import ErrorSvg from 'src/assets/404/404.svg'
 import {
   ErrorImg,
   ErrorTxt,
@@ -7,22 +5,23 @@ import {
   ErrorBtn,
   ErrorContainer,
   TitleDesktop,
-} from './Error.styles'
+} from 'src/styles/components/Error.styles'
+import { useRouter } from 'next/router'
 
 export default function Error(): JSX.Element {
-  const history = useHistory()
-  const location = useLocation()
-  const pathname: string = location?.pathname
+  const router = useRouter()
+
+  const pathname: string = router.asPath
 
   const sendToRootUrl = () => {
-    history.push('/')
+    router.push('/')
   }
 
   return (
     <ErrorContainer>
       <TitleMobile>Oops!</TitleMobile>
       <ErrorImg
-        src={ErrorSvg}
+        src='assets/404/404.svg'
         alt='404'
         title={`Error 404 in ${pathname}`}
         loading='lazy'

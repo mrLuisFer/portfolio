@@ -1,6 +1,3 @@
-// Assets
-import WebsiteCreatorIllustration from 'src/assets/website-creator-illustration.svg'
-import ToolsSkillsIllustration from 'src/assets/tools-skills.svg'
 import CardTitle from '../CardsTitle/CardTitle'
 
 import {
@@ -76,7 +73,7 @@ export default function Skiils(): JSX.Element {
               </div>
             </SkillsCardsContainer>
             <SkillsIllustration
-              src={WebsiteCreatorIllustration}
+              src='assets/website-creator-illustration.svg'
               alt='Website creator illustration'
             />
           </SkillsFlex>
@@ -87,7 +84,7 @@ export default function Skiils(): JSX.Element {
           <CardTitle titleSpan='Tools:' withMarginBottom={false} />
           <SkillsFlex>
             <SkillsIllustration
-              src={ToolsSkillsIllustration}
+              src='assets/tools-skills.svg'
               alt='Tool skills illustration'
             />
             <SkillsCardsContainerTwo>

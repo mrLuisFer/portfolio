@@ -1,6 +1,3 @@
-// Assets
-import contactMeIllustration from 'src/assets/contactMe/code-typing-contactme.svg'
-import contactMeMailSent from 'src/assets/contactMe/contactMe-mail-sent.svg'
 // Components
 import ContactForm from 'src/components/ContactForm/ContactForm'
 // Utils
@@ -24,7 +21,7 @@ import {
   ContactMeSocialText,
   ContactMeIllustration,
   ContactMeFlex,
-} from './ContactMe.styles'
+} from 'src/styles/components/ContactMe.styles'
 
 export default function ContactMe() {
   return (
@@ -57,13 +54,13 @@ export default function ContactMe() {
           </ContactMeSocialLink>
         </ContactMeSocialContainer>
         <ContactMeIllustration
-          src={contactMeIllustration}
+          src='assets/contactMe/code-typing-contactme.svg'
           alt='Illustration of person developing a web page'
         />
       </ContactMeContainer>
       <ContactMeFlex>
         <ContactMeIllustration
-          src={contactMeMailSent}
+          src='assets/contactMe/contactMe-mail-sent.svg'
           alt='Illustration where an email is sent'
         />
         <ContactForm />

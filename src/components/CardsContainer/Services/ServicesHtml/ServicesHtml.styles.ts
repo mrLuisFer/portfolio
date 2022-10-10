@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { ipad, large, mobile } from 'src/styles/screens'
 import { noSelect } from 'src/styles/mixins/noSelect'
 import { fontWeight } from 'src/styles/mixins/fontWeight'
+import Link from 'next/link'
 
 export const ServicesHtmlCardContentTitle = styled.h1`
   @media (max-width: ${mobile}) {
@@ -29,7 +30,7 @@ export const ServicesHtmlCardContentTitle = styled.h1`
   }
 `
 
-export const LinkReference = styled.a`
+export const LinkReference = styled(Link)`
   @media (max-width: ${mobile}) {
     font-size: 0.8rem;
   }
@@ -61,6 +62,7 @@ export const LinkReference = styled.a`
     }
   }
 `
+
 export const ServicesHtmlCardIcon = styled.span`
   @media (max-width: ${mobile}) {
     padding: 0.7rem 0.4rem;

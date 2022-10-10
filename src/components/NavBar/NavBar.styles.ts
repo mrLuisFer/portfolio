@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { ipad, large } from 'src/styles/screens'
 import { lineUnderText } from 'src/styles/mixins/lineUnderText'
 import { noSelect } from 'src/styles/mixins/noSelect'
+import Link from 'next/link'
 import type { TShowIns } from './showIns.d'
 
 export const NavBarStyled = styled.nav`

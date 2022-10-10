@@ -1,7 +1,3 @@
-// Assets
-import footerIllustration from 'src/assets/footer-illustration.svg'
-import footerWave from 'src/assets/footer-wave.svg'
-// Utils
 import {
   facebook,
   linkedin,
@@ -25,7 +21,10 @@ import {
 export default function Footer(): JSX.Element {
   return (
     <SFooter>
-      <FooterWave src={footerWave} alt='Wave style illustration for footer start' />
+      <FooterWave
+        src='assets/footer-wave.svg'
+        alt='Wave style illustration for footer start'
+      />
       <FooterContainer>
         {/* Quick Links */}
         <FooterContainerCard>
@@ -95,7 +94,7 @@ export default function Footer(): JSX.Element {
         </FooterContainerCard>
         {/* Footer Illustration */}
         <FooterContainerIllustration
-          src={footerIllustration}
+          src='assets/footer-illustration.svg'
           alt='Illustration of a Boy on a Cell Phone for the Footer'
         />
       </FooterContainer>

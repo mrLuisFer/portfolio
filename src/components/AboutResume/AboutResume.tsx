@@ -1,8 +1,3 @@
-// Assets
-import aboutResumeIllustration from 'src/assets/flying-about-resume-illustration.svg'
-import waveAboutResume from 'src/assets/wave-about-resume.svg'
-import waveAboutResumeDown from 'src/assets/wave-about-resume-down.svg'
-// Utils
 import { bounceIn } from 'src/utils/animateCss/animateCss'
 
 import {
@@ -23,7 +18,7 @@ export default function AboutResume(): JSX.Element {
   return (
     <SAboutResume>
       <AboutResumeWave
-        src={waveAboutResume}
+        src='assets/wave-about-resume.svg'
         alt='Illustration for the about section of mrLuisFer'
       />
       <AboutResumeInfo>
@@ -54,14 +49,14 @@ export default function AboutResume(): JSX.Element {
         </div>
         <AboutResumeInfoIllustrationContainer className='AboutResume__info-flying-illustration'>
           <AboutResumeInfoIllustration
-            src={aboutResumeIllustration}
+            src='assets/flying-about-resume-illustration.svg'
             className={bounceIn}
             alt='Floating illustration about ideas and inspiration'
           />
         </AboutResumeInfoIllustrationContainer>
       </AboutResumeInfo>
       <AboutResummeWaveDown
-        src={waveAboutResumeDown}
+        src='assets/wave-about-resume-down.svg'
         alt='Wave style illustration for the final part of the about section'
       />
     </SAboutResume>

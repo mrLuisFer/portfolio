@@ -1,9 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import 'src/styles/afterBtn.css'
+import Link from 'next/link'
 
-// Assets
-import navBarLogo from 'src/assets/navbar-logo/navbar-logo.svg'
 // Utils
 import { bounceIn, zoomIn, fadeIn } from 'src/utils/animateCss/animateCss'
 import { facebook, linkedin, mailTo, twitter } from 'src/utils/social-links/socialLinks'
@@ -34,15 +31,21 @@ export default function NavBar(): JSX.Element {
     <NavBarStyled id='hero'>
       <NavBarLogo>
         <NavBarLogoTitle className={`${bounceIn}`}>
-          <Link to='/'>
-            <img src={navBarLogo} alt='mrLuisFer logo' />
-            LuisFer
+          <Link href='/'>
+            <a>
+              <img src='assets/navbar-logo/navbar-logo.svg' alt='mrLuisFer logo' />
+              LuisFer
+            </a>
           </Link>
         </NavBarLogoTitle>
       </NavBarLogo>
       <NavBarLinks className={`${fadeIn}`}>
-        <NavBarLink to='/'>Home</NavBarLink>
-        <NavBarLink to='/contact-me'>Contact me</NavBarLink>
+        <NavBarLink href='/'>
+          <a>Home</a>
+        </NavBarLink>
+        <NavBarLink href='/contact-me'>
+          <a>Contact me</a>
+        </NavBarLink>
         <NavBarSocialMedia>
           <NavBarSocialMediaSpan
             onClick={handleShowIcons}
