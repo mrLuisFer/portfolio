@@ -1,47 +1,48 @@
-import { Box, Image as ChakraImg } from '@chakra-ui/react'
-import Link from 'src/components/Custom/Link'
+import { Box } from '@chakra-ui/react'
 import Title from 'src/components/Custom/Title'
+import GradientBtn from 'src/components/Custom/GradientBtn'
+import Paragraph from 'src/components/Custom/Paragraph'
 
 export default function AboutResume(): JSX.Element {
   return (
-    <Box>
-      <Box>
-        <div>
-          <Box>
-            <Title id='about' colorscheme='pink' fontSize='2xl'>
-              About Me
-            </Title>
-            <Box>Main information about me and what I love to do</Box>
-          </Box>
-          <Box>
-            <p>
-              Hi!, my name is <span>Luis Fernando Alvarez</span> I am a{' '}
-              <span>Software Developer</span>, focused on <span>Frontend Developer</span>,
-              I like to <span>learn</span> new things every day and put them into practice
-              developing projects and applications that make me very happy to do what I
-              love.
-              <br /> I am also a student & I love to learn about the{' '}
-              <span>world of programming</span>, learning new technologies, and doing
-              freelance work and projects.
-            </p>
-            {/* Button to download the CV */}
-            <Link href='/cv-resume.pdf' download>
-              <i className='fas fa-cloud-download-alt' />
-              Download My CV
-            </Link>
-          </Box>
-        </div>
-        <Box className='AboutResume__info-flying-illustration'>
-          <ChakraImg
-            src='/assets/flying-about-resume-illustration.svg'
-            alt='Floating illustration about ideas and inspiration'
-          />
+    <Box mt='8rem'>
+      <Title
+        id='about'
+        colorscheme='pink'
+        fontSize='5xl'
+        textAlign='center'
+        helperText='Main information about me and what I love to do'>
+        About Me
+      </Title>
+      <Box
+        display='flex'
+        alignItems='flex-start'
+        justifyContent='center'
+        gap='2rem'
+        mt='2rem'>
+        <Paragraph>
+          Hi!, my name is <a href='https://github.com/mrLuisFer'>Luis Fernando Alvarez</a>{' '}
+          I am a <span>Software Developer</span>, focused on{' '}
+          <span>Frontend Developer</span>, I like to <span>learn</span> new things every
+          day and put them into practice developing projects and applications that make me
+          very happy to do what I love.
+        </Paragraph>
+        <Box maxW='488px' lineHeight={1.6}>
+          <Paragraph mb='2rem'>
+            I am also a student & I love to learn about the{' '}
+            <span>world of programming</span>, learning new technologies, and doing
+            freelance work and projects.
+          </Paragraph>
+          <GradientBtn
+            colorscheme='blue'
+            href='/cv-resume.pdf'
+            asLink
+            download
+            iconComponent={<i className='fas fa-cloud-download-alt' />}>
+            Download My CV
+          </GradientBtn>
         </Box>
       </Box>
-      <ChakraImg
-        src='/assets/wave-about-resume-down.svg'
-        alt='Wave style illustration for the final part of the about section'
-      />
     </Box>
   )
 }

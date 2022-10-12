@@ -2,6 +2,8 @@ import Image from 'next/image'
 import { facebook, linkedin, twitter } from 'src/utils/social-links/socialLinks'
 import { Box, Text } from '@chakra-ui/react'
 import Link from '../Custom/Link'
+import GradientBtn from '../Custom/GradientBtn'
+
 interface ISocialMediaIcons {
   href: string
   label: string
@@ -44,7 +46,7 @@ export default function NavBar(): JSX.Element {
       </Box>
       <Box as='nav' display='flex' alignItems='center' gap='1rem'>
         {socialMediaIcons.map((item) => (
-          <Box>
+          <Box key={item.label}>
             <Link
               href={item.href}
               external={item.external}
@@ -56,31 +58,9 @@ export default function NavBar(): JSX.Element {
         ))}
       </Box>
       <Box>
-        <Link
-          href='/contact/form'
-          background='white'
-          color='white'
-          borderRadius='5px'
-          backgroundImage='linear-gradient(165deg,#FF4D4D, #F9CB28)'
-          backgroundClip='padding-box'
-          fontWeight='semibold'
-          p='0.7rem 0.2rem'>
-          <Text
-            as='span'
-            background='black'
-            p='0.5rem 1rem'
-            lineHeight='10'
-            borderRadius='5px'
-            fontWeight='extrabold'
-            transition='0.15s ease'
-            _hover={{
-              bgGradient: 'linear(165deg,#FF4D4D, #F9CB28)',
-              color: 'black',
-              boxShadow: '0px 0px 5px 10px linear-gradient(165deg,#FF4D4D, #F9CB28)',
-            }}>
-            Send email
-          </Text>
-        </Link>
+        <GradientBtn colorscheme='orange' href='/contact/form' asLink>
+          Send email
+        </GradientBtn>
       </Box>
     </Box>
   )

@@ -19,7 +19,7 @@ export default function Hero(): JSX.Element {
             <Text fontSize='3xl' opacity='0.5'>
               Hello!
             </Text>
-            <Text as='p' fontSize='4xl' display='flex' gap='0.5rem' fontWeight='bold'>
+            <Text as='div' fontSize='4xl' display='flex' gap='0.5rem' fontWeight='bold'>
               I&apos;m{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
                 <Link
@@ -56,6 +56,7 @@ export default function Hero(): JSX.Element {
                 as='span'
                 weight='bold'
                 colorscheme='yellow'
+                fontSize='lg'
                 opacity='1'>
                 Javascript
               </Title>{' '}
@@ -65,6 +66,7 @@ export default function Hero(): JSX.Element {
                 as='span'
                 opacity='1'
                 weight='bold'
+                fontSize='lg'
                 colorscheme='darkBlue'>
                 React
               </Title>{' '}

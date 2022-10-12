@@ -1,9 +1,9 @@
-import { Text, ChakraProps } from '@chakra-ui/react'
+import { Text, ChakraProps, Heading } from '@chakra-ui/react'
 import colors, { GradientColors } from 'src/utils/gradientColors'
 
 interface TitleProps {
   children: any
-  id: string
+  id?: string
   helperProps?: ChakraProps
   helperText?: string
   colorscheme?: keyof GradientColors
@@ -23,7 +23,7 @@ interface TitleProps {
 
 export default function Title({
   children,
-  id,
+  id = '',
   helperText,
   helperProps,
   colorscheme = 'default',
@@ -32,9 +32,10 @@ export default function Title({
   ...props
 }: TitleProps) {
   return (
-    <Text
+    <Heading
       key={id}
       id={id}
+      as='h2'
       fontWeight={weight}
       transition='0.15s ease'
       bgClip={colorscheme ? 'text' : ''}
@@ -44,7 +45,18 @@ export default function Title({
       }}
       {...props}>
       {children}
-      {helperText && <Text {...helperProps}>{helperText}</Text>}
-    </Text>
+      {helperText && (
+        <Text
+          as='span'
+          display='block'
+          fontSize='lg'
+          color='gray.500'
+          opacity='0.8'
+          fontWeight='medium'
+          {...helperProps}>
+          {helperText}
+        </Text>
+      )}
+    </Heading>
   )
 }

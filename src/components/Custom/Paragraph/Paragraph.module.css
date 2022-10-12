@@ -1,0 +1,12 @@
+.paragraph span {
+  color: #e2e8f0;
+}
+
+.paragraph a {
+  color: #4299e1;
+  font-weight: 500;
+}
+
+.paragraph a:hover {
+  color: #cbdbff;
+}

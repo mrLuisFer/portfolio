@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Hero from 'src/components/home/Hero'
 import AboutResume from 'src/components/home/AboutResume'
-import LikeToDo from 'src/components/LikeToDo/LikeToDo'
+import LikeToDo from 'src/components/home/LikeToDo/LikeToDo'
 import ListWorksSkills from 'src/components/ListWorksSkills/ListWorksSkills'
 import { NextPage } from 'next/types'
 
