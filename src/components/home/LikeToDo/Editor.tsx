@@ -1,11 +1,7 @@
 import { Box, Icon, Text, Tooltip } from '@chakra-ui/react'
 import { VscDebugRestart } from 'react-icons/vsc'
 import { BsCart3 } from 'react-icons/bs'
-import { SiInstacart } from 'react-icons/si'
-import { GiCat } from 'react-icons/gi'
-import { MdTravelExplore } from 'react-icons/md'
-import { IoGameController } from 'react-icons/io5'
-import { useState } from 'react'
+import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 
 function IconCircle({ color }: { color: string }) {
   return (
@@ -42,24 +38,34 @@ function EditorSkeleton({ children, w, h, bg, m }: EditorSkeletonProps) {
   )
 }
 
-const icons = [
-  <SiInstacart size={50} key='icon-parrot' />,
-  <GiCat size={50} key='icon-cat' />,
-  <MdTravelExplore size={50} key='explore' />,
-  <IoGameController size={50} key='game' />,
-]
-
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max)
 }
 
-export default function Editor() {
+interface LikeTodo {
+  title: string
+  value: string
+  icon: any
+}
+
+export default function Editor({
+  setIconActive,
+  icons,
+}: {
+  setIconActive: Dispatch<SetStateAction<string>>
+  icons: LikeTodo[]
+}) {
   const [iconIndex, setIconIndex] = useState(0)
 
   const handleClickIcon = () => {
     const number = getRandomInt(icons.length)
     setIconIndex(number)
+    setIconActive(icons[number].title)
   }
+
+  useEffect(() => {
+    handleClickIcon()
+  }, [])
 
   return (
     <Box
@@ -157,7 +163,7 @@ export default function Editor() {
             _hover={{
               background: '#2f2f2f',
             }}>
-            {icons[iconIndex]}
+            {icons[iconIndex].icon}
           </Box>
           <Box>
             <Box
