@@ -53,14 +53,14 @@ export default function LikeToDo() {
   const [accordionName, setAccordionName] = useState('')
 
   return (
-    <Box marginTop='200px' position='relative'>
+    <Box marginTop='100px' position='relative'>
       <Title colorscheme='yellow' fontSize='5xl' textAlign='center'>
         What I like?
       </Title>
       <Grid
         templateColumns='repeat(2, 400px)'
         justifyContent='center'
-        gap={8}
+        gap={20}
         mt='2.5rem'>
         <GridItem w='100%'>
           <EditorUI setIconActive={setIconActive} icons={likeToDoList} />

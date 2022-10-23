@@ -1,5 +1,5 @@
 import NavBar from 'src/components/NavBar/NavBar'
-import Footer from 'src/components/Footer/Footer'
+import Footer from 'src/components/Footer'
 import { Container } from '@chakra-ui/react'
 
 export default function Layout({ children }: { children: any }): JSX.Element {

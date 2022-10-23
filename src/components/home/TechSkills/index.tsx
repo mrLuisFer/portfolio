@@ -78,7 +78,7 @@ const techIcons: TechIcons[] = [
 
 export default function TechSkills() {
   return (
-    <Box>
+    <Box paddingBottom='2rem'>
       <Title colorscheme='blue' fontSize='5xl' textAlign='center' bgAnimate>
         Tech Skills
       </Title>
@@ -101,7 +101,13 @@ export default function TechSkills() {
           </Box>
         ))}
       </Box>
-      <Text textAlign='center' mt='1rem' fontSize='1rem' fontWeight='bold'>
+      <Text
+        textAlign='center'
+        mt='1rem'
+        fontSize='1rem'
+        fontWeight='bold'
+        opacity='0.5'
+        _hover={{ opacity: '1' }}>
         and more...
       </Text>
     </Box>
