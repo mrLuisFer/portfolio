@@ -9,11 +9,13 @@ interface FooterLink {
   href: string
   isExternal: boolean
 }
+
 interface FooterElements {
   title: string
   titleColor: keyof GradientColors
   links: FooterLink[]
 }
+
 const footerElements: FooterElements[] = [
   {
     title: 'Social',
