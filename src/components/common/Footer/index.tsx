@@ -2,7 +2,7 @@ import { Box, Button, Link as ChakraLink, Tooltip, Divider } from '@chakra-ui/re
 import Link from 'next/link'
 import { BiUpArrow } from 'react-icons/bi'
 import { GradientColors } from 'src/utils/gradientColors'
-import Title from '../../custom/Title'
+// import Title from '../../custom/Title'
 
 interface FooterLink {
   label: string
@@ -98,9 +98,10 @@ export default function Footer(): JSX.Element {
           <Box>logo</Box>
           {footerElements.map((item) => (
             <Box key={item.title}>
-              <Title colorscheme={item.titleColor} bgAnimate>
+              {/* <Title colorscheme={item.titleColor} bgAnimate>
                 {item.title}
-              </Title>
+              </Title> */}
+              <h1>{item.title}</h1>
               <Box display='flex' flexDirection='column' gap='1rem' mt='1rem'>
                 {item.links.map((link) => (
                   <Link href={link.href} key={link.label}>
