@@ -12,7 +12,7 @@ import {
 } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import Link from 'next/link'
-import Title from '../../../custom/Title'
+import Title from 'src/components/custom/Title'
 
 interface TechIcons {
   icon: any
