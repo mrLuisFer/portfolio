@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { noSelect } from 'src/styles/mixins/noSelect'
 import { large, ipad, veryLarge } from 'src/styles/screens'
+import Image from 'next/image'
 
 export const SkillsStyled = styled.div`
   display: flex;
@@ -77,7 +78,7 @@ export const SkillsCardsContainerTwo = styled(SkillsCardsContainer)`
   ${noSelect()}
 `
 
-export const SkillsIllustration = styled.img`
+export const SkillsIllustration = styled(Image)`
   margin: 2rem auto;
   width: 250px;
 
