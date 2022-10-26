@@ -9,6 +9,7 @@ import theme from 'src/styles/global/theme'
 
 import '../styles/global/globals.css'
 import { NextRouter, useRouter } from 'next/router'
+import { useEffect } from 'react'
 
 const styledTheme: DefaultTheme = {
   colors: {},
@@ -16,12 +17,13 @@ const styledTheme: DefaultTheme = {
 
 export default function AppPage({ Component, pageProps }: AppProps) {
   const router: NextRouter = useRouter()
-  const path: string = router?.pathname
 
-  if (path !== '/') {
-    router.push('/')
-    return null
-  }
+  useEffect(() => {
+    const path: string = router?.pathname
+    if (path !== '/') {
+      router.push('/')
+    }
+  }, [])
 
   return (
     <>
