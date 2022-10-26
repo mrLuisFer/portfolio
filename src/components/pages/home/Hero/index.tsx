@@ -1,8 +1,8 @@
 import { linkedin, github } from 'src/utils/social-links/socialLinks'
 import Image from 'next/image'
 import { Box, Text } from '@chakra-ui/react'
-import Link from '../../Custom/Link'
-import Title from '../../Custom/Title'
+import Link from '../../../custom/Link'
+import Title from '../../../custom/Title'
 
 export default function Hero(): JSX.Element {
   return (
@@ -19,7 +19,13 @@ export default function Hero(): JSX.Element {
             <Text fontSize='3xl' opacity='0.5'>
               Hello!
             </Text>
-            <Text as='div' fontSize='4xl' display='flex' gap='0.5rem' fontWeight='bold'>
+            <Text
+              as='div'
+              fontSize='4xl'
+              display='flex'
+              alignItems='center'
+              gap='0.5rem'
+              fontWeight='bold'>
               I&apos;m{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
                 <Link

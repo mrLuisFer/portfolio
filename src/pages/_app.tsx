@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
-import Layout from 'src/components/Layout'
+import Layout from 'src/components/common/Layout'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 import GlobalStyle from 'src/styles/global/globalStyle'
 import Head from 'next/head'

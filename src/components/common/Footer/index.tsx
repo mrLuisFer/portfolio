@@ -2,7 +2,7 @@ import { Box, Button, Link as ChakraLink, Tooltip, Divider } from '@chakra-ui/re
 import Link from 'next/link'
 import { BiUpArrow } from 'react-icons/bi'
 import { GradientColors } from 'src/utils/gradientColors'
-import Title from '../Custom/Title'
+import Title from '../../custom/Title'
 
 interface FooterLink {
   label: string

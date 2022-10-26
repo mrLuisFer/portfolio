@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { facebook, linkedin, twitter } from 'src/utils/social-links/socialLinks'
 import { Box, Text } from '@chakra-ui/react'
-import Link from '../Custom/Link'
-import GradientBtn from '../Custom/GradientBtn'
+import Link from '../../custom/Link'
+import GradientBtn from '../../custom/GradientBtn'
 
 interface ISocialMediaIcons {
   href: string

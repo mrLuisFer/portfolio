@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Hero from 'src/components/home/Hero'
-import AboutResume from 'src/components/home/AboutResume'
-import LikeToDo from 'src/components/home/LikeToDo/LikeToDo'
+import Hero from 'src/components/pages/home/Hero'
+import AboutResume from 'src/components/pages/home/AboutResume'
+import LikeToDo from 'src/components/pages/home/LikeToDo/LikeToDo'
 import { NextPage } from 'next/types'
-import TechSkills from 'src/components/home/TechSkills'
+import TechSkills from 'src/components/pages/home/TechSkills'
 
 const Home: NextPage = () => {
   return (

@@ -10,7 +10,9 @@ import {
   SiTypescript,
   SiSvelte,
 } from 'react-icons/si'
-import Title from '../../Custom/Title'
+import { TbBrandNextjs } from 'react-icons/tb'
+import Link from 'next/link'
+import Title from '../../../custom/Title'
 
 interface TechIcons {
   icon: any
@@ -43,6 +45,11 @@ const techIcons: TechIcons[] = [
     icon: <SiJavascript />,
     label: 'JavaScript',
     color: '#F0DB4F',
+  },
+  {
+    icon: <TbBrandNextjs />,
+    label: 'Next.js',
+    color: '#fff',
   },
   {
     icon: <FaNodeJs />,
@@ -101,15 +108,22 @@ export default function TechSkills() {
           </Box>
         ))}
       </Box>
-      <Text
-        textAlign='center'
-        mt='1rem'
-        fontSize='1rem'
-        fontWeight='bold'
-        opacity='0.5'
-        _hover={{ opacity: '1' }}>
-        and more...
-      </Text>
+      <Link href='/projects'>
+        <Text
+          as='a'
+          textAlign='center'
+          mt='1rem'
+          fontSize='1rem'
+          fontWeight='bold'
+          opacity='0.5'
+          display='block'
+          color='white'
+          cursor='pointer'
+          _hover={{ opacity: '1' }}
+          _active={{ color: 'blue.300' }}>
+          and more, see more projects...
+        </Text>
+      </Link>
     </Box>
   )
 }
