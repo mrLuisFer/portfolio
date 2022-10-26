@@ -6,7 +6,6 @@ import GlobalStyle from 'src/styles/global/globalStyle'
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/react'
 import theme from 'src/styles/global/theme'
-import paths from 'src/constants/paths'
 
 import '../styles/global/globals.css'
 import { NextRouter, useRouter } from 'next/router'
