@@ -1,8 +1,8 @@
 import { linkedin, github } from '../../../../utils/social-links/socialLinks'
 import Image from 'next/image'
 import { Box, Text } from '@chakra-ui/react'
-import Link from '../../../custom/Link'
-import Title from '../../../custom/Title'
+import Link from '../../../common/custom/Link'
+import Title from '../../../common/custom/Title'
 
 export default function Hero(): JSX.Element {
   return (
