@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://mrluisfer-portfolio.vercel.app/
+
+# Sitemaps
+Sitemap: https://mrluisfer-portfolio.vercel.app/sitemap.xml
