@@ -33,35 +33,46 @@ const socialMediaIcons: ISocialMediaIcons[] = [
   },
 ]
 
+const NavBarLogo = () => (
+  <Box>
+    <Link href='/' display='flex' alignItems='flex-end' gap='0.1rem'>
+      <Image src='/assets/navbar-logo/navbar-logo.svg' width='30px' height='30px' />
+      <Text fontWeight='bold' fontSize='2xl'>
+        LuisFer
+      </Text>
+    </Link>
+  </Box>
+)
+
 export default function NavBar(): JSX.Element {
   return (
-    <Box as='header' display='flex' justifyContent='space-between' pt='1rem' mb='3rem'>
-      <Box>
-        <Link href='/' display='flex' alignItems='flex-end' gap='0.1rem'>
-          <Image src='/assets/navbar-logo/navbar-logo.svg' width='30px' height='30px' />
-          <Text fontWeight='bold' fontSize='2xl'>
-            LuisFer
-          </Text>
-        </Link>
+    <>
+      <Box
+        as='header'
+        display={['none', 'flex']}
+        justifyContent='space-between'
+        pt='1rem'
+        mb='3rem'>
+        <NavBarLogo />
+        <Box as='nav' display='flex' alignItems='center' gap='1rem'>
+          {socialMediaIcons.map((item) => (
+            <Box key={item.label}>
+              <Link
+                href={item.href}
+                external={item.external}
+                opacity='0.5'
+                _hover={{ opacity: '1' }}>
+                {item.label}
+              </Link>
+            </Box>
+          ))}
+        </Box>
+        <Box>
+          <GradientBtn colorscheme='orange' href='/contact/form' asLink>
+            Send email
+          </GradientBtn>
+        </Box>
       </Box>
-      <Box as='nav' display='flex' alignItems='center' gap='1rem'>
-        {socialMediaIcons.map((item) => (
-          <Box key={item.label}>
-            <Link
-              href={item.href}
-              external={item.external}
-              opacity='0.5'
-              _hover={{ opacity: '1' }}>
-              {item.label}
-            </Link>
-          </Box>
-        ))}
-      </Box>
-      <Box>
-        <GradientBtn colorscheme='orange' href='/contact/form' asLink>
-          Send email
-        </GradientBtn>
-      </Box>
-    </Box>
+    </>
   )
 }
