@@ -2,9 +2,7 @@
   "name": "portfolio",
   "version": "1.5.0",
   "private": true,
-  "engines": {
-    "node": "^16.x"
-  },
+  "engines": {},
   "dependencies": {
     "@chakra-ui/react": "^2.3.5",
     "@emotion/react": "^11.10.4",
