@@ -1,6 +1,6 @@
 import { Box, Grid, GridItem, Heading, SlideFade, Text } from '@chakra-ui/react'
 import { useState } from 'react'
-import Title from 'src/components/custom/Title'
+import Title from '../../../custom/Title'
 import { GiCat } from 'react-icons/gi'
 import { MdTravelExplore } from 'react-icons/md'
 import { IoGameController } from 'react-icons/io5'

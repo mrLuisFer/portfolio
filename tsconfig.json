@@ -19,6 +19,5 @@
     "incremental": true,
     "plugins": [{ "name": "typescript-plugin-css-modules" }]
   },
-  "include": ["src/**/*", "components"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".next"]
 }

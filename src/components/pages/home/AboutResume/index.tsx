@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
-import Title from 'src/components/custom/Title'
-import GradientBtn from 'src/components/custom/GradientBtn'
-import Paragraph from 'src/components/custom/Paragraph'
+import Title from '../../../custom/Title'
+import GradientBtn from '../../../custom/GradientBtn'
+import Paragraph from '../../../custom/Paragraph'
 
 export default function AboutResume(): JSX.Element {
   return (

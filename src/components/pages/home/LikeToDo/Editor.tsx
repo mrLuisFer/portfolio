@@ -97,7 +97,7 @@ export default function Editor({
           alignItems='center'
           justifyContent='space-between'>
           http://localhost:3000/
-          <Tooltip label='reload' borderRadius='10px' bg='#222'>
+          <Tooltip label='reload' color='white' borderRadius='10px' bg='#222'>
             <Box
               cursor='pointer'
               p='5px'
