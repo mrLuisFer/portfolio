@@ -6,7 +6,11 @@ import Title from '../../../common/custom/Title'
 
 export default function Hero(): JSX.Element {
   return (
-    <Box display='flex' justifyContent='space-around'>
+    <Box
+      display='flex'
+      justifyContent={['center', 'space-around']}
+      flexDirection={['column', 'row']}
+      gap={['1rem', '0']}>
       <Image
         width='300px'
         height='300px'
@@ -16,7 +20,7 @@ export default function Hero(): JSX.Element {
       <div>
         <Box>
           <Box>
-            <Text fontSize='3xl' opacity='0.5'>
+            <Text fontSize={['4xl', '3xl']} display={['none', 'block']} opacity='0.5'>
               Hello!
             </Text>
             <Text
@@ -25,6 +29,7 @@ export default function Hero(): JSX.Element {
               display='flex'
               alignItems='center'
               gap='0.5rem'
+              justifyContent={['center', 'flex-start']}
               fontWeight='bold'>
               I&apos;m{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
@@ -47,15 +52,21 @@ export default function Hero(): JSX.Element {
             <Title
               id='seniority'
               as='p'
-              fontSize='xl'
+              fontSize={['2xl', 'xl']}
               weight='extrabold'
-              mt='0.5rem'
               colorscheme='pink'
               bgAnimate
-              display='inline-block'>
+              display={['block', 'inline-block']}
+              textAlign={['center', 'left']}
+              margin={['0.5rem auto 0', '0.5rem 0 0 0']}>
               Frontend <Text as='span'>Developer</Text>
             </Title>
-            <Text as='p' fontSize='lg' opacity='0.8' mt='1rem'>
+            <Text
+              as='p'
+              fontSize='lg'
+              opacity='0.8'
+              textAlign={['center', 'left']}
+              m={['1rem 1.5rem 0 1.5rem', '1rem 0 0']}>
               Specialized in{' '}
               <Title
                 id='js-label'
@@ -76,12 +87,17 @@ export default function Hero(): JSX.Element {
                 colorscheme='darkBlue'>
                 React
               </Title>{' '}
-              for UI <br />
+              for UI <Box as='br' display={['none', 'block']} />
               and Web Aplications
             </Text>
           </Box>
         </Box>
-        <Box display='flex' alignItems='center' gap='2rem' mt='2rem'>
+        <Box
+          display='flex'
+          alignItems='center'
+          justifyContent={['center', 'flex-start']}
+          gap='2rem'
+          mt='2rem'>
           <Link href={linkedin} fontSize='xl' opacity='0.8' _hover={{ opacity: '1' }}>
             <Text as='i' className='fab fa-linkedin-in' />
           </Link>

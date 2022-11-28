@@ -57,15 +57,20 @@ export default function LikeToDo() {
         What I like?
       </Title>
       <Grid
-        templateColumns='repeat(2, 400px)'
+        templateColumns={['none', 'repeat(2, 400px)']}
         justifyContent='center'
-        gap={20}
-        mt='2.5rem'>
+        gap={['2rem', 20]}
+        mt='2.5rem'
+        gridTemplateRows={['350px 1fr', 'none']}>
         <GridItem w='100%'>
           <EditorUI setIconActive={setIconActive} icons={likeToDoList} />
         </GridItem>
         <GridItem w='100%' bg='transparent'>
-          <Box display='flex' flexDirection='column' gap='1rem' minHeight='600px'>
+          <Box
+            display='flex'
+            flexDirection='column'
+            gap='1rem'
+            minHeight={['500px', '600px']}>
             {likeToDoList.map((item) => (
               <Box
                 key={item.title}

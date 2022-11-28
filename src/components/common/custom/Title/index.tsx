@@ -18,7 +18,7 @@ interface TitleProps {
     | 'extrabold'
     | 'black'
   bgAnimate?: boolean
-  [props: string]: any
+  [props: string]: ChakraProps | any
 }
 
 export default function Title({

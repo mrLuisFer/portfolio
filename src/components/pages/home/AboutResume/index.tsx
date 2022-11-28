@@ -19,7 +19,10 @@ export default function AboutResume(): JSX.Element {
         alignItems='flex-start'
         justifyContent='center'
         gap='2rem'
-        mt='2rem'>
+        mt='2rem'
+        flexDirection={['column', 'row']}
+        textAlign={['justify', 'left']}
+        padding={['0 1rem', '0']}>
         <Paragraph>
           Hi!, my name is <a href='https://github.com/mrLuisFer'>Luis Fernando Alvarez</a>{' '}
           I am a <span>Software Developer</span>, focused on{' '}
@@ -33,14 +36,17 @@ export default function AboutResume(): JSX.Element {
             <span>world of programming</span>, learning new technologies, and doing
             freelance work and projects.
           </Paragraph>
-          <GradientBtn
-            colorscheme='blue'
-            href='/cv-resume.pdf'
-            asLink
-            download
-            iconComponent={<i className='fas fa-cloud-download-alt' />}>
-            Download My CV
-          </GradientBtn>
+          <Box display={['flex', 'block']} justifyContent={['center', 'flex-start']}>
+            <GradientBtn
+              colorscheme='blue'
+              href='/cv-resume.pdf'
+              asLink
+              download
+              iconComponent={<i className='fas fa-cloud-download-alt' />}
+              padding={['0.2rem 0.2rem', '0.7rem 0.2rem']}>
+              Download My CV
+            </GradientBtn>
+          </Box>
         </Box>
       </Box>
     </Box>

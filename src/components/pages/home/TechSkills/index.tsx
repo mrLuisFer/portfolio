@@ -62,9 +62,9 @@ const techIcons: TechIcons[] = [
     color: '#764abc',
   },
   {
-    icon: <DiGit />,
-    label: 'Git',
-    color: '#f1502f',
+    icon: <SiTypescript />,
+    label: 'TypeScript',
+    color: '#007acc',
   },
   {
     icon: <SiStyledcomponents />,
@@ -72,9 +72,9 @@ const techIcons: TechIcons[] = [
     color: '',
   },
   {
-    icon: <SiTypescript />,
-    label: 'TypeScript',
-    color: '#007acc',
+    icon: <DiGit />,
+    label: 'Git',
+    color: '#f1502f',
   },
   {
     icon: <SiSvelte />,
@@ -90,20 +90,31 @@ export default function TechSkills() {
         Tech Skills
       </Title>
       <Box
-        display='flex'
+        display={['grid', 'flex']}
         alignItems='center'
         justifyContent='center'
         gap='2rem'
-        mt='2rem'>
+        mt='2rem'
+        flexDirection={['column', 'row']}
+        gridTemplateColumns={'repeat(2, 150px)'}>
         {techIcons.map((item) => (
           <Box
             key={item.label}
-            fontSize='50px'
+            fontSize={['30px', '50px']}
             opacity='0.8'
             transition='0.15s ease'
             _hover={{ opacity: '1', color: item.color }}>
             <Tooltip hasArrow label={item.label}>
-              <Box>{item.icon}</Box>
+              <Box
+                display={'flex'}
+                alignItems='center'
+                gap={3}
+                justifyContent={['center', 'flex-start']}>
+                <Box>{item.icon}</Box>
+                <Text fontSize='lg' display={['block', 'none']}>
+                  {item.label}
+                </Text>
+              </Box>
             </Tooltip>
           </Box>
         ))}
@@ -112,7 +123,7 @@ export default function TechSkills() {
         <Text
           as='a'
           textAlign='center'
-          mt='1rem'
+          mt={['2rem', '1rem']}
           fontSize='1rem'
           fontWeight='bold'
           opacity='0.5'

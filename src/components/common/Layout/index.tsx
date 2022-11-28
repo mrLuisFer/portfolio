@@ -4,7 +4,7 @@ import { Container } from '@chakra-ui/react'
 
 export default function Layout({ children }: { children: any }): JSX.Element {
   return (
-    <Container maxW='container.xl'>
+    <Container maxW='container.xl' overflowX='hidden'>
       <NavBar />
       {children}
       <Footer />

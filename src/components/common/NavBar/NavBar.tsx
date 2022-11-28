@@ -1,8 +1,9 @@
-import Image from 'next/image'
 import { facebook, linkedin, twitter } from 'src/utils/social-links/socialLinks'
-import { Box, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import Link from '../custom/Link'
 import GradientBtn from '../custom/GradientBtn'
+import NavBarMobile from './NavBarMobile'
+import NavBarLogo from './NavBarLogo'
 
 interface ISocialMediaIcons {
   href: string
@@ -33,17 +34,6 @@ const socialMediaIcons: ISocialMediaIcons[] = [
   },
 ]
 
-const NavBarLogo = () => (
-  <Box>
-    <Link href='/' display='flex' alignItems='flex-end' gap='0.1rem'>
-      <Image src='/assets/navbar-logo/navbar-logo.svg' width='30px' height='30px' />
-      <Text fontWeight='bold' fontSize='2xl'>
-        LuisFer
-      </Text>
-    </Link>
-  </Box>
-)
-
 export default function NavBar(): JSX.Element {
   return (
     <>
@@ -73,6 +63,7 @@ export default function NavBar(): JSX.Element {
           </GradientBtn>
         </Box>
       </Box>
+      <NavBarMobile />
     </>
   )
 }

@@ -114,7 +114,7 @@ export default function Editor({
           </Tooltip>
         </Box>
       </Box>
-      <Box p='24px'>
+      <Box p={['24px 10px', '24px']}>
         <Box
           display='grid'
           gridTemplateColumns='1fr 1fr'
