@@ -13,6 +13,7 @@ import {
 import { TbBrandNextjs } from 'react-icons/tb'
 import Link from 'next/link'
 import Title from '../../../common/custom/Title'
+import paths from 'src/constants/paths'
 
 interface TechIcons {
   icon: any
@@ -119,7 +120,7 @@ export default function TechSkills() {
           </Box>
         ))}
       </Box>
-      <Link href='/projects'>
+      <Link href={paths.projects}>
         <Text
           as='a'
           textAlign='center'

@@ -4,6 +4,7 @@ import Link from '../custom/Link'
 import GradientBtn from '../custom/GradientBtn'
 import NavBarMobile from './NavBarMobile'
 import NavBarLogo from './NavBarLogo'
+import paths from 'src/constants/paths'
 
 interface ISocialMediaIcons {
   href: string
@@ -28,7 +29,7 @@ const socialMediaIcons: ISocialMediaIcons[] = [
     external: true,
   },
   {
-    href: '/contact',
+    href: paths.contact,
     label: 'Contact Me',
     external: false,
   },
@@ -58,7 +59,7 @@ export default function NavBar(): JSX.Element {
           ))}
         </Box>
         <Box>
-          <GradientBtn colorscheme='orange' href='/contact/form' asLink>
+          <GradientBtn colorscheme='orange' href={paths.contactForm} asLink>
             Send email
           </GradientBtn>
         </Box>
