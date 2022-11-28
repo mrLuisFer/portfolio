@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { BiUpArrow } from 'react-icons/bi'
 import { GradientColors } from 'src/utils/gradientColors'
 import Title from '../custom/Title'
+import paths from 'src/constants/paths'
 
 interface FooterLink {
   label: string
@@ -34,18 +35,18 @@ const footerElements: FooterElements[] = [
     links: [
       {
         label: 'Contact',
-        href: '/contact',
+        href: paths.contact,
         isExternal: false,
       },
       {
         label: 'Projects',
-        href: '/projects',
+        href: paths.projects,
         isExternal: false,
       },
       {
         label: 'Blog',
-        href: '/blog',
-        isExternal: false,
+        href: 'https://mrluisfer-blog.netlify.app/',
+        isExternal: true,
       },
     ],
   },
@@ -93,10 +94,12 @@ export default function Footer(): JSX.Element {
       <Box position='relative' mt='50px' mb='2rem'>
         <Box
           as='footer'
-          display='grid'
-          gridTemplateColumns='repeat(4, 1fr)'
-          justifyContent='center'
-          alignItems='start'>
+          display={['flex', 'grid']}
+          gridTemplateColumns={['', 'repeat(4, 1fr)']}
+          justifyContent={['start', 'center']}
+          flexDirection={['column', 'row']}
+          alignItems='start'
+          gap={['2rem', '0']}>
           <Box>logo</Box>
           {footerElements.map((item) => (
             <Box key={item.title}>
@@ -104,18 +107,37 @@ export default function Footer(): JSX.Element {
                 {item.title}
               </Title>
               <Box display='flex' flexDirection='column' gap='1rem' mt='1rem'>
-                {item.links.map((link) => (
-                  <Link href={link.href} key={link.label}>
-                    <ChakraLink
-                      color='white'
-                      opacity='0.5'
-                      _hover={{ opacity: '1' }}
-                      display='inline-block'
-                      w='fit-content'>
-                      {link.label}
-                    </ChakraLink>
-                  </Link>
-                ))}
+                {item.links.map((link) => {
+                  if (link.isExternal) {
+                    return (
+                      <ChakraLink
+                        href={link.href}
+                        key={link.label}
+                        color='white'
+                        opacity='0.5'
+                        _hover={{ opacity: '1' }}
+                        display='inline-block'
+                        w='fit-content'
+                        target='_blank'
+                        rel='noreferrer'>
+                        {link.label}
+                      </ChakraLink>
+                    )
+                  }
+
+                  return (
+                    <Link href={link.href} key={link.label}>
+                      <ChakraLink
+                        color='white'
+                        opacity='0.5'
+                        _hover={{ opacity: '1' }}
+                        display='inline-block'
+                        w='fit-content'>
+                        {link.label}
+                      </ChakraLink>
+                    </Link>
+                  )
+                })}
               </Box>
             </Box>
           ))}

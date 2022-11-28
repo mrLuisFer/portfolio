@@ -1,11 +1,7 @@
-interface Paths {
-  '/': string
-  '/contact': string
-}
-
-const paths: Paths | any = {
-  '/': '/',
-  '/contact': '/contact',
+const paths = {
+  root: '/',
+  contact: '/contact',
+  projects: '/projects',
 }
 
 export default paths
