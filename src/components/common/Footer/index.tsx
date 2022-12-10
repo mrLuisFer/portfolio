@@ -1,82 +1,8 @@
 import { Box, Button, Link as ChakraLink, Tooltip, Divider } from '@chakra-ui/react'
 import Link from 'next/link'
 import { BiUpArrow } from 'react-icons/bi'
-import { GradientColors } from 'src/utils/gradientColors'
 import Title from '../custom/Title'
-import paths from 'src/constants/paths'
-
-interface FooterLink {
-  label: string
-  href: string
-  isExternal: boolean
-}
-
-interface FooterElements {
-  title: string
-  titleColor: keyof GradientColors
-  links: FooterLink[]
-}
-
-const footerElements: FooterElements[] = [
-  {
-    title: 'Social',
-    titleColor: 'darkBlue',
-    links: [
-      { label: 'Twitter', href: '', isExternal: true },
-      { label: 'GitHub', href: '', isExternal: true },
-      { label: 'LinkedIn', href: '', isExternal: true },
-      { label: 'Facebook', href: '', isExternal: true },
-      { label: 'Gitlab', href: '', isExternal: true },
-    ],
-  },
-  {
-    title: 'Navigate to',
-    titleColor: 'orange',
-    links: [
-      {
-        label: 'Contact',
-        href: paths.contact,
-        isExternal: false,
-      },
-      {
-        label: 'Projects',
-        href: paths.projects,
-        isExternal: false,
-      },
-      {
-        label: 'Blog',
-        href: 'https://mrluisfer-blog.netlify.app/',
-        isExternal: true,
-      },
-    ],
-  },
-  {
-    title: 'Other',
-    titleColor: 'yellow',
-    links: [
-      {
-        label: 'Seo Generator',
-        href: '',
-        isExternal: true,
-      },
-      {
-        label: 'Linktry',
-        href: '',
-        isExternal: true,
-      },
-      {
-        label: 'GitHub User Finder',
-        href: '',
-        isExternal: true,
-      },
-      {
-        label: 'Git Basic Guide',
-        href: '',
-        isExternal: true,
-      },
-    ],
-  },
-]
+import { footerElements } from './footerLinks'
 
 export default function Footer(): JSX.Element {
   const handleToTop = () => {

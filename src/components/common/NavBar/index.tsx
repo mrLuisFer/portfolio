@@ -1,10 +1,10 @@
 import { facebook, linkedin, twitter } from 'src/utils/social-links/socialLinks'
 import { Box } from '@chakra-ui/react'
-import Link from '../custom/Link'
 import GradientBtn from '../custom/GradientBtn'
 import NavBarMobile from './NavBarMobile'
 import NavBarLogo from './NavBarLogo'
 import paths from 'src/constants/paths'
+import SocialMediaItem from './SocialMediaItem'
 
 interface ISocialMediaIcons {
   href: string
@@ -47,15 +47,7 @@ export default function NavBar(): JSX.Element {
         <NavBarLogo />
         <Box as='nav' display='flex' alignItems='center' gap='1rem'>
           {socialMediaIcons.map((item) => (
-            <Box key={item.label}>
-              <Link
-                href={item.href}
-                external={item.external}
-                opacity='0.5'
-                _hover={{ opacity: '1' }}>
-                {item.label}
-              </Link>
-            </Box>
+            <SocialMediaItem item={item} />
           ))}
         </Box>
         <Box>

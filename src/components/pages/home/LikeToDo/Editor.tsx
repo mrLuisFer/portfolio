@@ -51,9 +51,13 @@ interface LikeTodo {
 export default function Editor({
   setIconActive,
   icons,
+  itemIndex = 0,
+  setAccordionName,
 }: {
   setIconActive: Dispatch<SetStateAction<string>>
   icons: LikeTodo[]
+  itemIndex?: number
+  setAccordionName: Dispatch<SetStateAction<string>>
 }) {
   const [iconIndex, setIconIndex] = useState(0)
 
@@ -63,9 +67,13 @@ export default function Editor({
     setIconActive(icons[number].title)
   }
 
+  useEffect(() => {}, [])
+
   useEffect(() => {
-    handleClickIcon()
-  }, [])
+    setIconIndex(itemIndex)
+    setIconActive(icons[itemIndex].title)
+    setAccordionName(icons[itemIndex].title)
+  }, [itemIndex])
 
   return (
     <Box

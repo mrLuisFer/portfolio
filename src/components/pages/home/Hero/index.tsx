@@ -98,10 +98,20 @@ export default function Hero(): JSX.Element {
           justifyContent={['center', 'flex-start']}
           gap='2rem'
           mt='2rem'>
-          <Link href={linkedin} fontSize='xl' opacity='0.8' _hover={{ opacity: '1' }}>
+          <Link
+            href={linkedin}
+            fontSize='xl'
+            external
+            opacity='0.8'
+            _hover={{ opacity: '1' }}>
             <Text as='i' className='fab fa-linkedin-in' />
           </Link>
-          <Link href={github} fontSize='xl' opacity='0.8' _hover={{ opacity: '1' }}>
+          <Link
+            href={github}
+            fontSize='xl'
+            external
+            opacity='0.8'
+            _hover={{ opacity: '1' }}>
             <Text as='i' className='fab fa-github' />
           </Link>
           <Link

@@ -1,55 +1,28 @@
 import { Box, Grid, GridItem, Heading, SlideFade, Text } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Title from '../../../common/custom/Title'
-import { GiCat } from 'react-icons/gi'
-import { MdTravelExplore } from 'react-icons/md'
-import { IoGameController } from 'react-icons/io5'
-import { FiMusic } from 'react-icons/fi'
-import { FaRegKeyboard } from 'react-icons/fa'
 import EditorUI from './Editor'
-
-interface LikeTodo {
-  title: string
-  value: string
-  icon: any
-}
-
-const likeToDoList: LikeTodo[] = [
-  {
-    title: 'Cats',
-    value:
-      'I have always had different pets but I like cats for their tranquility and I identify with the same taste for being asleep all day long.',
-    icon: <GiCat size={50} key='icon-cat' />,
-  },
-  {
-    title: 'Games',
-    value:
-      'Video games have always been an important part of my life and have taught me a lot and have helped me to de-stress my mind when you are always overthinking things.',
-    icon: <IoGameController size={50} key='game' />,
-  },
-  {
-    title: 'Music',
-    value:
-      'I love music, no matter the place or the time, music is a fundamental part of my life and my favorite band is Arctic Monkeys.',
-    icon: <FiMusic size={50} key='game' />,
-  },
-  {
-    title: 'Travel',
-    value:
-      'I enjoy getting out and exploring interesting areas such as esplanades and ranches where I can go for a walk and clear my mind.',
-    icon: <MdTravelExplore size={50} key='explore' />,
-  },
-  {
-    title: 'Keyboards',
-    value:
-      'In recent months I have discovered a great community of both programmers and geeks and among them the keyboard community with whom I have learned how to modding and customize a mechanical keyboard.',
-    icon: <FaRegKeyboard size={50} key='game' />,
-  },
-]
+import { likeToDoList } from './likeTodoList'
 
 export default function LikeToDo() {
   const [iconActive, setIconActive] = useState('')
   const [accordionName, setAccordionName] = useState('')
+  const [itemIndex, setItemIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (itemIndex === 4) {
+        setItemIndex(0)
+      } else {
+        setItemIndex(itemIndex + 1)
+      }
+      setAccordionName(likeToDoList[itemIndex].title)
+      setIconActive(likeToDoList[itemIndex].title)
+    }, 2000)
+    return () => {
+      clearInterval(interval)
+    }
+  }, [itemIndex])
 
   return (
     <Box marginTop='100px' position='relative'>
@@ -63,7 +36,12 @@ export default function LikeToDo() {
         mt='2.5rem'
         gridTemplateRows={['350px 1fr', 'none']}>
         <GridItem w='100%'>
-          <EditorUI setIconActive={setIconActive} icons={likeToDoList} />
+          <EditorUI
+            setIconActive={setIconActive}
+            icons={likeToDoList}
+            itemIndex={itemIndex}
+            setAccordionName={setAccordionName}
+          />
         </GridItem>
         <GridItem w='100%' bg='transparent'>
           <Box

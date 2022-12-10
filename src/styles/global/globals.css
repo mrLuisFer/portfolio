@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   /* Fonts */
   --open-sans-font: 'Open Sans', sans-serif;
@@ -92,13 +96,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--blue);
+  background: var(--rich-black);
   border-radius: var(--radius);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--blue);
+  background: var(--rich-black);
 }
 
 /* This doesnt change */

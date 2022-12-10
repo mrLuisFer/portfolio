@@ -1,4 +1,4 @@
-import NavBar from 'src/components/common/NavBar/NavBar'
+import NavBar from 'src/components/common/NavBar'
 import Footer from 'src/components/common/Footer'
 import { Container } from '@chakra-ui/react'
 
