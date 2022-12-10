@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Box, Text } from '@chakra-ui/react'
 import Link from '../../../common/custom/Link'
 import Title from '../../../common/custom/Title'
+import Tooltip from 'src/components/common/custom/Tooltip'
 
 export default function Hero(): JSX.Element {
   return (
@@ -98,22 +99,26 @@ export default function Hero(): JSX.Element {
           justifyContent={['center', 'flex-start']}
           gap='2rem'
           mt='2rem'>
-          <Link
-            href={linkedin}
-            fontSize='xl'
-            external
-            opacity='0.8'
-            _hover={{ opacity: '1' }}>
-            <Text as='i' className='fab fa-linkedin-in' />
-          </Link>
-          <Link
-            href={github}
-            fontSize='xl'
-            external
-            opacity='0.8'
-            _hover={{ opacity: '1' }}>
-            <Text as='i' className='fab fa-github' />
-          </Link>
+          <Tooltip label='LinkedIn'>
+            <Link
+              href={linkedin}
+              fontSize='xl'
+              external
+              opacity='0.8'
+              _hover={{ opacity: '1' }}>
+              <Text as='i' className='fab fa-linkedin-in' />
+            </Link>
+          </Tooltip>
+          <Tooltip label='GitHub'>
+            <Link
+              href={github}
+              fontSize='xl'
+              external
+              opacity='0.8'
+              _hover={{ opacity: '1' }}>
+              <Text as='i' className='fab fa-github' />
+            </Link>
+          </Tooltip>
           <Link
             href='/#about'
             display='flex'

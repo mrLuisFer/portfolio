@@ -1,7 +1,8 @@
-import { Box, Icon, Text, Tooltip } from '@chakra-ui/react'
+import { Box, Icon, Text } from '@chakra-ui/react'
 import { VscDebugRestart } from 'react-icons/vsc'
 import { BsCart3 } from 'react-icons/bs'
 import { Dispatch, SetStateAction, useState, useEffect } from 'react'
+import Tooltip from 'src/components/common/custom/Tooltip'
 
 function IconCircle({ color }: { color: string }) {
   return (
@@ -105,7 +106,7 @@ export default function Editor({
           alignItems='center'
           justifyContent='space-between'>
           http://localhost:3000/
-          <Tooltip label='reload' color='white' borderRadius='10px' bg='#222'>
+          <Tooltip label='reload'>
             <Box
               cursor='pointer'
               p='5px'

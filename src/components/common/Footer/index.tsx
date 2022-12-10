@@ -1,8 +1,9 @@
-import { Box, Button, Link as ChakraLink, Tooltip, Divider } from '@chakra-ui/react'
+import { Box, Button, Link as ChakraLink, Divider } from '@chakra-ui/react'
 import Link from 'next/link'
 import { BiUpArrow } from 'react-icons/bi'
 import Title from '../custom/Title'
 import { footerElements } from './footerLinks'
+import Tooltip from '../custom/Tooltip'
 
 export default function Footer(): JSX.Element {
   const handleToTop = () => {
@@ -74,7 +75,7 @@ export default function Footer(): JSX.Element {
           top={0}
           opacity='0.2'
           _hover={{ opacity: '1' }}>
-          <Tooltip label='Go to top' hasArrow>
+          <Tooltip label='Go to top'>
             <Button
               bg='gray.900'
               fontSize='1.5rem'

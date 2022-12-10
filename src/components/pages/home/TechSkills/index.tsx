@@ -1,4 +1,4 @@
-import { Box, Text, Tooltip } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { AiFillHtml5 } from 'react-icons/ai'
 import { DiCss3, DiGit } from 'react-icons/di'
@@ -14,6 +14,7 @@ import { TbBrandNextjs } from 'react-icons/tb'
 import Link from 'next/link'
 import Title from '../../../common/custom/Title'
 import paths from 'src/constants/paths'
+import Tooltip from 'src/components/common/custom/Tooltip'
 
 interface TechIcons {
   icon: any
@@ -105,7 +106,7 @@ export default function TechSkills() {
             opacity='0.8'
             transition='0.15s ease'
             _hover={{ opacity: '1', color: item.color }}>
-            <Tooltip hasArrow label={item.label}>
+            <Tooltip label={item.label}>
               <Box
                 display={'flex'}
                 alignItems='center'
