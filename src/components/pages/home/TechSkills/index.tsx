@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Text, useMediaQuery } from '@chakra-ui/react'
 import Link from 'next/link'
 import Title from '../../../common/custom/Title'
 import paths from 'src/constants/paths'
@@ -19,10 +19,15 @@ import {
   horizontalListSortingStrategy,
   SortableContext,
   sortableKeyboardCoordinates,
+  verticalListSortingStrategy,
 } from '@dnd-kit/sortable'
 
 export default function TechSkills() {
   const [techIconsListState, setTechIconsListState] = useState(techIconsList)
+
+  const [isLargerThan800] = useMediaQuery('(min-width: 800px)', {
+    ssr: true,
+  })
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -56,7 +61,9 @@ export default function TechSkills() {
         collisionDetection={closestCenter}>
         <SortableContext
           items={techIconsListState}
-          strategy={horizontalListSortingStrategy}>
+          strategy={
+            isLargerThan800 ? horizontalListSortingStrategy : verticalListSortingStrategy
+          }>
           <Box
             display={['grid', 'flex']}
             alignItems='center'
