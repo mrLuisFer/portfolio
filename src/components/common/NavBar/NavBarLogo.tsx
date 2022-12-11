@@ -1,15 +1,14 @@
 import Image from 'next/image'
-import { Box, Text } from '@chakra-ui/react'
-import Link from '../custom/Link'
+import { Box } from '@chakra-ui/react'
+import Link from 'next/link'
 import paths from 'src/constants/paths'
 
 const NavBarLogo = () => (
-  <Box>
-    <Link href={paths.root} display='flex' alignItems='flex-end' gap='0.1rem'>
-      <Image src='/assets/navbar-logo/navbar-logo.svg' width='30px' height='30px' />
-      <Text fontWeight='bold' fontSize='2xl'>
-        LuisFer
-      </Text>
+  <Box position='relative' width='150px' h='40px' cursor='pointer'>
+    <Link href={paths.root}>
+      <a>
+        <Image src='/assets/footer/logo.svg' alt='mrLuisFer logo' layout='fill' />
+      </a>
     </Link>
   </Box>
 )

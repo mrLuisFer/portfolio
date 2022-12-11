@@ -4,6 +4,7 @@ import { BiUpArrow } from 'react-icons/bi'
 import Title from '../custom/Title'
 import { footerElements } from './footerLinks'
 import Tooltip from '../custom/Tooltip'
+import Image from 'next/image'
 
 export default function Footer(): JSX.Element {
   const handleToTop = () => {
@@ -27,7 +28,13 @@ export default function Footer(): JSX.Element {
           flexDirection={['column', 'row']}
           alignItems='start'
           gap={['2rem', '0']}>
-          <Box>logo</Box>
+          <Box position='relative' width='150px' h='40px' cursor='pointer'>
+            <Link href='/'>
+              <a>
+                <Image src='/assets/footer/logo.svg' alt='mrLuisFer logo' layout='fill' />
+              </a>
+            </Link>
+          </Box>
           {footerElements.map((item) => (
             <Box key={item.title}>
               <Title colorscheme={item.titleColor} bgAnimate>
