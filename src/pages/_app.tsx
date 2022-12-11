@@ -36,6 +36,18 @@ export default function AppPage({ Component, pageProps }: AppProps) {
           content='Porfolio React Portfolio React and Typescript Website Frontend JavaScript mrLuisFer Luis Alvarez Github'
         />
         <meta name='author' content='mrLuisFer' />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.ANALYTICS}`}
+          strategy='afterInteractive'
+        />
+        <Script strategy='afterInteractive' id='google-analytics'>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ${process.env.ANALYTICS});
+          `}
+        </Script>
       </Head>
       <ChakraProvider theme={theme}>
         <ThemeProvider theme={styledTheme}>
