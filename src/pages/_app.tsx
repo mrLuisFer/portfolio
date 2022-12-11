@@ -64,6 +64,25 @@ export default function AppPage({ Component, pageProps }: AppProps) {
           ga('create', ${process.env.ANALYTICS}, 'auto');  // Creates a tracker.
           ga('send', 'pageview');             // Sends a pageview.
           `}
+          <link rel='shortcut icon' href='/favicon.ico' />
+          <link rel='icon' href='/favicon.svg' />
+          <link
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/favicon/apple-touch-icon.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/favicon/favicon-32x32.png'
+          />
+          <link
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='/favicon/favicon-16x16.png'
+          />
         </Script>
       </Head>
       <ChakraProvider theme={theme}>
