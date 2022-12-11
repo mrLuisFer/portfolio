@@ -47,7 +47,7 @@ export default function NavBar(): JSX.Element {
         <NavBarLogo />
         <Box as='nav' display='flex' alignItems='center' gap='1rem'>
           {socialMediaIcons.map((item) => (
-            <SocialMediaItem item={item} />
+            <SocialMediaItem key={item.label} item={item} />
           ))}
         </Box>
         <Box>
