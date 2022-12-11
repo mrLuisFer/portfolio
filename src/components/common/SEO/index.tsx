@@ -13,7 +13,7 @@ export default function SEO({ title, description, ...props }: SEOProps) {
       title={title}
       description={description}
       defaultTitle='Portfolio | mrLuisFer'
-      canonical=''
+      canonical='https://portfolio-mrluisfer.vercel.app/'
       openGraph={{
         type: 'website',
         url: 'https://portfolio-mrluisfer.vercel.app/',
