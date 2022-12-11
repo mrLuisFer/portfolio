@@ -19,13 +19,6 @@ export default function AppPage({ Component, pageProps }: AppProps) {
   const router: NextRouter = useRouter()
 
   useEffect(() => {
-    const path: string = router?.pathname
-    if (path !== '/') {
-      router.push('/')
-    }
-  }, [])
-
-  useEffect(() => {
     const handleRouteChange = (url: string) => {
       ga.pageview(url, document.title, router.asPath || router.pathname)
     }
@@ -62,12 +55,33 @@ export default function AppPage({ Component, pageProps }: AppProps) {
           gtag('config', ${process.env.ANALYTICS});
           `}
         </Script>
+        <Script>
+          {`
+          <!-- Google Tag Manager -->
+          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PBHNMXT');</script>
+        <!-- End Google Tag Manager -->
+          `}
+        </Script>
       </Head>
       <ChakraProvider theme={theme}>
         <ThemeProvider theme={styledTheme}>
           <GlobalStyle />
           <Layout>
             <Component {...pageProps} />
+            <noscript>
+              <iframe
+                src='https://www.googletagmanager.com/ns.html?id=GTM-PBHNMXT'
+                height='0'
+                width='0'
+                style={{
+                  display: 'none',
+                  visibility: 'hidden',
+                }}></iframe>
+            </noscript>
           </Layout>
         </ThemeProvider>
       </ChakraProvider>
