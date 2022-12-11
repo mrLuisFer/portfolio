@@ -34,15 +34,6 @@ export default function AppPage({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <meta charSet='utf-8' />
-        <link rel='icon' href='/favicon.svg' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <meta name='theme-color' content='#000000' />
-        <meta
-          name='keywords'
-          content='Porfolio React Portfolio React and Typescript Website Frontend JavaScript mrLuisFer Luis Alvarez Github'
-        />
-        <meta name='author' content='mrLuisFer' />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.ANALYTICS}`}
           strategy='afterInteractive'
