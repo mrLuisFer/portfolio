@@ -31,7 +31,12 @@ export default function Footer(): JSX.Element {
           <Box position='relative' width='150px' h='40px' cursor='pointer'>
             <Link href='/'>
               <a>
-                <Image src='/assets/footer/logo.svg' alt='mrLuisFer logo' layout='fill' />
+                <Image
+                  draggable='false'
+                  src='/assets/footer/logo.svg'
+                  alt='mrLuisFer logo'
+                  layout='fill'
+                />
               </a>
             </Link>
           </Box>

@@ -84,6 +84,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+* img,
+img {
+  user-select: none;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;

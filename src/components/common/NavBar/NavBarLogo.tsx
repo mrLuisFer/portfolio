@@ -7,7 +7,12 @@ const NavBarLogo = () => (
   <Box position='relative' width='150px' h='40px' cursor='pointer'>
     <Link href={paths.root}>
       <a>
-        <Image src='/assets/footer/logo.svg' alt='mrLuisFer logo' layout='fill' />
+        <Image
+          draggable='false'
+          src='/assets/footer/logo.svg'
+          alt='mrLuisFer logo'
+          layout='fill'
+        />
       </a>
     </Link>
   </Box>
