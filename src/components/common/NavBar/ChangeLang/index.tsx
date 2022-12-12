@@ -12,17 +12,35 @@ import Image from 'next/image'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import Tooltip from '../../custom/Tooltip'
 import { useTranslation } from 'src/hooks/useTranslation'
-import { useState, useRef } from 'react'
-import { localesList } from 'src/constants/locales'
+import { useState, useEffect } from 'react'
+import { localesList, TLocale } from 'src/constants/locales'
+import { useRouter } from 'next/router'
 
 export default function ChangeLang() {
   const [showLanguages, setShowLanguages] = useState<boolean>(false)
+  const [selectedLang, setSelectedLang] = useState<TLocale | any>(null)
   const { t, changeLanguage } = useTranslation()
+  const router = useRouter()
 
-  const initRef = useRef<any>()
+  const handleChangeLang = (locale: TLocale) => {
+    changeLanguage(locale.value)
+    setSelectedLang(locale)
+  }
+
+  useEffect(() => {
+    const routerLocale = router.locale
+    if (window.location.pathname === '/') {
+      setSelectedLang(null)
+    } else if (routerLocale !== undefined) {
+      const localeFiltered: TLocale[] = localesList.filter(
+        (locale) => locale.value === routerLocale
+      )
+      setSelectedLang(localeFiltered[0])
+    }
+  }, [])
 
   return (
-    <Popover closeOnBlur={false} placement='bottom' initialFocusRef={initRef}>
+    <Popover closeOnBlur={false} placement='bottom'>
       <PopoverTrigger>
         <Box as='button'>
           <Tooltip label={t('changeLanguage')}>
@@ -41,7 +59,11 @@ export default function ChangeLang() {
               _active={{
                 boxShadow: '1px 2px 5px rgb(79, 79, 79)',
               }}>
-              <Image src='/assets/navbar/world.svg' width={20} height={20} />
+              <Image
+                src={selectedLang ? selectedLang.flag : '/assets/navbar/world.svg'}
+                width={20}
+                height={20}
+              />
               <Box transform={showLanguages ? 'rotate(180deg)' : ''}>
                 <MdKeyboardArrowDown />
               </Box>
@@ -70,26 +92,28 @@ export default function ChangeLang() {
               alignContent='center'
               right='0'
               left='0'>
-              {localesList.map((locale) => (
-                <Box
-                  key={locale.value}
-                  p='10px 5px'
-                  borderRadius='15px'
-                  w='100%'
-                  textAlign='center'
-                  _hover={{
-                    background: 'rgb(18, 18, 18)',
-                  }}
-                  cursor='pointer'
-                  display='flex'
-                  alignItems='center'
-                  justifyContent='center'
-                  gap='5px'
-                  onClick={() => changeLanguage(locale.value)}>
-                  <Image src={locale.flag} width='26' height='16' />
-                  <Text fontSize='lg'>{locale.value.toUpperCase()}</Text>
-                </Box>
-              ))}
+              {localesList
+                .filter((locale) => locale.value !== selectedLang?.value)
+                .map((locale) => (
+                  <Box
+                    key={locale.value}
+                    p='10px 5px'
+                    borderRadius='15px'
+                    w='100%'
+                    textAlign='center'
+                    _hover={{
+                      background: 'rgb(18, 18, 18)',
+                    }}
+                    cursor='pointer'
+                    display='flex'
+                    alignItems='center'
+                    justifyContent='center'
+                    gap='5px'
+                    onClick={() => handleChangeLang(locale)}>
+                    <Image src={locale.flag} width='26' height='16' />
+                    <Text fontSize='lg'>{locale.value.toUpperCase()}</Text>
+                  </Box>
+                ))}
             </Box>
           </PopoverBody>
         </PopoverContent>
