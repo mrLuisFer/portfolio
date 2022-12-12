@@ -11,6 +11,8 @@ import { NextRouter, useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import ga from '../lib/ga'
 import AnimatedCursor from 'react-animated-cursor'
+import '../components/common/i18nNext'
+import { appWithTranslation } from 'next-i18next'
 
 import '../../node_modules/react-grid-layout/css/styles.css'
 import '../../node_modules/react-resizable/css/styles.css'
@@ -19,7 +21,7 @@ const styledTheme: DefaultTheme = {
   colors: {},
 }
 
-export default function AppPage({ Component, pageProps }: AppProps) {
+function AppPage({ Component, pageProps }: AppProps) {
   const router: NextRouter = useRouter()
   const [renderCursor, setRenderCursor] = useState(false)
 
@@ -128,3 +130,5 @@ export default function AppPage({ Component, pageProps }: AppProps) {
     </>
   )
 }
+
+export default appWithTranslation(AppPage)
