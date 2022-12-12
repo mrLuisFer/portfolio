@@ -11,6 +11,7 @@ import { NextRouter, useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import ga from '../lib/ga'
 import AnimatedCursor from 'react-animated-cursor'
+import { Analytics } from '@vercel/analytics/react'
 
 import '../../node_modules/react-grid-layout/css/styles.css'
 import '../../node_modules/react-resizable/css/styles.css'
@@ -111,6 +112,7 @@ function AppPage({ Component, pageProps }: AppProps) {
               </div>
             )}
             <Component {...pageProps} />
+            <Analytics />
             <noscript>
               <iframe
                 src='https://www.googletagmanager.com/ns.html?id=GTM-PBHNMXT'
