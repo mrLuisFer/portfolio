@@ -1,7 +1,17 @@
 import { NextPage } from 'next'
+import Title from 'src/components/common/custom/Title'
+import { Box } from '@chakra-ui/react'
+import GridContainer from 'src/components/pages/projects/GridContainer'
 
 const Projects: NextPage = () => {
-  return <h1>sdfjsdf</h1>
+  return (
+    <>
+      <Title colorscheme='blue'>Projects</Title>
+      <Box>
+        <GridContainer />
+      </Box>
+    </>
+  )
 }
 
 export default Projects

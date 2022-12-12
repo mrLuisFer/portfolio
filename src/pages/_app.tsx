@@ -11,6 +11,9 @@ import { NextRouter, useRouter } from 'next/router'
 import { useEffect } from 'react'
 import ga from '../lib/ga'
 
+import '../../node_modules/react-grid-layout/css/styles.css'
+import '../../node_modules/react-resizable/css/styles.css'
+
 const styledTheme: DefaultTheme = {
   colors: {},
 }
