@@ -22,6 +22,7 @@ import {
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable'
 import { useTranslation } from 'src/hooks/useTranslation'
+import Tooltip from 'src/components/common/custom/Tooltip'
 
 export default function TechSkills() {
   const [techIconsListState, setTechIconsListState] = useState(techIconsList)
@@ -55,9 +56,11 @@ export default function TechSkills() {
 
   return (
     <Box paddingBottom='2rem'>
-      <Title colorscheme='blue' fontSize='5xl' textAlign='center' bgAnimate>
-        {t('techSkills')}
-      </Title>
+      <Tooltip label={t('canDragDropItem')} placement='top'>
+        <Title colorscheme='blue' fontSize='5xl' textAlign='center' bgAnimate>
+          {t('techSkills')}
+        </Title>
+      </Tooltip>
       <DndContext
         onDragEnd={handleDragEnd}
         sensors={sensors}
