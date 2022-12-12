@@ -72,7 +72,7 @@ export default function ChangeLang() {
               left='0'>
               {localesList.map((locale) => (
                 <Box
-                  key={locale}
+                  key={locale.value}
                   p='10px 5px'
                   borderRadius='15px'
                   w='100%'
@@ -81,8 +81,13 @@ export default function ChangeLang() {
                     background: 'rgb(18, 18, 18)',
                   }}
                   cursor='pointer'
-                  onClick={() => changeLanguage(locale)}>
-                  <Text fontSize='xl'>{locale}</Text>
+                  display='flex'
+                  alignItems='center'
+                  justifyContent='center'
+                  gap='5px'
+                  onClick={() => changeLanguage(locale.value)}>
+                  <Image src={locale.flag} width='26' height='16' />
+                  <Text fontSize='lg'>{locale.value.toUpperCase()}</Text>
                 </Box>
               ))}
             </Box>
