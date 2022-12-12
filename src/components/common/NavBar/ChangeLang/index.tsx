@@ -12,23 +12,35 @@ import Image from 'next/image'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import Tooltip from '../../custom/Tooltip'
 import { useTranslation } from 'src/hooks/useTranslation'
-import { useState, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { localesList, TLocale } from 'src/constants/locales'
+import { useRouter } from 'next/router'
 
 export default function ChangeLang() {
   const [showLanguages, setShowLanguages] = useState<boolean>(false)
   const [selectedLang, setSelectedLang] = useState<TLocale | any>(null)
   const { t, changeLanguage } = useTranslation()
-
-  const initRef = useRef<any>()
+  const router = useRouter()
 
   const handleChangeLang = (locale: TLocale) => {
     changeLanguage(locale.value)
     setSelectedLang(locale)
   }
 
+  useEffect(() => {
+    const routerLocale = router.locale
+    if (window.location.pathname === '/') {
+      setSelectedLang(null)
+    } else if (routerLocale !== undefined) {
+      const localeFiltered: TLocale[] = localesList.filter(
+        (locale) => locale.value === routerLocale
+      )
+      setSelectedLang(localeFiltered[0])
+    }
+  }, [])
+
   return (
-    <Popover closeOnBlur={false} placement='bottom' initialFocusRef={initRef}>
+    <Popover closeOnBlur={false} placement='bottom'>
       <PopoverTrigger>
         <Box as='button'>
           <Tooltip label={t('changeLanguage')}>
