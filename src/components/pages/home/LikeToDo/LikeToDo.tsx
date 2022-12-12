@@ -2,12 +2,16 @@ import { Box, Grid, GridItem, Heading, SlideFade, Text } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 import Title from '../../../common/custom/Title'
 import EditorUI from './Editor'
-import { likeToDoList } from './likeTodoList'
+import { getLikeToDoList } from './likeTodoList'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 export default function LikeToDo() {
   const [iconActive, setIconActive] = useState('')
   const [accordionName, setAccordionName] = useState('')
   const [itemIndex, setItemIndex] = useState(0)
+
+  const { t } = useTranslation()
+  const likeToDoList = getLikeToDoList(t)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +31,7 @@ export default function LikeToDo() {
   return (
     <Box marginTop='100px' position='relative'>
       <Title colorscheme='yellow' fontSize='5xl' textAlign='center'>
-        What I like?
+        {t('whatILike')}
       </Title>
       <Grid
         templateColumns={['none', 'repeat(2, 400px)']}

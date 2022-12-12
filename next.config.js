@@ -1,6 +1,3 @@
-// eslint-disable-next-line
-const { i18n } = require('./next-i18next.config')
-
 /** @type {import('next').NextConfig} */
 module.exports = {
 	reactStrictMode: true,
@@ -8,5 +5,14 @@ module.exports = {
 	compiler: {
 		styledComponents: true
 	},
-	i18n
+	i18n: {
+		locales: ["en", "es", "pt"],
+		defaultLocale: "es",
+		localeDetection: false,
+	},
+	optimizeFonts: true,
+	images: {
+		dangerouslyAllowSVG: true,
+		contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+	},
 }

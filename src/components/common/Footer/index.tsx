@@ -2,11 +2,15 @@ import { Box, Button, Link as ChakraLink, Divider } from '@chakra-ui/react'
 import Link from 'next/link'
 import { BiUpArrow } from 'react-icons/bi'
 import Title from '../custom/Title'
-import { footerElements } from './footerLinks'
+import { getFooterElements } from './footerLinks'
 import Tooltip from '../custom/Tooltip'
 import Image from 'next/image'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 export default function Footer(): JSX.Element {
+  const { t } = useTranslation()
+  const footerElements = getFooterElements(t)
+
   const handleToTop = () => {
     if (typeof window !== 'undefined') {
       window.scrollTo({
@@ -87,7 +91,7 @@ export default function Footer(): JSX.Element {
           top={0}
           opacity='0.2'
           _hover={{ opacity: '1' }}>
-          <Tooltip label='Go to top'>
+          <Tooltip label={t('goToTop')}>
             <Button
               bg='gray.900'
               fontSize='1.5rem'

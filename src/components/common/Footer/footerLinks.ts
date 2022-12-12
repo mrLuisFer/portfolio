@@ -20,9 +20,9 @@ interface FooterElements {
   links: FooterLink[]
 }
 
-export const footerElements: FooterElements[] = [
+export const getFooterElements = (t: (key: string) => string): FooterElements[] => [
   {
-    title: 'Social',
+    title: t('social'),
     titleColor: 'darkBlue',
     links: [
       { label: 'Twitter', href: twitter, isExternal: true },
@@ -33,16 +33,16 @@ export const footerElements: FooterElements[] = [
     ],
   },
   {
-    title: 'Navigate to',
+    title: t('navigateTo'),
     titleColor: 'orange',
     links: [
       {
-        label: 'Contact',
+        label: t('contact'),
         href: paths.contact,
         isExternal: false,
       },
       {
-        label: 'Projects',
+        label: t('projects'),
         href: paths.projects,
         isExternal: false,
       },
@@ -54,7 +54,7 @@ export const footerElements: FooterElements[] = [
     ],
   },
   {
-    title: 'Other',
+    title: t('other'),
     titleColor: 'yellow',
     links: [
       {
@@ -78,7 +78,7 @@ export const footerElements: FooterElements[] = [
         isExternal: true,
       },
       {
-        label: 'More projects...',
+        label: `${t('moreProjects')}...`,
         href: 'https://github.com/mrLuisFer?tab=repositories',
         isExternal: true,
       },

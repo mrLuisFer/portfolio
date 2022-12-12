@@ -3,6 +3,7 @@ import { VscDebugRestart } from 'react-icons/vsc'
 import { BsCart3 } from 'react-icons/bs'
 import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 import Tooltip from 'src/components/common/custom/Tooltip'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 function IconCircle({ color }: { color: string }) {
   return (
@@ -61,6 +62,10 @@ export default function Editor({
   setAccordionName: Dispatch<SetStateAction<string>>
 }) {
   const [iconIndex, setIconIndex] = useState(0)
+  const { t } = useTranslation()
+
+  const url: string =
+    (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:3000'
 
   const handleClickIcon = () => {
     const number = getRandomInt(icons.length)
@@ -105,8 +110,8 @@ export default function Editor({
           w='205px'
           alignItems='center'
           justifyContent='space-between'>
-          http://localhost:3000/
-          <Tooltip label='reload'>
+          {url}
+          <Tooltip label={t('reload')}>
             <Box
               cursor='pointer'
               p='5px'

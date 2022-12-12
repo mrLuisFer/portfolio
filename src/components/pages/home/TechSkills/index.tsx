@@ -21,9 +21,12 @@ import {
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
 } from '@dnd-kit/sortable'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 export default function TechSkills() {
   const [techIconsListState, setTechIconsListState] = useState(techIconsList)
+
+  const { t } = useTranslation()
 
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)', {
     ssr: true,
@@ -53,7 +56,7 @@ export default function TechSkills() {
   return (
     <Box paddingBottom='2rem'>
       <Title colorscheme='blue' fontSize='5xl' textAlign='center' bgAnimate>
-        Tech Skills
+        {t('techSkills')}
       </Title>
       <DndContext
         onDragEnd={handleDragEnd}
@@ -91,7 +94,7 @@ export default function TechSkills() {
           cursor='pointer'
           _hover={{ opacity: '1' }}
           _active={{ color: 'blue.300' }}>
-          and more, see more projects...
+          {t('seeMoreProjects')}...
         </Text>
       </Link>
     </Box>
