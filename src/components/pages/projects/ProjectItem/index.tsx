@@ -2,7 +2,7 @@ import { Box, Heading, Text, List, ListItem, ListIcon, SlideFade } from '@chakra
 import { IProjectList } from '../projectsList'
 import Image from 'next/image'
 import { IoIosArrowDown } from 'react-icons/io'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { BsGithub } from 'react-icons/bs'
 import { AiOutlineLink } from 'react-icons/ai'
 

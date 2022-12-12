@@ -8,8 +8,9 @@ import { ChakraProvider } from '@chakra-ui/react'
 import theme from 'src/styles/global/theme'
 import '../styles/global/globals.css'
 import { NextRouter, useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import ga from '../lib/ga'
+import AnimatedCursor from 'react-animated-cursor'
 
 import '../../node_modules/react-grid-layout/css/styles.css'
 import '../../node_modules/react-resizable/css/styles.css'
@@ -20,6 +21,7 @@ const styledTheme: DefaultTheme = {
 
 export default function AppPage({ Component, pageProps }: AppProps) {
   const router: NextRouter = useRouter()
+  const [renderCursor, setRenderCursor] = useState(false)
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -33,6 +35,10 @@ export default function AppPage({ Component, pageProps }: AppProps) {
       router.events.off('hashChangeComplete', handleRouteChange)
     }
   }, [router.asPath, router.events, router.pathname])
+
+  useEffect(() => {
+    setRenderCursor(true)
+  }, [])
 
   return (
     <>
@@ -92,6 +98,18 @@ export default function AppPage({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={styledTheme}>
           <GlobalStyle />
           <Layout>
+            {renderCursor && (
+              <div className='cursor__dot'>
+                <AnimatedCursor
+                  innerSize={15}
+                  outerSize={15}
+                  color='255, 255 ,255'
+                  outerAlpha={0.4}
+                  innerScale={0.7}
+                  outerScale={5}
+                />
+              </div>
+            )}
             <Component {...pageProps} />
             <noscript>
               <iframe
