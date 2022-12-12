@@ -2,8 +2,11 @@ import { Box } from '@chakra-ui/react'
 import Title from '../../../common/custom/Title'
 import GradientBtn from '../../../common/custom/GradientBtn'
 import Paragraph from '../../../common/custom/Paragraph'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 export default function AboutResume(): JSX.Element {
+  const { t } = useTranslation()
+
   return (
     <Box mt='8rem'>
       <Title
@@ -11,8 +14,8 @@ export default function AboutResume(): JSX.Element {
         colorscheme='pink'
         fontSize='5xl'
         textAlign='center'
-        helperText='Main information about me and what I love to do'>
-        About Me
+        helperText={t('informationAboutWhatILove') || ''}>
+        {t('aboutMe')}
       </Title>
       <Box
         display='flex'
@@ -24,17 +27,16 @@ export default function AboutResume(): JSX.Element {
         textAlign={['justify', 'left']}
         padding={['0 1rem', '0']}>
         <Paragraph>
-          Hi!, my name is <a href='https://github.com/mrLuisFer'>Luis Fernando Alvarez</a>{' '}
-          I am a <span>Software Developer</span>, focused on{' '}
-          <span>Frontend Developer</span>, I like to <span>learn</span> new things every
-          day and put them into practice developing projects and applications that make me
-          very happy to do what I love.
+          {t('hiMyNameIs')}{' '}
+          <a href='https://github.com/mrLuisFer'>Luis Fernando Alvarez</a>{' '}
+          {t('heroIam').toLowerCase()} <span>{t('softwareDeveloper')}</span>,{' '}
+          {t('focusedOn')} <span>{t('heroJob')}</span>, {t('iLikeTo')}{' '}
+          <span>{t('learn')}</span> {t('thisILoveText')}.
         </Paragraph>
         <Box maxW='488px' lineHeight={1.6}>
           <Paragraph mb='2rem'>
-            I am also a student & I love to learn about the{' '}
-            <span>world of programming</span>, learning new technologies, and doing
-            freelance work and projects.
+            {t('alsoAStudent')} <span>{t('worldOfProgramming')}</span>,{' '}
+            {t('learningNewTech')}
           </Paragraph>
           <Box display={['flex', 'block']} justifyContent={['center', 'flex-start']}>
             <GradientBtn
@@ -44,7 +46,7 @@ export default function AboutResume(): JSX.Element {
               download
               iconComponent={<i className='fas fa-cloud-download-alt' />}
               padding={['0.2rem 0.2rem', '0.7rem 0.2rem']}>
-              Download My CV
+              {t('downloadMyCV')}
             </GradientBtn>
           </Box>
         </Box>

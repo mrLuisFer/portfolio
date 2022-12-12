@@ -19,7 +19,7 @@ const styledTheme: DefaultTheme = {
   colors: {},
 }
 
-export default function AppPage({ Component, pageProps }: AppProps) {
+function AppPage({ Component, pageProps }: AppProps) {
   const router: NextRouter = useRouter()
   const [renderCursor, setRenderCursor] = useState(false)
 
@@ -128,3 +128,5 @@ export default function AppPage({ Component, pageProps }: AppProps) {
     </>
   )
 }
+
+export default AppPage

@@ -4,8 +4,11 @@ import { Box, Text } from '@chakra-ui/react'
 import Link from '../../../common/custom/Link'
 import Title from '../../../common/custom/Title'
 import Tooltip from 'src/components/common/custom/Tooltip'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 export default function Hero(): JSX.Element {
+  const { t } = useTranslation()
+
   return (
     <Box
       display='flex'
@@ -22,7 +25,7 @@ export default function Hero(): JSX.Element {
         <Box>
           <Box>
             <Text fontSize={['4xl', '3xl']} display={['none', 'block']} opacity='0.5'>
-              Hello!
+              {t('hello')}!
             </Text>
             <Text
               as='div'
@@ -32,7 +35,7 @@ export default function Hero(): JSX.Element {
               gap='0.5rem'
               justifyContent={['center', 'flex-start']}
               fontWeight='bold'>
-              I&apos;m{' '}
+              {t('heroIam')}{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
                 <Link
                   href='https://github.com/mrLuisFer'
@@ -60,7 +63,8 @@ export default function Hero(): JSX.Element {
               display={['block', 'inline-block']}
               textAlign={['center', 'left']}
               margin={['0.5rem auto 0', '0.5rem 0 0 0']}>
-              Frontend <Text as='span'>Developer</Text>
+              {/* Frontend <Text as='span'>Developer</Text> */}
+              {t('heroJob')}
             </Title>
             <Text
               as='p'
@@ -68,7 +72,7 @@ export default function Hero(): JSX.Element {
               opacity='0.8'
               textAlign={['center', 'left']}
               m={['1rem 1.5rem 0 1.5rem', '1rem 0 0']}>
-              Specialized in{' '}
+              {t('specializedIn')}{' '}
               <Title
                 id='js-label'
                 as='span'
@@ -88,8 +92,8 @@ export default function Hero(): JSX.Element {
                 colorscheme='darkBlue'>
                 React
               </Title>{' '}
-              for UI <Box as='br' display={['none', 'block']} />
-              and Web Aplications
+              {t('forUi')} <Box as='br' display={['none', 'block']} />
+              {t('andWebAplications')}
             </Text>
           </Box>
         </Box>
@@ -136,7 +140,7 @@ export default function Hero(): JSX.Element {
               border: '1px solid white',
             }}>
             <Text as='i' className='fas fa-user' />
-            About Me
+            {t('aboutMe')}
           </Link>
         </Box>
       </div>

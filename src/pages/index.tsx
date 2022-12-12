@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Hero from 'src/components/pages/home/Hero'
 import AboutResume from 'src/components/pages/home/AboutResume'
 import LikeToDo from 'src/components/pages/home/LikeToDo/LikeToDo'

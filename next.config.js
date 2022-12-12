@@ -4,5 +4,15 @@ module.exports = {
 	swcMinify: true,
 	compiler: {
 		styledComponents: true
-	}
+	},
+	i18n: {
+		locales: ["en", "es", "pt"],
+		defaultLocale: "es",
+		localeDetection: false,
+	},
+	optimizeFonts: true,
+	images: {
+		dangerouslyAllowSVG: true,
+		contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+	},
 }

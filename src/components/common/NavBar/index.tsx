@@ -5,6 +5,7 @@ import NavBarMobile from './NavBarMobile'
 import NavBarLogo from './NavBarLogo'
 import paths from 'src/constants/paths'
 import SocialMediaItem from './SocialMediaItem'
+import { useTranslation } from 'src/hooks/useTranslation'
 
 interface ISocialMediaIcons {
   href: string
@@ -12,7 +13,7 @@ interface ISocialMediaIcons {
   external: boolean
 }
 
-const socialMediaIcons: ISocialMediaIcons[] = [
+const getSocialMediaIcons = (t: (key: string) => string): ISocialMediaIcons[] => [
   {
     href: facebook,
     label: 'Facebook',
@@ -30,12 +31,15 @@ const socialMediaIcons: ISocialMediaIcons[] = [
   },
   {
     href: paths.contact,
-    label: 'Contact Me',
+    label: t('contactMe'),
     external: false,
   },
 ]
 
 export default function NavBar(): JSX.Element {
+  const { t } = useTranslation()
+  const socialMediaIcons = getSocialMediaIcons(t)
+
   return (
     <>
       <Box
@@ -52,7 +56,7 @@ export default function NavBar(): JSX.Element {
         </Box>
         <Box>
           <GradientBtn colorscheme='orange' href={paths.contactForm} asLink>
-            Send email
+            {t('sendEmail')}
           </GradientBtn>
         </Box>
       </Box>
