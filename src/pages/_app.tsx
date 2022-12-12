@@ -37,7 +37,7 @@ function AppPage({ Component, pageProps }: AppProps) {
   }, [router.asPath, router.events, router.pathname])
 
   useEffect(() => {
-    setRenderCursor(true)
+    setRenderCursor(false)
   }, [])
 
   return (

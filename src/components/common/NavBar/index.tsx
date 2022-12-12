@@ -6,6 +6,7 @@ import NavBarLogo from './NavBarLogo'
 import paths from 'src/constants/paths'
 import SocialMediaItem from './SocialMediaItem'
 import { useTranslation } from 'src/hooks/useTranslation'
+import ChangeLang from './ChangeLang'
 
 interface ISocialMediaIcons {
   href: string
@@ -53,6 +54,7 @@ export default function NavBar(): JSX.Element {
           {socialMediaIcons.map((item) => (
             <SocialMediaItem key={item.label} item={item} />
           ))}
+          <ChangeLang />
         </Box>
         <Box>
           <GradientBtn colorscheme='orange' href={paths.contactForm} asLink>
