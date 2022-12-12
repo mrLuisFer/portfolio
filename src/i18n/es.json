@@ -40,5 +40,6 @@
   "other": "Otros",
   "moreProjects": "Más proyectos",
   "goToTop": "Ir al principio",
-  "changeLanguage": "Cambiar idioma"
+  "changeLanguage": "Cambiar idioma",
+  "canDragDropItem": "Puedes arrastrar y soltar los elementos"
 }
