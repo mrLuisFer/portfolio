@@ -94,6 +94,7 @@ function AppPage({ Component, pageProps }: AppProps) {
             href='/favicon/favicon-16x16.png'
           />
         </Script>
+        <script defer src='https://app.embed.im/snow.js' />
       </Head>
       <ChakraProvider theme={theme}>
         <ThemeProvider theme={styledTheme}>
