@@ -49,7 +49,7 @@ export default function Title({
         <Text
           as='span'
           display='block'
-          fontSize='lg'
+          fontSize={['md', 'lg']}
           color='gray.500'
           opacity='0.8'
           fontWeight='medium'

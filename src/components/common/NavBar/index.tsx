@@ -45,7 +45,7 @@ export default function NavBar(): JSX.Element {
     <>
       <Box
         as='header'
-        display={['none', 'flex']}
+        display={['none', 'none', 'flex']}
         justifyContent='space-between'
         pt='1rem'
         mb='3rem'>
