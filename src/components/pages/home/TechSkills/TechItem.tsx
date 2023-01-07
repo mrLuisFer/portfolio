@@ -31,7 +31,7 @@ export default function TechItem({ item }: { item: TechIcons }) {
             display={'flex'}
             alignItems='center'
             gap={3}
-            justifyContent={['center', 'flex-start']}>
+            justifyContent={['center', 'center', 'flex-start']}>
             <Box>{item.icon}</Box>
             <Text fontSize='lg' display={['block', 'none']}>
               {item.label}

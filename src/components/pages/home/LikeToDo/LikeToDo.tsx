@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Heading, SlideFade, Text } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Heading, Slide, SlideFade, Text } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 import Title from '../../../common/custom/Title'
 import EditorUI from './Editor'
@@ -6,9 +6,10 @@ import { getLikeToDoList } from './likeTodoList'
 import { useTranslation } from 'src/hooks/useTranslation'
 
 export default function LikeToDo() {
-  const [iconActive, setIconActive] = useState('')
-  const [accordionName, setAccordionName] = useState('')
-  const [itemIndex, setItemIndex] = useState(0)
+  const [iconActive, setIconActive] = useState<string>('')
+  const [accordionName, setAccordionName] = useState<string>('')
+  const [itemIndex, setItemIndex] = useState<number>(0)
+  const [hideEditor, setHideEditor] = useState<boolean>(false)
 
   const { t } = useTranslation()
   const likeToDoList = getLikeToDoList(t)
@@ -30,35 +31,47 @@ export default function LikeToDo() {
 
   return (
     <Box marginTop='100px' position='relative'>
-      <Title colorscheme='yellow' fontSize='5xl' textAlign='center'>
-        {t('whatILike')}
-      </Title>
+      <Box onClick={() => setHideEditor(false)} cursor={hideEditor ? 'pointer' : 'auto'}>
+        <Title colorscheme='yellow' fontSize='5xl' textAlign='center'>
+          {t('whatILike')}
+        </Title>
+      </Box>
       <Grid
-        templateColumns={['none', 'repeat(2, 400px)']}
         justifyContent='center'
         gap={['2rem', 20]}
         mt='2.5rem'
-        gridTemplateRows={['350px 1fr', 'none']}>
-        <GridItem w='100%'>
-          <EditorUI
-            setIconActive={setIconActive}
-            icons={likeToDoList}
-            itemIndex={itemIndex}
-            setAccordionName={setAccordionName}
-          />
-        </GridItem>
+        templateColumns={['none', '1fr', `${hideEditor ? '1fr' : 'repeat(2, 400px)'}`]}
+        gridTemplateRows={[`${hideEditor ? '1fr' : '350px 1fr'}`, 'none']}>
+        {hideEditor ? (
+          <></>
+        ) : (
+          <SlideFade in={!hideEditor} offsetY='-50px'>
+            <GridItem w='100%'>
+              <EditorUI
+                setIconActive={setIconActive}
+                icons={likeToDoList}
+                itemIndex={itemIndex}
+                setAccordionName={setAccordionName}
+                setHideEditor={setHideEditor}
+              />
+            </GridItem>
+          </SlideFade>
+        )}
+
         <GridItem w='100%' bg='transparent'>
           <Box
             display='flex'
             flexDirection='column'
             gap='1rem'
-            minHeight={['500px', '600px']}>
+            minHeight={['500px', '600px']}
+            alignItems={['center', 'center', `${hideEditor ? 'center' : 'flex-start'}`]}>
             {likeToDoList.map((item) => (
               <Box
                 key={item.title}
                 border='none'
                 onMouseOver={() => setAccordionName(item.title)}
-                onMouseLeave={() => setAccordionName('')}>
+                onMouseLeave={() => setAccordionName('')}
+                textAlign={['center', 'center', `${hideEditor ? 'center' : 'left'}`]}>
                 <Heading
                   as='h3'
                   color='white'

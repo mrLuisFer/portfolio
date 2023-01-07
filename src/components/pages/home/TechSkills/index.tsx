@@ -32,6 +32,9 @@ export default function TechSkills() {
   const [isLargerThan800] = useMediaQuery('(min-width: 800px)', {
     ssr: true,
   })
+  const [isLessThan760px] = useMediaQuery('(max-width: 760px)', {
+    ssr: true,
+  })
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -61,29 +64,46 @@ export default function TechSkills() {
           {t('techSkills')}
         </Title>
       </Tooltip>
-      <DndContext
-        onDragEnd={handleDragEnd}
-        sensors={sensors}
-        collisionDetection={closestCenter}>
-        <SortableContext
-          items={techIconsListState}
-          strategy={
-            isLargerThan800 ? horizontalListSortingStrategy : verticalListSortingStrategy
-          }>
-          <Box
-            display={['grid', 'flex']}
-            alignItems='center'
-            justifyContent='center'
-            gap='2rem'
-            mt='2rem'
-            flexDirection={['column', 'row']}
-            gridTemplateColumns={'repeat(2, 150px)'}>
-            {techIconsListState.map((item) => (
-              <TechItem key={item.id} item={item} />
-            ))}
-          </Box>
-        </SortableContext>
-      </DndContext>
+      {isLessThan760px ? (
+        <Box
+          display={['grid', 'grid', 'flex']}
+          alignItems='center'
+          justifyContent='center'
+          gap='2rem'
+          mt='2rem'
+          flexDirection={['column', 'column', 'row']}
+          gridTemplateColumns={'repeat(2, 150px)'}>
+          {techIconsListState.map((item) => (
+            <TechItem key={item.id} item={item} />
+          ))}
+        </Box>
+      ) : (
+        <DndContext
+          onDragEnd={handleDragEnd}
+          sensors={sensors}
+          collisionDetection={closestCenter}>
+          <SortableContext
+            items={techIconsListState}
+            strategy={
+              isLargerThan800
+                ? horizontalListSortingStrategy
+                : verticalListSortingStrategy
+            }>
+            <Box
+              display={['grid', 'flex']}
+              alignItems='center'
+              justifyContent='center'
+              gap='2rem'
+              mt='2rem'
+              flexDirection={['column', 'row']}
+              gridTemplateColumns={'repeat(2, 150px)'}>
+              {techIconsListState.map((item) => (
+                <TechItem key={item.id} item={item} />
+              ))}
+            </Box>
+          </SortableContext>
+        </DndContext>
+      )}
       <Link href={paths.projects}>
         <Text
           as='a'

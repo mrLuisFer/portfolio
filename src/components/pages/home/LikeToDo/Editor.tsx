@@ -1,7 +1,7 @@
 import { Box, Icon, Text } from '@chakra-ui/react'
 import { VscDebugRestart } from 'react-icons/vsc'
 import { BsCart3 } from 'react-icons/bs'
-import { Dispatch, SetStateAction, useState, useEffect } from 'react'
+import { Dispatch, SetStateAction, useState, useEffect, FormEvent } from 'react'
 import Tooltip from 'src/components/common/custom/Tooltip'
 import { useTranslation } from 'src/hooks/useTranslation'
 
@@ -55,22 +55,26 @@ export default function Editor({
   icons,
   itemIndex = 0,
   setAccordionName,
+  setHideEditor,
 }: {
   setIconActive: Dispatch<SetStateAction<string>>
   icons: LikeTodo[]
   itemIndex?: number
   setAccordionName: Dispatch<SetStateAction<string>>
+  setHideEditor: Dispatch<SetStateAction<boolean>>
 }) {
   const [iconIndex, setIconIndex] = useState(0)
   const { t } = useTranslation()
 
   const url: string =
     (typeof window !== 'undefined' && window.location.origin) || 'http://localhost:3000'
+  const [editorUrl, setEditorUrl] = useState<string>(url)
 
   const handleClickIcon = () => {
     const number = getRandomInt(icons.length)
     setIconIndex(number)
     setIconActive(icons[number].title)
+    setEditorUrl(url)
   }
 
   useEffect(() => {}, [])
@@ -95,10 +99,21 @@ export default function Editor({
         gap='0'
         border='1px solid'
         borderColor='gray.600'>
-        <Box display='flex' gap='0.2rem' alignItems='center'>
-          <IconCircle color='red.500' />
-          <IconCircle color='yellow.400' />
-          <IconCircle color='green.300' />
+        <Box display='flex' gap='0.2rem' alignItems='center' mb='1rem'>
+          <Tooltip label='Close' placement='top'>
+            <Box
+              cursor='pointer'
+              display='inline-block'
+              onClick={() => setHideEditor(true)}>
+              <IconCircle color='red.500' />
+            </Box>
+          </Tooltip>
+          <Box display='inline-block'>
+            <IconCircle color='yellow.400' />
+          </Box>
+          <Box display='inline-block'>
+            <IconCircle color='green.300' />
+          </Box>
         </Box>
         <Box
           p='10px'
@@ -109,8 +124,21 @@ export default function Editor({
           m='0 auto'
           w='205px'
           alignItems='center'
-          justifyContent='space-between'>
-          {url}
+          justifyContent='space-between'
+          border='1px solid transparent'
+          _hover={{
+            borderColor: 'gray.600',
+          }}>
+          <Box
+            as='input'
+            value={editorUrl}
+            bg='transparent'
+            outline='none'
+            border='none'
+            onChange={(e: FormEvent<HTMLInputElement>) => {
+              setEditorUrl((e.target as HTMLInputElement).value)
+            }}
+          />
           <Tooltip label={t('reload')}>
             <Box
               cursor='pointer'
