@@ -132,8 +132,7 @@ export default function Editor({
           border='1px solid transparent'
           _hover={{
             borderColor: 'gray.600',
-          }}
-        >
+          }}>
           <Box
             as='input'
             value={editorUrl}

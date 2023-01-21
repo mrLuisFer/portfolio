@@ -168,8 +168,7 @@ const NavbarMobileLink = ({
       onMouseEnter={() => setShowIcon(true)}
       onMouseLeave={() => setShowIcon(false)}
       target={link.isExternal ? '_blank' : '_self'}
-      rel='noreferrer'
-    >
+      rel='noreferrer'>
       {t(link.label)}
       <SlideFade in={showIcon} offsetX='20px' offsetY='0'>
         <Box cursor='pointer'>
