@@ -40,7 +40,8 @@ export default function ProjectItem({
       w='300px'
       _hover={{
         boxShadow: '1px 1px 5px rgba(112, 112, 112, 0.5)',
-      }}>
+      }}
+    >
       <Box position='relative' w='100%'>
         <Image src={project.img} alt={project.title} layout='fill' />
       </Box>
@@ -59,7 +60,8 @@ export default function ProjectItem({
                   width='fit-content'
                   _hover={{
                     color: getRandomColor(colorsList.length),
-                  }}>
+                  }}
+                >
                   <ListIcon as={BsGithub} />
                   GitHub
                 </ListItem>
@@ -69,7 +71,8 @@ export default function ProjectItem({
                   width='fit-content'
                   _hover={{
                     color: getRandomColor(colorsList.length),
-                  }}>
+                  }}
+                >
                   <ListIcon as={AiOutlineLink} />
                   Preview
                 </ListItem>
@@ -85,7 +88,8 @@ export default function ProjectItem({
         onClick={() => setShowMore((prevState) => !prevState)}
         _hover={{
           background: 'rgb(29, 29, 29)',
-        }}>
+        }}
+      >
         <Text display='flex' alignItems='center' gap='5px'>
           {showMore ? 'Ver menos' : 'Ver mas'}
           <Box as='span' transform={showMore ? 'rotate(-180deg)' : ''}>

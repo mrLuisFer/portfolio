@@ -33,7 +33,8 @@ const GradientBtn = ({
       fontWeight='semibold'
       padding={asLink ? '0.7rem 0.2rem' : '3px'}
       external={!asLink}
-      {...props}>
+      {...props}
+    >
       <Text
         as='span'
         background='black'
@@ -46,7 +47,8 @@ const GradientBtn = ({
           bgGradient: colors[colorscheme],
           color: 'black',
           boxShadow: `0px 0px 5px 10px ${colors[colorscheme]}`,
-        }}>
+        }}
+      >
         {iconComponent && (
           <Text display='inline-block' mr='0.5rem'>
             {iconComponent}

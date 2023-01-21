@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef, MutableRefObject } from 'react'
 
 export const useFetch = (url: string) => {
-  const cache: React.MutableRefObject<any> = useRef<Array<Object>>([])
+  const cache: MutableRefObject<any> = useRef<Array<Object>>([])
 
   const [status, setStatus] = useState<string>('fetching')
   const [data, setData] = useState<Array<Object>>([])

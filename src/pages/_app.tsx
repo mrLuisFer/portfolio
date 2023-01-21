@@ -22,7 +22,8 @@ const styledTheme: DefaultTheme = {
 
 function AppPage({ Component, pageProps }: AppProps) {
   const router: NextRouter = useRouter()
-  const [renderCursor, setRenderCursor] = useState(false)
+  const [renderCursor, setRenderCursor] = useState<boolean>(false)
+  const [isChristmas, setIsChristmas] = useState<boolean>(false)
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -41,61 +42,40 @@ function AppPage({ Component, pageProps }: AppProps) {
     setRenderCursor(false)
   }, [])
 
+  useEffect(() => {
+    const decemberDate = new Date('December 25')
+    const currentDate = new Date()
+    const decemberMonth: number = decemberDate.getMonth() + 1
+    const currentMonth: number = currentDate.getMonth() + 1
+    const isChristmasDate: boolean =
+      currentMonth === decemberMonth && decemberDate.getDate() === currentDate.getDate()
+    setIsChristmas(isChristmasDate)
+  }, [])
+
   return (
     <>
       <Head>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.ANALYTICS}`}
-          strategy='afterInteractive'
+        <link rel='shortcut icon' href='/favicon.ico' />
+        <link rel='icon' href='/favicon.svg' />
+        <link
+          rel='apple-touch-icon'
+          sizes='180x180'
+          href='/favicon/apple-touch-icon.png'
         />
-        <Script strategy='afterInteractive' id='google-analytics'>
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', ${process.env.ANALYTICS});
-          `}
-        </Script>
-        <Script>
-          {`
-          <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
-          (window,document,'script','dataLayer','GTM-PBHNMXT');</script>
-          `}
-        </Script>
-        <Script>
-          {`
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-          ga('create', ${process.env.ANALYTICS}, 'auto');  // Creates a tracker.
-          ga('send', 'pageview');             // Sends a pageview.
-          `}
-          <link rel='shortcut icon' href='/favicon.ico' />
-          <link rel='icon' href='/favicon.svg' />
-          <link
-            rel='apple-touch-icon'
-            sizes='180x180'
-            href='/favicon/apple-touch-icon.png'
-          />
-          <link
-            rel='icon'
-            type='image/png'
-            sizes='32x32'
-            href='/favicon/favicon-32x32.png'
-          />
-          <link
-            rel='icon'
-            type='image/png'
-            sizes='16x16'
-            href='/favicon/favicon-16x16.png'
-          />
-        </Script>
-        {/* <script defer src='https://app.embed.im/snow.js' /> */}
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='32x32'
+          href='/favicon/favicon-32x32.png'
+        />
+        <link
+          rel='icon'
+          type='image/png'
+          sizes='16x16'
+          href='/favicon/favicon-16x16.png'
+        />
       </Head>
+      {isChristmas && <script id='snowEffect' defer src='https://app.embed.im/snow.js' />}
       <ChakraProvider theme={theme}>
         <ThemeProvider theme={styledTheme}>
           <GlobalStyle />
@@ -122,12 +102,46 @@ function AppPage({ Component, pageProps }: AppProps) {
                 style={{
                   display: 'none',
                   visibility: 'hidden',
-                }}></iframe>
+                }}
+              ></iframe>
             </noscript>
           </Layout>
         </ThemeProvider>
       </ChakraProvider>
       <Script src='https://kit.fontawesome.com/0b9946e474.js' crossOrigin='anonymous' />
+      <Script
+        id='tagmanager'
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.ANALYTICS}`}
+        strategy='afterInteractive'
+      />
+      <Script strategy='afterInteractive' id='google-analytics'>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ${process.env.ANALYTICS});
+          `}
+      </Script>
+
+      <Script id='dataLayer'>
+        {`
+           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})
+          (window,document,'script','dataLayer','GTM-PBHNMXT')
+          `}
+      </Script>
+      <Script id='Analytics'>
+        {`
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', ${process.env.ANALYTICS}, 'auto');  // Creates a tracker.
+          ga('send', 'pageview');             // Sends a pageview.
+          `}
+      </Script>
     </>
   )
 }

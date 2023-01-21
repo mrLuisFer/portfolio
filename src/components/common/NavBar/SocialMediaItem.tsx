@@ -19,12 +19,14 @@ export default function SocialMediaItem({ item }: { item: ISocialMediaItemProps 
       onMouseLeave={() => setShowIcon(false)}
       display='flex'
       alignItems='center'
-      gap='5px'>
+      gap='5px'
+    >
       <Link
         href={item.href}
         external={item.external}
         opacity={showIcon ? '1' : '0.5'}
-        _hover={{ opacity: '1' }}>
+        _hover={{ opacity: '1' }}
+      >
         {item.label}
       </Link>
       {item.external && (

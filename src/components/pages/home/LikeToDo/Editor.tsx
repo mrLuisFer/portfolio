@@ -34,7 +34,8 @@ function EditorSkeleton({ children, w, h, bg, m }: EditorSkeletonProps) {
       m={m || '0'}
       display='flex'
       justifyContent='center'
-      alignItems='center'>
+      alignItems='center'
+    >
       {children}
     </Box>
   )
@@ -91,20 +92,23 @@ export default function Editor({
       background='black'
       borderColor='gray.600'
       maxW='450px'
-      borderRadius='5px'>
+      borderRadius='5px'
+    >
       <Box
         p='10px 15px'
         display='flex'
         alignItems='center'
         gap='0'
         border='1px solid'
-        borderColor='gray.600'>
+        borderColor='gray.600'
+      >
         <Box display='flex' gap='0.2rem' alignItems='center' mb='1rem'>
           <Tooltip label='Close' placement='top'>
             <Box
               cursor='pointer'
               display='inline-block'
-              onClick={() => setHideEditor(true)}>
+              onClick={() => setHideEditor(true)}
+            >
               <IconCircle color='red.500' />
             </Box>
           </Tooltip>
@@ -150,7 +154,8 @@ export default function Editor({
               }}
               _active={{
                 background: '#2c2c2c',
-              }}>
+              }}
+            >
               <VscDebugRestart size={15} />
             </Box>
           </Tooltip>
@@ -162,7 +167,8 @@ export default function Editor({
           gridTemplateColumns='1fr 1fr'
           justifyContent='space-between'
           alignItems='flex-start'
-          gap='1rem'>
+          gap='1rem'
+        >
           <Box display='flex' alignItems='flex-start' gap='0.5rem'>
             <Box
               bg='white'
@@ -172,7 +178,8 @@ export default function Editor({
               p='10px'
               borderRadius='50%'
               w='fit-content'
-              color='black'>
+              color='black'
+            >
               <BsCart3 />
             </Box>
             <Box display='flex' flexDirection='column' gap='0.5em'>
@@ -192,7 +199,8 @@ export default function Editor({
           gridTemplateColumns='1fr 1fr'
           justifyContent='space-between'
           alignItems='flex-start'
-          gap='1rem'>
+          gap='1rem'
+        >
           <Box
             display='flex'
             alignItems='center'
@@ -204,7 +212,8 @@ export default function Editor({
             color='white'
             _hover={{
               background: '#2f2f2f',
-            }}>
+            }}
+          >
             {icons[iconIndex].icon}
           </Box>
           <Box>
@@ -212,7 +221,8 @@ export default function Editor({
               display='flex'
               alignItems='flex-start'
               w='100%'
-              justifyContent='space-between'>
+              justifyContent='space-between'
+            >
               <EditorSkeleton w='90px' h='30px' bg='gray.700' />
               <EditorSkeleton w='50px' h='20px' bg='blue.400'>
                 <Text fontSize='12px'>$$$</Text>
