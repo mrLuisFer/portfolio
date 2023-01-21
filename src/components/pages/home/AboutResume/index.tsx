@@ -14,7 +14,8 @@ export default function AboutResume(): JSX.Element {
         colorscheme='pink'
         fontSize='5xl'
         textAlign='center'
-        helperText={t('informationAboutWhatILove') || ''}>
+        helperText={t('informationAboutWhatILove') || ''}
+      >
         {t('aboutMe')}
       </Title>
       <Box
@@ -25,7 +26,8 @@ export default function AboutResume(): JSX.Element {
         mt='2rem'
         flexDirection={['column', 'row']}
         textAlign={['justify', 'left']}
-        padding={['0 1rem', '0']}>
+        padding={['0 1rem', '0']}
+      >
         <Paragraph>
           {t('hiMyNameIs')}{' '}
           <a href='https://github.com/mrLuisFer'>Luis Fernando Alvarez</a>{' '}
@@ -45,7 +47,8 @@ export default function AboutResume(): JSX.Element {
               asLink
               download
               iconComponent={<i className='fas fa-cloud-download-alt' />}
-              padding={['0.2rem 0.2rem', '0.7rem 0.2rem']}>
+              padding={['0.2rem 0.2rem', '0.7rem 0.2rem']}
+            >
               {t('downloadMyCV')}
             </GradientBtn>
           </Box>

@@ -89,7 +89,8 @@ export default function NavBarMobile() {
         alignItems='center'
         justifyContent='space-between'
         pt='1rem'
-        mb='3rem'>
+        mb='3rem'
+      >
         <NavBarLogo />
         <Box as='button' onClick={onOpen} fontSize='2rem' ref={btnRef}>
           <HiOutlineMenuAlt3 />
@@ -101,7 +102,8 @@ export default function NavBarMobile() {
         placement='right'
         onClose={onClose}
         finalFocusRef={btnRef}
-        size='full'>
+        size='full'
+      >
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton fontSize={15} />
@@ -166,7 +168,8 @@ const NavbarMobileLink = ({
       onMouseEnter={() => setShowIcon(true)}
       onMouseLeave={() => setShowIcon(false)}
       target={link.isExternal ? '_blank' : '_self'}
-      rel='noreferrer'>
+      rel='noreferrer'
+    >
       {t(link.label)}
       <SlideFade in={showIcon} offsetX='20px' offsetY='0'>
         <Box cursor='pointer'>

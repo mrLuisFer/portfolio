@@ -16,7 +16,8 @@ export default function Tooltip({
       color='white'
       borderRadius='10px'
       bg='#222'
-      placement={placement}>
+      placement={placement}
+    >
       <Box position='relative'>{children}</Box>
     </ChakraTooltip>
   )

@@ -48,7 +48,8 @@ export default function NavBar(): JSX.Element {
         display={['none', 'none', 'flex']}
         justifyContent='space-between'
         pt='1rem'
-        mb='3rem'>
+        mb='3rem'
+      >
         <NavBarLogo />
         <Box as='nav' display='flex' alignItems='center' gap='1rem'>
           {socialMediaIcons.map((item) => (

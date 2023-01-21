@@ -43,7 +43,8 @@ export default function Title({
       _hover={{
         backgroundPosition: bgAnimate ? '-5.5em -4em' : '',
       }}
-      {...props}>
+      {...props}
+    >
       {children}
       {helperText && (
         <Text
@@ -53,7 +54,8 @@ export default function Title({
           color='gray.500'
           opacity='0.8'
           fontWeight='medium'
-          {...helperProps}>
+          {...helperProps}
+        >
           {helperText}
         </Text>
       )}

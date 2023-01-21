@@ -14,7 +14,8 @@ export default function Hero(): JSX.Element {
       display='flex'
       justifyContent={['center', 'space-around']}
       flexDirection={['column', 'row']}
-      gap={['1rem', '0']}>
+      gap={['1rem', '0']}
+    >
       <Image
         width='300px'
         height='300px'
@@ -34,7 +35,8 @@ export default function Hero(): JSX.Element {
               alignItems='center'
               gap='0.5rem'
               justifyContent={['center', 'flex-start']}
-              fontWeight='bold'>
+              fontWeight='bold'
+            >
               {t('heroIam')}{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
                 <Link
@@ -45,7 +47,8 @@ export default function Hero(): JSX.Element {
                   gap='1rem'
                   fontWeight='extrabold'
                   transition='0.15s ease'
-                  noBrightness>
+                  noBrightness
+                >
                   Luis Alvarez
                   <Text as='i' className='fas fa-code' />
                 </Link>
@@ -62,7 +65,8 @@ export default function Hero(): JSX.Element {
               bgAnimate
               display={['block', 'inline-block']}
               textAlign={['center', 'left']}
-              margin={['0.5rem auto 0', '0.5rem 0 0 0']}>
+              margin={['0.5rem auto 0', '0.5rem 0 0 0']}
+            >
               {/* Frontend <Text as='span'>Developer</Text> */}
               {t('heroJob')}
             </Title>
@@ -71,7 +75,8 @@ export default function Hero(): JSX.Element {
               fontSize='lg'
               opacity='0.8'
               textAlign={['center', 'left']}
-              m={['1rem 1.5rem 0 1.5rem', '1rem 0 0']}>
+              m={['1rem 1.5rem 0 1.5rem', '1rem 0 0']}
+            >
               {t('specializedIn')}{' '}
               <Title
                 id='js-label'
@@ -79,7 +84,8 @@ export default function Hero(): JSX.Element {
                 weight='bold'
                 colorscheme='yellow'
                 fontSize='lg'
-                opacity='1'>
+                opacity='1'
+              >
                 Javascript
               </Title>{' '}
               &{' '}
@@ -89,7 +95,8 @@ export default function Hero(): JSX.Element {
                 opacity='1'
                 weight='bold'
                 fontSize='lg'
-                colorscheme='darkBlue'>
+                colorscheme='darkBlue'
+              >
                 React
               </Title>{' '}
               {t('forUi')} <Box as='br' display={['none', 'block']} />
@@ -102,14 +109,16 @@ export default function Hero(): JSX.Element {
           alignItems='center'
           justifyContent={['center', 'flex-start']}
           gap='2rem'
-          mt='2rem'>
+          mt='2rem'
+        >
           <Tooltip label='LinkedIn'>
             <Link
               href={linkedin}
               fontSize='xl'
               external
               opacity='0.8'
-              _hover={{ opacity: '1' }}>
+              _hover={{ opacity: '1' }}
+            >
               <Text as='i' className='fab fa-linkedin-in' />
             </Link>
           </Tooltip>
@@ -119,7 +128,8 @@ export default function Hero(): JSX.Element {
               fontSize='xl'
               external
               opacity='0.8'
-              _hover={{ opacity: '1' }}>
+              _hover={{ opacity: '1' }}
+            >
               <Text as='i' className='fab fa-github' />
             </Link>
           </Tooltip>
@@ -138,7 +148,8 @@ export default function Hero(): JSX.Element {
               background: 'black',
               color: 'white',
               border: '1px solid white',
-            }}>
+            }}
+          >
             <Text as='i' className='fas fa-user' />
             {t('aboutMe')}
           </Link>

@@ -6,12 +6,12 @@
  * @returns {void}
  */
 const pageview = (url, title = '', location = '') => {
-	window.gtag &&
-		window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
-			page_path: url,
-			page_title: title,
-			page_location: location,
-		})
+  window.gtag &&
+    window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+      page_path: url,
+      page_title: title,
+      page_location: location,
+    })
 }
 
 /**
@@ -31,16 +31,16 @@ const pageview = (url, title = '', location = '') => {
  * @returns {void}
  */
 const event = ({ action, category, label = '', value }) => {
-	window.gtag &&
-		window.gtag('event', action, {
-			event_category: category,
-			event_label: label,
-			value: value,
-		})
+  window.gtag &&
+    window.gtag('event', action, {
+      event_category: category,
+      event_label: label,
+      value: value,
+    })
 }
 
 const ga = {
-	event,
-	pageview,
+  event,
+  pageview,
 }
 export default ga

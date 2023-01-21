@@ -37,7 +37,7 @@ export default function ChangeLang() {
       )
       setSelectedLang(localeFiltered[0])
     }
-  }, [])
+  }, [router.locale])
 
   return (
     <Popover closeOnBlur={false} placement='bottom'>
@@ -58,11 +58,13 @@ export default function ChangeLang() {
               }}
               _active={{
                 boxShadow: '1px 2px 5px rgb(79, 79, 79)',
-              }}>
+              }}
+            >
               <Image
                 src={selectedLang ? selectedLang.flag : '/assets/navbar/world.svg'}
                 width={20}
                 height={20}
+                alt='country flag'
               />
               <Box transform={showLanguages ? 'rotate(180deg)' : ''}>
                 <MdKeyboardArrowDown />
@@ -77,7 +79,8 @@ export default function ChangeLang() {
           border='none'
           boxShadow='2px 2px 10px rgb(114, 114, 114)'
           fontWeight='bold'
-          w='80px'>
+          w='80px'
+        >
           <PopoverArrow bg='black' />
           <PopoverBody p='0' borderRadius='15px'>
             <Box
@@ -91,7 +94,8 @@ export default function ChangeLang() {
               alignItems='center'
               alignContent='center'
               right='0'
-              left='0'>
+              left='0'
+            >
               {localesList
                 .filter((locale) => locale.value !== selectedLang?.value)
                 .map((locale) => (
@@ -109,8 +113,14 @@ export default function ChangeLang() {
                     alignItems='center'
                     justifyContent='center'
                     gap='5px'
-                    onClick={() => handleChangeLang(locale)}>
-                    <Image src={locale.flag} width='26' height='16' />
+                    onClick={() => handleChangeLang(locale)}
+                  >
+                    <Image
+                      src={locale.flag}
+                      width='26'
+                      height='16'
+                      alt={`${locale.value} flag`}
+                    />
                     <Text fontSize='lg'>{locale.value.toUpperCase()}</Text>
                   </Box>
                 ))}

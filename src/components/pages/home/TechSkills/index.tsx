@@ -72,7 +72,8 @@ export default function TechSkills() {
           gap='2rem'
           mt='2rem'
           flexDirection={['column', 'column', 'row']}
-          gridTemplateColumns={'repeat(2, 150px)'}>
+          gridTemplateColumns={'repeat(2, 150px)'}
+        >
           {techIconsListState.map((item) => (
             <TechItem key={item.id} item={item} />
           ))}
@@ -81,14 +82,16 @@ export default function TechSkills() {
         <DndContext
           onDragEnd={handleDragEnd}
           sensors={sensors}
-          collisionDetection={closestCenter}>
+          collisionDetection={closestCenter}
+        >
           <SortableContext
             items={techIconsListState}
             strategy={
               isLargerThan800
                 ? horizontalListSortingStrategy
                 : verticalListSortingStrategy
-            }>
+            }
+          >
             <Box
               display={['grid', 'flex']}
               alignItems='center'
@@ -96,7 +99,8 @@ export default function TechSkills() {
               gap='2rem'
               mt='2rem'
               flexDirection={['column', 'row']}
-              gridTemplateColumns={'repeat(2, 150px)'}>
+              gridTemplateColumns={'repeat(2, 150px)'}
+            >
               {techIconsListState.map((item) => (
                 <TechItem key={item.id} item={item} />
               ))}
@@ -116,7 +120,8 @@ export default function TechSkills() {
           color='white'
           cursor='pointer'
           _hover={{ opacity: '1' }}
-          _active={{ color: 'blue.300' }}>
+          _active={{ color: 'blue.300' }}
+        >
           {t('seeMoreProjects')}...
         </Text>
       </Link>

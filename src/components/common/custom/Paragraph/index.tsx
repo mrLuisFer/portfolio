@@ -17,7 +17,8 @@ export default function Paragraph({ children, customColor, ...props }: Paragraph
       _hover={{
         color: 'whiteAlpha.700',
       }}
-      {...props}>
+      {...props}
+    >
       {children}
     </Text>
   )

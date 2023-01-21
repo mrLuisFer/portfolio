@@ -31,7 +31,8 @@ export default function Footer(): JSX.Element {
           justifyContent={['start', 'center']}
           flexDirection={['column', 'row']}
           alignItems='start'
-          gap={['2rem', '0']}>
+          gap={['2rem', '0']}
+        >
           <Box position='relative' width='150px' h='40px' cursor='pointer'>
             <Link href='/'>
               <a>
@@ -62,7 +63,8 @@ export default function Footer(): JSX.Element {
                         display='inline-block'
                         w='fit-content'
                         target='_blank'
-                        rel='noreferrer'>
+                        rel='noreferrer'
+                      >
                         {link.label}
                       </ChakraLink>
                     )
@@ -75,7 +77,8 @@ export default function Footer(): JSX.Element {
                         opacity='0.5'
                         _hover={{ opacity: '1' }}
                         display='inline-block'
-                        w='fit-content'>
+                        w='fit-content'
+                      >
                         {link.label}
                       </ChakraLink>
                     </Link>
@@ -90,7 +93,8 @@ export default function Footer(): JSX.Element {
           right={0}
           top={0}
           opacity='0.2'
-          _hover={{ opacity: '1' }}>
+          _hover={{ opacity: '1' }}
+        >
           <Tooltip label={t('goToTop')}>
             <Button
               bg='gray.900'
@@ -102,7 +106,8 @@ export default function Footer(): JSX.Element {
               }}
               _active={{
                 background: 'gray.900',
-              }}>
+              }}
+            >
               <BiUpArrow />
             </Button>
           </Tooltip>

@@ -41,7 +41,8 @@ export default function LikeToDo() {
         gap={['2rem', 20]}
         mt='2.5rem'
         templateColumns={['none', '1fr', `${hideEditor ? '1fr' : 'repeat(2, 400px)'}`]}
-        gridTemplateRows={[`${hideEditor ? '1fr' : '350px 1fr'}`, 'none']}>
+        gridTemplateRows={[`${hideEditor ? '1fr' : '350px 1fr'}`, 'none']}
+      >
         {hideEditor ? (
           <></>
         ) : (
@@ -64,14 +65,16 @@ export default function LikeToDo() {
             flexDirection='column'
             gap='1rem'
             minHeight={['500px', '600px']}
-            alignItems={['center', 'center', `${hideEditor ? 'center' : 'flex-start'}`]}>
+            alignItems={['center', 'center', `${hideEditor ? 'center' : 'flex-start'}`]}
+          >
             {likeToDoList.map((item) => (
               <Box
                 key={item.title}
                 border='none'
                 onMouseOver={() => setAccordionName(item.title)}
                 onMouseLeave={() => setAccordionName('')}
-                textAlign={['center', 'center', `${hideEditor ? 'center' : 'left'}`]}>
+                textAlign={['center', 'center', `${hideEditor ? 'center' : 'left'}`]}
+              >
                 <Heading
                   as='h3'
                   color='white'
@@ -79,13 +82,15 @@ export default function LikeToDo() {
                     item.title === iconActive || item.title === accordionName
                       ? '1'
                       : '0.6'
-                  }>
+                  }
+                >
                   {item.title}
                 </Heading>
                 {item.title === accordionName || item.title === iconActive ? (
                   <SlideFade
                     in={item.title === accordionName || item.title === iconActive}
-                    offsetY='20px'>
+                    offsetY='20px'
+                  >
                     <Text color='gray.500' _hover={{ color: 'white' }}>
                       {item.value}
                     </Text>
