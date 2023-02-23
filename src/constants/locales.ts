@@ -5,11 +5,11 @@ export type TLocale = {
 
 export const localesList: TLocale[] = [
   {
-    value: 'es',
-    flag: '/assets/navbar/mx.svg',
-  },
-  {
     value: 'en',
     flag: '/assets/navbar/us.svg',
+  },
+  {
+    value: 'es',
+    flag: '/assets/navbar/mx.svg',
   },
 ]

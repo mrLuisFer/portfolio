@@ -5,6 +5,21 @@ import Link from '../../../common/custom/Link'
 import Title from '../../../common/custom/Title'
 import Tooltip from 'src/components/common/custom/Tooltip'
 import { useTranslation } from 'src/hooks/useTranslation'
+import HighlightedParagraph from '../../../common/custom/HighlightedParagraph'
+import HeroAnimatedImg from './HeroAnimatedImg'
+
+const heroSocialMedia = [
+  {
+    href: linkedin,
+    label: 'LinkedIn',
+    icon: 'fab fa-linkedin-in',
+  },
+  {
+    href: github,
+    label: 'GitHub',
+    icon: 'fab fa-github',
+  },
+]
 
 export default function Hero(): JSX.Element {
   const { t } = useTranslation()
@@ -12,31 +27,28 @@ export default function Hero(): JSX.Element {
   return (
     <Box
       display='flex'
-      justifyContent={['center', 'space-around']}
+      justifyContent={['center', 'center']}
       flexDirection={['column', 'row']}
-      gap={['1rem', '0']}
-    >
-      <Image
-        width='300px'
-        height='300px'
-        src='/assets/hero-illustration.svg'
-        alt='Illustration of a developer person making code'
-      />
+      alignItems={['', 'flex-start']}
+      gap={['1rem', '2rem']}>
+      <HeroAnimatedImg />
       <div>
         <Box>
           <Box>
-            <Text fontSize={['4xl', '3xl']} display={['none', 'block']} opacity='0.5'>
+            <Text
+              fontSize={['4xl', '3xl', '4xl']}
+              display={['none', 'block']}
+              opacity='0.5'>
               {t('hello')}!
             </Text>
             <Text
               as='div'
-              fontSize='4xl'
+              fontSize={['4xl', '4xl', '5xl']}
               display='flex'
               alignItems='center'
               gap='0.5rem'
               justifyContent={['center', 'flex-start']}
-              fontWeight='bold'
-            >
+              fontWeight='bold'>
               {t('heroIam')}{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
                 <Link
@@ -48,7 +60,7 @@ export default function Hero(): JSX.Element {
                   fontWeight='extrabold'
                   transition='0.15s ease'
                   noBrightness
-                >
+                  fontSize={['4xl', '4xl', '5xl']}>
                   Luis Alvarez
                   <Text as='i' className='fas fa-code' />
                 </Link>
@@ -65,43 +77,18 @@ export default function Hero(): JSX.Element {
               bgAnimate
               display={['block', 'inline-block']}
               textAlign={['center', 'left']}
-              margin={['0.5rem auto 0', '0.5rem 0 0 0']}
-            >
-              {/* Frontend <Text as='span'>Developer</Text> */}
+              margin={['0.5rem auto 0', '0.5rem 0 0 0']}>
               {t('heroJob')}
             </Title>
-            <Text
-              as='p'
-              fontSize='lg'
-              opacity='0.8'
-              textAlign={['center', 'left']}
-              m={['1rem 1.5rem 0 1.5rem', '1rem 0 0']}
-            >
-              {t('specializedIn')}{' '}
-              <Title
-                id='js-label'
-                as='span'
-                weight='bold'
-                colorscheme='yellow'
-                fontSize='lg'
-                opacity='1'
-              >
-                Javascript
-              </Title>{' '}
-              &{' '}
-              <Title
-                id='react-label'
-                as='span'
-                opacity='1'
-                weight='bold'
-                fontSize='lg'
-                colorscheme='darkBlue'
-              >
-                React
-              </Title>{' '}
+            <HighlightedParagraph color='darkBlue'>
+              {t('specializedIn')} <span>Javascript</span>, <span> Typescript</span> &
+              <span> React.js </span>
               {t('forUi')} <Box as='br' display={['none', 'block']} />
               {t('andWebAplications')}
-            </Text>
+            </HighlightedParagraph>
+            <HighlightedParagraph color='orange'>
+              {t('And')} <span>Node.js</span> {t('for Backend Development')}
+            </HighlightedParagraph>
           </Box>
         </Box>
         <Box
@@ -109,30 +96,27 @@ export default function Hero(): JSX.Element {
           alignItems='center'
           justifyContent={['center', 'flex-start']}
           gap='2rem'
-          mt='2rem'
-        >
-          <Tooltip label='LinkedIn'>
-            <Link
-              href={linkedin}
-              fontSize='xl'
-              external
-              opacity='0.8'
-              _hover={{ opacity: '1' }}
-            >
-              <Text as='i' className='fab fa-linkedin-in' />
-            </Link>
-          </Tooltip>
-          <Tooltip label='GitHub'>
-            <Link
-              href={github}
-              fontSize='xl'
-              external
-              opacity='0.8'
-              _hover={{ opacity: '1' }}
-            >
-              <Text as='i' className='fab fa-github' />
-            </Link>
-          </Tooltip>
+          mt='2rem'>
+          {heroSocialMedia.map((social) => (
+            <Tooltip label={social.label} key={social.label}>
+              <Link
+                href={social.href}
+                fontSize='xl'
+                external
+                opacity='0.8'
+                _hover={{ opacity: '1' }}>
+                <Text
+                  as='i'
+                  className={social.icon}
+                  transition={'0.15s ease'}
+                  _hover={{
+                    transform: 'scale(1.2)',
+                    filter: 'drop-shadow(0px 0px 5px rgb(255, 255, 255, 0.5))',
+                  }}
+                />
+              </Link>
+            </Tooltip>
+          ))}
           <Link
             href='/#about'
             display='flex'
@@ -144,12 +128,14 @@ export default function Hero(): JSX.Element {
             background='white'
             color='black'
             border='1px solid black'
+            transition='0.15s ease'
             _hover={{
               background: 'black',
               color: 'white',
               border: '1px solid white',
-            }}
-          >
+              transform: 'scale(1.05)',
+              boxShadow: '0 0 10px 0 rgba(255,255,255,0.3)',
+            }}>
             <Text as='i' className='fas fa-user' />
             {t('aboutMe')}
           </Link>

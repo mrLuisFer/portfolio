@@ -6,14 +6,14 @@ import paths from 'src/constants/paths'
 const NavBarLogo = () => (
   <Box position='relative' width='150px' h='40px' cursor='pointer'>
     <Link href={paths.root}>
-      <a>
+      <Box as='a'>
         <Image
           draggable='false'
           src='/assets/footer/logo.svg'
           alt='mrLuisFer logo'
           layout='fill'
         />
-      </a>
+      </Box>
     </Link>
   </Box>
 )

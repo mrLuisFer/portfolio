@@ -29,8 +29,7 @@ const Link = ({
           textDecoration: 'none',
           filter: noBrightness ? '' : 'brightness(1.1)',
         }}
-        {...props}
-      >
+        {...props}>
         {children}
       </ChakraLink>
     )
@@ -46,8 +45,7 @@ const Link = ({
           textDecoration: 'none',
           filter: noBrightness ? '' : 'brightness(1.1)',
         }}
-        {...props}
-      >
+        {...props}>
         {children}
       </ChakraLink>
     </NextLink>
