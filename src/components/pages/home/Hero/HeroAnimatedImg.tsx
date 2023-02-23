@@ -64,9 +64,10 @@ export default function HeroAnimatedImg() {
         }}>
         <Box
           position='relative'
-          transition='all 0.3s ease'
+          transition='all 0.5s ease-in'
           _hover={{
             filter: 'drop-shadow(3px 3px 15px rgb(255, 205, 130, 0.5)) brightness(1.3)',
+            transition: 'all 0.5s ease-out',
           }}>
           <Image
             src='/assets/hero/sparkles-icon.svg'
