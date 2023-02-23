@@ -48,7 +48,8 @@ export default function Hero(): JSX.Element {
               alignItems='center'
               gap='0.5rem'
               justifyContent={['center', 'flex-start']}
-              fontWeight='bold'>
+              fontWeight='bold'
+            >
               {t('heroIam')}{' '}
               <Title id='titleName' colorscheme='blue' bgAnimate>
                 <Link
