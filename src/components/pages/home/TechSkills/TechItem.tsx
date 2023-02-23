@@ -20,7 +20,6 @@ export default function TechItem({ item }: { item: TechIcons }) {
         key={item.label}
         fontSize={['30px', '50px']}
         opacity='0.8'
-        transition='0.1s ease'
         _hover={{ opacity: '1', color: item.color }}
         cursor='grab'
         _active={{
