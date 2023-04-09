@@ -1,7 +1,5 @@
 import { Box, Text, useMediaQuery } from '@chakra-ui/react'
-import Link from 'next/link'
 import Title from '../../../common/custom/Title'
-import paths from 'src/constants/paths'
 import TechItem from './TechItem'
 import { useState } from 'react'
 import { TechIcons, techIconsList } from './techIconsList'
@@ -72,8 +70,7 @@ export default function TechSkills() {
           gap='2rem'
           mt='2rem'
           flexDirection={['column', 'column', 'row']}
-          gridTemplateColumns={'repeat(2, 150px)'}
-        >
+          gridTemplateColumns={'repeat(2, 150px)'}>
           {techIconsListState.map((item) => (
             <TechItem key={item.id} item={item} />
           ))}
@@ -82,16 +79,14 @@ export default function TechSkills() {
         <DndContext
           onDragEnd={handleDragEnd}
           sensors={sensors}
-          collisionDetection={closestCenter}
-        >
+          collisionDetection={closestCenter}>
           <SortableContext
             items={techIconsListState}
             strategy={
               isLargerThan800
                 ? horizontalListSortingStrategy
                 : verticalListSortingStrategy
-            }
-          >
+            }>
             <Box
               display={['grid', 'flex']}
               alignItems='center'
@@ -99,8 +94,7 @@ export default function TechSkills() {
               gap='2rem'
               mt='2rem'
               flexDirection={['column', 'row']}
-              gridTemplateColumns={'repeat(2, 150px)'}
-            >
+              gridTemplateColumns={'repeat(2, 150px)'}>
               {techIconsListState.map((item) => (
                 <TechItem key={item.id} item={item} />
               ))}
@@ -108,23 +102,16 @@ export default function TechSkills() {
           </SortableContext>
         </DndContext>
       )}
-      <Link href={paths.projects}>
-        <Text
-          as='a'
-          textAlign='center'
-          mt={['2rem', '1rem']}
-          fontSize='1rem'
-          fontWeight='bold'
-          opacity='0.5'
-          display='block'
-          color='white'
-          cursor='pointer'
-          _hover={{ opacity: '1' }}
-          _active={{ color: 'blue.300' }}
-        >
-          {t('seeMoreProjects')}...
-        </Text>
-      </Link>
+      <Text
+        textAlign='center'
+        mt={['2rem', '1rem']}
+        fontSize='1rem'
+        fontWeight='bold'
+        opacity='0.5'
+        display='block'
+        color='white'>
+        {t('andLearningMore')}...
+      </Text>
     </Box>
   )
 }

@@ -19,20 +19,18 @@ export default function TechItem({ item }: { item: TechIcons }) {
       <Box
         key={item.label}
         fontSize={['30px', '50px']}
-        opacity='0.8'
-        _hover={{ opacity: '1', color: item.color }}
+        _hover={{ filter: 'brightness(1.2)' }}
         cursor='grab'
         _active={{
           cursor: 'grabbing',
         }}
-      >
+        color={item.color}>
         <Tooltip label={item.label}>
           <Box
             display={'flex'}
             alignItems='center'
             gap={3}
-            justifyContent={['center', 'center', 'flex-start']}
-          >
+            justifyContent={['center', 'center', 'flex-start']}>
             <Box>{item.icon}</Box>
             <Text fontSize='lg' display={['block', 'none']}>
               {item.label}

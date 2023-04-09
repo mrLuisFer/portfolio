@@ -4,6 +4,7 @@ import LikeToDo from 'src/components/pages/home/LikeToDo/LikeToDo'
 import { NextPage } from 'next/types'
 import TechSkills from 'src/components/pages/home/TechSkills'
 import SEO from 'src/components/common/SEO'
+import Projects from 'src/components/pages/home/Projects'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <AboutResume />
       <LikeToDo />
       <TechSkills />
+      <Projects />
     </>
   )
 }
