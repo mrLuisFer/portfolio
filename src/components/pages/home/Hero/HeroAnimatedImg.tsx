@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Image from 'next/image'
 import { Box } from '@chakra-ui/react'
+import { useMediaQuery } from '@chakra-ui/react'
 
 export default function HeroAnimatedImg() {
   const [isHover, setIsHover] = useState<boolean>(false)
@@ -34,6 +35,7 @@ export default function HeroAnimatedImg() {
         perspective: 500,
         width: '300px',
         height: '300px',
+        // margin: isLargerThan600 ? '0' : '0 auto',
       }}>
       <motion.div
         drag

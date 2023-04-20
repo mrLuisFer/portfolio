@@ -74,9 +74,10 @@ export default function Projects() {
                   color='inherit'
                   fontSize={20}
                   zIndex={10}
+                  opacity={0.8}
                   _hover={{
                     transform: 'scale(1.1)',
-                    color: 'cyan.200',
+                    opacity: 1,
                   }}>
                   <BsGithub />
                 </Box>

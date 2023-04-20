@@ -147,6 +147,28 @@ const projectsList: Project[] = [
       },
     ],
   },
+  {
+    id: v4(),
+    name: 'GH Finder',
+    description: 'A simple app for search users in Github',
+    image: '/images/projects/gh-finder.png',
+    link: 'https://gh-find.netlify.app/',
+    github: 'https://github.com/mrLuisFer/gh-card-profile',
+    technologies: [
+      {
+        name: 'Sass',
+        icon: FaSass,
+      },
+      {
+        name: 'HTML',
+        icon: SiHtml5,
+      },
+      {
+        name: 'Javascript',
+        icon: SiJavascript,
+      },
+    ],
+  },
 ]
 
 export default projectsList
