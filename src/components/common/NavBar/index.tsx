@@ -30,11 +30,6 @@ const getSocialMediaIcons = (t: (key: string) => string): ISocialMediaIcons[] =>
     label: 'LinkedIn',
     external: true,
   },
-  {
-    href: paths.contact,
-    label: t('contactMe'),
-    external: false,
-  },
 ]
 
 export default function NavBar(): JSX.Element {
@@ -48,8 +43,7 @@ export default function NavBar(): JSX.Element {
         display={['none', 'none', 'flex']}
         justifyContent='space-between'
         pt='1rem'
-        mb='3rem'
-      >
+        mb='3rem'>
         <NavBarLogo />
         <Box as='nav' display='flex' alignItems='center' gap='1rem'>
           {socialMediaIcons.map((item) => (

@@ -28,7 +28,7 @@ export const useFetch = (url: string) => {
     }
 
     fetchData()
-  }, [url])
+  }, [data, url])
 
   return { status, data }
 }

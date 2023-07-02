@@ -8,6 +8,9 @@ import {
   SiSocketdotio,
   SiJavascript,
   SiHtml5,
+  SiTypescript,
+  SiSupabase,
+  SiJira,
 } from 'react-icons/si'
 
 interface Technology {
@@ -166,6 +169,37 @@ const projectsList: Project[] = [
       {
         name: 'Javascript',
         icon: SiJavascript,
+      },
+    ],
+  },
+  {
+    id: v4(),
+    name: 'Planning App',
+    description:
+      'A planning poker app to select story points, made with React and Supabase',
+    image: '/images/projects/planning.png',
+    link: 'https://planning-pocket.vercel.app',
+    github: '',
+    technologies: [
+      {
+        name: 'Typescript',
+        icon: SiTypescript,
+      },
+      {
+        name: 'React',
+        icon: FaReact,
+      },
+      {
+        name: 'Supabase',
+        icon: SiSupabase,
+      },
+      {
+        name: 'Jira API',
+        icon: SiJira,
+      },
+      {
+        name: 'Tailwind CSS',
+        icon: SiTailwindcss,
       },
     ],
   },

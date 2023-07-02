@@ -3,7 +3,7 @@ import Title from 'src/components/common/custom/Title'
 import { useTranslation } from 'src/hooks/useTranslation'
 import projectsList from './projectsList'
 import { BsGithub } from 'react-icons/bs'
-import { FiExternalLink } from 'react-icons/fi'
+import { FiArrowUpRight, FiExternalLink } from 'react-icons/fi'
 
 export default function Projects() {
   const { t } = useTranslation()
@@ -83,7 +83,7 @@ export default function Projects() {
                 </Box>
                 <Box
                   as='a'
-                  href={project.github}
+                  href={project.link}
                   target='_blank'
                   rel='noopener noreferrer'
                   color='green.200'
@@ -99,6 +99,24 @@ export default function Projects() {
           </Box>
         ))}
       </Flex>
+      <Box display='flex' justifyContent='center'>
+        <Text
+          as='a'
+          href='https://github.com/mrLuisFer?tab=repositories'
+          display='flex'
+          alignItems='center'
+          color='white'
+          target='_blank'
+          rel='noopener noreferrer'
+          fontWeight='semibold'
+          _hover={{
+            color: 'orange.300',
+          }}
+          gap='1'>
+          {t('moreProjects')}
+          <FiArrowUpRight />
+        </Text>
+      </Box>
     </Box>
   )
 }
