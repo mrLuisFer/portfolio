@@ -89,21 +89,18 @@ export default function NavBarMobile() {
         alignItems='center'
         justifyContent='space-between'
         pt='1rem'
-        mb='3rem'
-      >
+        mb='3rem'>
         <NavBarLogo />
         <Box as='button' onClick={onOpen} fontSize='2rem' ref={btnRef}>
           <HiOutlineMenuAlt3 />
         </Box>
       </Box>
-
       <Drawer
         isOpen={isOpen}
         placement='right'
         onClose={onClose}
         finalFocusRef={btnRef}
-        size='full'
-      >
+        size='full'>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton fontSize={15} />

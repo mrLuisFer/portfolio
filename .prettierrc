@@ -10,5 +10,6 @@
   "useTabs": false,
   "jsxSingleQuote": true,
   "quoteProps": "as-needed",
-  "jsxBracketSameLine": true
+  "jsxBracketSameLine": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }

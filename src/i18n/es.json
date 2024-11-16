@@ -1,10 +1,12 @@
 {
   "hello": "Hola",
   "heroIam": "Soy",
-  "heroJob": "Desarrollador Frontend",
+  "heroJob": "Desarrollador Software",
   "specializedIn": "Especializado en",
-  "forUi": "para UI",
-  "andWebAplications": "y Aplicaciones Web",
+  "for": "para",
+  "Ui": "UI",
+  "and": "y",
+  "webAplications": "Aplicaciones Web",
   "aboutMe": "Sobre Mí",
   "contactMe": "Contáctame",
   "sendEmail": "Enviar email",
@@ -44,5 +46,6 @@
   "canDragDropItem": "Puedes arrastrar y soltar los elementos",
   "for Backend Development": "para el desarrollo de Backend",
   "And": "Y",
-  "BackToHome": "Volver al inicio"
+  "BackToHome": "Volver al inicio",
+  "Also": "También"
 }

@@ -1,13 +1,12 @@
 import NavBar from 'src/components/common/NavBar'
 import Footer from 'src/components/common/Footer'
-import { Container } from '@chakra-ui/react'
 
-export default function Layout({ children }: { children: any }): JSX.Element {
+export default function AppLayout({ children }: { children: any }): JSX.Element {
   return (
-    <Container maxW='container.xl' overflowX='hidden'>
+    <div className='container mx-auto pt-5'>
       <NavBar />
       {children}
-      <Footer />
-    </Container>
+      {/*<Footer />*/}
+    </div>
   )
 }

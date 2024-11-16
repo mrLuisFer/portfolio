@@ -7,10 +7,8 @@ export const useFetch = (url: string) => {
   const [data, setData] = useState<Array<Object>>([])
 
   useEffect(() => {
-    if (!url) return
-
-    // Fetching the data
-    const fetchData = async () => {
+    if (!url) return // Fetching the data
+    ;(async () => {
       setStatus('fetching')
 
       // Check if the data was in the cache
@@ -25,9 +23,7 @@ export const useFetch = (url: string) => {
         setData(resData)
         setStatus('fetched')
       }
-    }
-
-    fetchData()
+    })()
   }, [data, url])
 
   return { status, data }

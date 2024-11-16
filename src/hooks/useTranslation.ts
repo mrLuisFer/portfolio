@@ -1,7 +1,9 @@
-import { useRouter } from 'next/router'
+'use client'
 import getValueAtPathOfObject from '../utils/getValueAtPathOfObject'
 import en from '../i18n/en.json'
 import es from '../i18n/es.json'
+import { useContext } from 'react'
+import { LanguageContext } from '@/context/languageContext'
 
 const locales: any = {
   en,
@@ -9,25 +11,16 @@ const locales: any = {
 }
 
 export const useTranslation = () => {
-  const router = useRouter()
-  const { locale } = router
-  const language = locale!
-
+  const { language } = useContext(LanguageContext)
   const t = (key: string): string =>
-    getValueAtPathOfObject(locales[locale || ''], key) || key
+    getValueAtPathOfObject(locales[language || ''], key) || key
 
   const staticTranslate = (key = '', lan = 'en') => {
-    getValueAtPathOfObject(locales[lan], key) || key
-  }
-
-  const changeLanguage = (locale: string) => {
-    router.push(router.pathname, router.asPath, { locale })
+    getValueAtPathOfObject(locales[lan ?? language], key) || key
   }
 
   return {
     t,
     st: staticTranslate,
-    language,
-    changeLanguage,
   }
 }

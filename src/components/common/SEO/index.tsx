@@ -1,5 +1,5 @@
+'use client'
 import { NextSeo } from 'next-seo'
-import PropTypes from 'prop-types'
 
 interface SEOProps {
   title: string
@@ -29,9 +29,4 @@ export default function SEO({ title, description, ...props }: SEOProps) {
       {...props}
     />
   )
-}
-
-SEO.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
 }

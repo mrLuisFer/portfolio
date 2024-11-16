@@ -1,0 +1,663 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+:root {
+  /* Fonts */
+  --open-sans-font: 'Open Sans', sans-serif;
+  --inter-font: 'Inter', sans-serif;
+
+  /* Color Palette */
+  --powder-blue: #caf0f8;
+  --gainsboro: #d8e1e9;
+  --beau-blue: #c5d5ea;
+  --light-gray: #ecf2f8;
+  --cultured: #f8f9fa;
+  --cerulean-blue: #7392b7;
+  --state-gray: #6c757d;
+  --independence: #33415c;
+  --oxford-blue: #002855;
+  --semi-purple: #21209c;
+  --blue-background: #2f3292;
+  --cerulean-crayola: #00b4d8;
+  --usafa-blue: #0353a4;
+  --true-blue: #0466c8;
+  --command-blue: #0077b6;
+  --oxford-dark-blue: #001233;
+  --rich-black: #0b090a;
+  --dark: #0d1b2a;
+  --dark-gray: #212529;
+  --honey-yellow: #ffcd3c;
+  --orange: #fb8500;
+  --green: #9efcd0;
+  /* Shadow Color */
+  --shadow-color: rgba(33, 37, 41, 0.4);
+  /* root properties */
+  font-size: 16px;
+
+  /* Linkedin Color */
+  --linkedin-color: #0e76a8;
+  /* Github Color */
+  --github-color: #211f1f;
+  /* Linear Gradient Colors */
+  --blue: linear-gradient(90deg, rgba(4, 102, 200, 1) 30%, rgba(3, 83, 164, 1) 95%);
+
+  --blue-bg: linear-gradient(130deg, rgba(71, 63, 173, 1) 34%, rgba(42, 34, 144, 1) 94%);
+
+  --dark-blue-bg: linear-gradient(130deg, rgb(46, 42, 105) 45%, rgb(12, 8, 69) 85%);
+  /* Animate Css (Delay) */
+  --animate-delay: 0.2s;
+
+  --radius: 10px;
+  --transition: 0.1s ease-in;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 0.15s ease;
+}
+
+body {
+  margin: 0;
+  font-family:
+    var(--open-sans-font),
+    -apple-system,
+    'Segoe UI',
+    'Roboto',
+    sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  overflow-x: hidden;
+  padding: 0;
+  background-color: #000;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* img,
+img {
+  user-select: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--rich-black);
+  border-radius: var(--radius);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rich-black);
+}
+
+/* This doesnt change */
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+/**
+   This is because in styled components for some reason
+   the pseudo classes ::after doesnt work
+
+   You need to change this props
+   @param content: string = '',
+   @param top: number = 0
+   @param left: number = 0
+*/
+
+.HeroLinksGithub:hover::after {
+  content: 'Github';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: -0.3rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarLogo:hover::after {
+  content: 'Luis Alvarez';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 4rem;
+  left: 0;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.HeroLinksLinkedin:hover::after {
+  content: 'LinkedIn';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: -2rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorFacebook:hover::after {
+  content: 'Facebook';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: 0rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorTwitter:hover::after {
+  content: 'Twitter';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: 0rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorLinkedin:hover::after {
+  content: 'LinkedIn';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: 0rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.NavBarSocialMediaAnchorMailTo:hover::after {
+  content: 'Mail to mrLuisFer';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 1.7rem;
+  left: -3rem;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.AboutResumeInfoText-a {
+  position: relative;
+}
+
+.AboutResumeInfoText-a:hover::after {
+  content: 'mrLuisFer | Curriculum Vitae';
+  position: absolute;
+  background: var(--dark-gray);
+  width: auto;
+  height: auto;
+  top: 3.5rem;
+  left: 0;
+  padding: 0.5rem;
+  font-family: var(--open-sans-font);
+  color: var(--gainsboro);
+  font-size: 0.7rem;
+  border-radius: var(--radius);
+  visibility: hidden;
+  animation: 0.4s fadeIn;
+  animation-fill-mode: forwards;
+  transition: all var(--transition);
+  -webkit-transition: all var(--transition);
+}
+
+.loader {
+  color: #0466c8;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation:
+    load6 1.7s infinite ease,
+    round 1.7s infinite ease;
+  animation:
+    load6 1.7s infinite ease,
+    round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em,
+      -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em,
+      -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em,
+      -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em,
+      -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em,
+      -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em,
+      -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  color: #0466c8;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation:
+    load6 1.7s infinite ease,
+    round 1.7s infinite ease;
+  animation:
+    load6 1.7s infinite ease,
+    round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em,
+      -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em,
+      -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em,
+      -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em,
+      -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em,
+      -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em,
+      -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow:
+      0 -0.83em 0 -0.4em,
+      0 -0.83em 0 -0.42em,
+      0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em,
+      0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: 2s rotate360 infinite linear;
+}
+
+@keyframes rotate360 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

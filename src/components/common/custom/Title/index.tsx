@@ -1,10 +1,8 @@
-import { Text, ChakraProps, Heading } from '@chakra-ui/react'
 import colors, { GradientColors } from 'src/utils/gradientColors'
 
 interface TitleProps {
   children: any
   id?: string
-  helperProps?: ChakraProps
   helperText?: string
   colorscheme?: keyof GradientColors
   weight?:
@@ -18,47 +16,32 @@ interface TitleProps {
     | 'extrabold'
     | 'black'
   bgAnimate?: boolean
-  [props: string]: ChakraProps | any
 }
 
 export default function Title({
   children,
   id = '',
   helperText,
-  helperProps,
   colorscheme = 'default',
   weight = 'extrabold',
   bgAnimate = false,
   ...props
 }: TitleProps) {
   return (
-    <Heading
+    <p
       key={id}
       id={id}
-      as='h2'
-      fontWeight={weight}
-      transition='0.15s ease'
-      bgClip={colorscheme ? 'text' : ''}
-      bgGradient={colorscheme ? colors[colorscheme] : ''}
-      _hover={{
-        backgroundPosition: bgAnimate ? '-5.5em -4em' : '',
-      }}
+      className={`bg-gradient-to-r from-transparent to-transparent bg-clip-text text-transparent transition font-${weight} ${
+        bgAnimate ? 'bg-animate' : ''
+      } ${colorscheme ? `bg-[${colorscheme}]` : ''}`}
       {...props}
     >
       {children}
       {helperText && (
-        <Text
-          as='span'
-          display='block'
-          fontSize={['md', 'lg']}
-          color='gray.500'
-          opacity='0.8'
-          fontWeight='medium'
-          {...helperProps}
-        >
+        <span className='block text-base font-medium text-gray-500 opacity-80 sm:text-lg'>
           {helperText}
-        </Text>
+        </span>
       )}
-    </Heading>
+    </p>
   )
 }

@@ -1,4 +1,3 @@
-import { Text } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import Title from 'src/components/common/custom/Title'
 import { GradientColors } from 'src/utils/gradientColors'
@@ -15,26 +14,17 @@ export default function HighlightedParagraph({
   if (!children) return <></>
 
   return (
-    <Text
-      as='p'
-      fontSize='lg'
-      opacity='0.8'
-      _hover={{ opacity: '1' }}
-      textAlign={['center', 'left']}
-      m={['1rem 1.5rem 0 1.5rem', '1rem 0 0']}>
+    <p className='mb-6 ml-0 mr-6 mt-4 text-center text-lg opacity-80 transition hover:opacity-100 sm:text-left'>
       {children.map((child: any) => {
         if (child.type === 'span') {
           return (
-            <Title
+            <span
               key={child.props.children}
               id={child.props.children}
-              as='span'
-              weight='bold'
-              colorscheme={color}
-              fontSize='lg'
-              opacity='1'>
+              className={`text-lg font-bold transition text-[${color}]`}
+            >
               {child.props.children}
-            </Title>
+            </span>
           )
         } else {
           return child
@@ -47,6 +37,6 @@ export default function HighlightedParagraph({
         colorscheme='yellow'
         fontSize='lg'
         opacity='1'></Title> */}
-    </Text>
+    </p>
   )
 }

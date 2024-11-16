@@ -12,8 +12,11 @@ export const fontWeight = (
 
     &:hover {
       color: ${fontColor};
-      text-shadow: -0.2px -0.2px 0 ${fontColor}, 0.2px -0.2px 0 ${fontColor},
-        -0.2px 0.2px 0 ${fontColor}, 0.2px 0.2px 0 ${fontColor};
+      text-shadow:
+        -0.2px -0.2px 0 ${fontColor},
+        0.2px -0.2px 0 ${fontColor},
+        -0.2px 0.2px 0 ${fontColor},
+        0.2px 0.2px 0 ${fontColor};
 
       -webkit-transition: all 0.4s;
       -moz-transition: all 0.4s;

@@ -1,12 +1,6 @@
 import { GradientColors } from 'src/utils/gradientColors'
 import paths from 'src/constants/paths'
-import {
-  facebook,
-  github,
-  linkedin,
-  twitter,
-  gitlab,
-} from 'src/utils/social-links/socialLinks'
+import { facebook, github, linkedin, twitter, gitlab } from 'src/utils/socialLinks'
 
 interface FooterLink {
   label: string
