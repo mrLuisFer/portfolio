@@ -58,7 +58,7 @@ export default function Editor({
         setEditorUrl={setEditorUrl}
         handleClickIcon={handleClickIcon}
       />
-      <EditorContent icon={currentIcon} />
+      <EditorContent icon={currentIcon} editorUrl={editorUrl} />
     </div>
   )
 }

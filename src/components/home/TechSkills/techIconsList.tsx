@@ -23,6 +23,13 @@ import LuaIcon from '@/components/common/Icons/Lua'
 import JavaIcon from '@/components/common/Icons/Java'
 import TailwindCSSIcon from '@/components/common/Icons/TailwindCss'
 import SvelteIcon from '@/components/common/Icons/Svelte'
+import PrettierIcon from '@/components/common/Icons/Prettier'
+import ViteIcon from '@/components/common/Icons/Vite'
+import DenoIcon from '@/components/common/Icons/Deno'
+import ReactRouterIcon from '@/components/common/Icons/ReactRouter'
+import JQueryIcon from '@/components/common/Icons/JQuery'
+import ChakraUIIcon from '@/components/common/Icons/Chakra'
+import BunIcon from '@/components/common/Icons/Bun'
 
 export interface TechIcons {
   icon: any
@@ -139,5 +146,33 @@ export const minorTechList: TechIcons[] = [
   {
     icon: <StyledComponentsIcon />,
     label: 'Styled Components',
+  },
+  {
+    icon: <PrettierIcon />,
+    label: 'Prettier',
+  },
+  {
+    icon: <ViteIcon />,
+    label: 'Vite',
+  },
+  {
+    icon: <DenoIcon />,
+    label: 'Deno',
+  },
+  {
+    icon: <ReactRouterIcon />,
+    label: 'React Router',
+  },
+  {
+    icon: <JQueryIcon />,
+    label: 'JQuery',
+  },
+  {
+    icon: <ChakraUIIcon />,
+    label: 'Chakra UI',
+  },
+  {
+    icon: <BunIcon />,
+    label: 'Bun',
   },
 ]

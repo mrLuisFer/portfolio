@@ -10,6 +10,7 @@ type GlowBoxProps = {
   padding?: number
   defaultBorder?: string
   className?: string
+  width?: string
 }
 type MousePosition = {
   x: number
@@ -30,7 +31,7 @@ const GlowBoxStyled = styled.div<GlowBoxStyledProps>`
   position: relative;
   text-align: center;
   transition: 0.15ms ease;
-  width: fit-content;
+  width: ${(props) => props.attrs.width || 'fit-content'};
 
   &:hover {
     transition: 0.15ms ease;
@@ -70,6 +71,7 @@ export default function GlowBox({
   padding = 20,
   defaultBorder = 'transparent',
   className,
+  width,
 }: GlowBoxProps) {
   const [position, setPosition] = useState<MousePosition>({ x: 0, y: 0 })
 
@@ -82,7 +84,7 @@ export default function GlowBox({
     <GlowBoxStyled
       className={className}
       onMouseMove={handleMouseMove}
-      attrs={{ color, backgroundColor, borderColor, size, padding, defaultBorder }}
+      attrs={{ color, backgroundColor, borderColor, size, padding, defaultBorder, width }}
       style={
         {
           '--x': position.x + 'px',
