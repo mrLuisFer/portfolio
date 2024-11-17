@@ -30,6 +30,7 @@ import ReactRouterIcon from '@/components/common/Icons/ReactRouter'
 import JQueryIcon from '@/components/common/Icons/JQuery'
 import ChakraUIIcon from '@/components/common/Icons/Chakra'
 import BunIcon from '@/components/common/Icons/Bun'
+import AstroIcon from '@/components/common/Icons/Astro'
 
 export interface TechIcons {
   icon: any
@@ -174,5 +175,9 @@ export const minorTechList: TechIcons[] = [
   {
     icon: <BunIcon />,
     label: 'Bun',
+  },
+  {
+    icon: <AstroIcon />,
+    label: 'Astro',
   },
 ]

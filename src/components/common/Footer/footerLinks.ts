@@ -1,14 +1,14 @@
 import { GradientColors } from 'src/utils/gradientColors'
 import paths from 'src/constants/paths'
-import { facebook, github, linkedin, twitter, gitlab } from 'src/utils/socialLinks'
+import { SocialMedia } from '@/constants/socialMedia'
 
-interface FooterLink {
+export interface FooterLink {
   label: string
   href: string
   isExternal: boolean
 }
 
-interface FooterElements {
+export interface FooterElements {
   title: string
   titleColor: keyof GradientColors
   links: FooterLink[]
@@ -19,11 +19,10 @@ export const getFooterElements = (t: (key: string) => string): FooterElements[] 
     title: t('social'),
     titleColor: 'darkBlue',
     links: [
-      { label: 'Twitter', href: twitter, isExternal: true },
-      { label: 'GitHub', href: github, isExternal: true },
-      { label: 'LinkedIn', href: linkedin, isExternal: true },
-      { label: 'Facebook', href: facebook, isExternal: true },
-      { label: 'Gitlab', href: gitlab, isExternal: true },
+      { label: 'Twitter', href: SocialMedia.twitter, isExternal: true },
+      { label: 'GitHub', href: SocialMedia.github, isExternal: true },
+      { label: 'LinkedIn', href: SocialMedia.linkedin, isExternal: true },
+      { label: 'Gitlab', href: SocialMedia.gitlab, isExternal: true },
     ],
   },
   {
@@ -31,17 +30,17 @@ export const getFooterElements = (t: (key: string) => string): FooterElements[] 
     titleColor: 'orange',
     links: [
       {
-        label: t('contact'),
-        href: paths.contact,
-        isExternal: false,
+        label: 'Contact me',
+        href: SocialMedia.linkedinContact,
+        isExternal: true,
       },
       {
-        label: t('projects'),
-        href: paths.projects,
-        isExternal: false,
+        label: 'More projects',
+        href: SocialMedia.githhubRepositories,
+        isExternal: true,
       },
       {
-        label: 'Blog',
+        label: 'Blog (Deprecated)',
         href: 'https://mrluisfer-blog.netlify.app/',
         isExternal: true,
       },
@@ -72,8 +71,8 @@ export const getFooterElements = (t: (key: string) => string): FooterElements[] 
         isExternal: true,
       },
       {
-        label: `${t('moreProjects')}...`,
-        href: 'https://github.com/mrLuisFer?tab=repositories',
+        label: 'SVGL (Used in this site)',
+        href: 'https://svgl.app',
         isExternal: true,
       },
     ],

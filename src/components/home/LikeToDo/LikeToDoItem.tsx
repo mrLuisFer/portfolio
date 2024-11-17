@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useMemo } from 'react'
 import { LikeTodo } from './likeTodoList'
 
 type LikeToDoItemProps = {
@@ -11,18 +11,22 @@ export default function LikeToDoItem({
   iconActive,
   accordionName,
 }: LikeToDoItemProps) {
+  const isActive = useMemo(
+    () => item.title === iconActive || item.title === accordionName,
+    [item.title, iconActive, accordionName]
+  )
+
   return (
     <div key={item.title} className='border-none text-left'>
       <h3
         className={`text-2xl font-bold transition ${
-          item.title === iconActive || item.title === accordionName
-            ? `${item.color} opacity-100`
-            : 'text-white opacity-60'
+          isActive ? `${item.color} opacity-100` : 'text-white opacity-60'
         }`}>
         {item.title}
       </h3>
-      {(item.title === accordionName || item.title === iconActive) && (
-        <p className='transform text-justify text-base text-white opacity-40 transition-transform hover:opacity-80'>
+      {isActive && (
+        <p
+          className={`transform text-justify text-base text-white transition hover:opacity-100 ${isActive ? 'opacity-80' : 'opacity-40'}`}>
           {item.value}
         </p>
       )}

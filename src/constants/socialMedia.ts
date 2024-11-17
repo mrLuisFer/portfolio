@@ -2,7 +2,15 @@ import GithubIcon from '@/components/common/Icons/Github'
 import GitLabIcon from '@/components/common/Icons/Gitlab'
 import LinkedInIcon from '@/components/common/Icons/LinkedIn'
 import TwitterIcon from '@/components/common/Icons/Twitter'
-import { github, gitlab, linkedin, twitter } from '@/utils/socialLinks'
+
+export const enum SocialMedia {
+  twitter = 'https://twitter.com/mrluisfer_',
+  linkedin = 'https://www.linkedin.com/in/mrluisfer/',
+  github = 'https://www.github.com/mrLuisFer',
+  gitlab = 'https://gitlab.com/mrLuisFer',
+  linkedinContact = 'https://www.linkedin.com/in/mrluisfer/',
+  githhubRepositories = 'https://github.com/mrLuisFer?tab=repositories',
+}
 
 export interface ISocialMedia {
   href: string
@@ -13,25 +21,25 @@ export interface ISocialMedia {
 
 export const socialMedia: ISocialMedia[] = [
   {
-    href: twitter,
+    href: SocialMedia.twitter,
     label: 'Twitter',
     external: true,
     Icon: TwitterIcon,
   },
   {
-    href: linkedin,
+    href: SocialMedia.linkedin,
     label: 'LinkedIn',
     external: true,
     Icon: LinkedInIcon,
   },
   {
-    href: github,
+    href: SocialMedia.github,
     label: 'GitHub',
     external: true,
     Icon: GithubIcon,
   },
   {
-    href: gitlab,
+    href: SocialMedia.gitlab,
     label: 'GitLab',
     external: true,
     Icon: GitLabIcon,

@@ -8,7 +8,7 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className='dark'>
-      <body className='overflow-x-hidden'>
+      <body className='relative overflow-x-hidden'>
         <LanguageProvider>
           <StyledComponentsRegistry>
             <TooltipProvider>

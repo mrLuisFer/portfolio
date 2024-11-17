@@ -9,6 +9,27 @@ import SectionTitle from '@/components/common/SectionTitle'
 import { Button } from '@/components/ui/button'
 import { GrPrevious, GrNext } from 'react-icons/gr'
 
+enum Direction {
+  Prev = 'prev',
+  Next = 'next',
+}
+
+const NavigationButton = ({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode
+  onClick: () => void
+}) => {
+  return (
+    <Button
+      className='w-fit rounded-full bg-neutral-800 text-white shadow transition hover:bg-neutral-700'
+      onClick={onClick}>
+      {children}
+    </Button>
+  )
+}
+
 export default function LikeToDo() {
   const [iconActive, setIconActive] = useState<string>('')
   const [accordionName, setAccordionName] = useState<string>('')
@@ -17,6 +38,24 @@ export default function LikeToDo() {
 
   const { t } = useTranslation()
   const likeToDoList = getLikeToDoList(t)
+
+  const handleNavigation = (direction: Direction.Prev | Direction.Next) => {
+    setShouldPauseInterval(true)
+
+    if (direction === Direction.Prev) {
+      const newIndex = itemIndex === 0 ? likeToDoList.length - 1 : itemIndex - 1
+      setAccordionName(likeToDoList[newIndex].title)
+      setIconActive(likeToDoList[newIndex].title)
+      setItemIndex(newIndex)
+    }
+
+    if (direction === Direction.Next) {
+      const newIndex = itemIndex === likeToDoList.length - 1 ? 0 : itemIndex + 1
+      setAccordionName(likeToDoList[newIndex].title)
+      setIconActive(likeToDoList[newIndex].title)
+      setItemIndex(newIndex)
+    }
+  }
 
   // sets a 2 second interval to change the active accordion
   useEffect(() => {
@@ -73,35 +112,12 @@ export default function LikeToDo() {
             ))}
           </div>
           <div className='flex items-center gap-4'>
-            <Button
-              className='w-fit rounded-full bg-neutral-800 text-white shadow transition hover:text-neutral-800 active:bg-neutral-300'
-              onClick={() => {
-                setShouldPauseInterval(true)
-                if (itemIndex === 0) {
-                  const lastIndex = likeToDoList.length - 1
-                  setAccordionName(likeToDoList[lastIndex].title)
-                  setIconActive(likeToDoList[lastIndex].title)
-                  setItemIndex(lastIndex)
-                  return
-                }
-                setItemIndex(itemIndex - 1)
-              }}>
+            <NavigationButton onClick={() => handleNavigation(Direction.Prev)}>
               <GrPrevious />
-            </Button>
-            <Button
-              className='w-fit rounded-full bg-neutral-800 text-white shadow transition hover:text-neutral-800 active:bg-neutral-300'
-              onClick={() => {
-                setShouldPauseInterval(true)
-                if (itemIndex === likeToDoList.length - 1) {
-                  setAccordionName(likeToDoList[0].title)
-                  setIconActive(likeToDoList[0].title)
-                  setItemIndex(0)
-                  return
-                }
-                setItemIndex(itemIndex + 1)
-              }}>
+            </NavigationButton>
+            <NavigationButton onClick={() => handleNavigation(Direction.Next)}>
               <GrNext />
-            </Button>
+            </NavigationButton>
           </div>
         </section>
       </div>

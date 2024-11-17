@@ -52,7 +52,7 @@ export default function Editor({
   }, [icons, itemIndex, setAccordionName, setIconActive])
 
   return (
-    <div className='w-full max-w-[450px] rounded-md border border-gray-600 bg-black shadow-lg'>
+    <div className='w-full max-w-[450px] select-none rounded-md border border-gray-600 bg-black shadow-lg'>
       <EditorHeader
         editorUrl={editorUrl}
         setEditorUrl={setEditorUrl}

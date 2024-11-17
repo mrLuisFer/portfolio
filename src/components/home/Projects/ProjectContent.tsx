@@ -14,7 +14,7 @@ export default function ProjectContent({ project }: { project: Project }) {
           <Image
             src={project.image}
             alt={project.name}
-            className='rounded-tl-lg rounded-tr-lg object-cover'
+            className='w-full rounded-tl-lg rounded-tr-lg object-cover'
             width={350}
             height={200}
           />
