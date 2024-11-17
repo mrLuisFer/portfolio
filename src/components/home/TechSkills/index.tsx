@@ -4,20 +4,19 @@ import TechItem from './TechItem'
 import { minorTechList, techIconsList } from './techIconsList'
 import { useTranslation } from 'src/hooks/useTranslation'
 import { SocialMedia } from '@/constants/socialLinks'
-import GlowBox from '@/components/common/GlowBox'
+import SectionTitle from '@/components/common/SectionTitle'
+import { TooltipContent, TooltipTrigger, Tooltip } from '@radix-ui/react-tooltip'
 
 export default function TechSkills() {
   const { t } = useTranslation()
 
   return (
-    <div className='pb-8'>
-      <section className='tems-center flex justify-center'>
-        <GlowBox color='#0059ff59' width='100%'>
-          <div className='mb-4 inline-block text-center text-4xl font-bold text-blue-300 transition hover:text-blue-400'>
-            {t('techSkills')}
-          </div>
-        </GlowBox>
-      </section>
+    <div>
+      <SectionTitle
+        glowProps={{ color: '#0059ff59', width: '100%' }}
+        className='text-blue-300 hover:text-blue-400'>
+        {t('techSkills')}
+      </SectionTitle>
       <div className='mx-auto mt-4 flex max-w-screen-md flex-wrap items-center justify-evenly gap-9'>
         {techIconsList.map((item, id) => (
           <TechItem key={id} item={item} />
@@ -29,9 +28,18 @@ export default function TechSkills() {
         </p>
         <div className='flex items-center gap-4'>
           {minorTechList.map((item, id) => (
-            <div key={id} className='text-[30px] transition'>
-              {item.icon}
-            </div>
+            <Tooltip key={id}>
+              <TooltipTrigger>
+                <div key={id} className='text-[30px] transition'>
+                  {item.icon}
+                </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className='rounded-md border-2 border-neutral-800 bg-neutral-900 px-2 py-1 text-sm opacity-70'>
+                  {item.label}
+                </p>
+              </TooltipContent>
+            </Tooltip>
           ))}
         </div>
       </section>

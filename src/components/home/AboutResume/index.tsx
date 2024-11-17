@@ -5,24 +5,26 @@ import { TooltipContent } from '@radix-ui/react-tooltip'
 import { Button } from '@/components/ui/button'
 import GlowBox from '@/components/common/GlowBox'
 import { HiDocumentArrowDown } from 'react-icons/hi2'
+import SectionTitle from '@/components/common/SectionTitle'
 
 export default function AboutResume(): JSX.Element {
   const { t } = useTranslation()
 
   return (
-    <div className='mt-32'>
-      <section className='flex flex-col items-center justify-center' id='about'>
-        <GlowBox color='#faa1f171'>
-          <p
-            id='about'
-            className='bg-gradient-to-tr from-[#7928CA] to-[#FF0080] bg-clip-text pr-1 text-center text-5xl font-extrabold text-transparent'>
-            {t('aboutMe')}
-          </p>
-        </GlowBox>
-        <p className='font-semibold text-white opacity-45 transition hover:opacity-70'>
+    <div>
+      <SectionTitle
+        glowProps={{
+          color: '#faa1f171',
+        }}
+        id='about'
+        className='bg-gradient-to-tr from-[#7928CA] to-[#FF0080] bg-clip-text text-transparent'>
+        {t('aboutMe')}
+      </SectionTitle>
+      <div className='flex items-center justify-center'>
+        <p className='inline-block text-sm text-white opacity-45 transition hover:opacity-70'>
           {t('informationAboutWhatILove')}
         </p>
-      </section>
+      </div>
       <section className='mt-8 flex flex-col items-start justify-center gap-8 px-4 py-0 text-justify md:grid md:grid-cols-2 md:gap-24'>
         <p className='text-justify leading-relaxed'>
           Hi! I'm{' '}

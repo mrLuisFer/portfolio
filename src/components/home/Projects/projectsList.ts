@@ -13,12 +13,12 @@ import {
   SiJira,
 } from 'react-icons/si'
 
-interface Technology {
+export interface Technology {
   name: string
   icon: IconType
 }
 
-interface Project {
+export interface Project {
   id: string | number
   name: string
   description: string

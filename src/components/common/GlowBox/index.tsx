@@ -1,7 +1,7 @@
 import { CSSProperties, MouseEvent, ReactNode, useState } from 'react'
 import styled from 'styled-components'
 
-type GlowBoxProps = {
+export type GlowBoxProps = {
   children: ReactNode
   color: string
   backgroundColor?: string

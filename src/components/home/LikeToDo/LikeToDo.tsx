@@ -5,6 +5,7 @@ import { getLikeToDoList } from './likeTodoList'
 import { useTranslation } from 'src/hooks/useTranslation'
 import GlowBox from '@/components/common/GlowBox'
 import LikeToDoItem from './LikeToDoItem'
+import SectionTitle from '@/components/common/SectionTitle'
 
 export default function LikeToDo() {
   const [iconActive, setIconActive] = useState<string>('')
@@ -30,17 +31,12 @@ export default function LikeToDo() {
   }, [itemIndex, likeToDoList])
 
   return (
-    <div className='relative mt-[100px]'>
-      <section className='flex items-center justify-center'>
-        <GlowBox color='#fef4636f' size={80}>
-          <div>
-            <h1 className='text-center text-5xl font-bold text-yellow-500'>
-              {t('whatILike')}
-            </h1>
-          </div>
-        </GlowBox>
-      </section>
-
+    <div className='relative'>
+      <SectionTitle
+        glowProps={{ color: '#fef4636f' }}
+        className='bg-gradient-to-tr from-yellow-500 to-yellow-300 bg-clip-text text-transparent'>
+        {t('whatILike')}
+      </SectionTitle>
       <div className='mt-10 grid grid-cols-[repeat(2,_400px)] grid-rows-[350px_1fr] justify-center gap-x-20 gap-y-8'>
         <EditorUI
           setIconActive={setIconActive}
@@ -48,7 +44,6 @@ export default function LikeToDo() {
           itemIndex={itemIndex}
           setAccordionName={setAccordionName}
         />
-
         <section className='flex min-h-[500px] w-full flex-col items-start gap-4 md:min-h-[600px]'>
           {likeToDoList.map((item) => (
             <LikeToDoItem
