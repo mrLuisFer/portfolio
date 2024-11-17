@@ -1,7 +1,7 @@
 import Hero from '@/components/home/Hero'
 import SEO from '@/components/common/SEO'
 import AboutResume from '@/components/home/AboutResume'
-import LikeToDo from '@/components/home/LikeToDo/LikeToDo'
+import LikeToDo from '@/components/home/LikeToDo'
 import TechSkills from '@/components/home/TechSkills'
 import Projects from '@/components/home/Projects'
 

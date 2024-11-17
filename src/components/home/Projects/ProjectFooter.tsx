@@ -16,7 +16,7 @@ function FooterLink({
       href={href}
       target='_blank'
       rel='noopener noreferrer'
-      className={`flex items-center gap-2 text-sm font-bold opacity-80 transition hover:opacity-100 ${className}`}>
+      className={`flex items-center gap-2 text-sm font-bold opacity-85 transition hover:opacity-100 ${className}`}>
       {children}
     </a>
   )
@@ -29,7 +29,7 @@ export default function ProjectFooter({ project }: { project: Project }) {
         <GithubIcon />
         GitHub Repository
       </FooterLink>
-      <FooterLink href={project.link} className='hover:text-blue-300'>
+      <FooterLink href={project.link} className='text-blue-200 hover:text-blue-300'>
         Live Demo
         <FiExternalLink />
       </FooterLink>
