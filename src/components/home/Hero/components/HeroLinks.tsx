@@ -1,4 +1,3 @@
-import GlowBox from '@/components/common/GlowBox'
 import SocialMediaItem from '@/components/common/NavBar/SocialMedia/SocialMediaItem'
 import { Button } from '@/components/ui/button'
 import { socialMedia } from '@/constants/socialMedia'
@@ -16,8 +15,8 @@ export default function HeroLinks() {
 
   return (
     <section className='mt-8 flex items-center justify-center space-x-8 md:justify-start'>
-      {socialMediaFiltered.map((social) => (
-        <SocialMediaItem key={social.label} item={social} />
+      {socialMediaFiltered.map((social, id) => (
+        <SocialMediaItem key={social.label} item={social} id={id} />
       ))}
       <Button asChild>
         <Link href='/#about'>

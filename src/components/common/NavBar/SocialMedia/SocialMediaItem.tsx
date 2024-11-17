@@ -1,16 +1,13 @@
-import Link from '../../custom/Link'
 import { TbExternalLink } from 'react-icons/tb'
-import { useState } from 'react'
 import { ISocialMedia, socialMedia } from '@/constants/socialMedia'
 import { Separator } from '@/components/ui/separator'
-
-interface ISocialMediaItemProps extends ISocialMedia {}
+import Link from 'next/link'
 
 export default function SocialMediaItem({
   item,
   id,
 }: {
-  item: ISocialMediaItemProps
+  item: ISocialMedia
   id: number
 }) {
   const Icon = item.Icon ?? (() => null)
@@ -21,9 +18,13 @@ export default function SocialMediaItem({
         <span>
           <Icon />
         </span>
-        <Link href={item.href} external={item.external}>
-          {item.label}
-        </Link>
+        {item.external ? (
+          <a href={item.href} target='_blank' rel='noopener noreferrer'>
+            {item.label}
+          </a>
+        ) : (
+          <Link href={item.href}>{item.label}</Link>
+        )}
         {item.external && (
           <div className='opacity-0 transition group-hover:opacity-100'>
             <TbExternalLink />
