@@ -8,7 +8,6 @@ export const enum SocialMedia {
   linkedin = 'https://www.linkedin.com/in/mrluisfer/',
   github = 'https://www.github.com/mrLuisFer',
   gitlab = 'https://gitlab.com/mrLuisFer',
-  linkedinContact = 'https://www.linkedin.com/in/mrluisfer/',
   githhubRepositories = 'https://github.com/mrLuisFer?tab=repositories',
 }
 

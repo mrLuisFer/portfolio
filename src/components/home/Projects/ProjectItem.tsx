@@ -1,10 +1,6 @@
-import Image from 'next/image'
 import { Project } from './projectsList'
-import { BsGithub } from 'react-icons/bs'
-import { FiExternalLink } from 'react-icons/fi'
 import { Separator } from '@/components/ui/separator'
 import ProjectFooter from './ProjectFooter'
-import { Badge } from '@/components/ui/badge'
 import ProjectContent from './ProjectContent'
 
 export default function ProjectItem({ project }: { project: Project }) {

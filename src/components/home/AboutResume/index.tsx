@@ -1,9 +1,6 @@
 'use client'
 import { useTranslation } from 'src/hooks/useTranslation'
-import { Tooltip, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-import { TooltipContent } from '@radix-ui/react-tooltip'
 import { Button } from '@/components/ui/button'
-import GlowBox from '@/components/common/GlowBox'
 import { HiDocumentArrowDown } from 'react-icons/hi2'
 import SectionTitle from '@/components/common/SectionTitle'
 
@@ -27,7 +24,7 @@ export default function AboutResume(): JSX.Element {
       </div>
       <section className='mt-8 flex flex-col items-start justify-center gap-8 px-4 py-0 text-justify md:grid md:grid-cols-2 md:gap-24'>
         <p className='text-justify leading-relaxed'>
-          Hi! I'm{' '}
+          Hi! I&apos;m{' '}
           <a
             href='https://github.com/mrLuisFer'
             className='font-semibold text-blue-300 hover:text-blue-400'>
@@ -42,7 +39,7 @@ export default function AboutResume(): JSX.Element {
         </p>
         <p className='flex flex-col gap-5 leading-relaxed'>
           <span>
-            I'm also a student & I love to learn about the{' '}
+            I&apos;m also a student & I love to learn about the{' '}
             <span className='font-semibold text-orange-200 hover:text-orange-300'>
               World of Programming
             </span>

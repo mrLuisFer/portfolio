@@ -2,11 +2,9 @@ import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { AiFillHtml5 } from 'react-icons/ai'
 import { DiCss3, DiGit } from 'react-icons/di'
 import {
-  SiTailwindcss,
   SiJavascript,
   SiRedux,
   SiTypescript,
-  SiSvelte,
 } from 'react-icons/si'
 import StyledComponentsIcon from '@/components/common/Icons/StyledComponents'
 import NestJSIcon from '@/components/common/Icons/NestJs'
@@ -31,9 +29,10 @@ import JQueryIcon from '@/components/common/Icons/JQuery'
 import ChakraUIIcon from '@/components/common/Icons/Chakra'
 import BunIcon from '@/components/common/Icons/Bun'
 import AstroIcon from '@/components/common/Icons/Astro'
+import React from 'react'
 
 export interface TechIcons {
-  icon: any
+  icon: React.ReactNode
   label: string
   color?: string
 }

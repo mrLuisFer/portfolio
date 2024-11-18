@@ -3,11 +3,12 @@ import { MdTravelExplore } from 'react-icons/md'
 import { IoGameController } from 'react-icons/io5'
 import { FiMusic } from 'react-icons/fi'
 import { FaRegKeyboard } from 'react-icons/fa'
+import React from 'react'
 
 export interface LikeTodo {
   title: string
   value: string
-  icon: any
+  icon: React.ReactNode
   color: string
 }
 

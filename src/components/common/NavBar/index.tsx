@@ -1,6 +1,5 @@
 'use client'
 import Logo from '../Logo'
-import ChangeLanguage from './ChangeLanguage'
 import SocialMedia from './SocialMedia'
 
 export default function NavBar(): JSX.Element {

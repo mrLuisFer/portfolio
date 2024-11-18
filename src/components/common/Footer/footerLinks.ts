@@ -1,5 +1,4 @@
 import { GradientColors } from 'src/utils/gradientColors'
-import paths from 'src/constants/paths'
 import { SocialMedia } from '@/constants/socialMedia'
 
 export interface FooterLink {
@@ -31,7 +30,7 @@ export const getFooterElements = (t: (key: string) => string): FooterElements[] 
     links: [
       {
         label: 'Contact me',
-        href: SocialMedia.linkedinContact,
+        href: SocialMedia.linkedin,
         isExternal: true,
       },
       {

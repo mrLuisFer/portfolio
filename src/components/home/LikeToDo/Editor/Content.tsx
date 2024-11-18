@@ -1,14 +1,6 @@
 import { Skeleton } from '@/components/ui/skeleton'
 import { BsCart3 } from 'react-icons/bs'
 
-interface EditorSkeletonProps {
-  children?: any
-  w: string | number
-  h: string | number
-  bg?: string
-  m?: string
-  className?: string
-}
 
 export default function EditorContent({
   icon,

@@ -1,7 +1,4 @@
 'use client'
-import Link from 'next/link'
-import Image from 'next/image'
-import { BiUpArrow } from 'react-icons/bi'
 import { getFooterElements } from './footerLinks'
 import { useTranslation } from 'src/hooks/useTranslation'
 import { Separator } from '@/components/ui/separator'

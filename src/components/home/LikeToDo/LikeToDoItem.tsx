@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useMemo } from 'react'
+import {  useMemo } from 'react'
 import { LikeTodo } from './likeTodoList'
 
 type LikeToDoItemProps = {
