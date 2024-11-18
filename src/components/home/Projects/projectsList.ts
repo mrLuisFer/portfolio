@@ -12,6 +12,7 @@ import {
   SiSupabase,
   SiJira,
 } from 'react-icons/si'
+import { Technologies } from './technologies'
 
 export interface Technology {
   name: string
@@ -25,7 +26,7 @@ export interface Project {
   image?: string
   link: string
   github: string
-  technologies: Technology[]
+  technologies: Technologies[]
 }
 
 const projectsList: Project[] = [
@@ -37,20 +38,7 @@ const projectsList: Project[] = [
     image: '/images/projects/linktry.png',
     link: 'https://linktry-mrluisfer.vercel.app',
     github: 'https://github.com/mrLuisFer/linktry',
-    technologies: [
-      {
-        name: 'React',
-        icon: FaReact,
-      },
-      {
-        name: 'Next.js',
-        icon: TbBrandNextjs,
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: SiTailwindcss,
-      },
-    ],
+    technologies: [Technologies.react, Technologies.next, Technologies.tailwind],
   },
   {
     id: v4(),
@@ -61,22 +49,10 @@ const projectsList: Project[] = [
     link: 'https://nezt-chat.vercel.app/',
     github: 'https://github.com/mrLuisFer/next-chat-app',
     technologies: [
-      {
-        name: 'React',
-        icon: FaReact,
-      },
-      {
-        name: 'Next.js',
-        icon: TbBrandNextjs,
-      },
-      {
-        name: 'Chakra UI',
-        icon: SiChakraui,
-      },
-      {
-        name: 'Socket.Io',
-        icon: SiSocketdotio,
-      },
+      Technologies.react,
+      Technologies.next,
+      Technologies.chakraui,
+      Technologies.socket,
     ],
   },
   {
@@ -86,20 +62,7 @@ const projectsList: Project[] = [
     image: '/images/projects/seo-generator.png',
     link: 'https://seo-generator.vercel.app/',
     github: 'https://github.com/mrLuisFer/seo-generator',
-    technologies: [
-      {
-        name: 'React',
-        icon: FaReact,
-      },
-      {
-        name: 'Next.js',
-        icon: TbBrandNextjs,
-      },
-      {
-        name: 'Chakra UI',
-        icon: SiChakraui,
-      },
-    ],
+    technologies: [Technologies.react, Technologies.next, Technologies.chakraui],
   },
   {
     id: v4(),
@@ -108,20 +71,7 @@ const projectsList: Project[] = [
     image: '/images/projects/terminal.png',
     link: 'https://terminal-emulator.vercel.app/',
     github: 'https://github.com/mrLuisFer/terminal-website',
-    technologies: [
-      {
-        name: 'Javascript',
-        icon: SiJavascript,
-      },
-      {
-        name: 'Sass',
-        icon: FaSass,
-      },
-      {
-        name: 'HTML',
-        icon: SiHtml5,
-      },
-    ],
+    technologies: [Technologies.javascript, Technologies.sass, Technologies.html],
   },
   {
     id: v4(),
@@ -132,22 +82,10 @@ const projectsList: Project[] = [
     link: 'https://git-guia.netlify.app/',
     github: 'https://github.com/mrLuisFer/git-guide',
     technologies: [
-      {
-        name: 'Javascript',
-        icon: SiJavascript,
-      },
-      {
-        name: 'Sass',
-        icon: FaSass,
-      },
-      {
-        name: 'HTML',
-        icon: SiHtml5,
-      },
-      {
-        name: 'React',
-        icon: FaReact,
-      },
+      Technologies.javascript,
+      Technologies.sass,
+      Technologies.html,
+      Technologies.react,
     ],
   },
   {
@@ -157,20 +95,7 @@ const projectsList: Project[] = [
     image: '/images/projects/gh-finder.png',
     link: 'https://gh-find.netlify.app/',
     github: 'https://github.com/mrLuisFer/gh-card-profile',
-    technologies: [
-      {
-        name: 'Sass',
-        icon: FaSass,
-      },
-      {
-        name: 'HTML',
-        icon: SiHtml5,
-      },
-      {
-        name: 'Javascript',
-        icon: SiJavascript,
-      },
-    ],
+    technologies: [Technologies.sass, Technologies.html, Technologies.javascript],
   },
   {
     id: v4(),
@@ -181,26 +106,10 @@ const projectsList: Project[] = [
     link: 'https://planning-pocket.vercel.app',
     github: '',
     technologies: [
-      {
-        name: 'Typescript',
-        icon: SiTypescript,
-      },
-      {
-        name: 'React',
-        icon: FaReact,
-      },
-      {
-        name: 'Supabase',
-        icon: SiSupabase,
-      },
-      {
-        name: 'Jira API',
-        icon: SiJira,
-      },
-      {
-        name: 'Tailwind CSS',
-        icon: SiTailwindcss,
-      },
+      Technologies.typescript,
+      Technologies.supabase,
+      Technologies.jira,
+      Technologies.tailwind,
     ],
   },
 ]

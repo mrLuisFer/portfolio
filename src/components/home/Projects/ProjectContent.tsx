@@ -1,10 +1,6 @@
 import Image from 'next/image'
 import { Project } from './projectsList'
-import { Badge } from '@/components/ui/badge'
-
-function ProjectTechnology({ children }: { children: React.ReactNode }) {
-  return <Badge className='flex gap-1 hover:bg-blue-300'>{children}</Badge>
-}
+import ProjectTechnologies from './ProjectTechnologies'
 
 export default function ProjectContent({ project }: { project: Project }) {
   return (
@@ -26,14 +22,7 @@ export default function ProjectContent({ project }: { project: Project }) {
           {project.description}
         </p>
       </section>
-      <section className='flex flex-wrap items-center justify-evenly gap-5 px-4 pb-5'>
-        {project.technologies.map((tech, id) => (
-          <ProjectTechnology key={id}>
-            <tech.icon />
-            {tech.name}
-          </ProjectTechnology>
-        ))}
-      </section>
+      <ProjectTechnologies project={project} />
     </a>
   )
 }
