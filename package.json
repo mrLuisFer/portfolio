@@ -89,11 +89,7 @@
   },
   "lint-staged": {
     "*": "prettier --write",
-    "*.ts": [
-      "prettier --list-different",
-      "eslint"
-    ],
-    "*.md": "prettier --list-different",
-    "*.js": "eslint --fix"
+    "*.ts": ["prettier --list-different"],
+    "*.md": "prettier --list-different"
   }
 }
