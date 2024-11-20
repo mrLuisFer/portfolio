@@ -1,4 +1,4 @@
-import SocialMediaItem from '@/components/common/NavBar/SocialMedia/SocialMediaItem'
+import SocialMediaItem from '@/components/common/NavBar/SocialMedia/components/SocialMediaItem'
 import { Button } from '@/components/ui/button'
 import { socialMedia } from '@/constants/socialMedia'
 import { useTranslation } from '@/hooks/useTranslation'

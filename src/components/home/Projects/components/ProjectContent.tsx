@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Project } from './projectsList'
+import { Project } from '../constants/projectsList'
 import ProjectTechnologies from './ProjectTechnologies'
 
 export default function ProjectContent({ project }: { project: Project }) {

@@ -1,4 +1,4 @@
-import { FooterElements } from './footerLinks'
+import { FooterElements } from '../constants/footerLinks'
 import FooterLink from './FooterLink'
 
 export default function FooterItem({ item }: { item: FooterElements }) {

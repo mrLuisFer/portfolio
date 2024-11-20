@@ -1,11 +1,11 @@
 'use client'
 import { useTranslation } from 'src/hooks/useTranslation'
-import projectsList from './projectsList'
 import { FiArrowUpRight } from 'react-icons/fi'
 import SectionTitle from '@/components/common/SectionTitle'
 import { Button } from '@/components/ui/button'
-import ProjectItem from './ProjectItem'
+import ProjectItem from './components/ProjectItem'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
+import projectsList from './constants/projectsList'
 
 export default function Projects() {
   const { t } = useTranslation()

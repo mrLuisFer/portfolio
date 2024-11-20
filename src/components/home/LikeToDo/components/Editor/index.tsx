@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState, useEffect, useMemo, ReactNode } from 'react'
-import EditorHeader from './Header'
-import EditorContent from './Content'
+import EditorHeader from './components/Header'
+import EditorContent from './components/Content'
 
 function getRandomInt(max: number) {
   return Math.floor(Math.random() * max)

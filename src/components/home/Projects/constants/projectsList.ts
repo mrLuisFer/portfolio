@@ -12,7 +12,7 @@ import {
   SiSupabase,
   SiJira,
 } from 'react-icons/si'
-import { Technologies } from './technologies'
+import { Technologies } from './components/technologies'
 
 export interface Technology {
   name: string

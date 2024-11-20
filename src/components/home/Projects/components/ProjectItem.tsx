@@ -1,4 +1,4 @@
-import { Project } from './projectsList'
+import { Project } from '../projectsList'
 import { Separator } from '@/components/ui/separator'
 import ProjectFooter from './ProjectFooter'
 import ProjectContent from './ProjectContent'

@@ -1,11 +1,11 @@
 'use client'
 import { Button } from '@/components/ui/button'
-import TechItem from './TechItem'
-import { minorTechList, techIconsList } from './techIconsList'
+import { minorTechList, techIconsList } from './constants/techIconsList'
 import { useTranslation } from 'src/hooks/useTranslation'
 import SectionTitle from '@/components/common/SectionTitle'
 import { TooltipContent, TooltipTrigger, Tooltip } from '@radix-ui/react-tooltip'
 import { SocialMedia } from '@/constants/socialMedia'
+import TechItem from './components/TechItem'
 
 export default function TechSkills() {
   const { t } = useTranslation()

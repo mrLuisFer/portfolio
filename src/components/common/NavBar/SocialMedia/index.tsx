@@ -1,4 +1,4 @@
-import SocialMediaItem from './SocialMediaItem'
+import SocialMediaItem from './components/SocialMediaItem'
 import { socialMedia } from '@/constants/socialMedia'
 
 export default function SocialMedia() {

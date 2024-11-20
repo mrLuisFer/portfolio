@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterLink as TFooterLink } from './footerLinks'
+import { FooterLink as TFooterLink } from '../constants/footerLinks'
 import Link from 'next/link'
 import { TbExternalLink } from 'react-icons/tb'
 

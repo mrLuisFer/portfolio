@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge'
-import { Project } from './projectsList'
+import { Project } from '../projectsList'
 import { icons } from './technologies'
 
 export function ProjectTechnology({ children }: { children: React.ReactNode }) {

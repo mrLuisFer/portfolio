@@ -1,9 +1,9 @@
 'use client'
-import { getFooterElements } from './footerLinks'
+import { getFooterElements } from './constants/footerLinks'
 import { useTranslation } from 'src/hooks/useTranslation'
 import { Separator } from '@/components/ui/separator'
 import Logo from '../Logo'
-import FooterItem from './FooterItem'
+import FooterItem from './components/FooterItem'
 
 export default function Footer(): JSX.Element {
   const { t } = useTranslation()
