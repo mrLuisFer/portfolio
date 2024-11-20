@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className='flex h-full w-full flex-col gap-28 pb-10'>
+      <div className='flex h-full w-full flex-col gap-20 pb-10 md:gap-28'>
         <Hero />
         <AboutResume />
         <LikeToDo />

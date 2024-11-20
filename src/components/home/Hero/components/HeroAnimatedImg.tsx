@@ -1,12 +1,24 @@
 'use client'
 import GlowBox from '@/components/common/GlowBox'
+import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useMotionValue, useTransform, useSpring } from 'framer-motion'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useMemo } from 'react'
 
 export default function HeroAnimatedImg() {
-  const imgSize = 350
+  const isGreaterThan768 = useMediaQuery('(min-width: 768px)')
+  const isGreaterThan1024 = useMediaQuery('(min-width: 1024px)')
+  console.log({
+    isGreaterThan768,
+    isGreaterThan1024,
+  })
+  // const imgSize = 350
+  const imgSize = useMemo(() => {
+    if (isGreaterThan1024) return 350
+    if (isGreaterThan768) return 300
+    return 250
+  }, [isGreaterThan768, isGreaterThan1024])
 
   // Initialize motion values for x and y positions
   const x = useMotionValue(0.5) // Starts at the center
@@ -38,7 +50,7 @@ export default function HeroAnimatedImg() {
   }, [loopAnimation])
 
   return (
-    <GlowBox color='#f9e4006c' padding={4}>
+    <GlowBox color='#f9e4006c' padding={4} className='mx-auto lg:mx-0'>
       <motion.div
         style={{
           perspective: 500,

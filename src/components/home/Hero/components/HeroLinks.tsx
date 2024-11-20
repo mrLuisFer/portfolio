@@ -14,16 +14,22 @@ export default function HeroLinks() {
   )
 
   return (
-    <section className='mt-8 flex items-center justify-center space-x-8 md:justify-start'>
+    <section className='mt-8 flex w-full flex-wrap items-center justify-center gap-5 md:justify-start md:gap-0 md:space-x-8 md:pl-0 lg:flex-nowrap'>
       {socialMediaFiltered.map((social, id) => (
         <SocialMediaItem key={social.label} item={social} id={id} />
       ))}
-      <Button asChild>
+      <Button asChild className='hidden md:block'>
         <Link href='/#about'>
           <FaUser />
           {t('aboutMe')}
         </Link>
       </Button>
+      <Link
+        href='/#about'
+        className='flex items-center gap-2 rounded-lg bg-neutral-800 p-2 text-sm md:hidden'>
+        <FaUser />
+        {t('aboutMe')}
+      </Link>
     </section>
   )
 }

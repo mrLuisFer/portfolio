@@ -13,20 +13,26 @@ export default function SocialMediaItem({
   const Icon = item.Icon ?? (() => null)
   const isLastItem = id === socialMedia.length - 1
   return (
-    <div key={item.label} className='flex items-center gap-6'>
+    <div
+      key={item.label}
+      className='flex items-center gap-2 rounded-lg p-1 transition hover:bg-neutral-900 md:gap-6 md:hover:bg-transparent'>
       <div className='group flex items-center gap-1 text-white opacity-60 transition hover:opacity-100'>
         <span>
           <Icon />
         </span>
         {item.external ? (
-          <a href={item.href} target='_blank' rel='noopener noreferrer'>
+          <a
+            href={item.href}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='leading-relaxed hover:underline hover:md:no-underline'>
             {item.label}
           </a>
         ) : (
           <Link href={item.href}>{item.label}</Link>
         )}
         {item.external && (
-          <div className='opacity-0 transition group-hover:opacity-100'>
+          <div className='hidden opacity-0 transition group-hover:opacity-100 md:block'>
             <TbExternalLink />
           </div>
         )}
@@ -35,7 +41,7 @@ export default function SocialMediaItem({
         <Separator
           aria-orientation='vertical'
           orientation='vertical'
-          className='h-[20px] w-[1px]'
+          className='hidden h-[20px] w-[1px] md:inline-block'
         />
       )}
     </div>

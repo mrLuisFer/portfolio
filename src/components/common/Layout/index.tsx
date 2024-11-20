@@ -5,7 +5,7 @@ import { ReactNode } from 'react'
 
 export default function AppLayout({ children }: { children: ReactNode }) {
   return (
-    <div className='container mx-auto pt-5'>
+    <div className='mx-auto pt-5 lg:container'>
       <NavBar />
       {children}
       <ToTopButton />

@@ -17,7 +17,7 @@ export default function SectionTitle({
       <GlowBox {...glowProps} width={glowProps.width || '100%'}>
         <p
           id={id}
-          className={`mb-4 inline-block text-center text-5xl font-extrabold leading-relaxed transition ${className}`}>
+          className={`mb-4 inline-block text-center text-4xl font-extrabold leading-relaxed transition md:text-5xl ${className}`}>
           {children}
         </p>
       </GlowBox>

@@ -17,16 +17,16 @@ export default function TechSkills() {
         className='text-blue-300 hover:text-blue-400'>
         {t('techSkills')}
       </SectionTitle>
-      <div className='mx-auto mt-4 flex max-w-screen-md flex-wrap items-center justify-evenly gap-9'>
+      <div className='mx-auto mt-4 flex max-w-screen-md flex-wrap items-center justify-evenly gap-9 md:px-10 lg:px-0'>
         {techIconsList.map((item, id) => (
           <TechItem key={id} item={item} />
         ))}
       </div>
-      <section className='mt-10 flex items-center justify-center gap-6'>
-        <p className='text-sm lowercase opacity-60 transition hover:opacity-70'>
+      <section className='hidden md:mt-10 md:flex md:items-center md:justify-center md:gap-6'>
+        <p className='text-sm lowercase opacity-60 transition hover:opacity-70 md:hidden lg:inline-block'>
           Also...
         </p>
-        <div className='flex items-center gap-4'>
+        <div className='flex flex-wrap items-center gap-4'>
           {minorTechList.map((item, id) => (
             <Tooltip key={id}>
               <TooltipTrigger>
@@ -43,15 +43,17 @@ export default function TechSkills() {
           ))}
         </div>
       </section>
-      <Button asChild className='w-fit'>
-        <a
-          href={SocialMedia.github}
-          className='mt-8 inline-block text-center text-base capitalize transition md:mx-auto md:flex md:items-center md:justify-center'
-          target='_blank'
-          rel='noopener noreferrer'>
-          And learning much more... 🚀
-        </a>
-      </Button>
+      <div className='flex justify-center'>
+        <Button asChild className='w-fit'>
+          <a
+            href={SocialMedia.github}
+            className='mt-8 inline-block text-center text-base capitalize transition md:mx-auto md:flex md:items-center md:justify-center'
+            target='_blank'
+            rel='noopener noreferrer'>
+            And learning much more... 🚀
+          </a>
+        </Button>
+      </div>
     </div>
   )
 }

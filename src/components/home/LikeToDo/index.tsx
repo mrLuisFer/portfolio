@@ -92,15 +92,15 @@ export default function LikeToDo() {
         className='bg-gradient-to-tr from-yellow-500 to-yellow-300 bg-clip-text text-transparent'>
         {t('whatILike')}
       </SectionTitle>
-      <div className='mt-10 grid grid-cols-[repeat(2,_400px)] grid-rows-[350px_1fr] justify-center gap-x-20 gap-y-8'>
+      <div className='mt-10 grid grid-rows-[350px_1fr] justify-center justify-items-center gap-x-20 gap-y-8 lg:grid-cols-[repeat(2,_400px)] lg:justify-items-start'>
         <EditorUI
           setIconActive={setIconActive}
           icons={likeToDoList}
           itemIndex={itemIndex}
           setAccordionName={setAccordionName}
         />
-        <section className='flex w-full flex-col items-start gap-4'>
-          <div className='flex flex-col gap-4'>
+        <section className='flex w-full flex-col items-start gap-4 md:w-[450px]'>
+          <div className='flex flex-col gap-4 px-5 md:px-0'>
             {likeToDoList.map((item) => (
               <LikeToDoItem
                 key={item.title}
@@ -110,7 +110,7 @@ export default function LikeToDo() {
               />
             ))}
           </div>
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center gap-4 px-5 md:px-0 md:pt-5 lg:p-0'>
             <NavigationButton onClick={() => handleNavigation(Direction.Prev)}>
               <GrPrevious />
             </NavigationButton>

@@ -1,7 +1,6 @@
 import { Skeleton } from '@/components/ui/skeleton'
 import { BsCart3 } from 'react-icons/bs'
 
-
 export default function EditorContent({
   icon,
   editorUrl,
@@ -11,7 +10,7 @@ export default function EditorContent({
 }) {
   const currentDay = new Date().getDate().toString()
   return (
-    <div className='p-6'>
+    <div className='p-4 md:p-6'>
       <div className='grid grid-cols-2 gap-4'>
         <div className='flex items-start gap-2'>
           <div className='flex animate-pulse items-center justify-center rounded-full bg-zinc-300 p-2 text-black transition hover:bg-white'>

@@ -11,24 +11,24 @@ export default function HeroContent() {
   return (
     <div>
       <section>
-        <p className='hidden text-4xl opacity-50 hover:opacity-70 sm:text-3xl md:inline-block md:text-4xl'>
-          {t('hello')}!
+        <p className='flex flex-row gap-4 pl-5 text-4xl opacity-80 sm:text-3xl md:inline-block md:text-4xl md:opacity-50 md:hover:opacity-70'>
+          {t('hello')}!<span className='inline-block md:hidden'>I'm</span>
         </p>
-        <div className='flex items-center justify-center gap-2 text-4xl font-bold sm:text-3xl md:justify-start md:gap-6 md:text-4xl lg:gap-1'>
-          {t('heroIam')}{' '}
+        <div className='flex flex-wrap items-center justify-start gap-2 text-4xl font-bold sm:text-3xl md:gap-6 md:text-4xl lg:gap-1'>
+          <span className='hidden pl-5 md:inline-block'>{t('heroIam')} </span>
           <GlowBox
             color='rgba(0, 123, 255, 0.5)'
             borderColor='#131313'
             backgroundColor='#000'>
             <p
               id='titleName'
-              className='bg-gradient-to-tr from-blue-800 to-blue-400 bg-clip-text text-5xl font-bold text-transparent'>
+              className='bg-gradient-to-tr from-blue-800 to-blue-400 bg-clip-text text-4xl font-bold text-transparent md:text-5xl'>
               <a href='https://github.com/mrLuisFer'>Luis Alvarez</a>
             </p>
           </GlowBox>
         </div>
       </section>
-      <section className='flex flex-col gap-4'>
+      <section className='flex flex-col gap-4 px-5 md:px-0'>
         <GlowBox color='#c24a86ae' size={70} padding={10} defaultBorder='#3d3d3d'>
           <p
             id='seniority'

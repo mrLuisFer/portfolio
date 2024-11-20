@@ -24,6 +24,11 @@ export default function Projects() {
           ))}
         </Masonry>
       </ResponsiveMasonry>
+      <div className='flex flex-col flex-wrap items-center justify-center gap-4 px-5 md:gap-10 md:px-0 lg:hidden'>
+        {projectsList.map((project) => (
+          <ProjectItem key={project.id} project={project} />
+        ))}
+      </div>
       <div className='mt-6 flex justify-center'>
         <Button asChild>
           <a

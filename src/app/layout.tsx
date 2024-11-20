@@ -31,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           sizes='16x16'
           href='/favicon/favicon-16x16.png'
         />
+        <script src='https://unpkg.com/react-scan/dist/auto.global.js' async></script>
       </head>
       <body className='relative overflow-x-hidden'>
         <LanguageProvider>

@@ -1,11 +1,4 @@
-import {
-  Dispatch,
-  SetStateAction,
-  useState,
-  useEffect,
-  useMemo,
-  ReactNode,
-} from 'react'
+import { Dispatch, SetStateAction, useState, useEffect, useMemo, ReactNode } from 'react'
 import EditorHeader from './Header'
 import EditorContent from './Content'
 
@@ -51,7 +44,7 @@ export default function Editor({
   }, [icons, itemIndex, setAccordionName, setIconActive])
 
   return (
-    <div className='w-full max-w-[450px] select-none rounded-md border border-gray-600 bg-black shadow-lg'>
+    <div className='mx-auto w-[300px] select-none rounded-md border border-gray-600 bg-black shadow-lg md:mx-0 md:w-full md:max-w-[450px]'>
       <EditorHeader
         editorUrl={editorUrl}
         setEditorUrl={setEditorUrl}
