@@ -17,13 +17,15 @@ export default function Projects() {
         className='bg-gradient-to-tr from-orange-300 to-orange-200 bg-clip-text text-transparent'>
         {t('projects')}
       </SectionTitle>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-        <Masonry columnsCount={3} gutter='20px'>
-          {projectsList.map((project) => (
-            <ProjectItem key={project.id} project={project} />
-          ))}
-        </Masonry>
-      </ResponsiveMasonry>
+      <div className='hidden lg:block'>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry columnsCount={3} gutter='20px'>
+            {projectsList.map((project) => (
+              <ProjectItem key={project.id} project={project} />
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
       <div className='flex flex-col flex-wrap items-center justify-center gap-4 px-5 md:gap-10 md:px-0 lg:hidden'>
         {projectsList.map((project) => (
           <ProjectItem key={project.id} project={project} />
