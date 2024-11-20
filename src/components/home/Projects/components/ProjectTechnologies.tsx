@@ -1,6 +1,6 @@
 import { Badge } from '@/components/ui/badge'
-import { Project } from '../projectsList'
-import { icons } from './technologies'
+import { Icon, icons } from '../constants/technologies'
+import { Project } from '../constants/projectsList'
 
 export function ProjectTechnology({ children }: { children: React.ReactNode }) {
   return <Badge className='flex gap-1 hover:bg-blue-200'>{children}</Badge>
@@ -15,7 +15,8 @@ export default function ProjectTechnologies({ project }: { project: Project }) {
       <div className='flex flex-wrap items-center gap-5'>
         {project.technologies.map((tech, id) => (
           <ProjectTechnology key={id}>
-            {icons[tech]} <span className='text-xs font-normal capitalize'>{tech}</span>
+            {icons[tech as Icon]}
+            <span className='text-xs font-normal capitalize'>{tech}</span>
           </ProjectTechnology>
         ))}
       </div>

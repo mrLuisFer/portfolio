@@ -1,6 +1,6 @@
 import GithubIcon from '@/components/common/Icons/Github'
-import { Project } from '../projectsList'
 import { FiExternalLink } from 'react-icons/fi'
+import { Project } from '../constants/projectsList'
 
 function FooterLink({
   href,

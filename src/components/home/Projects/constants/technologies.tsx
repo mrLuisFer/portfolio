@@ -25,8 +25,13 @@ export enum Technologies {
   typescript = 'typescript',
 }
 
+export type Icons = {
+  [key in Technologies]: React.ReactNode
+}
+export type Icon = keyof Icons
+
 // TODO: change the icons from react-icons to svgs
-export const icons = {
+export const icons: Icons = {
   [Technologies.chakraui]: <ChakraUIIcon />,
   [Technologies.css]: <CSSIcon />,
   [Technologies.html]: <HTML5Icon />,

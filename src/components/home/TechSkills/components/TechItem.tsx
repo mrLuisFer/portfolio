@@ -1,4 +1,4 @@
-import { TechIcons } from './techIconsList'
+import { TechIcons } from '../constants/techIconsList'
 
 export default function TechItem({ item }: { item: TechIcons }) {
   return (

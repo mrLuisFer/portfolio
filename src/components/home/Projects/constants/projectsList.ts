@@ -1,18 +1,6 @@
 import { v4 } from 'uuid'
 import { IconType } from 'react-icons/lib'
-import { FaReact, FaSass } from 'react-icons/fa'
-import { TbBrandNextjs } from 'react-icons/tb'
-import {
-  SiTailwindcss,
-  SiChakraui,
-  SiSocketdotio,
-  SiJavascript,
-  SiHtml5,
-  SiTypescript,
-  SiSupabase,
-  SiJira,
-} from 'react-icons/si'
-import { Technologies } from './components/technologies'
+import { Technologies } from './technologies'
 
 export interface Technology {
   name: string

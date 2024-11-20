@@ -1,7 +1,7 @@
-import { Project } from '../projectsList'
 import { Separator } from '@/components/ui/separator'
 import ProjectFooter from './ProjectFooter'
 import ProjectContent from './ProjectContent'
+import { Project } from '../constants/projectsList'
 
 export default function ProjectItem({ project }: { project: Project }) {
   return (
