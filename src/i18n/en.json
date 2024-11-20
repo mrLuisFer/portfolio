@@ -1,10 +1,12 @@
 {
   "hello": "Hello",
   "heroIam": "I'm",
-  "heroJob": "Frontend Developer",
+  "heroJob": "Software Developer",
   "specializedIn": "Specialized in",
-  "forUi": "for UI",
-  "andWebAplications": "and Web Aplications",
+  "for": "for",
+  "Ui": "UI",
+  "and": "and",
+  "webAplications": "Web Aplications",
   "aboutMe": "About Me",
   "contactMe": "Contact Me",
   "sendEmail": "Send email",
@@ -44,5 +46,6 @@
   "canDragDropItem": "You can drag and drop the elements",
   "for Backend Development": "for Backend Development",
   "And": "And",
-  "BackToHome": "Back to home"
+  "BackToHome": "Back to home",
+  "Also": "Also"
 }

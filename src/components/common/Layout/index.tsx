@@ -1,13 +1,15 @@
 import NavBar from 'src/components/common/NavBar'
 import Footer from 'src/components/common/Footer'
-import { Container } from '@chakra-ui/react'
+import ToTopButton from '../ToTopButton'
+import { ReactNode } from 'react'
 
-export default function Layout({ children }: { children: any }): JSX.Element {
+export default function AppLayout({ children }: { children: ReactNode }) {
   return (
-    <Container maxW='container.xl' overflowX='hidden'>
+    <div className='mx-auto pt-5 lg:container'>
       <NavBar />
       {children}
+      <ToTopButton />
       <Footer />
-    </Container>
+    </div>
   )
 }

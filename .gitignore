@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+pnpm-lock.yaml
 
 .next
 
@@ -26,6 +27,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+yarn.lock
 
 ### react ###
 .DS_*
