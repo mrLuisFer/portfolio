@@ -7,7 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from '@vercel/analytics/react'
 import { useChristmasDate } from '@/hooks/useChristmasDate'
 
-const isOnDevEnv = process?.env?.NODE_ENV === 'development' || true
+const isOnDevEnv = process?.env?.NODE_ENV === 'development'
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const isChristmas = useChristmasDate()
 
