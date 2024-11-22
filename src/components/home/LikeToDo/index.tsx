@@ -56,7 +56,7 @@ export default function LikeToDo() {
     }
   }
 
-  // sets a 2 second interval to change the active accordion
+  // sets a 2-second interval to change the active accordion
   useEffect(() => {
     if (shouldPauseInterval) return
 

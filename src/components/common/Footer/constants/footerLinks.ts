@@ -35,7 +35,7 @@ export const getFooterElements = (t: (key: string) => string): FooterElements[] 
       },
       {
         label: 'More projects',
-        href: SocialMedia.githhubRepositories,
+        href: SocialMedia.githubRepositories,
         isExternal: true,
       },
       {

@@ -2,20 +2,21 @@ import GithubIcon from '@/components/common/Icons/Github'
 import GitLabIcon from '@/components/common/Icons/Gitlab'
 import LinkedInIcon from '@/components/common/Icons/LinkedIn'
 import TwitterIcon from '@/components/common/Icons/Twitter'
+import { FC } from 'react'
 
 export const enum SocialMedia {
   twitter = 'https://twitter.com/mrluisfer_',
   linkedin = 'https://www.linkedin.com/in/mrluisfer/',
   github = 'https://www.github.com/mrLuisFer',
   gitlab = 'https://gitlab.com/mrLuisFer',
-  githhubRepositories = 'https://github.com/mrLuisFer?tab=repositories',
+  githubRepositories = 'https://github.com/mrLuisFer?tab=repositories',
 }
 
 export interface ISocialMedia {
   href: string
   label: string
   external: boolean
-  Icon?: React.FC
+  Icon?: FC
 }
 
 export const socialMedia: ISocialMedia[] = [

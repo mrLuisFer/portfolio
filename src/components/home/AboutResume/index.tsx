@@ -51,7 +51,7 @@ export default function AboutResume(): JSX.Element {
                 // className='rounded-md bg-blue-500 px-4 py-2 text-white'
                 download
                 href='/cv-resume.pdf'
-                className='text-lg'>
+                className='text-lg flex justify-center items-center'>
                 <HiDocumentArrowDown />
                 You can download my resume here
               </a>
