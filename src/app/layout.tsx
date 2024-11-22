@@ -7,6 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from '@vercel/analytics/react'
 import { useChristmasDate } from '@/hooks/useChristmasDate'
 
+const isOnDevEnv = process?.env?.NODE_ENV === 'development' || true
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const isChristmas = useChristmasDate()
 
@@ -31,7 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           sizes='16x16'
           href='/favicon/favicon-16x16.png'
         />
-        <script src='https://unpkg.com/react-scan/dist/auto.global.js' async></script>
+        {isOnDevEnv && (
+          <script src='https://unpkg.com/react-scan/dist/auto.global.js' async></script>
+        )}
       </head>
       <body className='relative overflow-x-hidden'>
         <LanguageProvider>
