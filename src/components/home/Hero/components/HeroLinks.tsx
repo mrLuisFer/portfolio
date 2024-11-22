@@ -5,8 +5,19 @@ import { useTranslation } from '@/hooks/useTranslation'
 import Link from 'next/link'
 import { FaUser } from 'react-icons/fa'
 
-export default function HeroLinks() {
+const AboutLink = () => {
   const { t } = useTranslation()
+  return (
+    <Link
+      href='/#about'
+      className='flex justify-center items-center gap-2 rounded-lg bg-neutral-800 p-2 text-sm'>
+      <FaUser />
+      {t('aboutMe')}
+    </Link>
+  )
+}
+
+export default function HeroLinks() {
   const socialMediaFiltered = socialMedia.filter(
     (social) =>
       social.label?.toLowerCase() === 'linkedin' ||
@@ -18,18 +29,12 @@ export default function HeroLinks() {
       {socialMediaFiltered.map((social, id) => (
         <SocialMediaItem key={social.label} item={social} id={id} />
       ))}
-      <Button asChild className='hidden md:block'>
-        <Link href='/#about'>
-          <FaUser />
-          {t('aboutMe')}
-        </Link>
+      <Button asChild className='hidden md:inline-block'>
+       <AboutLink />
       </Button>
-      <Link
-        href='/#about'
-        className='flex items-center gap-2 rounded-lg bg-neutral-800 p-2 text-sm md:hidden'>
-        <FaUser />
-        {t('aboutMe')}
-      </Link>
+      <div className='md:hidden'>
+        <AboutLink />
+      </div>
     </section>
   )
 }
