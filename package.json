@@ -14,6 +14,7 @@
     "@radix-ui/react-slot": "1.1.0",
     "@radix-ui/react-tooltip": "1.1.4",
     "@vercel/analytics": "0.1.6",
+    "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
     "framer-motion": "6.5.1",
@@ -89,7 +90,9 @@
   },
   "lint-staged": {
     "*": "prettier --write",
-    "*.ts": ["prettier --list-different"],
+    "*.ts": [
+      "prettier --list-different"
+    ],
     "*.md": "prettier --list-different"
   }
 }

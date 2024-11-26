@@ -6,6 +6,7 @@ import StyledComponentsRegistry from '@/lib/registry'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from '@vercel/analytics/react'
 import { useChristmasDate } from '@/hooks/useChristmasDate'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const isOnDevEnv = process?.env?.NODE_ENV === 'development'
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -48,6 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {isChristmas && (
           <script id='snowEffect' defer src='https://app.embed.im/snow.js' />
         )}
+        <SpeedInsights />
       </body>
     </html>
   )
