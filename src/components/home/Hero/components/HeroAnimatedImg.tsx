@@ -4,15 +4,12 @@ import { useMediaQuery } from '@/hooks/useMediaQuery'
 import { useMotionValue, useTransform, useSpring } from 'framer-motion'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { useCallback, useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 
 export default function HeroAnimatedImg() {
   const isGreaterThan768 = useMediaQuery('(min-width: 768px)')
   const isGreaterThan1024 = useMediaQuery('(min-width: 1024px)')
-  console.log({
-    isGreaterThan768,
-    isGreaterThan1024,
-  })
+
   // const imgSize = 350
   const imgSize = useMemo(() => {
     if (isGreaterThan1024) return 350
@@ -33,21 +30,18 @@ export default function HeroAnimatedImg() {
   const springX = useSpring(rotateX, { stiffness: 30, damping: 10 })
   const springY = useSpring(rotateY, { stiffness: 30, damping: 10 })
 
-  // Loop animation to simulate constant movement
-  const loopAnimation = useCallback(() => {
+  // start the animation when the component mounts
+  useEffect(() => {
     let t = 0
-    setInterval(() => {
+    const interval = setInterval(() => {
       const value = Math.sin(t) * 0.5 + 0.5 // Oscillates between 0 and 1
       x.set(value)
       y.set(1 - value)
       t += 0.03
     }, 16) // Approximately 60 FPS
-  }, [x, y])
 
-  // start the animation when the component mounts
-  useEffect(() => {
-    loopAnimation()
-  }, [loopAnimation])
+    return () => clearInterval(interval)
+  }, [x, y])
 
   return (
     <GlowBox color='#f9e4006c' padding={4} className='mx-auto lg:mx-0'>

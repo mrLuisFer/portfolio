@@ -29,12 +29,9 @@ export default function HeroLinks() {
       {socialMediaFiltered.map((social, id) => (
         <SocialMediaItem key={social.label} item={social} id={id} />
       ))}
-      <Button asChild className='hidden md:inline-block'>
+      <Button asChild>
        <AboutLink />
       </Button>
-      <div className='md:hidden'>
-        <AboutLink />
-      </div>
     </section>
   )
 }
