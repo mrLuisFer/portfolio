@@ -11,11 +11,11 @@ export default function HeroContent() {
   return (
     <div>
       <section>
-        <p className='flex flex-row gap-4 pl-5 text-4xl opacity-80 sm:text-3xl md:inline-block md:text-4xl md:opacity-50 md:hover:opacity-70'>
+        <p className='flex flex-row gap-4 text-4xl opacity-80 sm:text-3xl md:inline-block md:text-4xl md:opacity-50 md:hover:opacity-70'>
           {t('hello')}!<span className='inline-block md:hidden'>I'm</span>
         </p>
         <div className='flex flex-wrap items-center justify-start gap-2 text-4xl font-bold sm:text-3xl md:gap-6 md:text-4xl lg:gap-1'>
-          <span className='hidden pl-5 md:inline-block'>{t('heroIam')} </span>
+          <span className='hidden md:inline-block'>{t('heroIam')} </span>
           <GlowBox
             color='rgba(0, 123, 255, 0.5)'
             borderColor='#131313'

@@ -8,12 +8,12 @@ import { FaUser } from 'react-icons/fa'
 const AboutLink = () => {
   const { t } = useTranslation()
   return (
-    <Link
-      href='/#about'
-      className='flex justify-center items-center gap-2 rounded-lg bg-neutral-800 p-2 text-sm'>
+    <Button asChild>
+    <Link href='/#about'>
       <FaUser />
       {t('aboutMe')}
     </Link>
+    </Button>
   )
 }
 

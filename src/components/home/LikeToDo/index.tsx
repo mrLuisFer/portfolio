@@ -22,7 +22,7 @@ const NavigationButton = ({
 }) => {
   return (
     <Button
-      className='w-fit rounded-full bg-neutral-800 text-white shadow transition hover:bg-neutral-700'
+      className='w-fit rounded-full shadow'
       onClick={onClick}>
       {children}
     </Button>
@@ -86,7 +86,7 @@ export default function LikeToDo() {
   }, [shouldPauseInterval])
 
   return (
-    <div className='relative'>
+    <div className='relative md:min-h-[600px]'>
       <SectionTitle
         glowProps={{ color: '#fef4636f' }}
         className='bg-gradient-to-tr from-yellow-500 to-yellow-300 bg-clip-text text-transparent'>
