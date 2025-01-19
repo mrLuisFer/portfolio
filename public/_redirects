@@ -1,8 +1,2 @@
-/*  /index.html  200
 
-[[redirects]]
-  from = "/"
-  to = "https://mrluisfer.vercel.app/"
-  status = 200
-  force = true
-  headers = {X-From = "Netlify"}
+/* https://mrluisfer.vercel.app 301
