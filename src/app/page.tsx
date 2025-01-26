@@ -4,6 +4,7 @@ import LikeToDo from '@/components/home/LikeToDo'
 import TechSkills from '@/components/home/TechSkills'
 import Projects from '@/components/home/Projects'
 import { Metadata } from 'next'
+import GitHubChart from '@/components/home/GitHubChart'
 
 export const metadata: Metadata = {
   title: 'Home | mrLuisFer',
@@ -20,6 +21,7 @@ export default function Home() {
         <LikeToDo />
         <TechSkills />
         <Projects />
+        <GitHubChart />
       </div>
     </>
   )

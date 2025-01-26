@@ -30,7 +30,7 @@ export default function TechSkills() {
           {minorTechList.map((item, id) => (
             <Tooltip key={id}>
               <TooltipTrigger>
-                <div key={id} className='text-[30px] transition'>
+                <div key={id} className='text-[30px] transition filter hover:scale-110'>
                   {item.icon}
                 </div>
               </TooltipTrigger>

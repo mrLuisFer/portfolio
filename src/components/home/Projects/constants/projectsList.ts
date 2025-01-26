@@ -1,4 +1,3 @@
-import { v4 } from 'uuid'
 import { IconType } from 'react-icons/lib'
 import { Technologies } from './technologies'
 
@@ -19,7 +18,7 @@ export interface Project {
 
 const projectsList: Project[] = [
   {
-    id: v4(),
+    id: 1,
     name: 'Linktry',
     description:
       'A custom version of Linktree and Bento to shows all my social media links and other links in one place',
@@ -29,7 +28,7 @@ const projectsList: Project[] = [
     technologies: [Technologies.react, Technologies.next, Technologies.tailwind],
   },
   {
-    id: v4(),
+    id: 2,
     name: 'Next Chat App',
     description:
       'Just a simple chat app for learn Socket.Io and test with friends or people of the world 🌎',
@@ -44,7 +43,7 @@ const projectsList: Project[] = [
     ],
   },
   {
-    id: v4(),
+    id: 3,
     name: 'Seo Generator',
     description: 'An app for create Meta-Tags for better preview and SEO in the web',
     image: '/images/projects/seo-generator.png',
@@ -53,7 +52,7 @@ const projectsList: Project[] = [
     technologies: [Technologies.react, Technologies.next, Technologies.chakraui],
   },
   {
-    id: v4(),
+    id: 4,
     name: 'Terminal Website',
     description: 'A terminal web page made in Typescript just for fun 😄',
     image: '/images/projects/terminal.png',
@@ -62,7 +61,7 @@ const projectsList: Project[] = [
     technologies: [Technologies.javascript, Technologies.sass, Technologies.html],
   },
   {
-    id: v4(),
+    id: 5,
     name: 'Git Guide',
     description:
       'A basic guide to the most necessary commands for using Git with github or gitlab in Spanish',
@@ -77,7 +76,7 @@ const projectsList: Project[] = [
     ],
   },
   {
-    id: v4(),
+    id: 6,
     name: 'GH Finder',
     description: 'A simple app for search users in Github',
     image: '/images/projects/gh-finder.png',
@@ -86,7 +85,7 @@ const projectsList: Project[] = [
     technologies: [Technologies.sass, Technologies.html, Technologies.javascript],
   },
   {
-    id: v4(),
+    id:7,
     name: 'Planning App',
     description:
       'A planning poker app to select story points, made with React and Supabase',
