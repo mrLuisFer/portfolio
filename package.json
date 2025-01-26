@@ -94,5 +94,6 @@
       "prettier --list-different"
     ],
     "*.md": "prettier --list-different"
-  }
+  },
+  "packageManager": "pnpm@9.15.0"
 }
